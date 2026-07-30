@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="omelette-owns-print" content="1">
+<title>Ochsenglitter · Care-Arbeit Familienrechner</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F7EDE0">
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#F7EDE0"/><circle cx="100" cy="100" r="52" fill="#EDDCCB"/><rect x="66" y="96" width="34" height="9" rx="4.5" fill="#BC7A5A"/><rect x="104" y="96" width="30" height="9" rx="4.5" fill="#C2A36B"/><text x="100" y="82" text-anchor="middle" font-family="Georgia,serif" font-size="26" fill="#2c251e">OG</text><text x="100" y="132" text-anchor="middle" font-family="Helvetica,sans-serif" font-size="11" letter-spacing="2" fill="#a08a63">RECHNER</text></svg></template>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;family=Mulish:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: #F7EDE0; -webkit-font-smoothing: antialiased; }
+  a { color: #BC7A5A; text-underline-offset: 3px; }
+  a:hover { color: #2c251e; }
+  input[type=range] { -webkit-appearance: none; appearance: none; background: transparent; }
+  input[type=range]::-webkit-slider-runnable-track { height: 6px; border-radius: 99px; background: #EDDCCB; }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 30px; height: 30px; margin-top: -12px; border-radius: 99px; background: #FDF9F3; border: 2px solid #C2A36B; box-shadow: 0 2px 8px rgba(44,37,30,.18); cursor: grab; }
+  input[type=range]::-moz-range-track { height: 6px; border-radius: 99px; background: #EDDCCB; }
+  input[type=range]::-moz-range-thumb { width: 26px; height: 26px; border-radius: 99px; background: #FDF9F3; border: 2px solid #C2A36B; }
+  @media print {
+    @page { margin: 14mm; }
+    body { background: #fff; }
+    [data-print="hide"] { display: none !important; }
+    [data-print="page"] { break-inside: avoid; }
+  }
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F7EDE0; font-family: Mulish, system-ui, sans-serif; color: #3a3228; display: flex; justify-content: center; padding: 0 16px 72px;">
+  <div style="width: 100%; max-width: 470px;">
+
+    <sc-if value="{{ isIntro }}" hint-placeholder-val="{{ true }}">
+      <div data-screen-label="Intro" style="padding: 54px 0 0;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+          <span style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 25px; color: #BC7A5A;">Ochsenglitter</span>
+          <span style="display: flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: #a08a63;">
+            <span style="width: 22px; height: 1px; background: #DEC9B4;"></span>Family Edition<span style="width: 22px; height: 1px; background: #DEC9B4;"></span>
+          </span>
+        </div>
+        <h1 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 46px; line-height: 1.05; text-align: center; margin: 16px 0 0; color: #2c251e;">Wer macht<br><em style="color: #BC7A5A;">eigentlich was?</em></h1>
+        <p style="text-align: center; font-size: 15px; line-height: 1.65; color: #5c5042; margin: 18px 20px 0; text-wrap: pretty;">44 Fragen, ehrlich beantwortet. Danach steht schwarz auf creme, wie viele Stunden, wie viel Kopf und wie viele Euro eure unsichtbare Arbeit wert ist – als Datei zum Behalten.</p>
+
+        <div style="background: #FDF9F3; border: 1px solid #E3D7C7; border-radius: 22px; padding: 26px 22px; margin: 32px 0 0; box-shadow: 0 12px 32px rgba(44,37,30,.05);">
+          <div style="font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: #BC7A5A; margin-bottom: 20px;">Wer seid ihr zwei?</div>
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <label style="display: flex; flex-direction: column; gap: 6px;">
+              <span style="font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: #a09080;">Person A</span>
+              <input type="text" value="{{ nameA }}" onChange="{{ setNameA }}" style="font-family: 'Cormorant Garamond', serif; font-size: 25px; color: #2c251e; background: transparent; border: none; border-bottom: 1px solid #DEC9B4; padding: 0 0 8px; outline: none;">
+            </label>
+            <label style="display: flex; flex-direction: column; gap: 6px;">
+              <span style="font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: #a09080;">Person B</span>
+              <input type="text" value="{{ nameB }}" onChange="{{ setNameB }}" style="font-family: 'Cormorant Garamond', serif; font-size: 25px; color: #2c251e; background: transparent; border: none; border-bottom: 1px solid #DEC9B4; padding: 0 0 8px; outline: none;">
+            </label>
+            <label style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; border-top: 1px dotted #DEC9B4; padding-top: 18px;">
+              <span style="font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: #a09080;">Stundensatz</span>
+              <span style="display: flex; align-items: baseline; gap: 5px;">
+                <input type="number" value="{{ rate }}" onChange="{{ setRate }}" style="width: 58px; text-align: right; font-family: 'Cormorant Garamond', serif; font-size: 25px; color: #2c251e; background: transparent; border: none; border-bottom: 1px solid #DEC9B4; padding: 0 0 6px; outline: none;">
+                <span style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #5c5042;">€ / h</span>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div style="margin: 26px 0 0;">
+          <div style="font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: #a08a63; text-align: center; margin-bottom: 12px;">Wie wollt ihr antworten?</div>
+          <div style="display: grid; gap: 8px;">
+            <sc-for list="{{ variantOptions }}" as="v" hint-placeholder-count="3">
+              <button onClick="{{ v.pick }}" style="text-align: left; cursor: pointer; display: flex; gap: 12px; align-items: flex-start; background: {{ v.bg }}; border: 1px solid {{ v.bd }}; border-radius: 15px; padding: 14px 16px; font-family: Mulish, sans-serif;">
+                <span style="flex: none; width: 9px; height: 9px; margin-top: 6px; border-radius: 99px; background: {{ v.dot }}; box-shadow: 0 0 0 3px {{ v.ring }};"></span>
+                <span>
+                  <span style="display: block; font-size: 14px; font-weight: 700; color: #2c251e;">{{ v.title }}</span>
+                  <span style="display: block; font-size: 12.5px; line-height: 1.5; color: #5c5042; margin-top: 2px;">{{ v.sub }}</span>
+                </span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+
+        <button onClick="{{ start }}" style="width: 100%; margin-top: 26px; cursor: pointer; background: #BC7A5A; color: #FDF9F3; border: none; border-radius: 99px; padding: 18px; font-family: Mulish, sans-serif; font-size: 12.5px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;">Losrechnen</button>
+        <p style="text-align: center; font-size: 11px; letter-spacing: .08em; color: #b3a48f; margin-top: 14px;">ca. 6 Minuten · alles bleibt auf eurem Gerät</p>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isCards }}" hint-placeholder-val="{{ false }}">
+      <div data-screen-label="Fragen" style="padding: 24px 0 0;">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <button onClick="{{ back }}" style="cursor: pointer; background: transparent; border: none; padding: 0; font-family: Mulish, sans-serif; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #a09080;">← zurück</button>
+          <span style="font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #a09080;">{{ stepLabel }}</span>
+        </div>
+        <div style="height: 3px; background: #EDDCCB; border-radius: 99px; margin: 14px 0 0; overflow: hidden;">
+          <div style="height: 100%; background: #C2A36B; width: {{ progress }}%; transition: width .35s ease;"></div>
+        </div>
+
+        <div style="background: #FDF9F3; border: 1px solid #E3D7C7; border-radius: 24px; padding: 28px 22px 26px; margin: 20px 0 0; box-shadow: 0 14px 36px rgba(44,37,30,.06);">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span style="width: 34px; height: 34px; border-radius: 99px; background: #F7EDE0; border: 1px solid #EDE3D5; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 15px; color: #BC7A5A;">{{ catInitial }}</span>
+            <span style="font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: #BC7A5A;">{{ catName }}</span>
+          </div>
+
+          <sc-if value="{{ isSingle }}" hint-placeholder-val="{{ true }}">
+            <div>
+              <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 31px; line-height: 1.14; color: #2c251e; margin: 18px 0 0; text-wrap: pretty;">{{ taskLabel }}</h2>
+              <p style="font-size: 13px; line-height: 1.55; color: #5c5042; margin: 9px 0 0;">{{ taskHint }}</p>
+
+              <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px dotted #DEC9B4; border-bottom: 1px dotted #DEC9B4; margin: 18px 0 0; padding: 11px 0;">
+                <span style="font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: #a09080;">Zeit / Woche</span>
+                <span style="display: flex; align-items: center; gap: 12px;">
+                  <button onClick="{{ lessTime }}" style="cursor: pointer; width: 44px; height: 44px; border-radius: 99px; border: 1px solid #E3D7C7; background: #F7EDE0; color: #5c5042; font-size: 18px; line-height: 1;">–</button>
+                  <span style="font-family: 'Cormorant Garamond', serif; font-size: 21px; color: #2c251e; min-width: 78px; text-align: center;">{{ taskTime }}</span>
+                  <button onClick="{{ moreTime }}" style="cursor: pointer; width: 44px; height: 44px; border-radius: 99px; border: 1px solid #E3D7C7; background: #F7EDE0; color: #5c5042; font-size: 18px; line-height: 1;">+</button>
+                </span>
+              </div>
+
+              <sc-if value="{{ isSlider }}" hint-placeholder-val="{{ true }}">
+                <div style="margin: 24px 0 0;">
+                  <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                    <span style="font-family: 'Cormorant Garamond', serif; font-size: 21px; color: #2c251e;">{{ nameA }}</span>
+                    <span style="font-family: 'Cormorant Garamond', serif; font-size: 21px; color: #2c251e;">{{ nameB }}</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; margin: 2px 0 14px;">
+                    <span style="font-size: 12px; letter-spacing: .1em; color: #BC7A5A;">{{ splitA }} %</span>
+                    <span style="font-size: 12px; letter-spacing: .1em; color: #a09080;">{{ splitB }} %</span>
+                  </div>
+                  <input type="range" min="0" max="100" step="5" value="{{ splitA }}" onChange="{{ setSplit }}" onInput="{{ setSplit }}" style="width: 100%; height: 30px;">
+                  <div style="text-align: center; font-size: 12px; color: #5c5042; margin-top: 8px;">{{ splitWord }}</div>
+                </div>
+              </sc-if>
+
+              <sc-if value="{{ isTaps }}" hint-placeholder-val="{{ false }}">
+                <div style="margin: 22px 0 0; display: grid; gap: 8px;">
+                  <sc-for list="{{ choices }}" as="c" hint-placeholder-count="5">
+                    <button onClick="{{ c.pick }}" style="cursor: pointer; display: flex; align-items: center; gap: 13px; text-align: left; background: {{ c.bg }}; border: 1px solid {{ c.bd }}; border-radius: 14px; padding: 13px 15px; font-family: Mulish, sans-serif; font-size: 14px; font-weight: 500; color: {{ c.fg }};">
+                      <span style="flex: none; width: 36px; height: 6px; border-radius: 99px; background: linear-gradient(90deg,#BC7A5A {{ c.v }}%, #EDDCCB {{ c.v }}%);"></span>
+                      <span>{{ c.label }}</span>
+                    </button>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ isList }}" hint-placeholder-val="{{ false }}">
+            <div style="margin: 16px 0 0;">
+              <h2 style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 29px; line-height: 1.1; color: #2c251e; margin: 0;">{{ catName }}</h2>
+              <p style="font-size: 12.5px; color: #5c5042; margin: 6px 0 2px;">Links ist {{ nameA }}, rechts {{ nameB }}. Einmal tippen genügt.</p>
+              <sc-for list="{{ listTasks }}" as="t" hint-placeholder-count="7">
+                <div style="border-top: 1px dotted #DEC9B4; padding: 13px 0 11px;">
+                  <div style="display: flex; justify-content: space-between; gap: 10px; align-items: baseline;">
+                    <span style="font-size: 13.5px; font-weight: 500; color: #2c251e;">{{ t.label }}</span>
+                    <span style="flex: none; font-size: 11px; letter-spacing: .06em; color: #b3a48f;">{{ t.time }}</span>
+                  </div>
+                  <div style="display: flex; gap: 6px; margin-top: 9px;">
+                    <sc-for list="{{ t.choices }}" as="c" hint-placeholder-count="5">
+                      <button onClick="{{ c.pick }}" title="{{ c.label }}" style="cursor: pointer; flex: 1; height: 44px; border-radius: 11px; border: 1px solid {{ c.bd }}; background: {{ c.bg }}; display: flex; align-items: center; justify-content: center;">
+                        <span style="width: 22px; height: 5px; border-radius: 99px; background: linear-gradient(90deg,#BC7A5A {{ c.v }}%, #EDDCCB {{ c.v }}%);"></span>
+                      </button>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+
+        <div style="display: flex; gap: 10px; margin: 16px 0 0; position: sticky; bottom: 0; padding-bottom: calc(14px + env(safe-area-inset-bottom)); padding-top: 14px; background: linear-gradient(180deg, rgba(247,237,224,0) 0%, #F7EDE0 42%);">
+          <button onClick="{{ skip }}" style="flex: none; cursor: pointer; background: #F7EDE0; border: 1px solid #E3D7C7; border-radius: 99px; padding: 16px 18px; font-family: Mulish, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: #a09080;">Betrifft uns nicht</button>
+          <button onClick="{{ next }}" style="flex: 1; cursor: pointer; background: #2c251e; color: #FDF9F3; border: none; border-radius: 99px; padding: 16px; font-family: Mulish, sans-serif; font-size: 11.5px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;">{{ nextLabel }}</button>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isResult }}" hint-placeholder-val="{{ false }}">
+      <div data-screen-label="Ergebnis" style="padding: 30px 0 0;">
+        <div data-print="hide" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px;">
+          <button onClick="{{ back }}" style="cursor: pointer; background: transparent; border: none; padding: 0; font-family: Mulish, sans-serif; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #a09080;">← ändern</button>
+          <span style="display: flex; gap: 8px;">
+            <button onClick="{{ doCsv }}" style="cursor: pointer; background: transparent; color: #a08a63; border: 1px solid #C2A36B; border-radius: 99px; padding: 10px 16px; font-family: Mulish, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;">Sheets</button>
+            <button onClick="{{ doPrint }}" style="cursor: pointer; background: #BC7A5A; color: #FDF9F3; border: none; border-radius: 99px; padding: 11px 20px; font-family: Mulish, sans-serif; font-size: 10.5px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;">PDF</button>
+          </span>
+        </div>
+        <p data-print="hide" style="font-size: 11px; line-height: 1.5; color: #b3a48f; margin: -14px 0 20px; text-align: right;">„Sheets" lädt eine CSV mit allen 44 Aufgaben und fertigen Formeln – in Google Sheets importieren und live weiterrechnen.</p>
+
+        <div data-print="page" style="background: #FDF9F3; border: 1px solid #E3D7C7; border-radius: 24px; padding: 32px 24px 28px; box-shadow: 0 14px 36px rgba(44,37,30,.06);">
+          <div style="text-align: center; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: #BC7A5A;">Ochsenglitter</div>
+          <div style="text-align: center; font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: #a08a63; margin-top: 6px;">Care-Bilanz · Family Edition</div>
+          <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 34px; line-height: 1.1; text-align: center; color: #2c251e; margin: 12px 0 0;">{{ nameA }} <em style="color: #C2A36B;">&amp;</em> {{ nameB }}</h2>
+          <div style="text-align: center; font-size: 11px; letter-spacing: .14em; color: #b3a48f; margin-top: 8px;">{{ today }}</div>
+
+          <div style="display: flex; align-items: flex-end; justify-content: center; gap: 16px; margin: 26px 0 0;">
+            <div style="text-align: center;">
+              <div style="font-family: 'Cormorant Garamond', serif; font-size: 62px; line-height: .9; color: #BC7A5A;">{{ shareA }}</div>
+              <div style="font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: #a09080; margin-top: 8px;">{{ nameA }}</div>
+            </div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 34px; color: #DEC9B4; padding-bottom: 12px;">/</div>
+            <div style="text-align: center;">
+              <div style="font-family: 'Cormorant Garamond', serif; font-size: 62px; line-height: .9; color: #2c251e;">{{ shareB }}</div>
+              <div style="font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: #a09080; margin-top: 8px;">{{ nameB }}</div>
+            </div>
+          </div>
+          <div style="display: flex; height: 10px; border-radius: 99px; overflow: hidden; margin: 22px 0 0; border: 1px solid #EDE3D5;">
+            <div style="width: {{ shareA }}%; background: #BC7A5A;"></div>
+            <div style="flex: 1; background: #EDDCCB;"></div>
+          </div>
+          <p style="text-align: center; font-size: 14px; line-height: 1.6; color: #5c5042; margin: 18px 6px 0; text-wrap: pretty;">{{ verdict }}</p>
+        </div>
+
+        <div data-print="page" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px;">
+          <sc-for list="{{ statCards }}" as="s" hint-placeholder-count="4">
+            <div style="background: #FDF9F3; border: 1px solid #E3D7C7; border-radius: 18px; padding: 18px 16px;">
+              <div style="font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: #BC7A5A;">{{ s.label }}</div>
+              <div style="font-family: 'Cormorant Garamond', serif; font-size: 33px; line-height: 1.05; color: #2c251e; margin-top: 10px;">{{ s.value }}</div>
+              <div style="font-size: 11.5px; line-height: 1.45; color: #a09080; margin-top: 6px;">{{ s.note }}</div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div data-print="page" style="background: #FDF9F3; border: 1px solid #E3D7C7; border-radius: 22px; padding: 24px 22px; margin-top: 12px;">
+          <div style="font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: #BC7A5A;">Die Zahlen im Detail</div>
+          <div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 0; margin-top: 16px;">
+            <sc-for list="{{ tableRows }}" as="r" hint-placeholder-count="18">
+              <div style="border-top: 1px solid {{ r.line }}; padding: 10px 0 9px; font-size: {{ r.size }}; font-weight: {{ r.weight }}; color: {{ r.fg }};">{{ r.label }}</div>
+              <div style="border-top: 1px solid {{ r.line }}; padding: 10px 0 9px; text-align: right; font-family: 'Cormorant Garamond', serif; font-size: {{ r.num }}; color: #BC7A5A;">{{ r.a }}</div>
+              <div style="border-top: 1px solid {{ r.line }}; padding: 10px 0 9px; text-align: right; font-family: 'Cormorant Garamond', serif; font-size: {{ r.num }}; color: #2c251e;">{{ r.b }}</div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div data-print="page" style="background: #FDF9F3; border: 1px solid #E3D7C7; border-radius: 22px; padding: 24px 22px; margin-top: 12px;">
+          <div style="font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: #BC7A5A;">Verteilung nach Bereich</div>
+          <div style="display: flex; justify-content: space-between; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: #b3a48f; margin: 14px 0 0;">
+            <span>{{ nameA }}</span><span>{{ nameB }}</span>
+          </div>
+          <sc-for list="{{ catRows }}" as="c" hint-placeholder-count="7">
+            <div style="margin-top: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 10px;">
+                <span style="font-size: 13px; font-weight: 500; color: #2c251e;">{{ c.name }}</span>
+                <span style="flex: none; font-size: 11px; letter-spacing: .06em; color: #a09080;">{{ c.hours }}</span>
+              </div>
+              <div style="display: flex; height: 9px; border-radius: 99px; overflow: hidden; margin-top: 7px; background: #EDDCCB;">
+                <div style="width: {{ c.pct }}%; background: {{ c.color }};"></div>
+              </div>
+              <div style="display: flex; justify-content: space-between; font-size: 11px; color: #b3a48f; margin-top: 4px;">
+                <span>{{ c.pct }} %</span><span>{{ c.pctB }} %</span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+
+        <div data-print="page" style="background: #2c251e; border-radius: 22px; padding: 28px 22px; margin-top: 12px; color: #F7EDE0;">
+          <div style="font-size: 10px; letter-spacing: .3em; text-transform: uppercase; color: #C2A36B;">Time Out · Mental Load</div>
+          <div style="display: flex; align-items: flex-end; gap: 14px; margin-top: 18px; border-bottom: 1px solid #574c3f; padding-bottom: 20px;">
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 58px; line-height: .9; color: #FDF9F3;">{{ mentalA }}%</div>
+            <div style="font-size: 12.5px; line-height: 1.5; color: #C9BCA8; padding-bottom: 6px;">der Denk-, Plan- und Erinnerungsarbeit liegt bei {{ nameA }}.</div>
+          </div>
+          <p style="font-size: 13.5px; line-height: 1.65; color: #EDE3D5; margin: 18px 0 0; text-wrap: pretty;">{{ mentalText }}</p>
+          <div style="display: flex; gap: 18px; margin-top: 20px; border-top: 1px solid #574c3f; padding-top: 18px;">
+            <div style="flex: 1;">
+              <div style="font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: #a09080;">Kopfarbeit / Woche</div>
+              <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #FDF9F3; margin-top: 6px;">{{ mentalHours }}</div>
+            </div>
+            <div style="flex: 1;">
+              <div style="font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: #a09080;">Sichtbare Arbeit</div>
+              <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; color: #FDF9F3; margin-top: 6px;">{{ visibleHours }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div data-print="page" style="background: #FDF9F3; border: 1px solid #E3D7C7; border-radius: 22px; padding: 24px 22px; margin-top: 12px;">
+          <div style="font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: #BC7A5A;">{{ swapTitle }}</div>
+          <p style="font-size: 12.5px; line-height: 1.55; color: #5c5042; margin: 10px 0 0;">{{ swapIntro }}</p>
+          <sc-for list="{{ swaps }}" as="s" hint-placeholder-count="3">
+            <div style="display: flex; gap: 14px; border-top: 1px dotted #DEC9B4; margin-top: 16px; padding-top: 16px;">
+              <span style="flex: none; width: 26px; height: 26px; border: 1px solid #C2A36B; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: 'Cormorant Garamond', serif; font-size: 14px; color: #a08a63;">{{ s.n }}</span>
+              <span>
+                <span style="display: block; font-family: 'Cormorant Garamond', serif; font-size: 21px; line-height: 1.2; color: #2c251e;">{{ s.label }}</span>
+                <span style="display: block; font-size: 12.5px; line-height: 1.55; color: #5c5042; margin-top: 5px;">{{ s.text }}</span>
+              </span>
+            </div>
+          </sc-for>
+          <sc-if value="{{ hasSwaps }}" hint-placeholder-val="{{ true }}">
+            <div style="border-top: 1px solid #E3D7C7; margin-top: 18px; padding-top: 16px; display: flex; justify-content: space-between; align-items: baseline;">
+              <span style="font-size: 10.5px; letter-spacing: .18em; text-transform: uppercase; color: #a09080;">Danach steht ihr bei</span>
+              <span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #2c251e;">{{ afterSplit }}</span>
+            </div>
+          </sc-if>
+        </div>
+
+        <div data-print="page" style="border: 1px solid #EDDCCB; border-radius: 22px; padding: 24px 22px; margin-top: 12px;">
+          <div style="font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: #a08a63;">Abmachung</div>
+          <p style="font-size: 12.5px; line-height: 1.55; color: #5c5042; margin: 10px 0 18px;">Ausdrucken, unterschreiben, in vier Wochen nochmal rechnen.</p>
+          <div style="display: flex; gap: 18px;">
+            <div style="flex: 1; border-bottom: 1px solid #C9BCA8; height: 46px;"></div>
+            <div style="flex: 1; border-bottom: 1px solid #C9BCA8; height: 46px;"></div>
+          </div>
+          <div style="display: flex; gap: 18px; margin-top: 7px;">
+            <span style="flex: 1; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: #b3a48f;">{{ nameA }}</span>
+            <span style="flex: 1; font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase; color: #b3a48f;">{{ nameB }}</span>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin: 26px 0 0;">
+          <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px; color: #a08a63;">Ochsenglitter</div>
+          <div style="font-size: 9.5px; letter-spacing: .24em; text-transform: uppercase; color: #b3a48f; margin-top: 5px;">Care-Arbeit Familienrechner · nur zur privaten Nutzung</div>
+        </div>
+
+        <button data-print="hide" onClick="{{ restart }}" style="width: 100%; margin-top: 20px; cursor: pointer; background: transparent; color: #a09080; border: 1px solid #E3D7C7; border-radius: 99px; padding: 15px; font-family: Mulish, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase;">Von vorn beginnen</button>
+      </div>
+    </sc-if>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:470,&quot;height&quot;:940}}">
+class Component extends DCLogic {
+  cats = [
+    { n: "Küche & Essen", t: [
+      ["Wochenplanung: Was essen wir?", "Der Kopf, der jeden Sonntag durchdenkt, was Montag auf dem Tisch steht.", 40, 1],
+      ["Einkaufsliste führen", "Wissen, dass die Milch alle ist – bevor sie alle ist.", 30, 1],
+      ["Einkaufen gehen", "Inklusive Wege, Schlange, Einräumen.", 120, 0],
+      ["Kochen unter der Woche", "Fünf Abende, fünf Meinungen.", 300, 0],
+      ["Kochen am Wochenende", "Auch das Brunch-Chaos zählt.", 120, 0],
+      ["Spülmaschine & Abwasch", "Ein- und wieder ausräumen. Und wieder.", 105, 0],
+      ["Vorräte & Haltbarkeit", "Was hinten im Kühlschrank vor sich hin lebt.", 25, 1]
+    ]},
+    { n: "Wäsche & Kleidung", t: [
+      ["Waschmaschine bestücken", "Sortieren, starten, rechtzeitig rausholen.", 70, 0],
+      ["Aufhängen & Trockner", "Der Wäscheständer als Möbelstück.", 60, 0],
+      ["Zusammenlegen & einräumen", "Der undankbarste Teil.", 75, 0],
+      ["Bügeln, Nähen, Flicken", "Knopf ab, Naht auf.", 30, 0],
+      ["Kleidergrößen im Blick", "Wer merkt, dass die Hosen zu kurz sind?", 20, 1]
+    ]},
+    { n: "Wohnung & Ordnung", t: [
+      ["Aufräumen & Klarschiff", "Die Runde, die nie fertig ist.", 140, 0],
+      ["Staubsaugen & Wischen", "Böden, Ecken, Krümel.", 80, 0],
+      ["Bad putzen", "Alles, was glänzen soll.", 45, 0],
+      ["Müll & Recycling", "Rausbringen, Tonne rausstellen, Pfand.", 35, 0],
+      ["Pflanzen & Haustiere", "Füttern, gießen, Gassi.", 60, 0],
+      ["Reparaturen & Handwerk", "Regal, Lampe, tropfender Hahn.", 45, 0]
+    ]},
+    { n: "Kinder · Alltag", t: [
+      ["Morgenroutine", "Wecken, anziehen, Frühstück, Zähne, Jacke, Schuhe.", 175, 0],
+      ["Bringen & Abholen", "Kita, Schule, Sport, Musik.", 200, 0],
+      ["Hausaufgaben & Üben", "Geduld inklusive.", 90, 0],
+      ["Abendroutine & Schlafen", "Baden, Vorlesen, dreimal zurückgehen.", 175, 0],
+      ["Spielen & Zeit schenken", "Präsent sein, nicht nur anwesend.", 180, 0],
+      ["Krankheitstage auffangen", "Wer bleibt zuhause, wenn Fieber ist?", 90, 0],
+      ["Körperpflege & Baden", "Nägel, Haare, Zahnarztroutine.", 60, 0]
+    ]},
+    { n: "Kinder · Organisation", t: [
+      ["Kita- & Schulkommunikation", "Elternchats, Apps, Zettel im Ranzen.", 60, 1],
+      ["Arzt- und Therapietermine", "Buchen, erinnern, hinbegleiten.", 50, 1],
+      ["Kindergeburtstage & Geschenke", "Eigene und die der anderen.", 45, 1],
+      ["Ferien & Betreuung planen", "Der Kalender-Tetris-Meister.", 40, 1],
+      ["Ausrüstung & Nachkaufen", "Turnbeutel, Gummistiefel, Bastelkram.", 40, 1],
+      ["Elternabende & Ehrenamt", "Kuchenbasar, Elternbeirat.", 35, 1]
+    ]},
+    { n: "Geld & Papierkram", t: [
+      ["Rechnungen & Kontostand", "Fristen kennen, Mahnungen vermeiden.", 45, 1],
+      ["Verträge & Versicherungen", "Vergleichen, kündigen, wechseln.", 30, 1],
+      ["Steuer & Belege", "Das Jahresprojekt.", 25, 1],
+      ["Behörden & Anträge", "Kindergeld, Anmeldungen, Ämter.", 30, 1],
+      ["Urlaub planen & buchen", "Von der Idee bis zum Koffer.", 40, 1],
+      ["Handwerker & Servicetermine", "Anrufen, warten, dabei sein.", 35, 1]
+    ]},
+    { n: "Beziehung & Gefühl", t: [
+      ["Kontakt zur Familie halten", "Anrufe, Besuche, Geburtstage der Großeltern.", 60, 1],
+      ["Geschenke für Erwachsene", "Auch für deine Seite der Familie.", 30, 1],
+      ["Freundschaften & Playdates", "Verabredungen für alle, auch für euch.", 45, 1],
+      ["Streit schlichten & trösten", "Emotionale Erste Hilfe.", 90, 1],
+      ["Stimmung im Blick behalten", "Merken, wenn es jemandem nicht gut geht.", 90, 1],
+      ["Feste & Feiertage stemmen", "Weihnachten macht sich nicht von selbst.", 60, 1],
+      ["Woran sonst niemand denkt", "Die Liste im Kopf, die nie leer wird.", 90, 1]
+    ]}
+  ];
+
+  constructor(p) {
+    super(p);
+    const tasks = [];
+    this.cats.forEach((c, ci) => c.t.forEach((t, ti) => tasks.push({
+      id: ci + "-" + ti, ci, cat: c.n, label: t[0], hint: t[1], min: t[2], mental: !!t[3]
+    })));
+    this.tasks = tasks;
+    const split = {}, time = {};
+    tasks.forEach(t => { split[t.id] = 50; time[t.id] = t.min; });
+    this.state = { screen: "intro", variant: "slider", step: 0, split, time, nameA: "Person A", nameB: "Person B", rate: 18 };
+  }
+
+  fmtH(min) {
+    const h = Math.floor(min / 60), m = Math.round(min % 60);
+    if (min < 60) return m + " min";
+    return h + " h" + (m ? " " + m : "");
+  }
+  fmtN(n, d) { return n.toLocaleString("de-DE", { minimumFractionDigits: d || 0, maximumFractionDigits: d || 0 }); }
+  fmtE(n) { return this.fmtN(Math.round(n)) + " €"; }
+
+  set(k, v) { this.setState({ [k]: v }); }
+
+  csvExport() {
+    const s = this.state;
+    const q = x => /[",\n]/.test(String(x)) ? '"' + String(x).replace(/"/g, '""') + '"' : String(x);
+    const L = [];
+    L.push(["OCHSENGLITTER · CARE-ARBEIT FAMILIENRECHNER"]);
+    L.push(["Family Edition · Wer macht eigentlich was?"]);
+    L.push(["Stand", new Date().toLocaleDateString("de-DE")]);
+    L.push(["Person A", s.nameA]);
+    L.push(["Person B", s.nameB]);
+    L.push(["Stundensatz (EUR/h)", s.rate]);
+    L.push([]);
+    L.push(["Bereich", "Aufgabe", "Minuten/Woche", "Anteil A (%)", "Stunden A", "Stunden B", "Kopfarbeit"]);
+    const first = L.length + 1;
+    this.tasks.forEach((t, i) => {
+      const r = first + i;
+      L.push([t.cat, t.label, s.time[t.id], s.split[t.id], `=C${r}*D${r}/100/60`, `=C${r}*(100-D${r})/100/60`, t.mental ? 1 : 0]);
+    });
+    const last = first + this.tasks.length - 1;
+    const E = `E${first}:E${last}`, F = `F${first}:F${last}`, G = `G${first}:G${last}`;
+    L.push([]);
+    L.push(["ERGEBNIS", "", "", "", s.nameA, s.nameB, "Gesamt"]);
+    const b = L.length + 1;
+    L.push(["Stunden / Woche", "", "", "", `=SUM(${E})`, `=SUM(${F})`, `=E${b}+F${b}`]);
+    L.push(["Stunden / Jahr", "", "", "", `=E${b}*52`, `=F${b}*52`, `=G${b}*52`]);
+    L.push(["Anteil (%)", "", "", "", `=ROUND(E${b}/G${b}*100)`, `=ROUND(F${b}/G${b}*100)`, 100]);
+    L.push(["Wert / Monat (EUR)", "", "", "", `=ROUND(E${b}*4.33*$B$6)`, `=ROUND(F${b}*4.33*$B$6)`, `=ROUND(G${b}*4.33*$B$6)`]);
+    L.push(["Wert / Jahr (EUR)", "", "", "", `=ROUND(E${b}*52*$B$6)`, `=ROUND(F${b}*52*$B$6)`, `=ROUND(G${b}*52*$B$6)`]);
+    L.push(["Kopfarbeit Std / Woche", "", "", "", `=SUMIF(${G},1,${E})`, `=SUMIF(${G},1,${F})`, `=E${b + 5}+F${b + 5}`]);
+    L.push(["Mental-Load-Anteil (%)", "", "", "", `=ROUND(E${b + 5}/G${b + 5}*100)`, `=ROUND(F${b + 5}/G${b + 5}*100)`, 100]);
+    L.push(["Differenz Std / Woche", "", "", "", `=ABS(E${b}-F${b})`]);
+    L.push(["Differenz Wert / Jahr (EUR)", "", "", "", `=ROUND(ABS(E${b}-F${b})*52*$B$6)`]);
+    L.push(["Arbeitstage / Jahr (8 h)", "", "", "", `=ROUND(E${b}*52/8)`, `=ROUND(F${b}*52/8)`, `=ROUND(G${b}*52/8)`]);
+    L.push([]);
+    L.push(["Anleitung: In Google Sheets Datei > Importieren > Hochladen. Nur Spalte C (Minuten) und D (Anteil A) aendern - alles andere rechnet sich selbst."]);
+    L.push(["© OCHSENGLITTER · Care-Arbeit Familienrechner, Family Edition · nur zur privaten Nutzung"]);
+    const csv = "\uFEFF" + L.map(r => r.map(q).join(",")).join("\r\n");
+    const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `Care-Bilanz-${s.nameA}-${s.nameB}.csv`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  }
+
+  renderVals() {
+    const s = this.state, v = s.variant;
+    const A = s.nameA || "A", B = s.nameB || "B";
+    const isList = v === "list";
+    const total = isList ? this.cats.length : this.tasks.length;
+    const step = Math.min(s.step, total - 1);
+    const task = isList ? null : this.tasks[step];
+
+    const labelsFor = (sp, setter) => [0, 25, 50, 75, 100].map(val => {
+      const on = sp === val;
+      return {
+        v: val, label: [`Nur ${A}`, `Meistens ${A}`, `Halbe-halbe`, `Meistens ${B}`, `Nur ${B}`][val / 25],
+        pick: () => setter(val),
+        bg: on ? "#F7EDE0" : "#FDF9F3",
+        bd: on ? "#BC7A5A" : "#EDE3D5",
+        fg: on ? "#2c251e" : "#5c5042"
+      };
+    }).map(c => ({ ...c, v: 100 - c.v }));
+
+    const setSplitFor = (id, val, adv) => {
+      this.setState(st => ({ split: { ...st.split, [id]: val } }), () => { if (adv) this.advance(); });
+    };
+
+    // ---- results ----
+    let mA = 0, mB = 0, menA = 0, menB = 0;
+    const perCat = this.cats.map(() => ({ a: 0, b: 0 }));
+    this.tasks.forEach(t => {
+      const m = s.time[t.id], p = s.split[t.id] / 100;
+      const a = m * p, b = m * (1 - p);
+      mA += a; mB += b;
+      if (t.mental) { menA += a; menB += b; }
+      perCat[t.ci].a += a; perCat[t.ci].b += b;
+    });
+    const tot = mA + mB || 1;
+    const shareA = Math.round(mA / tot * 100), shareB = 100 - shareA;
+    const hA = mA / 60, hB = mB / 60;
+    const mentalA = Math.round(menA / (menA + menB || 1) * 100);
+    const gap = Math.abs(hA - hB);
+    const lead = hA >= hB ? A : B;
+    const other = hA >= hB ? B : A;
+
+    const verdict = shareA === shareB
+      ? `Ausgeglichen. Selten, schön – und der Beweis, dass es geht.`
+      : gap < 3
+        ? `Fast auf Augenhöhe: ${this.fmtN(gap, 1)} Stunden Unterschied pro Woche. Das ist Feinschliff, kein Systemfehler.`
+        : gap < 8
+          ? `${lead} übernimmt ${this.fmtN(gap, 1)} Stunden pro Woche mehr. Das sind ${this.fmtN(gap * 52)} Stunden im Jahr – ein ganzer Arbeitsmonat Unterschied.`
+          : `${lead} übernimmt ${this.fmtN(gap, 1)} Stunden pro Woche mehr als ${other}. Auf ein Jahr gerechnet: ${this.fmtN(gap * 52)} Stunden. Das ist keine Kleinigkeit, das ist ein zweiter Job.`;
+
+    const statCards = [
+      { label: "Care-Stunden / Woche", value: this.fmtN((mA + mB) / 60, 1), note: `zusammen · ${this.fmtN((mA + mB) / 60 * 52)} h im Jahr` },
+      { label: "Marktwert / Jahr", value: this.fmtE((mA + mB) / 60 * 52 * s.rate), note: `bei ${s.rate} € pro Stunde` },
+      { label: "Mental Load", value: mentalA + " / " + (100 - mentalA), note: `${A} gegenüber ${B}` },
+      { label: "Mehrarbeit / Jahr", value: this.fmtE(Math.abs(hA - hB) * 52 * s.rate), note: `so viel mehr macht ${lead} als ${other} – in Euro` }
+    ];
+
+    const row = (label, a, b, head) => ({
+      label, a, b,
+      line: head ? "#C9BCA8" : "#EDE3D5",
+      size: head ? "12px" : "13px",
+      num: head ? "16px" : "19px",
+      weight: head ? "700" : "400",
+      fg: head ? "#a08a63" : "#3a3228"
+    });
+    const tableRows = [
+      row("", A, B, true),
+      row("Stunden / Woche", this.fmtN(hA, 1), this.fmtN(hB, 1)),
+      row("Stunden / Monat", this.fmtN(hA * 4.33, 0), this.fmtN(hB * 4.33, 0)),
+      row("Stunden / Jahr", this.fmtN(hA * 52, 0), this.fmtN(hB * 52, 0)),
+      row("Anteil", shareA + " %", shareB + " %"),
+      row("Wert / Monat", this.fmtE(hA * 4.33 * s.rate), this.fmtE(hB * 4.33 * s.rate)),
+      row("Wert / Jahr", this.fmtE(hA * 52 * s.rate), this.fmtE(hB * 52 * s.rate)),
+      row("davon Kopfarbeit", this.fmtN(menA / 60, 1) + " h", this.fmtN(menB / 60, 1) + " h"),
+      row("Arbeitstage / Jahr (8 h)", this.fmtN(hA * 52 / 8, 0), this.fmtN(hB * 52 / 8, 0))
+    ];
+
+    const catRows = this.cats.map((c, i) => {
+      const t = perCat[i].a + perCat[i].b || 1;
+      const pct = Math.round(perCat[i].a / t * 100);
+      return { name: c.n, pct, pctB: 100 - pct, hours: this.fmtN(t / 60, 1) + " h", color: pct > 65 ? "#BC7A5A" : pct < 35 ? "#C2A36B" : "#DEC9B4" };
+    });
+
+    const overloaded = hA >= hB ? "a" : "b";
+    const cand = this.tasks
+      .map(t => ({ t, load: overloaded === "a" ? s.time[t.id] * s.split[t.id] / 100 : s.time[t.id] * (1 - s.split[t.id] / 100) }))
+      .filter(x => x.load > 15)
+      .sort((x, y) => y.load - x.load).slice(0, 3);
+    const moved = cand.reduce((a, x) => a + x.load, 0);
+    const nA = overloaded === "a" ? mA - moved : mA + moved;
+    const nB = overloaded === "a" ? mB + moved : mB - moved;
+    const newShare = Math.round(nA / (nA + nB || 1) * 100);
+    const balanced = gap < 1;
+    const swaps = balanced ? [] : cand.map((x, i) => {
+      const whole = x.load >= x.t.min * 0.85;
+      return {
+        n: i + 1, label: x.t.label,
+        text: whole
+          ? `${this.fmtH(Math.round(x.load))} pro Woche, die fast komplett bei ${lead} hängen. Wenn ${other} das ganz übernimmt – nicht „mithilft", sondern zuständig ist – sind das ${this.fmtN(x.load / 60 * 52, 0)} Stunden im Jahr, die frei werden.`
+          : `Hier stecken ${this.fmtH(Math.round(x.load))} pro Woche von ${lead} drin. Der Posten ist groß genug, dass sich ein echter Tausch lohnt: ${other} macht das ab jetzt allein, ${this.fmtN(x.load / 60 * 52, 0)} Stunden im Jahr wechseln die Seite.`
+      };
+    });
+
+    return {
+      isIntro: s.screen === "intro", isCards: s.screen === "cards", isResult: s.screen === "result",
+      nameA: A, nameB: B, rate: s.rate,
+      setNameA: e => this.set("nameA", e.target.value),
+      setNameB: e => this.set("nameB", e.target.value),
+      setRate: e => this.set("rate", Math.max(1, Number(e.target.value) || 0)),
+      variantOptions: [
+        { key: "slider", title: "Regler", sub: "Eine Aufgabe pro Karte, Verteilung frei schieben. Am genauesten." },
+        { key: "taps", title: "Fünf Stufen", sub: "Eine Aufgabe pro Karte, fünf Antworten, tippt sich von allein weiter." },
+        { key: "list", title: "Schnellliste", sub: "Ein Bereich pro Karte, alle Aufgaben untereinander. In 7 Schritten durch." }
+      ].map(o => ({
+        ...o, pick: () => this.setState({ variant: o.key, step: 0 }),
+        bg: v === o.key ? "#F7EDE0" : "#FDF9F3",
+        bd: v === o.key ? "#BC7A5A" : "#E3D7C7",
+        dot: v === o.key ? "#BC7A5A" : "#EDDCCB",
+        ring: v === o.key ? "#EDDCCB" : "transparent"
+      })),
+      start: () => this.setState({ screen: "cards", step: 0 }),
+      restart: () => this.setState({ screen: "intro", step: 0 }),
+      doPrint: () => window.print(),
+      doCsv: () => this.csvExport(),
+      back: () => {
+        if (s.screen === "result") return this.setState({ screen: "cards", step: total - 1 });
+        if (s.step === 0) return this.setState({ screen: "intro" });
+        this.setState({ step: s.step - 1 });
+      },
+      next: () => this.advance(),
+      skip: () => {
+        if (isList) return this.advance();
+        this.setState(st => ({ time: { ...st.time, [task.id]: 0 } }), () => this.advance());
+      },
+      nextLabel: step >= total - 1 ? "Ergebnis ansehen" : "Weiter",
+      stepLabel: (step + 1) + " / " + total,
+      progress: Math.round((step + 1) / total * 100),
+      catName: isList ? this.cats[step].n : task.cat,
+      catInitial: (isList ? this.cats[step].n : task.cat).charAt(0),
+      isSingle: !isList, isList,
+      isSlider: v === "slider", isTaps: v === "taps",
+      taskLabel: task ? task.label : "",
+      taskHint: task ? task.hint : "",
+      taskTime: task ? this.fmtH(s.time[task.id]) : "",
+      lessTime: () => task && this.setState(st => ({ time: { ...st.time, [task.id]: Math.max(0, st.time[task.id] - 15) } })),
+      moreTime: () => task && this.setState(st => ({ time: { ...st.time, [task.id]: st.time[task.id] + 15 } })),
+      splitA: task ? s.split[task.id] : 50,
+      splitB: task ? 100 - s.split[task.id] : 50,
+      splitWord: task ? (s.split[task.id] > 50 ? `Mehr bei ${A}` : s.split[task.id] < 50 ? `Mehr bei ${B}` : "Genau geteilt") : "",
+      setSplit: e => task && setSplitFor(task.id, Number(e.target.value), false),
+      choices: task ? labelsFor(s.split[task.id], val => setSplitFor(task.id, val, true)) : [],
+      listTasks: isList ? this.cats[step].t.map((t, ti) => {
+        const id = step + "-" + ti;
+        return {
+          label: t[0], time: this.fmtH(s.time[id]),
+          choices: labelsFor(s.split[id], val => setSplitFor(id, val, false))
+        };
+      }) : [],
+      today: new Date().toLocaleDateString("de-DE", { day: "2-digit", month: "long", year: "numeric" }),
+      shareA, shareB, verdict, statCards, tableRows, catRows,
+      mentalA, mentalHours: this.fmtN((menA + menB) / 60, 1) + " h",
+      visibleHours: this.fmtN((mA + mB - menA - menB) / 60, 1) + " h",
+      mentalText: mentalA > 60 || mentalA < 40
+        ? `Kopfarbeit ist die Arbeit, die niemand sieht und die trotzdem müde macht. Bei euch liegt sie deutlich schiefer als die sichtbare Arbeit – ${mentalA > 50 ? A : B} ist die Zentrale. Zuständigkeit abgeben heißt: ganze Bereiche übergeben, nicht Aufgaben zuteilen.`
+        : `Die Kopfarbeit ist bei euch erstaunlich fair verteilt. Haltet das – es ist der Teil, der als Erstes wieder kippt, wenn es stressig wird.`,
+      swapTitle: balanced ? "Wo ihr trotzdem hinschauen könnt" : "Drei Züge, die viel bewegen",
+      swapIntro: balanced
+        ? `Bei euch ist es fast ausgeglichen – da gibt es nichts umzuverteilen. Interessanter ist die Frage, wer bei jedem Punkt daran denkt, dass er gemacht werden muss. Redet über Zuständigkeit statt über Stunden, und rechnet in vier Wochen nochmal.`
+        : `Ihr müsst nicht alles umbauen. Diese drei Posten sind die größten Einzelstücke und lassen sich am leichtesten ganz abgeben.`,
+      hasSwaps: !balanced,
+      swaps,
+      afterSplit: newShare + " / " + (100 - newShare)
+    };
+  }
+
+  advance() {
+    const total = this.state.variant === "list" ? this.cats.length : this.tasks.length;
+    if (this.state.step >= total - 1) { this.setState({ screen: "result" }); window.scrollTo(0, 0); }
+    else { this.setState(st => ({ step: st.step + 1 })); window.scrollTo(0, 0); }
+  }
+}
+</script>
+</body>
+</html>
