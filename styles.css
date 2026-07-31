@@ -563,12 +563,54 @@ input[type=range]::-moz-range-thumb {
 /* ---------- Druck / PDF ---------- */
 
 @media print {
-  @page { margin: 14mm; }
-  body { background: #fff; }
+  @page { margin: 10mm; size: A4; }
+  html, body { background: #fff; font-size: 11.5px; }
   .shell { padding: 0; }
   .col { max-width: none; }
   [data-print="hide"] { display: none !important; }
-  .card, .card--dark, .stat { break-inside: avoid; box-shadow: none; }
+  .card, .card--dark, .card--plain, .card--outline, .stat {
+    break-inside: avoid; box-shadow: none; border-radius: 10px;
+    padding: 12px 14px !important; margin-top: 8px !important;
+  }
   .card--dark { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   .ratio i, .catrow .track i, .choice .bar i { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .wordmark { font-size: 15px !important; }
+  h2.serif { font-size: 22px !important; margin-top: 6px !important; }
+  .duo { margin-top: 10px !important; gap: 10px !important; }
+  .duo .big { font-size: 38px !important; }
+  .duo .slash { font-size: 22px !important; padding-bottom: 6px !important; }
+  .ratio { margin-top: 10px !important; height: 7px; }
+  .verdict { font-size: 11.5px !important; margin-top: 8px !important; }
+
+  .stats { gap: 6px !important; }
+  .stat { padding: 10px 12px !important; }
+  .stat .v { font-size: 20px !important; margin-top: 4px !important; }
+  .stat .n { font-size: 9.5px !important; margin-top: 2px !important; }
+
+  .table > div { padding: 4px 0 !important; font-size: 10.5px !important; }
+  .table > div.num { font-size: 13px !important; }
+
+  .catrow { margin-top: 8px !important; }
+  .catrow .track { margin-top: 4px !important; height: 6px; }
+
+  .mental-top { margin-top: 10px !important; padding-bottom: 10px !important; gap: 10px !important; }
+  .mental-top .big { font-size: 32px !important; }
+  .card--dark p { font-size: 10.5px !important; margin-top: 8px !important; }
+  .mental-foot { margin-top: 10px !important; padding-top: 10px !important; gap: 12px !important; }
+  .mental-foot .v { font-size: 18px !important; margin-top: 3px !important; }
+
+  .swap { margin-top: 8px !important; padding-top: 8px !important; gap: 10px !important; }
+  .swap .label { font-size: 15px !important; }
+  .swap .text { font-size: 10.5px !important; margin-top: 3px !important; }
+  .after { margin-top: 8px !important; padding-top: 8px !important; }
+  .after .v { font-size: 17px !important; }
+
+  .sign { display: none; }
+  .sign-names { display: none; }
+  .card--outline p { display: none; }
+
+  .brandfoot { margin-top: 10px !important; }
+  .brandfoot .w { font-size: 13px !important; }
+  .brandfoot .s { font-size: 8px !important; margin-top: 2px !important; }
 }

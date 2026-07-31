@@ -235,16 +235,17 @@
 
   function choiceButtons(id, current, cls) {
     var out = '';
-    [0, 25, 50, 75, 100].forEach(function (val) {
-      var on = current === val;
-      var fill = val;
+    [0, 25, 50, 75, 100].forEach(function (displayVal) {
+      var aShare = 100 - displayVal;
+      var on = current === aShare;
+      var fill = displayVal;
       if (cls === 'mini') {
-        out += '<button type="button" class="mini" aria-pressed="' + on + '" title="' + esc(choiceLabel(val)) +
-          '" aria-label="' + esc(choiceLabel(val)) + '" data-act="pick" data-id="' + id + '" data-val="' + val + '">' +
+        out += '<button type="button" class="mini" aria-pressed="' + on + '" title="' + esc(choiceLabel(aShare)) +
+          '" aria-label="' + esc(choiceLabel(aShare)) + '" data-act="pick" data-id="' + id + '" data-val="' + aShare + '">' +
           bar(fill) + '</button>';
       } else {
         out += '<button type="button" class="choice" aria-pressed="' + on + '" data-act="pick-next" data-id="' + id +
-          '" data-val="' + val + '">' + bar(fill, 36) + '<span>' + esc(choiceLabel(val)) + '</span></button>';
+          '" data-val="' + aShare + '">' + bar(fill, 36) + '<span>' + esc(choiceLabel(aShare)) + '</span></button>';
       }
     });
     return out;
@@ -266,7 +267,7 @@
         '<span class="rule-row"><span class="rule"></span>Fair Care Check<span class="rule"></span></span>' +
       '</div>' +
       '<h1 class="display">Wer macht<br><em>eigentlich was?</em></h1>' +
-      '<p class="lede">44 Fragen, ehrlich beantwortet. Danach steht schwarz auf creme, wie viele Stunden, wie viel Kopf und wie viele Euro eure unsichtbare Arbeit wert ist – als Datei zum Behalten.</p>' +
+      '<p class="lede">44 Fragen, ehrlich beantwortet. Danach steht schwarz auf creme, wie viele Stunden und wie viel Denkarbeit eure unsichtbare Arbeit jeweils erfordert und wie viel monetären Wert sie hat – und am Ende bekommt ihr eine Auswertung zum Ausdrucken und Behalten.</p>' +
 
       '<div class="card" style="margin-top:32px">' +
         '<div class="eyebrow" style="margin-bottom:20px">Wer seid ihr zwei?</div>' +
@@ -275,12 +276,12 @@
             '<input type="text" autocomplete="off" placeholder="Name" value="' + esc(state.nameA) + '" data-act="nameA"></label>' +
           '<label class="field"><span class="field-label">Person B</span>' +
             '<input type="text" autocomplete="off" placeholder="Name" value="' + esc(state.nameB) + '" data-act="nameB"></label>' +
-          '<label class="rate"><span class="field-label">Stundensatz</span>' +
+          '<label class="rate"><span class="field-label">STUNDENSATZ ZUM BERECHNEN DES WERTS</span>' +
             '<span style="display:flex;align-items:baseline;gap:5px">' +
               '<input type="number" inputmode="numeric" min="1" step="1" value="' + state.rate + '" data-act="rate">' +
               '<span class="unit">€ / h</span></span></label>' +
         '</div>' +
-        '<p style="font-size:12px;line-height:1.5;color:var(--gedaempft-2);margin:16px 0 0">18 € entspricht etwa einer bezahlten Haushaltshilfe. Wer den Wert der eigenen Zeit rechnen will, nimmt den eigenen Brutto-Stundenlohn.</p>' +
+        '<p style="font-size:12px;line-height:1.5;color:var(--gedaempft-2);margin:16px 0 0">18 € entspricht etwa einer bezahlten Haushaltshilfe. Wer den Wert der eigenen Zeit wirklich realistisch berechnen will, nimmt den eigenen Brutto-Stundenlohn.</p>' +
       '</div>' +
 
       '<div style="margin-top:26px">' +
@@ -294,7 +295,7 @@
         '</div>' +
       '</div>' +
 
-      '<button type="button" class="btn btn--primary" style="margin-top:26px" data-act="start">Losrechnen</button>' +
+      '<button type="button" class="btn btn--primary" style="margin-top:26px" data-act="start">CARE CHECK STARTEN</button>' +
       '<p class="fineprint" style="margin-top:14px">ca. 6 Minuten · alles bleibt auf eurem Gerät</p>' +
     '</div>';
   }
@@ -327,7 +328,7 @@
         ? '<div style="margin-top:24px">' +
             '<div class="split-head"><span class="n">' + esc(nameA()) + '</span><span class="n">' + esc(nameB()) + '</span></div>' +
             '<div class="split-pct"><span class="a">' + sp + ' %</span><span class="b">' + (100 - sp) + ' %</span></div>' +
-            '<input type="range" min="0" max="100" step="5" value="' + sp + '" aria-label="Verteilung" data-act="slider" data-id="' + task.id + '">' +
+            '<input type="range" min="0" max="100" step="5" value="' + (100 - sp) + '" aria-label="Verteilung" data-act="slider" data-id="' + task.id + '">' +
             '<div class="split-word">' + esc(word) + '</div>' +
           '</div>'
         : '<div class="choices">' + choiceButtons(task.id, sp, 'choice') + '</div>';
@@ -393,12 +394,8 @@
     '<div class="col" style="padding-top:28px">' +
       '<div class="result-head" data-print="hide">' +
         '<button type="button" class="link-back" data-act="back">← ändern</button>' +
-        '<span style="display:flex;gap:8px">' +
-          '<button type="button" class="btn btn--pill is-gold" data-act="csv">Sheets</button>' +
-          '<button type="button" class="btn btn--pill is-rose" data-act="print">PDF</button>' +
-        '</span>' +
+        '<button type="button" class="btn btn--pill is-rose" data-act="print">Als PDF drucken</button>' +
       '</div>' +
-      '<p class="export-note" data-print="hide">„Sheets" lädt eine CSV mit allen 44 Aufgaben und fertigen Formeln – in Google Sheets importieren und live weiterrechnen.</p>' +
 
       '<div class="card">' +
         '<div class="wordmark" style="text-align:center;font-size:20px">Ochsenglitter</div>' +
@@ -453,8 +450,8 @@
           '<div class="cap">der Denk-, Plan- und Erinnerungsarbeit liegt bei ' + esc(A) + '.</div></div>' +
         '<p>' + esc(mentalText) + '</p>' +
         '<div class="mental-foot">' +
-          '<div><div class="k">Kopfarbeit / Woche</div><div class="v">' + fmtN((r.menA + r.menB) / 60, 1) + ' h</div></div>' +
-          '<div><div class="k">Sichtbare Arbeit</div><div class="v">' + fmtN((r.mA + r.mB - r.menA - r.menB) / 60, 1) + ' h</div></div>' +
+          '<div><div class="k">Kopfarbeit / Woche, gesamt</div><div class="v">' + fmtN((r.menA + r.menB) / 60, 1) + ' h</div></div>' +
+          '<div><div class="k">Sichtbare Arbeit, gesamt</div><div class="v">' + fmtN((r.mA + r.mB - r.menA - r.menB) / 60, 1) + ' h</div></div>' +
         '</div>' +
       '</div>' +
 
@@ -635,7 +632,7 @@
     else if (act === 'rate') { state.rate = Math.max(1, Number(el.value) || 1); save(); }
     else if (act === 'slider') {
       var id = el.getAttribute('data-id');
-      state.split[id] = Number(el.value);
+      state.split[id] = 100 - Number(el.value);
       var wrap = el.parentNode;
       var pct = wrap.querySelector('.split-pct');
       var word = wrap.querySelector('.split-word');
