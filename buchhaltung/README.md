@@ -8,6 +8,9 @@ eigenständiges Werkzeug für die eigene Buchhaltung.
 
 ---
 
+**Wie der Prozess im Alltag läuft — wer was wann macht — steht in
+[PROZESS.md](PROZESS.md).** Dieses Dokument beschreibt das Werkzeug selbst.
+
 ## Der einfachste Weg in vier Regeln
 
 Belege fehlen fast nie, weil jemand schlampt. Sie fehlen, weil sie gar nicht

@@ -26,6 +26,8 @@ import abgleich
 import belegindex
 import kontoauszug
 import privatcheck
+import story
+import uebersicht
 from gemeinsam import tabelle_schreiben
 
 HIER = os.path.dirname(os.path.abspath(__file__))
@@ -125,10 +127,28 @@ def main(argumente: list[str]) -> int:
     else:
         print("Privatkonto: keine Datei gefunden, Schritt uebersprungen.")
 
-    print(f"\nFertig. Ergebnisse in {os.path.normpath(ausgabe)}")
-    print("  bericht.md          welche Buchungen noch einen Beleg brauchen")
+    # Gesamtuebersicht ueber alle Konten, Umbuchungen herausgerechnet.
+    print("Uebersicht:")
+    quellen = [buchungsdatei]
     if privatdateien:
-        print("  privat-bericht.md   welche privaten Ausgaben betrieblich sein koennten")
+        quellen.append(os.path.join(ausgabe, "privatbuchungen.csv"))
+    argumentliste = quellen + ["--ausgabe", ausgabe]
+    if ab:
+        argumentliste += ["--ab", ab.isoformat(), "--bis", bis.isoformat()]
+    uebersicht.main(argumentliste)
+
+    if privatdateien:
+        print("Zeigen lohnt sich:")
+        story.main([
+            os.path.join(ausgabe, "privatbuchungen.csv"), "--ausgabe", ausgabe
+        ])
+
+    print(f"\nFertig. Ergebnisse in {os.path.normpath(ausgabe)}")
+    print("  bericht.md            welche Buchungen noch einen Beleg brauchen")
+    print("  uebersicht.md         Einnahmen, Ausgaben, Ruecklagen ohne Umbuchungen")
+    if privatdateien:
+        print("  privat-bericht.md     welche privaten Ausgaben betrieblich sein koennten")
+        print("  story-kandidaten.md   was sich zu zeigen lohnt, solange die Frist laeuft")
     return 0
 
 

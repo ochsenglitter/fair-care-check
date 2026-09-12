@@ -1,0 +1,4 @@
+einstellung;wert;erlaeuterung
+mindestbetrag;50.00;Ab diesem Betrag lohnt sich das Zeigen. Bei 20 Prozent entspricht das 10 Euro Wirkung.
+anteil_prozent;20;Aus der Betriebspruefung: Anteil privater Kosten, der bei Zeigen im Content betrieblich absetzbar ist.
+frist_tage;45;So lange nach dem Kauf gilt das Zeigen noch als zeitnah. Danach sinkt die Glaubwuerdigkeit.

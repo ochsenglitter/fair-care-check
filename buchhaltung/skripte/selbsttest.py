@@ -131,6 +131,40 @@ ergebnis = abgleich.zuordnen(buchungen, [])
 pruefe(ergebnis[0]["status"] == "belegfrei", "Privatentnahme braucht keinen Beleg")
 pruefe(ergebnis[1]["status"] == "belegfrei", "Umbuchung zwischen eigenen Konten ebenso")
 
+print("Umbuchungen zwischen eigenen Konten")
+import uebersicht
+konten = {"firmenkonto": "geschaeft", "meinprivat": "privat", "sparbuch": "ruecklage"}
+pruefe(uebersicht.konto_art("firmenkonto", konten) == "geschaeft", "Konto nach Namen eingeordnet")
+pruefe(uebersicht.konto_art("meinprivat-2026-08", konten) == "privat", "Kontoname im Dateinamen")
+pruefe(uebersicht.konto_art("unbekannt", konten) == "geschaeft", "im Zweifel geschaeftlich")
+
+bewegungen = [
+    {"datum": "2026-08-10", "betrag": "-2000.00", "empfaenger": "Uebertrag",
+     "verwendungszweck": "", "konto": "firmenkonto"},
+    {"datum": "2026-08-11", "betrag": "2000.00", "empfaenger": "Uebertrag",
+     "verwendungszweck": "", "konto": "meinprivat"},
+    {"datum": "2026-08-12", "betrag": "-49.99", "empfaenger": "Anbieter",
+     "verwendungszweck": "Abo", "konto": "firmenkonto"},
+]
+for b in bewegungen:
+    b["_datum"] = datum_lesen(b["datum"])
+    b["_betrag"] = betrag_lesen(b["betrag"])
+    b["_konto"] = b["konto"]
+    b["_art"] = uebersicht.konto_art(b["konto"], konten)
+ergebnis = uebersicht.auswerten(bewegungen)
+pruefe(ergebnis["zahlen"]["umbuchungen"] == 1, "Gegenbuchung als Umbuchung erkannt")
+pruefe(
+    abs(ergebnis["zahlen"]["ausgaben_betrieb"] - 49.99) < 0.01,
+    "Umbuchung zaehlt nicht als Betriebsausgabe",
+)
+pruefe(ergebnis["zahlen"]["ausgaben_privat"] == 0.0, "Gegenseite zaehlt auch nicht als privat")
+
+print("Zeigen lohnt sich")
+import story
+werte = story.einstellungen()
+pruefe(werte["anteil_prozent"] == 20.0, "Anteil aus der Betriebspruefung ist hinterlegt")
+pruefe(werte["mindestbetrag"] > 0, "Mindestbetrag ist gesetzt")
+
 print("Regelkatalog")
 regeln = privatcheck.regeln_laden()
 pruefe(len(regeln) > 15, "Regeln werden geladen")

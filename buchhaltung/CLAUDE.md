@@ -28,13 +28,21 @@ Deshalb gilt für jede Ausgabe von Claude:
 - Läuft eine Betriebsprüfung, ist Zurückhaltung angebracht: nichts umbenennen
   oder verschieben, was zu einem geprüften Jahr gehört, ohne Rückfrage.
 
-## Vorsicht bei Änderungen an vorhandenen Daten
+## Die bestehende Ablage im Drive wird nicht verändert
 
-Belege im Drive nur umbenennen oder verschieben, wenn ausdrücklich darum
-gebeten wurde, und dann nachvollziehbar protokolliert. Ein verschobener Beleg,
-den niemand mehr findet, ist schlimmer als ein schlecht benannter.
+Das ist keine Empfehlung, sondern eine Grenze. In der gewachsenen
+Ordnerstruktur wird **nichts** umbenannt, verschoben, überschrieben oder
+gelöscht — auch nicht, um aufzuräumen, und auch nicht, wenn ein Dateiname
+offensichtlich falsch ist. Fehler werden gemeldet, nicht behoben.
 
-Löschen nie ohne Rückfrage.
+Der Grund: Nadine (Buchhaltung) und die Steuerkanzlei arbeiten mit dieser
+Struktur, und eine Betriebsprüfung hat sie in diesem Zustand gesehen.
+
+Geschrieben wird ausschließlich in einen eigenen Ordner `Buchhaltung/Abgleich/`
+oder gar nicht — dann gehen die Listen in den Chat. Vor jedem Schreibvorgang
+ins Drive gilt: nachfragen.
+
+Lesen ist unbeschränkt erlaubt.
 
 ## Am Regelkatalog arbeiten
 
@@ -47,6 +55,20 @@ gern ergänzen, aber:
   Trefferliste ansehen. Ein Fehlalarm kostet Vertrauen in die ganze Liste.
 - Die Ausschlussliste ist genauso wichtig wie die Kandidatenliste. Sie
   verhindert, dass privat Gebliebenes versehentlich angesetzt wird.
+
+## Die 20-Prozent-Regel
+
+Aus der Betriebsprüfung stammt die Feststellung, dass von privaten Kosten, die
+im eigenen Content gezeigt werden, 20 Prozent betrieblich abziehbar sind. Diese
+Zahl ist eine **Vorgabe der Eigentümerin**, kein allgemeines Steuerrecht — sie
+gilt für diesen Betrieb, weil sie dort geprüft wurde.
+
+Sie ist deshalb an einer Stelle hinterlegt (`regeln/story-regeln.csv`) und wird
+nirgends im Code fest verdrahtet. In Texten immer als das benennen, was sie
+ist, und nie zu einer allgemeinen Aussage verallgemeinern.
+
+Der Abzug hängt am Nachweis des Zeigens. Jede Ausgabe dieses Werkzeugs, die
+solche Kandidaten nennt, muss den nötigen Nachweis mit nennen.
 
 ## Sprache
 
