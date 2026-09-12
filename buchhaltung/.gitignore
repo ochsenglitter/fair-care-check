@@ -1,9 +1,0 @@
-# Echte Buchhaltungsdaten gehoeren nicht ins Repository - auch nicht in ein privates.
-/daten/eingang/*
-/daten/export/*
-/daten/belege
-!/daten/eingang/.gitkeep
-!/daten/export/.gitkeep
-
-__pycache__/
-*.pyc

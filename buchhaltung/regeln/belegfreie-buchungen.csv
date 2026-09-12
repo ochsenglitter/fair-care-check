@@ -1,4 +1,0 @@
-art;stichwoerter;begruendung
-Privatentnahme;privatentnahme|private entnahme|privateinlage|private einlage|entnahme inhaber;Bewegung zwischen Betriebs- und Privatvermoegen, kein Leistungsaustausch. Wird gebucht, braucht aber keinen Fremdbeleg.
-Umbuchung eigenes Konto;wallet uebertragen|wallet ubertragen|withdrawal transfer|umbuchung|uebertrag eigenes konto|interne buchung|eigenuebertrag;Geld wechselt nur das eigene Konto. Der Gegenposten steht im anderen Auszug.
-Kontofuehrung;kontofuehrungsentgelt|kontofuehrungsgebuehr|depotentgelt;Der Kontoauszug selbst weist die Gebuehr aus.
