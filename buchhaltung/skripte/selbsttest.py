@@ -63,8 +63,8 @@ pruefe(eintrag["datum"] == "2026-08-29", "Datum aus dem Zielschema")
 pruefe(eintrag["betrag"] == "87.45", "Betrag aus dem Dateinamen")
 pruefe(eintrag["anbieter"] == "Amazon", "Anbieter aus dem Zielschema")
 
-eintrag = belegindex.eintrag_bauen("Rechnung_RE2026-326_31.08.2026_WunderStudios.pdf", "", "")
-pruefe(eintrag["anbieter"] == "WunderStudios", "Anbieter hinter Belegart und Rechnungsnummer")
+eintrag = belegindex.eintrag_bauen("Rechnung_RE2026-326_31.08.2026_Musterkundin.pdf", "", "")
+pruefe(eintrag["anbieter"] == "Musterkundin", "Anbieter hinter Belegart und Rechnungsnummer")
 pruefe(eintrag["datum"] == "2026-08-31", "Datum mitten im Namen")
 
 eintrag = belegindex.eintrag_bauen("2026-09-07_StB Tewes_20260909121632060.pdf", "", "")
