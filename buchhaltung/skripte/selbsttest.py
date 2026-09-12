@@ -43,6 +43,19 @@ pruefe(aehnlichkeit("Les Lunes GmbH", "LES LUNES") > 0.9, "Rechtsform stoert nic
 pruefe(aehnlichkeit("ANTHROPIC PBC", "Anthorpic") > 0.55, "Tippfehler wird noch erkannt")
 pruefe(aehnlichkeit("Aldi Sued", "Kaufland") == 0.0, "fremde Namen gelten nicht als aehnlich")
 pruefe(aehnlichkeit("Hiscox", "Les Lunes") == 0.0, "kein Treffer durch zufaellige Buchstaben")
+pruefe(aehnlichkeit("ANTHROPIC* CLAUDE SUB", "Anthropic") > 0.7, "Anbieter steht vor dem Stern")
+pruefe(
+    aehnlichkeit("Zahlung fuer Rechnung 1002-2017", "Rechnung_RE2026-322.1_Trueglow") == 0.0,
+    "das Wort Rechnung allein verbindet nichts",
+)
+
+from gemeinsam import referenz_trifft
+pruefe(referenz_trifft("RE2026-324 Wunderstudios", "Rechnung_RE2026-324_WunderStudios.pdf"),
+       "Rechnungsnummer trotz Bindestrich erkannt")
+pruefe(referenz_trifft("Rechnung 20260016", "2026-08-10_Hoehn_RE20260016_Ochsenglitter.pdf"),
+       "Rechnungsnummer ohne Trennzeichen erkannt")
+pruefe(not referenz_trifft("Rechnung 20260016", "2026-08-31_Hoehn_RE20260017_Ochsenglitter.pdf"),
+       "benachbarte Rechnungsnummer trifft nicht")
 
 print("Belegnamen lesen")
 eintrag = belegindex.eintrag_bauen("2026-08-29_Amazon_Bueromaterial 87,45EUR.pdf", "", "2026")
@@ -106,6 +119,17 @@ pruefe(
     ergebnis["Les Lunes GmbH"]["status"] == "fehlt",
     "Datumsnaehe allein fuehrt zu keiner Zuordnung",
 )
+
+buchungen = abgleich.vorbereiten([
+    {"datum": "2026-08-27", "betrag": "-3000.00", "richtung": "ausgabe",
+     "empfaenger": "Elena Krefeld", "verwendungszweck": "Privatentnahme", "konto": "geschaeft"},
+    {"datum": "2026-08-30", "betrag": "2000.00", "richtung": "einnahme",
+     "empfaenger": "Von einer anderen Wallet uebertragen",
+     "verwendungszweck": "Withdrawal transfer", "konto": "geschaeft"},
+], None, None)
+ergebnis = abgleich.zuordnen(buchungen, [])
+pruefe(ergebnis[0]["status"] == "belegfrei", "Privatentnahme braucht keinen Beleg")
+pruefe(ergebnis[1]["status"] == "belegfrei", "Umbuchung zwischen eigenen Konten ebenso")
 
 print("Regelkatalog")
 regeln = privatcheck.regeln_laden()

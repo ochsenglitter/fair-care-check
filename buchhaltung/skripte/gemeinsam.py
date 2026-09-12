@@ -156,9 +156,17 @@ def entschaerfen(text: str) -> str:
 
 # Rechtsformen und Zahlungsdienstleister sagen nichts ueber den Anbieter aus.
 FUELLWOERTER = {
+    # Rechtsformen und Orte
     "gmbh", "ug", "ag", "kg", "ohg", "gbr", "mbh", "co", "inc", "ltd", "llc", "bv",
     "sarl", "srl", "se", "eg", "ev", "haftungsbeschraenkt", "und", "der", "die", "das",
-    "gmbhcokg", "deutschland", "germany", "europe", "int", "gmbhco",
+    "gmbhcokg", "deutschland", "germany", "europe", "int", "gmbhco", "com", "www",
+    # Belegwoerter: stehen auf fast jedem Beleg und sagen nichts ueber den Anbieter.
+    # Ohne sie wurde "Zahlung fuer Rechnung ..." schon einmal einer fremden
+    # Rechnung zugeordnet, nur weil beide das Wort "Rechnung" enthielten.
+    "rechnung", "rechnungsnr", "rechnungsnummer", "invoice", "zahlung", "beleg",
+    "gutschrift", "quittung", "kunde", "kundennr", "kdnr", "nr", "vom", "fur", "fuer",
+    "payment", "num", "sagt", "danke", "ihr", "einkauf", "bei", "limited", "abbuchung",
+    "konto", "statement", "subscription", "sub", "bill", "na",
 }
 ZAHLUNGSDIENSTE = (
     "paypal", "klarna", "sumup", "stripe", "shopify", "amazon payments", "amzn mktp",
@@ -176,14 +184,13 @@ def anbieter_kern(text: str) -> str:
     if not roh:
         return ""
 
-    # Bei Zahlungsdienstleistern steht der echte Empfaenger hinter dem Stern.
-    if "*" in (text or ""):
-        hinter_stern = entschaerfen((text or "").split("*", 1)[1])
-        if hinter_stern:
-            roh = hinter_stern
+    # Nur wenn vorn wirklich ein Zahlungsdienstleister steht, ist der Anbieter
+    # der Teil dahinter. Bei "ANTHROPIC* CLAUDE SUB" steht er davor, deshalb
+    # wird der Stern sonst einfach wie ein Leerzeichen behandelt.
     for dienst in ZAHLUNGSDIENSTE:
         if roh.startswith(dienst + " "):
             roh = roh[len(dienst):].strip()
+            break
 
     woerter = [w for w in roh.split() if w not in FUELLWOERTER and not w.isdigit()]
     # Sehr lange Verwendungszwecke auf den aussagekraeftigen Anfang kuerzen.
@@ -213,6 +220,33 @@ def aehnlichkeit(links: str, rechts: str) -> float:
     # deutsche Firmennamen kommen allein durch gemeinsame Buchstaben auf 0,3 bis 0,4.
     wert = difflib.SequenceMatcher(None, a, b).ratio()
     return wert if wert >= 0.55 else 0.0
+
+
+
+REFERENZ = re.compile(r"\d{6,}")
+
+
+def referenzen(text: str) -> set[str]:
+    """Zieht Rechnungs- und Kundennummern aus einem Text.
+
+    Trennzeichen fallen weg, damit 'RE2026-324' und 'RE2026324' dieselbe
+    Nummer ergeben. Erst ab sechs Ziffern, sonst treffen zufaellige Zahlen.
+    """
+    verdichtet = re.sub(r"[^0-9a-zA-Z]", "", text or "")
+    return set(REFERENZ.findall(verdichtet))
+
+
+def referenz_trifft(links: str, rechts: str) -> bool:
+    """Wahr, wenn eine Nummer aus dem einen Text im anderen wieder auftaucht."""
+    verdichtet_rechts = re.sub(r"[^0-9a-zA-Z]", "", rechts or "")
+    verdichtet_links = re.sub(r"[^0-9a-zA-Z]", "", links or "")
+    for nummer in referenzen(links):
+        if nummer in verdichtet_rechts:
+            return True
+    for nummer in referenzen(rechts):
+        if nummer in verdichtet_links:
+            return True
+    return False
 
 
 def euro(betrag: float | None) -> str:

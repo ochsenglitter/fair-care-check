@@ -16,7 +16,36 @@ import os
 import sys
 from collections import defaultdict
 
-from gemeinsam import aehnlichkeit, euro, tabelle_lesen, tabelle_schreiben
+from gemeinsam import (
+    aehnlichkeit, entschaerfen, euro, referenz_trifft, tabelle_lesen, tabelle_schreiben,
+)
+
+BELEGFREI_DATEI = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "..", "regeln", "belegfreie-buchungen.csv"
+)
+
+
+def belegfrei_regeln(pfad: str = BELEGFREI_DATEI) -> list[tuple[str, str]]:
+    """Muster fuer Buchungen, die es gibt, die aber keinen Fremdbeleg haben koennen."""
+    if not os.path.exists(pfad):
+        return []
+    regeln = []
+    for zeile in tabelle_lesen(pfad):
+        for wort in (zeile.get("stichwoerter") or "").split("|"):
+            wort = entschaerfen(wort)
+            if wort:
+                regeln.append((wort, zeile.get("art", "")))
+    return regeln
+
+
+def ist_belegfrei(buchung: dict, regeln: list[tuple[str, str]]) -> str:
+    text = entschaerfen(
+        f"{buchung.get('empfaenger', '')} {buchung.get('verwendungszweck', '')}"
+    )
+    for wort, art in regeln:
+        if wort in text:
+            return art
+    return ''
 
 # Rechnungsdatum und Buchungstag liegen auseinander; vier Wochen sind normal.
 TAGE_VOLLE_PUNKTE = 3
@@ -58,6 +87,11 @@ def punktzahl(buchung: dict, beleg: dict) -> float:
         aehnlichkeit(text, beleg.get("titel", "")),
     )
 
+    # Taucht die Rechnungs- oder Kundennummer aus dem Verwendungszweck im
+    # Belegnamen wieder auf, ist das eindeutiger als jeder Namensvergleich.
+    if referenz_trifft(buchung.get("verwendungszweck", ""), beleg.get("titel", "")):
+        return 0.97
+
     # Ein uebereinstimmender Betrag ist der staerkste Einzelbeleg fuer eine Zuordnung.
     betragspunkte = 0.0
     if beleg["_betrag"] is not None:
@@ -78,8 +112,14 @@ def punktzahl(buchung: dict, beleg: dict) -> float:
 
 def zuordnen(buchungen: list[dict], belege: list[dict]) -> list[dict]:
     """Ordnet die besten Paare zuerst zu; jeder Beleg wird nur einmal vergeben."""
+    regeln = belegfrei_regeln()
+    for buchung in buchungen:
+        buchung["_belegfrei"] = ist_belegfrei(buchung, regeln)
+
     paare = []
     for b_index, buchung in enumerate(buchungen):
+        if buchung["_belegfrei"]:
+            continue  # braucht keinen Beleg, also auch keinen Zuordnungsversuch
         for l_index, beleg in enumerate(belege):
             wert = punktzahl(buchung, beleg)
             if wert >= PRUEFEN:
@@ -98,7 +138,11 @@ def zuordnen(buchungen: list[dict], belege: list[dict]) -> list[dict]:
     for b_index, buchung in enumerate(buchungen):
         treffer = beleg_fuer_buchung.get(b_index)
         zeile = dict(buchung)
-        if treffer is None:
+        if buchung["_belegfrei"]:
+            zeile.update(
+                status="belegfrei", beleg=buchung["_belegfrei"], beleg_pfad="", guete=""
+            )
+        elif treffer is None:
             zeile.update(status="fehlt", beleg="", beleg_pfad="", guete="")
         else:
             l_index, wert = treffer
@@ -127,8 +171,10 @@ def naechster_schritt(zeile: dict) -> str:
 def bericht_schreiben(pfad: str, zeilen: list[dict], zeitraum: str) -> str:
     offen = [z for z in zeilen if z["status"] in {"fehlt", "pruefen"}]
     fehlend = [z for z in zeilen if z["status"] == "fehlt"]
-    zugeordnet = len(zeilen) - len(offen)
-    quote = (zugeordnet / len(zeilen) * 100) if zeilen else 100.0
+    belegfrei = [z for z in zeilen if z["status"] == "belegfrei"]
+    zugeordnet = len(zeilen) - len(offen) - len(belegfrei)
+    pflichtig = len(zeilen) - len(belegfrei)
+    quote = (zugeordnet / pflichtig * 100) if pflichtig else 100.0
 
     # Nach Anbieter buendeln: aus vielen Einzelposten werden wenige Aufgaben.
     nach_anbieter: dict[str, list[dict]] = defaultdict(list)
@@ -145,11 +191,12 @@ def bericht_schreiben(pfad: str, zeilen: list[dict], zeitraum: str) -> str:
     text = [
         f"# Belegabgleich {zeitraum}",
         "",
-        f"- Buchungen geprueft: **{len(zeilen)}**",
-        f"- Mit Beleg: **{zugeordnet}** ({quote:.0f} %)",
+        f"- Buchungen geprueft: **{len(zeilen)}**, davon belegpflichtig **{pflichtig}**",
+        f"- Mit Beleg: **{zugeordnet}** ({quote:.0f} % der belegpflichtigen)",
         f"- Beleg fehlt: **{len(fehlend)}** "
         f"(Summe {euro(sum(abs(z['_betrag']) for z in fehlend))} EUR)",
         f"- Zuordnung unsicher, bitte bestaetigen: **{len(offen) - len(fehlend)}**",
+        f"- Ohne Belegpflicht (Privatentnahme, Umbuchung): **{len(belegfrei)}**",
         "",
     ]
 
@@ -269,7 +316,9 @@ def main(argumente: list[str]) -> int:
 
     offen = []
     for zeile in zeilen:
-        if zeile["status"] == "zugeordnet":
+        # Belegfreie Buchungen gehoeren nicht in die Arbeitsliste, sonst steht dort
+        # jeden Monat dieselbe Privatentnahme.
+        if zeile["status"] in {"zugeordnet", "belegfrei"}:
             continue
         offene_zeile = dict(zeile)
         offene_zeile["moeglicher_beleg"] = zeile["beleg"]
@@ -284,9 +333,11 @@ def main(argumente: list[str]) -> int:
     bericht_schreiben(os.path.join(ausgabeordner, "bericht.md"), zeilen, zeitraum)
 
     fehlend = sum(1 for z in zeilen if z["status"] == "fehlt")
+    belegfrei = sum(1 for z in zeilen if z["status"] == "belegfrei")
     print(
-        f"{len(zeilen)} Buchungen, {len(zeilen) - len(offen)} mit Beleg, "
-        f"{fehlend} ohne Beleg, {len(offen) - fehlend} zu bestaetigen"
+        f"{len(zeilen)} Buchungen: {len(zeilen) - len(offen) - belegfrei} mit Beleg, "
+        f"{fehlend} ohne Beleg, {len(offen) - fehlend} zu bestaetigen, "
+        f"{belegfrei} ohne Belegpflicht"
     )
     print(f"-> {os.path.join(ausgabeordner, 'bericht.md')}")
     return 0

@@ -50,7 +50,7 @@ ERKENNUNG = {
 
 def spalte_finden(kopf: list[str], schluessel: str) -> str | None:
     vereinfacht = {
-        spalte: spalte.lower().replace("ä", "a").replace("ö", "o").replace("ü", "u")
+        spalte: spalte.lower().replace("ä", "ae").replace("ö", "oe").replace("ü", "ue")
         for spalte in kopf
     }
     for bruchstueck in ERKENNUNG[schluessel]:
