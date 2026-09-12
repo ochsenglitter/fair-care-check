@@ -50,11 +50,11 @@ pruefe(
 )
 
 from gemeinsam import referenz_trifft
-pruefe(referenz_trifft("RE2026-324 Wunderstudios", "Rechnung_RE2026-324_WunderStudios.pdf"),
+pruefe(referenz_trifft("RE2026-999 Musterkundin", "Rechnung_RE2026-999_Musterkundin.pdf"),
        "Rechnungsnummer trotz Bindestrich erkannt")
-pruefe(referenz_trifft("Rechnung 20260016", "2026-08-10_Hoehn_RE20260016_Ochsenglitter.pdf"),
+pruefe(referenz_trifft("Rechnung 20260016", "2026-08-10_Dienstleisterin_RE20260016_Firma.pdf"),
        "Rechnungsnummer ohne Trennzeichen erkannt")
-pruefe(not referenz_trifft("Rechnung 20260016", "2026-08-31_Hoehn_RE20260017_Ochsenglitter.pdf"),
+pruefe(not referenz_trifft("Rechnung 20260016", "2026-08-31_Dienstleisterin_RE20260017_Firma.pdf"),
        "benachbarte Rechnungsnummer trifft nicht")
 
 print("Belegnamen lesen")
@@ -122,7 +122,7 @@ pruefe(
 
 buchungen = abgleich.vorbereiten([
     {"datum": "2026-08-27", "betrag": "-3000.00", "richtung": "ausgabe",
-     "empfaenger": "Elena Krefeld", "verwendungszweck": "Privatentnahme", "konto": "geschaeft"},
+     "empfaenger": "Inhaberin", "verwendungszweck": "Privatentnahme", "konto": "geschaeft"},
     {"datum": "2026-08-30", "betrag": "2000.00", "richtung": "einnahme",
      "empfaenger": "Von einer anderen Wallet uebertragen",
      "verwendungszweck": "Withdrawal transfer", "konto": "geschaeft"},
