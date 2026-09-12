@@ -6,6 +6,9 @@ Dieses Repository enthält zwei Dinge:
    `app.js`, `styles.css`, `support.js`). Siehe `README.md`.
 2. **`produktplanung/`** – die verbindliche Produktarchitektur des
    KI-/Automation-Business für Working Moms (Sarah, Fenja, Add-ons).
+3. **`buchhaltung/`** – Werkzeug für den Belegabgleich der eigenen Buchhaltung.
+   Eigenständig, mit eigener `CLAUDE.md`. Die Produktregeln unten gelten dort
+   **nicht**; die Einordnungstabelle ist auf diesen Ordner nicht anzuwenden.
 
 ## Pflicht: Produktarchitektur vor Produktentscheidungen lesen
 
