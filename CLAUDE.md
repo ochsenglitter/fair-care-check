@@ -62,3 +62,14 @@ eine Mutter danach nicht mehr selbst übernehmen?"
 ## Sprache
 
 Projektsprache ist Deutsch. Dokumentation, Commits und Antworten auf Deutsch.
+
+## Nicht in diesem Repository
+
+Die **Property Performance Group** (kaufmännische Indexberatung für
+Gewerbemietverträge, Indexmietprüfung, VPI, ALDI-Projekt) ist ein eigenes
+Geschäft und hat ein eigenes Repository: `property-performance-group`.
+Material dazu liegt im Drive-Ordner „Property Performance Group".
+
+Nichts davon gehört hierher, und nichts aus der Produktfamilie gehört dorthin.
+Wer in einer Session Material zur Indexberatung bekommt: im anderen Repository
+arbeiten, nicht in diesem.
