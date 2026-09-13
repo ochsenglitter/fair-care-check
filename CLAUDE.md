@@ -67,7 +67,7 @@ Projektsprache ist Deutsch. Dokumentation, Commits und Antworten auf Deutsch.
 
 Die **Property Performance Group** (kaufmännische Indexberatung für
 Gewerbemietverträge, Indexmietprüfung, VPI, ALDI-Projekt) ist ein eigenes
-Geschäft und hat ein eigenes Repository: `property-performance-group`.
+Geschäft und hat ein eigenes Repository: `ochsenglitter/PPG`.
 Material dazu liegt im Drive-Ordner „Property Performance Group".
 
 Nichts davon gehört hierher, und nichts aus der Produktfamilie gehört dorthin.
