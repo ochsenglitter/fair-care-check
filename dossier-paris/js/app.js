@@ -293,9 +293,9 @@
 
   /* ---------- Mission ---------- */
 
-  function starteMission(modus) {
+  function starteMission(modus, zielModulId) {
     DP.audio.freischalten();
-    mission = DP.missionBauen(modus);
+    mission = DP.missionBauen(modus, zielModulId);
     if (!mission.schritte.length) {
       alert("Gerade ist nichts fällig. Starte eine normale Mission.");
       return;
@@ -834,7 +834,12 @@
       </div>
 
       <div class="klein grau zentriert">Tipp aufs Französische, um es zu hören.</div>
-      <button class="btn btn-geist mt-gross" id="zurueck">Zurück zur Akte</button>`);
+
+      <button class="btn btn-haupt mt-gross" id="trainieren">Dieses Thema trainieren
+        <span class="unter">10 Minuten, nur dieses Modul – für die Woche vor der Arbeit</span></button>
+      <button class="btn btn-geist mt" id="zurueck">Zurück zur Akte</button>`);
+
+    auf("#trainieren", "click", () => starteMission("thema", m.id));
 
     auf("[data-sprich]", "click", ev => DP.audio.sprechen(ev.currentTarget.dataset.sprich));
     auf("#zurueck", "click", zeigeAkte);

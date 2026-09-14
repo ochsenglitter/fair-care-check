@@ -87,9 +87,11 @@
 
   /* ---------- Mission zusammenstellen ---------- */
 
-  DP.missionBauen = function (modus) {
+  DP.missionBauen = function (modus, zielModulId) {
     const benutzt = new Set();
-    const modul = DP.aktuellesModul();
+    const modul = zielModulId
+      ? ((window.CURRICULUM || []).find(m => m.id === zielModulId) || DP.aktuellesModul())
+      : DP.aktuellesModul();
     const schritte = [];
     const beatNr = DP.stand.fortschritt.beat[modul.id] || 0;
     const story = (window.STORY || {})[modul.id];
@@ -106,6 +108,15 @@
         items.forEach(i => schritte.push({ art: "item", item: i }));
       }
       return { modus: modus, modul: modul, schritte: schritte, titel: "WIEDERHOLUNG", dauer: 10 * 60 };
+    }
+
+    /* Gezieltes Training eines Themas – fuer die Woche vor der Klassenarbeit.
+       Nur dieses Modul, keine Story, kein neuer Stoff. */
+    if (modus === "thema") {
+      const g = modul.grammar[0];
+      if (g) schritte.push({ art: "regel", modul: modul.id, grammatik: g });
+      waehlen(modul.id, 22, benutzt).forEach(i => schritte.push({ art: "item", item: i, phase: "training" }));
+      return { modus: modus, modul: modul, schritte: schritte, titel: "TRAINING – " + modul.titel.toUpperCase(), dauer: 10 * 60 };
     }
 
     if (modus === "pruefung") {
@@ -203,6 +214,9 @@
   DP.missionAbschliessen = function (mission, statistik) {
     const modulId = mission.modul.id;
 
+    /* Nur die regulaere Mission treibt die Geschichte voran. Wiederholung,
+       Pruefung und Thementraining zaehlen fuer Serie und Punkte, verschieben
+       aber nichts im Erzaehlstrang. */
     if (mission.modus === "mission" || mission.modus === "kurz") {
       /* Gezeigte Regeln merken */
       mission.schritte.filter(s => s.art === "regel").forEach(s => {
@@ -234,7 +248,7 @@
 
     DP.stand.tag.missionFertig = true;
     DP.serieZaehlen();
-    DP.stand.xp += mission.modus === "kurz" ? 25 : 50;
+    DP.stand.xp += (mission.modus === "kurz" || mission.modus === "thema") ? 25 : 50;
     const neueOrden = DP.ordenPruefen();
     DP.speichern();
     return neueOrden;
@@ -294,21 +308,25 @@
   };
 
   DP.einstufungAuswerten = function (ergebnisse) {
-    let gekonnt = 0, letztesGekonnt = -1;
-    ergebnisse.forEach((e, i) => {
-      if (e.richtig) {
-        DP.modulVormerken(e.modulId, 2);
-        gekonnt++;
-        letztesGekonnt = i;
-      }
-    });
-    /* Startmodul: das erste, das nicht sass – aber nie weiter als bis zur
-       letzten gekonnten Frage, damit niemand Stoff ueberspringt, den er braucht. */
+    /* Startmodul: das erste, das nicht sass. */
     let start = 0;
     for (let i = 0; i < ergebnisse.length; i++) {
       if (!ergebnisse[i].richtig) { start = i; break; }
       start = i + 1;
     }
+
+    let gekonnt = 0, letztesGekonnt = -1;
+    ergebnisse.forEach((e, i) => {
+      if (!e.richtig) return;
+      gekonnt++;
+      letztesGekonnt = i;
+      /* Alles vor dem Startpunkt sass durchgehend – das wird als solide
+         vorgemerkt. Ein einzelner Treffer weiter hinten kann auch Raten
+         gewesen sein: der gibt nur einen kleinen Vorsprung, kein Freilos.
+         Sonst waere ausgerechnet das Passé composé nach einem Glückstreffer
+         in zwei Einsätzen "erledigt". */
+      DP.modulVormerken(e.modulId, i < start ? 2 : 1);
+    });
     start = Math.min(start, letztesGekonnt + 1, (window.CURRICULUM || []).length - 1);
     if (start < 0) start = 0;
 

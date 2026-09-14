@@ -74,15 +74,34 @@ Auswahl, Tippen mit Akzenttastatur, Hörverstehen, Satzbau und Paare-Zuordnen.
 Bei 15 Minuten am Tag reicht das für ein komplettes Schuljahr, inklusive
 Wiederholungen.
 
+## Ablauf
+
+Beim ersten Start steht eine **Einstufung**: 16 Fragen quer durch den Stoff.
+Wer die ersten Module sicher beantwortet, überspringt sie – nach zwei Jahren
+Unterricht ist eine Woche „bonjour" der schnellste Weg, wieder aufzuhören.
+Was dabei zu großzügig eingeschätzt wurde, fällt in den Wiederholungen der
+nächsten Tage auf und korrigiert sich selbst.
+
 ## Modi
 
 - **Mission (15 min)** – der Normalfall. Aufwärmen, Rückblick auf Fälliges,
   neue Regel, Training, Entschlüsselung, Story.
 - **Kurzeinsatz (5 min)** – für schlechte Tage. Hält die Serie am Leben.
 - **Wiederholen** – nur das, was gerade fällig ist.
+- **Thementraining** – über die Akte ein einzelnes Modul auswählen und zehn
+  Minuten gezielt üben. Für die Woche vor der Klassenarbeit.
 - **Prüfungssimulation** – 20 gemischte Aufgaben aus allem bisher Gelernten,
-  mit grober Selbsteinschätzung. Vor einer Klassenarbeit.
+  mit grober Selbsteinschätzung.
+- **Spickzettel** – alle Regeln, Wörter und Sätze eines Moduls zum Nachschlagen,
+  jedes französische Wort antippbar zum Anhören.
 - **Bericht** – Statistik zum Vorzeigen, als Text kopierbar.
+
+## Tempo
+
+Ein Modul dauert vier bis fünf Einsätze, bei rund 30 Aufgaben pro Mission. Wer
+täglich fünfzehn Minuten macht, arbeitet sich in etwa drei bis vier Monaten
+durch die 24 Module – ein Schulhalbjahr, mit Luft für Lücken. Wer in der
+Einstufung schon etwas kann, ist schneller durch.
 
 ## Technik
 

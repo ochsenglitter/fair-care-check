@@ -185,7 +185,11 @@ DP.serieZaehlen = function () {
 
 /* ---------- Wiederholungs-Algorithmus (angelehnt an SM-2, vereinfacht) ---------- */
 
-const INTERVALLE = [0, 1, 2, 4, 8, 16, 32, 60];
+/* Abstaende in Tagen. Bewusst nicht enger: mit 1-2-4 Tagen erzeugt jede neue
+   Karte in der ersten Woche so viele Wiederholungen, dass sich bei 15 Minuten
+   am Tag ein Berg aufbaut, den niemand mehr abtraegt. 1-3-7-16 ist der uebliche
+   Rhythmus und haelt den Stapel in einer Groesse, die taeglich zu schaffen ist. */
+const INTERVALLE = [0, 1, 3, 7, 16, 35, 70, 140];
 
 DP.karte = function (key) {
   if (!DP.stand.srs[key]) {

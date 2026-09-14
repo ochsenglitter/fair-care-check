@@ -20,14 +20,33 @@
     return p;
   }
 
-  function optionenBauen(richtig, pool, global, anzahl) {
+  /* Welche deutschen Bedeutungen gehoeren zu welchem franzoesischen Wort?
+     "la fille" heisst in Modul 1 "das Mädchen" und in Modul 5 "die Tochter".
+     Beides nebeneinander als Antwortmöglichkeit waere schlicht unfair – also
+     wird jede Bedeutung ausgeschlossen, die zum selben franzoesischen Wort
+     gehoert wie die richtige Loesung. */
+  let BEDEUTUNGEN = null;
+  function bedeutungenZu(deutsch) {
+    if (!BEDEUTUNGEN) {
+      BEDEUTUNGEN = {};
+      (window.CURRICULUM || []).forEach(m => m.vocab.forEach(v => {
+        const fr = DP.norm(v[0]);
+        (BEDEUTUNGEN[DP.norm(v[1])] = BEDEUTUNGEN[DP.norm(v[1])] || []).push(fr);
+      }));
+    }
+    return BEDEUTUNGEN[DP.norm(deutsch)] || [];
+  }
+
+  function optionenBauen(richtig, pool, global, anzahl, franzoesisch) {
     const gesehen = new Set([DP.norm(richtig)]);
+    const verboten = franzoesisch ? DP.norm(franzoesisch) : null;
     const out = [richtig];
     const quellen = DP.mische(pool).concat(DP.mische(global));
     for (const q of quellen) {
       if (out.length >= anzahl) break;
       const n = DP.norm(q);
       if (gesehen.has(n)) continue;
+      if (verboten && bedeutungenZu(q).indexOf(verboten) > -1) continue;
       gesehen.add(n);
       out.push(q);
     }
@@ -55,7 +74,7 @@
           modul: modul.id, thema: "Wortschatz", typ: "mc",
           frage: "Was bedeutet <b>" + fr + "</b>?",
           loesung: de,
-          optionen: optionenBauen(de, poolDe, globalDe, 4),
+          optionen: optionenBauen(de, poolDe, globalDe, 4, fr),
           sprechen: fr
         });
 
@@ -73,7 +92,7 @@
           modul: modul.id, thema: "Hören", typ: "hoeren",
           frage: "Hör zu. Was bedeutet das?",
           loesung: de,
-          optionen: optionenBauen(de, poolDe, globalDe, 4),
+          optionen: optionenBauen(de, poolDe, globalDe, 4, fr),
           sprechen: fr
         });
       });

@@ -182,14 +182,14 @@ window.STORY = {
   },
 
   m16: {
-    intro: "Ein Code erreicht dich in drei Teilen, von drei verschiedenen Nummern. Jeder Teil ergibt allein keinen Sinn.",
+    intro: "Ein Code erreicht dich in vier Teilen, von vier verschiedenen Nummern. Jeder Teil ergibt allein keinen Sinn.",
     beats: [
-      "Teil eins: «Je lui ai tout dit.» Ich habe ihm alles gesagt. Wem?",
-      "Teil zwei: «Ils leur ont menti.» Sie haben ihnen gelogen. Zwei Gruppen, beide im Plural.",
-      "Teil drei: «J'y serai.» Ich werde dort sein. Nur — wo ist dort?",
-      "Du legst die drei Nachrichten nebeneinander. Die Anfangsbuchstaben ergeben ein Wort."
+      "Teil eins: «Tu lui fais confiance ?» Vertraust du ihm? Kein Name, keine Erklärung.",
+      "Teil zwei: «On leur a menti.» Man hat sie belogen. Wer «sie» sind, steht nicht da.",
+      "Teil drei: «Il y en a une autre.» Es gibt noch eine. Eine andere was?",
+      "Teil vier: «Trouve-la avant eux.» Finde sie vor ihnen. Du legst alle vier nebeneinander — und siehst, dass die Anfangsbuchstaben ein Wort ergeben."
     ],
-    ende: "TOIT. Dach. Und es gibt nur ein Dach, das in dieser Geschichte je erwähnt wurde."
+    ende: "T — O — I — T. TOIT. Dach. Und es gibt nur ein Dach, das in dieser Geschichte je erwähnt wurde."
   },
 
   m17: {
