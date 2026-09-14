@@ -308,3 +308,6 @@ button { font-family: inherit; font-size: inherit; cursor: pointer; border: none
 .modul.anklickbar .t::after { content: " ›"; color: var(--grau); }
 
 .option.grau { color: var(--grau); font-style: italic; }
+
+.eingabe[disabled] { opacity: .65; }
+.akzenttaste[disabled] { opacity: .35; }

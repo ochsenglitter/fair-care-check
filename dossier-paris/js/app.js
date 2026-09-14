@@ -237,7 +237,7 @@
           <div style="flex:1;min-width:0">
             <div class="label grau">AGENT</div>
             <h2>${esc(s.codename)}</h2>
-            <div class="klein grau">${esc(rang.name)} &middot; ${esc(rang.de)}</div>
+            <div class="klein grau">${esc(rang.name)}${rang.de !== rang.name ? " &middot; " + esc(rang.de) : ""}</div>
             <div class="balken mt"><i style="width:${Math.round(rangAnteil * 100)}%"></i></div>
             <div class="klein grau" style="margin-top:5px">
               ${naechst ? (naechst.xp - s.xp) + " XP bis " + esc(naechst.name) : "Höchster Rang erreicht."}
@@ -245,8 +245,8 @@
           </div>
         </div>
         <div class="statreihe">
-          <div class="stat"><div class="wert">${s.fortschritt.fertig.length}<span style="font-size:14px;color:var(--grau)">/${(window.CURRICULUM || []).length}</span></div><div class="titel">Akten gelöst</div></div>
-          <div class="stat"><div class="wert">${sitzt}</div><div class="titel">sitzt sicher</div></div>
+          <div class="stat"><div class="wert">${s.fortschritt.fertig.length}<span style="font-size:14px;color:var(--grau)">/${(window.CURRICULUM || []).length}</span></div><div class="titel">Akten</div></div>
+          <div class="stat"><div class="wert">${sitzt}</div><div class="titel">sitzt</div></div>
           <div class="stat"><div class="wert">${s.serie.beste}</div><div class="titel">Rekord</div></div>
         </div>
       </div>
@@ -633,6 +633,15 @@
     const p = DP.punkte(ergebnis);
     DP.speichern();
 
+    /* Nach der Abgabe gibt es nichts mehr zu pruefen – sonst stehen zwei grosse
+       Knoepfe untereinander und man weiss nicht, welcher gemeint ist. */
+    const pruefKnopf = q("#pruef");
+    if (pruefKnopf) pruefKnopf.remove();
+    const feld = q("#ant");
+    if (feld) feld.setAttribute("disabled", "disabled");
+    qa(".akzenttaste").forEach(t => t.setAttribute("disabled", "disabled"));
+    qa("#teile .teil").forEach(t => t.classList.add("weg"));
+
     /* Optische Rueckmeldung */
     if (knopf) {
       qa(".option").forEach(o => {
@@ -972,6 +981,14 @@
           ${[10, 15, 20].map(m => `<button class="btn ${e.tagesziel === m ? "" : "btn-geist"}" data-ziel="${m}" style="flex:1;text-align:center">${m} min</button>`).join("")}
         </div>
         <div class="klein grau mt">15 Minuten sind der Plan. 10 ist besser als nichts, 20 nur, wenn du wirklich Lust hast.</div>
+      </div>
+
+      <div class="karte">
+        <div class="label grau">// AUFS HANDY LEGEN</div>
+        <p class="klein grau" style="margin:0">Die App kann wie eine normale App auf dem
+        Startbildschirm liegen – dann ist sie ein Tipp weit weg und funktioniert auch offline.<br><br>
+        <b>iPhone:</b> in Safari öffnen, unten auf Teilen, dann „Zum Home-Bildschirm".<br>
+        <b>Android:</b> in Chrome öffnen, oben rechts das Menü, dann „App installieren".</p>
       </div>
 
       <div class="karte">
