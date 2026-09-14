@@ -25,10 +25,26 @@ unter B3 in `produktplanung/offene-fragen.md`.
 
 ---
 
-## Schritt 1: Fenja den Plan geben
+## Schritt 1: Fenja den Drive-Ordner geben
 
-Gib Fenja einmalig die Datei `content/30-tage-kopf-frei.md` als Wissensquelle.
-Kein Umbau nötig, sie liest sie so, wie sie ist.
+Alle Planungsdokumente liegen als Google Docs in
+
+**AE Social Media Management → Contentplanung → 30 Tage Kopf frei –
+Contentplanung**
+
+| Dokument | Entspricht |
+|---|---|
+| 01 Story-Plan – 30 Tage Kopf frei | `30-tage-kopf-frei.md` |
+| 02 Feed und Reels | `feed-und-reels.md` |
+| 03 Affiliate – Eventkalender und Promotion | `affiliate-kalender-und-promotion.md` |
+| 04 Launch – Sarah Founding | `launch-sarah.md` |
+| 05 Fenja-Übergabe | diese Datei |
+
+Fenja braucht als Wissensquelle mindestens **01**, für den Sonntagsblick
+zusätzlich **02**, **03** und **04**.
+
+Das Repository bleibt die Quelle, Drive ist die Lesekopie für Fenja. Nach jeder
+Änderung hier wird der entsprechende Google Doc neu abgelegt.
 
 ## Schritt 2: Diese Anweisung bei Fenja hinterlegen
 
