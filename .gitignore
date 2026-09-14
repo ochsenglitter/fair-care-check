@@ -1,0 +1,7 @@
+# Nichts Vertrauliches in dieses oeffentliche Repository.
+buchhaltung/
+__pycache__/
+*.pyc
+*.csv
+*.pdf
+daten/
