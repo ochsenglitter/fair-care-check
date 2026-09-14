@@ -1,0 +1,324 @@
+/* ============================================================
+   Laufstart – Design
+   Dunkel, kontraststark, für das Handy in der Hand beim Laufen.
+   ============================================================ */
+
+:root {
+  --bg:        #0d1117;
+  --karte:     #161c24;
+  --karte-hell:#1e2732;
+  --rand:      rgba(255,255,255,.09);
+  --text:      #e9eef5;
+  --leise:     #93a1b0;
+  --lauf:      #ff6b4a;
+  --geh:       #4cc2ff;
+  --warm:      #ffd166;
+  --ok:        #3ddc97;
+  --schatten:  0 8px 30px rgba(0,0,0,.45);
+  --radius:    16px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Outfit, "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  padding-bottom: 88px;
+  overscroll-behavior-y: contain;
+}
+
+h1, h2, h3 { font-weight: 700; line-height: 1.2; margin: 0 0 .4em; letter-spacing: -.01em; }
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.2rem; }
+h3 { font-size: 1rem; }
+p  { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+button { font: inherit; color: inherit; }
+
+/* --- Gerüst ---------------------------------------------- */
+
+.huelle { max-width: 640px; margin: 0 auto; padding: 0 16px; }
+
+.kopf {
+  display: flex; align-items: center; gap: 10px;
+  padding: 18px 0 14px;
+}
+.kopf .marke {
+  font-weight: 800; font-size: 1.15rem; letter-spacing: -.02em;
+}
+.kopf .marke span { color: var(--lauf); }
+.kopf .woche-chip {
+  margin-left: auto; font-size: .8rem; color: var(--leise);
+  background: var(--karte); border: 1px solid var(--rand);
+  padding: 4px 10px; border-radius: 999px; white-space: nowrap;
+}
+
+.seite { display: none; }
+.seite.aktiv { display: block; animation: rein .25s ease; }
+@keyframes rein { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* --- Navigation ------------------------------------------ */
+
+.nav {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  background: rgba(13,17,23,.94);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--rand);
+  padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+}
+.nav-innen { max-width: 640px; margin: 0 auto; display: flex; }
+.nav button {
+  flex: 1; background: none; border: 0; cursor: pointer;
+  padding: 8px 4px; border-radius: 12px;
+  color: var(--leise); font-size: .76rem; font-weight: 600;
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+}
+.nav button .sym { font-size: 1.15rem; line-height: 1; }
+.nav button[aria-selected="true"] { color: var(--text); background: var(--karte); }
+
+/* --- Karten ---------------------------------------------- */
+
+.karte {
+  background: var(--karte); border: 1px solid var(--rand);
+  border-radius: var(--radius); padding: 18px; margin-bottom: 14px;
+}
+.karte.gross { padding: 22px; }
+.etikett {
+  font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--leise); margin-bottom: 6px;
+}
+
+/* --- Knöpfe ---------------------------------------------- */
+
+.knopf {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border: 0; border-radius: 999px; cursor: pointer;
+  padding: 14px 24px; font-weight: 700; font-size: 1rem;
+  background: var(--lauf); color: #21100b;
+  transition: transform .1s ease, filter .15s ease;
+}
+.knopf:hover { filter: brightness(1.08); }
+.knopf:active { transform: scale(.97); }
+.knopf.voll { width: 100%; }
+.knopf.zweit { background: var(--karte-hell); color: var(--text); box-shadow: inset 0 0 0 1px var(--rand); }
+.knopf.klein { padding: 9px 16px; font-size: .85rem; }
+.knopf:disabled { opacity: .45; cursor: not-allowed; }
+
+.knopfzeile { display: flex; gap: 10px; flex-wrap: wrap; }
+.knopfzeile > * { flex: 1 1 auto; }
+
+/* --- Heute ----------------------------------------------- */
+
+.heute-kopf { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 2px; }
+.heute-kopf .titel { font-size: 1.45rem; font-weight: 800; letter-spacing: -.02em; }
+.heute-kopf .meta { color: var(--leise); font-size: .9rem; }
+
+.zahlenzeile { display: flex; gap: 10px; margin: 16px 0; flex-wrap: wrap; }
+.zahl {
+  flex: 1 1 90px; background: var(--karte-hell); border-radius: 12px;
+  padding: 10px 12px; min-width: 90px;
+}
+.zahl b { display: block; font-size: 1.3rem; font-weight: 800; letter-spacing: -.02em; }
+.zahl span { font-size: .75rem; color: var(--leise); }
+
+/* Blockstreifen: zeigt den Aufbau der Einheit als Balken */
+.streifen { display: flex; height: 12px; border-radius: 6px; overflow: hidden; gap: 2px; margin: 14px 0 8px; }
+.streifen i { display: block; min-width: 2px; }
+.streifen i.lauf { background: var(--lauf); }
+.streifen i.geh  { background: var(--geh); }
+.streifen i.warm { background: #4a5462; }
+
+.legende { display: flex; gap: 14px; font-size: .78rem; color: var(--leise); flex-wrap: wrap; }
+.legende b { display: inline-block; width: 9px; height: 9px; border-radius: 3px; margin-right: 5px; }
+
+.bloecke { list-style: none; margin: 12px 0 0; padding: 0; }
+.bloecke li {
+  display: flex; align-items: center; gap: 10px;
+  padding: 7px 0; border-bottom: 1px solid var(--rand); font-size: .92rem;
+}
+.bloecke li:last-child { border-bottom: 0; }
+.bloecke .punkt { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.bloecke .punkt.lauf { background: var(--lauf); }
+.bloecke .punkt.geh  { background: var(--geh); }
+.bloecke .punkt.warm { background: #4a5462; }
+.bloecke .dauer { margin-left: auto; color: var(--leise); font-variant-numeric: tabular-nums; }
+
+.hinweis {
+  background: var(--karte-hell); border-left: 3px solid var(--warm);
+  border-radius: 0 10px 10px 0; padding: 12px 14px; font-size: .92rem;
+}
+.spruch { font-size: 1.05rem; line-height: 1.45; }
+.spruch::before { content: "„"; color: var(--lauf); }
+.spruch::after  { content: "“"; color: var(--lauf); }
+
+/* --- Trainingstage --------------------------------------- */
+
+.tage { display: flex; gap: 6px; margin-top: 10px; }
+.tage button {
+  flex: 1; padding: 10px 0; border-radius: 10px; cursor: pointer;
+  background: var(--karte-hell); border: 1px solid var(--rand);
+  font-size: .82rem; font-weight: 700; color: var(--leise);
+}
+.tage button[aria-pressed="true"] { background: var(--ok); color: #06251a; border-color: transparent; }
+
+/* --- Plan ------------------------------------------------ */
+
+.woche { margin-bottom: 12px; border: 1px solid var(--rand); border-radius: var(--radius); overflow: hidden; background: var(--karte); }
+.woche > summary {
+  list-style: none; cursor: pointer; padding: 15px 18px;
+  display: flex; align-items: center; gap: 12px;
+}
+.woche > summary::-webkit-details-marker { display: none; }
+.woche .w-nr {
+  width: 38px; height: 38px; border-radius: 11px; flex: none;
+  background: var(--karte-hell); display: grid; place-items: center;
+  font-weight: 800; font-size: .95rem;
+}
+.woche.fertig .w-nr { background: var(--ok); color: #06251a; }
+.woche.laeuft .w-nr { background: var(--lauf); color: #21100b; }
+.woche .w-text { min-width: 0; }
+.woche .w-text b { display: block; }
+.woche .w-text span { font-size: .82rem; color: var(--leise); }
+.woche .w-punkte { margin-left: auto; display: flex; gap: 5px; flex: none; }
+.woche .w-punkte i { width: 9px; height: 9px; border-radius: 50%; background: var(--karte-hell); box-shadow: inset 0 0 0 1px var(--rand); }
+.woche .w-punkte i.ok { background: var(--ok); box-shadow: none; }
+.woche .inhalt { padding: 0 18px 16px; border-top: 1px solid var(--rand); }
+
+.einheit-zeile {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 0; border-bottom: 1px solid var(--rand);
+}
+.einheit-zeile:last-child { border-bottom: 0; }
+.einheit-zeile .haken {
+  width: 26px; height: 26px; border-radius: 8px; flex: none; cursor: pointer;
+  background: var(--karte-hell); border: 1px solid var(--rand);
+  display: grid; place-items: center; font-size: .85rem; color: transparent;
+}
+.einheit-zeile .haken[aria-pressed="true"] { background: var(--ok); border-color: transparent; color: #06251a; }
+.einheit-zeile .e-text { min-width: 0; }
+.einheit-zeile .e-text b { display: block; font-size: .95rem; }
+.einheit-zeile .e-text span { font-size: .8rem; color: var(--leise); }
+.einheit-zeile .knopf { margin-left: auto; flex: none; }
+
+/* --- Fortschritt ----------------------------------------- */
+
+.ring-zeile { display: flex; align-items: center; gap: 20px; }
+.ring { position: relative; width: 108px; height: 108px; flex: none; }
+.ring svg { transform: rotate(-90deg); display: block; }
+.ring .mitte {
+  position: absolute; inset: 0; display: grid; place-items: center; text-align: center;
+}
+.ring .mitte b { font-size: 1.6rem; font-weight: 800; letter-spacing: -.03em; display: block; line-height: 1; }
+.ring .mitte span { font-size: .7rem; color: var(--leise); }
+
+.kacheln { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.kachel { background: var(--karte-hell); border-radius: 12px; padding: 12px 14px; }
+.kachel b { display: block; font-size: 1.35rem; font-weight: 800; letter-spacing: -.02em; }
+.kachel span { font-size: .76rem; color: var(--leise); }
+
+.heat { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; margin-top: 12px; }
+.heat i { aspect-ratio: 1; border-radius: 5px; background: var(--karte-hell); }
+.heat i.ok { background: var(--ok); }
+.heat i.heute { box-shadow: 0 0 0 2px var(--lauf); }
+.heat-kopf { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; font-size: .68rem; color: var(--leise); text-align: center; }
+
+.abzeichen { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.abz {
+  background: var(--karte-hell); border-radius: 12px; padding: 12px 8px;
+  text-align: center; opacity: .32; filter: grayscale(1);
+}
+.abz.hat { opacity: 1; filter: none; }
+.abz .sym { font-size: 1.6rem; display: block; line-height: 1.2; }
+.abz b { display: block; font-size: .78rem; }
+.abz span { font-size: .68rem; color: var(--leise); }
+
+.verlauf { list-style: none; margin: 0; padding: 0; }
+.verlauf li { display: flex; gap: 10px; align-items: baseline; padding: 9px 0; border-bottom: 1px solid var(--rand); font-size: .9rem; }
+.verlauf li:last-child { border-bottom: 0; }
+.verlauf .datum { color: var(--leise); font-size: .82rem; margin-left: auto; white-space: nowrap; }
+.verlauf .gefuehl { font-size: .9rem; }
+
+/* --- Trainingsansicht (Vollbild) -------------------------- */
+
+.trainer {
+  position: fixed; inset: 0; z-index: 60; display: none;
+  background: var(--bg); padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
+  flex-direction: column; overflow-y: auto;
+}
+.trainer.offen { display: flex; }
+/* Farbschimmer über deckendem Grund – die Seite darunter darf nicht durchscheinen */
+.trainer.lauf { background-image: radial-gradient(120% 80% at 50% 0%, rgba(255,107,74,.22), rgba(13,17,23,0) 65%); }
+.trainer.geh  { background-image: radial-gradient(120% 80% at 50% 0%, rgba(76,194,255,.20), rgba(13,17,23,0) 65%); }
+.trainer.warm { background-image: radial-gradient(120% 80% at 50% 0%, rgba(255,209,102,.16), rgba(13,17,23,0) 65%); }
+
+.trainer-innen { max-width: 480px; margin: auto; width: 100%; text-align: center; }
+.trainer .kleinzeile { display: flex; justify-content: space-between; font-size: .82rem; color: var(--leise); }
+.trainer .aktion { font-size: 2.4rem; font-weight: 800; letter-spacing: -.02em; margin: 6px 0 0; }
+.trainer.lauf .aktion { color: var(--lauf); }
+.trainer.geh  .aktion { color: var(--geh); }
+.trainer.warm .aktion { color: var(--warm); }
+
+.uhr { position: relative; width: 240px; max-width: 72vw; margin: 12px auto; }
+.uhr svg { display: block; width: 100%; transform: rotate(-90deg); }
+.uhr .zeit {
+  position: absolute; inset: 0; display: grid; place-items: center;
+  font-size: 3.2rem; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -.03em;
+}
+.uhr .zeit small { font-size: .9rem; font-weight: 600; color: var(--leise); letter-spacing: 0; }
+
+.balken { height: 7px; border-radius: 4px; background: var(--karte-hell); overflow: hidden; margin: 10px 0 6px; }
+.balken i { display: block; height: 100%; background: var(--ok); width: 0; transition: width .3s linear; }
+.naechster { color: var(--leise); font-size: .9rem; min-height: 1.4em; }
+.trainer .steuerung { display: flex; gap: 10px; margin-top: 16px; }
+.trainer .steuerung + .steuerung { margin-top: 10px; }
+.trainer .steuerung .knopf { flex: 1; }
+
+/* --- Abschluss ------------------------------------------- */
+
+.gefuehl-wahl { display: flex; gap: 8px; margin: 6px 0 14px; }
+.gefuehl-wahl button {
+  flex: 1; padding: 12px 0; font-size: 1.5rem; cursor: pointer;
+  background: var(--karte-hell); border: 1px solid var(--rand); border-radius: 12px;
+}
+.gefuehl-wahl button[aria-pressed="true"] { border-color: var(--ok); background: rgba(61,220,151,.14); }
+
+textarea {
+  width: 100%; background: var(--karte-hell); color: var(--text);
+  border: 1px solid var(--rand); border-radius: 12px; padding: 12px;
+  font: inherit; font-size: .95rem; resize: vertical; min-height: 76px;
+}
+
+.neu-abz {
+  display: flex; align-items: center; gap: 12px; padding: 12px 14px;
+  background: rgba(255,209,102,.12); border: 1px solid rgba(255,209,102,.35);
+  border-radius: 12px; margin-bottom: 10px;
+}
+.neu-abz .sym { font-size: 1.8rem; }
+.neu-abz b { display: block; }
+.neu-abz span { font-size: .82rem; color: var(--leise); }
+
+/* --- Einstellungen --------------------------------------- */
+
+.schalter { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--rand); }
+.schalter:last-of-type { border-bottom: 0; }
+.schalter .txt { min-width: 0; }
+.schalter .txt b { display: block; font-size: .95rem; font-weight: 600; }
+.schalter .txt span { font-size: .78rem; color: var(--leise); }
+.schalter input { margin-left: auto; width: 46px; height: 27px; flex: none; accent-color: var(--ok); }
+
+.fuss { text-align: center; color: var(--leise); font-size: .78rem; padding: 6px 0 18px; }
+
+@media (max-width: 380px) {
+  .kacheln { grid-template-columns: 1fr; }
+  .abzeichen { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
