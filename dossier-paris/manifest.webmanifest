@@ -1,0 +1,20 @@
+{
+  "name": "Dossier Paris",
+  "short_name": "Dossier Paris",
+  "description": "Französisch aufholen in 15 Minuten am Tag.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080b12",
+  "theme_color": "#080b12",
+  "lang": "de",
+  "icons": [
+    {
+      "src": "img/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
