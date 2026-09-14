@@ -167,8 +167,8 @@
       ${kann.length ? `<div class="karte">
         <div class="label">// DAS KANNST DU SCHON</div>
         ${kann.map(e => `<div class="klein" style="padding:4px 0">&#10003; ${esc(e.thema)}</div>`).join("")}
-        <div class="klein grau mt">Das musst du nicht neu lernen. Es taucht nur ab und zu
-        zur Kontrolle auf.</div>
+        <div class="klein grau mt">Das musst du nicht von vorn lernen. Was vor deinem
+        Startpunkt liegt, überspringst du ganz – der Rest kommt später dran, aber mit Vorsprung.</div>
       </div>` : ""}
 
       ${luecken.length ? `<div class="karte warn">
@@ -746,7 +746,7 @@
       ${extra}
       ${neueOrden.length ? `<div class="karte">
         <div class="label gold">// NEUE ORDEN</div>
-        ${neueOrden.map(o => `<div class="modul"><div class="mitte"><div class="t">${esc(o.name)}</div><div class="s">${esc(o.text)}</div></div></div>`).join("")}
+        ${neueOrden.map(o => `<div style="padding:6px 0"><div class="t" style="font-weight:700">&#9733; ${esc(o.name)}</div><div class="s klein grau">${esc(o.text)}</div></div>`).join("")}
       </div>` : ""}
       ${schwach.length ? `<div class="karte">
         <div class="label grau">// NOCH WACKELIG</div>
@@ -874,11 +874,20 @@
   function zeigeBericht() {
     ansicht = "bericht";
     const s = DP.stand;
-    const tage = s.verlauf.slice(-14);
+    /* Immer 14 Kalendertage zeichnen, auch leere. Sonst fuellt ein einzelner
+       Balken die ganze Breite und sieht aus wie ein Fehler. */
     const heuteEintrag = { datum: s.tag.datum, sekunden: s.tag.sekunden, aufgaben: s.tag.aufgaben, richtig: s.tag.richtig };
-    const reihe = tage.concat([heuteEintrag]).slice(-14);
+    const nachDatum = {};
+    s.verlauf.forEach(t => { nachDatum[t.datum] = t; });
+    nachDatum[heuteEintrag.datum] = heuteEintrag;
+    const reihe = [];
+    for (let i = 13; i >= 0; i--) {
+      const d = DP.tagePlus(-i);
+      reihe.push(nachDatum[d] || { datum: d, sekunden: 0, aufgaben: 0, richtig: 0 });
+    }
     const max = Math.max(1, ...reihe.map(t => t.sekunden));
-    const gesamtMin = Math.round((s.verlauf.reduce((a, t) => a + t.sekunden, 0) + s.tag.sekunden) / 60);
+    const gesamtSek = s.verlauf.reduce((a, t) => a + t.sekunden, 0) + s.tag.sekunden;
+    const gesamtMin = gesamtSek > 0 ? Math.max(1, Math.round(gesamtSek / 60)) : 0;
     const gesamtAufgaben = s.verlauf.reduce((a, t) => a + t.aufgaben, 0) + s.tag.aufgaben;
     const gesamtRichtig = s.verlauf.reduce((a, t) => a + t.richtig, 0) + s.tag.richtig;
     const quote = gesamtAufgaben ? Math.round((gesamtRichtig / gesamtAufgaben) * 100) : 0;
@@ -969,9 +978,9 @@
           <div class="schieber ${e.stimme ? "an" : ""}" data-k="stimme"><i></i></div></div>
         <div class="schalter" style="border:none">
           <div><div>Sprechtempo</div><div class="klein grau">Langsamer hilft am Anfang.</div></div>
-          <div><button class="chip" data-tempo="0.7">langsam</button>
-               <button class="chip" data-tempo="0.85">normal</button>
-               <button class="chip" data-tempo="1">schnell</button></div>
+          <div>${[[0.7, "langsam"], [0.85, "normal"], [1, "schnell"]].map(t =>
+            `<button class="chip ${Math.abs((e.tempo || 0.85) - t[0]) < 0.01 ? "cyan" : ""}" data-tempo="${t[0]}">${t[1]}</button>`
+          ).join(" ")}</div>
         </div>
       </div>
 
@@ -993,7 +1002,10 @@
 
       <div class="karte">
         <div class="label grau">// ALIBIS</div>
-        <p class="klein grau" style="margin:0">Du hast ${DP.stand.serie.alibis} Alibis diesen Monat. Jedes rettet deine Serie für einen verpassten Tag – automatisch, ohne dass du etwas tun musst.</p>
+        <p class="klein grau" style="margin:0">Du hast diesen Monat noch
+        ${DP.stand.serie.alibis === 1 ? "ein Alibi" : DP.stand.serie.alibis + " Alibis"}.
+        ${DP.stand.serie.alibis === 1 ? "Es rettet" : "Jedes rettet"} deine Serie für einen
+        verpassten Tag – automatisch, ohne dass du etwas tun musst.</p>
       </div>
 
       <button class="btn btn-geist" id="neueEinstufung">Einstufung wiederholen</button>
@@ -1014,6 +1026,7 @@
       DP.stand.einstellungen.tempo = Number(ev.currentTarget.dataset.tempo);
       DP.speichern();
       DP.audio.sprechen("Je m'appelle " + DP.stand.codename);
+      zeigeEinstellungen();
     });
     auf("[data-ziel]", "click", ev => {
       DP.stand.einstellungen.tagesziel = Number(ev.currentTarget.dataset.ziel);

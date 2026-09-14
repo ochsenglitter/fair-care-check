@@ -45,9 +45,13 @@
     const heute = DP.heute();
     const keys = Object.keys(DP.stand.srs)
       .filter(k => DP.stand.srs[k].faellig <= heute && !benutzt.has(k));
+    /* Wichtig ist die Reihenfolge: erst das Wacklige, dann das Aelteste. In
+       15 Minuten am Tag laesst sich nie alles wiederholen, was faellig waere –
+       also muss die knappe Zeit dorthin, wo wirklich etwas zu kippen droht.
+       Was schon sicher sitzt, darf ruhig ein paar Tage warten. */
     keys.sort((a, b) => {
-      const d = DP.stand.srs[a].faellig.localeCompare(DP.stand.srs[b].faellig);
-      return d !== 0 ? d : DP.stand.srs[a].r - DP.stand.srs[b].r;
+      const d = DP.stand.srs[a].r - DP.stand.srs[b].r;
+      return d !== 0 ? d : DP.stand.srs[a].faellig.localeCompare(DP.stand.srs[b].faellig);
     });
     const out = [];
     for (const k of keys) {
@@ -142,9 +146,14 @@
 
     /* 3 – Rueckblick auf faelligen Altstoff. Waechst der Stapel, verschiebt sich
        das Verhaeltnis zugunsten der Wiederholung: lieber sicher koennen, was
-       schon dran war, als immer neuen Stoff obendrauf zu kippen. */
+       schon dran war, als immer neuen Stoff obendrauf zu kippen.
+
+       Ganz aufgehen wird die Rechnung nie – in 15 Minuten lassen sich nicht so
+       viele Karten wiederholen, wie taeglich neue dazukommen. Das ist in Ordnung,
+       solange die knappe Zeit zuerst ins Wacklige geht (siehe rueckblick()):
+       was liegen bleibt, ist dann das, was ohnehin schon sitzt. */
     const stapel = DP.faelligeKeys().length;
-    const rueckblickAnzahl = kurz ? 5 : (stapel > 60 ? 14 : stapel > 25 ? 12 : 10);
+    const rueckblickAnzahl = kurz ? 5 : (stapel > 60 ? 16 : stapel > 25 ? 14 : 12);
     const alt = rueckblick(rueckblickAnzahl, benutzt);
     if (alt.length) {
       schritte.push({ art: "karte", stil: "phase", titel: "RAPPEL", text: ["Kurzer Rückblick. " + alt.length + " Sachen von früher, die heute wieder dran sind."] });
@@ -163,7 +172,7 @@
     }
 
     /* 5 – Training */
-    const training = waehlen(modul.id, kurz ? 8 : (stapel > 60 ? 12 : 16), benutzt);
+    const training = waehlen(modul.id, kurz ? 8 : (stapel > 60 ? 11 : 15), benutzt);
     if (training.length) {
       schritte.push({ art: "karte", stil: "phase", titel: "ENTRAÎNEMENT", text: ["Jetzt du."] });
       DP.mische(training).forEach(i => schritte.push({ art: "item", item: i, phase: "training" }));

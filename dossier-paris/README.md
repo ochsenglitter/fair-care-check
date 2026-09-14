@@ -126,6 +126,23 @@ js/data/story.js    Erzählstrang
 sw.js               Offline-Cache
 ```
 
+## In ein eigenes Repository umziehen
+
+Dieser Ordner ist vollständig eigenständig – er hat keine Verbindung zum Rest
+des Repositories. Um ihn in ein eigenes Repository zu heben:
+
+```bash
+# im Hauptordner des Repositories, auf dem Branch mit dieser App
+git subtree split --prefix=dossier-paris -b dossier-paris-solo
+
+# neues, leeres Repository auf GitHub anlegen, dann:
+git push https://github.com/<dein-konto>/dossier-paris.git dossier-paris-solo:main
+```
+
+Ohne Kommandozeile geht es genauso: neues Repository anlegen und den Inhalt
+dieses Ordners dort hochladen. Die Dateien liegen alle relativ zueinander,
+es gibt nichts zu konfigurieren.
+
 ## Starten
 
 Lokal reicht Doppelklick auf `index.html`. Für die Offline-Funktion und die
