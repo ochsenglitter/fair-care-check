@@ -80,6 +80,7 @@ button { font: inherit; color: inherit; }
   display: flex; flex-direction: column; align-items: center; gap: 3px;
 }
 .nav button .sym { font-size: 1.15rem; line-height: 1; }
+.woche > summary .w-nr { font-size: 1.05rem; }
 .nav button[aria-selected="true"] { color: var(--text); background: var(--karte); }
 
 /* --- Karten ---------------------------------------------- */
@@ -153,6 +154,12 @@ button { font: inherit; color: inherit; }
   background: var(--karte-hell); border-left: 3px solid var(--warm);
   border-radius: 0 10px 10px 0; padding: 12px 14px; font-size: .92rem;
 }
+.hinweis.achtung { border-left-color: var(--lauf); }
+.tipp { padding: 12px 0; border-bottom: 1px solid var(--rand); }
+.tipp:last-child { border-bottom: 0; }
+.tipp b { display: block; font-size: .95rem; margin-bottom: 2px; }
+.tipp p { font-size: .92rem; color: var(--leise); margin: 0; }
+
 .spruch { font-size: 1.05rem; line-height: 1.45; }
 .spruch::before { content: "„"; color: var(--lauf); }
 .spruch::after  { content: "“"; color: var(--lauf); }

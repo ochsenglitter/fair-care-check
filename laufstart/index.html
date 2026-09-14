@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Laufstart – in acht Wochen vom ersten Schritt zu 30 Minuten am Stück. Intervall-Timer, Trainingsplan, Fortschritt.">
+<meta name="description" content="Laufstart – Wiedereinstieg nach langer Pause: 15 Wochen, zwei Einheiten pro Woche, vom Spaziergang zu 25 Minuten am Stück. Intervall-Timer, Kurzvariante, Fortschritt.">
 <meta name="theme-color" content="#0d1117">
-<title>Laufstart – in 8 Wochen zu 30 Minuten</title>
+<title>Laufstart – vom Spaziergang zu 25 Minuten</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -32,9 +32,12 @@
   <main id="seite-plan" class="seite">
     <section class="karte">
       <div class="etikett">Der Plan</div>
-      <p>Acht Wochen, drei Einheiten pro Woche, jede zwischen 28 und 40 Minuten.
-         Zwischen zwei Einheiten liegt mindestens ein Ruhetag. Wenn eine Woche
-         zu schwer war, wiederhol sie einfach – der Plan läuft nicht weg.</p>
+      <p>15 Wochen, zwei Einheiten pro Woche, jede zwischen 25 und 32 Minuten.
+         Woche 1 wird nur gegangen, das erste Laufintervall dauert 30 Sekunden.
+         Zwischen zwei Einheiten liegen ein bis zwei Ruhetage.</p>
+      <p>Wenn eine Woche zu schwer war oder eine Woche ausgefallen ist:
+         <b>Woche wiederholen</b> unten in der jeweiligen Woche. Der Plan läuft
+         nicht weg, und deine Zahlen bleiben erhalten.</p>
     </section>
     <div id="planListe"></div>
   </main>
@@ -50,6 +53,22 @@
     <p class="fuss">Alle Daten bleiben in diesem Browser. Kein Konto, kein Server.</p>
   </main>
 
+  <!-- ---------- Tipps ---------- -->
+  <main id="seite-tipps" class="seite">
+    <section class="karte">
+      <div class="etikett">Tipps</div>
+      <p>Das Wichtigste für den Wiedereinstieg, für Tage mit wenig Zeit, fürs
+         Laufen mit Kind und für die dunkle Jahreszeit.</p>
+    </section>
+    <div id="tippsListe"></div>
+    <section class="karte">
+      <div class="etikett">Zum Schluss</div>
+      <p>Der Plan ist ein üblicher Einsteigeraufbau, keine medizinische Beratung.
+         Bei Vorerkrankungen, Beschwerden oder wenn du dir unsicher bist, vorher
+         ärztlich abklären lassen.</p>
+    </section>
+  </main>
+
 </div>
 
 <!-- ---------- Navigation ---------- -->
@@ -58,6 +77,7 @@
     <button role="tab" data-seite="heute" aria-selected="true"><span class="sym">👟</span>Heute</button>
     <button role="tab" data-seite="plan" aria-selected="false"><span class="sym">🗓️</span>Plan</button>
     <button role="tab" data-seite="fortschritt" aria-selected="false"><span class="sym">📈</span>Fortschritt</button>
+    <button role="tab" data-seite="tipps" aria-selected="false"><span class="sym">💡</span>Tipps</button>
   </div>
 </nav>
 

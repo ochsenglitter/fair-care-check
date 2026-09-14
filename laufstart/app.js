@@ -6,10 +6,11 @@
 (function () {
   "use strict";
 
-  var SPEICHER = "laufstart.v1";
+  var SPEICHER = "laufstart.v1";   /* Schlüssel bleibt, Inhalt wird migriert */
   var TAGE_KURZ = ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"];
   var TAGE_LANG = ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"];
   var GEFUEHLE  = ["😣", "😕", "🙂", "😃", "🤩"];
+  var SEITEN    = ["heute", "plan", "fortschritt", "tipps"];
 
   /* ==========================================================
      1. Zustand
@@ -17,10 +18,12 @@
 
   function standard() {
     return {
-      version: 1,
-      erledigt: {},          /* id -> { datum, dauer, gefuehl, notiz } */
-      tage: [0, 2, 4],       /* Montag, Mittwoch, Freitag (0 = Montag) */
-      abzeichen: {},         /* id -> Datum */
+      version: 2,
+      erledigt: {},        /* id -> { datum, kurz }  – Stand im Plan */
+      verlauf: [],         /* alle gelaufenen Einheiten, auch Wiederholungen */
+      tage: [0, 3],        /* Montag und Donnerstag */
+      proWoche: 2,
+      abzeichen: {},
       ton: true,
       stimme: true,
       vibration: true,
@@ -34,19 +37,43 @@
     try {
       var roh = localStorage.getItem(SPEICHER);
       if (!roh) return standard();
-      var d = JSON.parse(roh);
-      var s = standard();
-      for (var k in s) if (d[k] !== undefined) s[k] = d[k];
-      return s;
+      return migriere(JSON.parse(roh));
     } catch (e) {
       return standard();
     }
   }
 
+  /* Ältere Stände (nur „erledigt", kein Verlauf) übernehmen */
+  function migriere(d) {
+    var s = standard();
+    for (var k in s) if (d[k] !== undefined) s[k] = d[k];
+
+    if (!Array.isArray(s.verlauf) || (!s.verlauf.length && Object.keys(s.erledigt).length)) {
+      s.verlauf = [];
+      Object.keys(s.erledigt).forEach(function (id) {
+        var e = einheitNachId(id);
+        var alt = s.erledigt[id] || {};
+        if (!e) return;
+        s.verlauf.push({
+          id: id, woche: e.woche, nr: e.nr,
+          datum: alt.datum || null,
+          dauer: alt.dauer || e.gesamtSek,
+          laufSek: e.laufSek,
+          laengstes: e.laengstesLaufSek,
+          gefuehl: alt.gefuehl || null,
+          notiz: alt.notiz || "",
+          kurz: false
+        });
+      });
+    }
+    s.version = 2;
+    return s;
+  }
+
   function sichern() {
     try {
       localStorage.setItem(SPEICHER, JSON.stringify(zustand));
-    } catch (e) { /* privater Modus o. ä. – App läuft trotzdem */ }
+    } catch (e) { /* privater Modus o. ä. – die App läuft trotzdem */ }
   }
 
   /* ==========================================================
@@ -89,8 +116,8 @@
   function heuteIso() { return isoVon(new Date()); }
 
   function datumHuebsch(iso) {
-    var t = iso.split("-");
-    return t[2] + "." + t[1] + "." + t[0];
+    var t = String(iso).split("-");
+    return t.length === 3 ? t[2] + "." + t[1] + "." + t[0] : "";
   }
 
   function tageZwischen(isoA, isoB) {
@@ -111,35 +138,33 @@
     return raus;
   }
 
-  function wocheVon(einheit) {
-    return PLAN[einheit.woche - 1];
+  function einheitNachId(id) {
+    var alle = alleEinheiten();
+    for (var i = 0; i < alle.length; i++) if (alle[i].id === id) return alle[i];
+    return null;
   }
+
+  function wocheVon(einheit) { return PLAN[einheit.woche - 1]; }
 
   function istErledigt(id) { return !!zustand.erledigt[id]; }
 
   function naechsteEinheit() {
     var alle = alleEinheiten();
-    for (var i = 0; i < alle.length; i++) {
-      if (!istErledigt(alle[i].id)) return alle[i];
-    }
-    return null; /* Plan komplett */
-  }
-
-  function erledigteEinheiten() {
-    return alleEinheiten().filter(function (e) { return istErledigt(e.id); });
+    for (var i = 0; i < alle.length; i++) if (!istErledigt(alle[i].id)) return alle[i];
+    return null;
   }
 
   function statistik() {
-    var fertig = erledigteEinheiten();
-    var trainingsSek = 0, laufSek = 0, laengstes = 0;
+    var v = zustand.verlauf;
+    var trainingsSek = 0, laufSek = 0, laengstes = 0, kurzAnzahl = 0;
     var daten = [];
 
-    fertig.forEach(function (e) {
-      var d = zustand.erledigt[e.id];
-      trainingsSek += (d.dauer || e.gesamtSek);
-      laufSek += e.laufSek;
-      if (e.laengstesLaufSek > laengstes) laengstes = e.laengstesLaufSek;
-      if (d.datum) daten.push(d.datum);
+    v.forEach(function (x) {
+      trainingsSek += x.dauer || 0;
+      laufSek += x.laufSek || 0;
+      if ((x.laengstes || 0) > laengstes) laengstes = x.laengstes;
+      if (x.kurz) kurzAnzahl++;
+      if (x.datum) daten.push(x.datum);
     });
 
     daten.sort();
@@ -151,16 +176,26 @@
       return diff >= 0 && diff < 7;
     }).length;
 
+    /* längste Pause zwischen zwei Einheiten */
+    var groessteLuecke = 0;
+    for (var i = 1; i < daten.length; i++) {
+      var l = tageZwischen(daten[i - 1], daten[i]);
+      if (l > groessteLuecke) groessteLuecke = l;
+    }
+
     return {
-      anzahl: fertig.length,
+      anzahl: Object.keys(zustand.erledigt).length,
       gesamt: alleEinheiten().length,
+      einheitenGelaufen: v.length,
       trainingsSek: trainingsSek,
       laufSek: laufSek,
       laengstes: laengstes,
+      kurzAnzahl: kurzAnzahl,
       daten: daten,
       letztesDatum: letzte,
       tageSeitLetztem: letzte ? tageZwischen(letzte, heute) : null,
-      inLetzten7Tagen: letzte7
+      inLetzten7Tagen: letzte7,
+      groessteLuecke: groessteLuecke
     };
   }
 
@@ -170,25 +205,25 @@
 
   function pruefeAbzeichen() {
     var st = statistik();
-    var fertig = erledigteEinheiten();
-    var w1 = PLAN[0].einheiten.every(function (e) { return istErledigt(e.id); });
+    var v = zustand.verlauf;
 
-    /* drei Einheiten innerhalb von sieben Tagen */
-    var dreiInWoche = false;
-    for (var i = 0; i + 2 < st.daten.length; i++) {
-      if (tageZwischen(st.daten[i], st.daten[i + 2]) <= 6) { dreiInWoche = true; break; }
+    var zweiInWoche = false;
+    for (var i = 0; i + 1 < st.daten.length; i++) {
+      if (tageZwischen(st.daten[i], st.daten[i + 1]) <= 6) { zweiInWoche = true; break; }
     }
 
     var bedingungen = {
-      start:    st.anzahl >= 1,
-      woche1:   w1,
-      fuenf:    st.anzahl >= 5,
-      fuenfmin: st.laengstes >= 300,
-      halbzeit: st.anzahl >= Math.ceil(st.gesamt / 2),
-      zwanzig:  st.laengstes >= 1200,
-      hundert:  st.laufSek >= 6000,
-      dreimal:  dreiInWoche,
-      dreissig: st.laengstes >= 1800
+      start:      st.einheitenGelaufen >= 1,
+      gelaufen:   v.some(function (x) { return (x.laufSek || 0) > 0; }),
+      vollewoche: zweiInWoche,
+      fuenf:      st.einheitenGelaufen >= 5,
+      kurz:       st.kurzAnzahl >= 1,
+      fuenfmin:   st.laengstes >= 300,
+      zurueck:    st.groessteLuecke >= 14,
+      halbzeit:   st.anzahl >= Math.ceil(st.gesamt / 2),
+      hundert:    st.laufSek >= 6000,
+      fuenfzehn:  st.laengstes >= 900,
+      ziel:       st.anzahl >= st.gesamt
     };
 
     var neu = [];
@@ -263,27 +298,34 @@
   };
 
   /* ==========================================================
-     6. Ansicht „Heute"
+     6. Bausteine für die Anzeige einer Einheit
      ========================================================== */
 
   function streifenHtml(einheit) {
+    var legende = einheit.laufSek
+      ? '<span><b style="background:var(--lauf)"></b>Laufen</span>' +
+        '<span><b style="background:var(--geh)"></b>Gehen</span>' +
+        '<span><b style="background:#4a5462"></b>Auf- und Auslaufen</span>'
+      : '<span><b style="background:var(--geh)"></b>Zügig gehen</span>' +
+        '<span><b style="background:#4a5462"></b>Auf- und Auslaufen</span>';
+
     return '<div class="streifen">' + einheit.bloecke.map(function (b) {
-      var f = ARTEN[b.art].farbe;
-      return '<i class="' + f + '" style="flex:' + b.sek + '"></i>';
-    }).join("") + '</div>' +
-    '<div class="legende">' +
-      '<span><b style="background:var(--lauf)"></b>Laufen</span>' +
-      '<span><b style="background:var(--geh)"></b>Gehen</span>' +
-      '<span><b style="background:#4a5462"></b>Auf- und Auslaufen</span>' +
-    '</div>';
+      return '<i class="' + ARTEN[b.art].farbe + '" style="flex:' + b.sek + '"></i>';
+    }).join("") + '</div><div class="legende">' + legende + '</div>';
+  }
+
+  function passt(bloecke, start, muster) {
+    for (var k = 0; k < muster.length; k++) {
+      var b = bloecke[start + k];
+      if (!b || b.art !== muster[k].art || b.sek !== muster[k].sek) return false;
+    }
+    return true;
   }
 
   function bloeckeHtml(einheit) {
-    var zeilen = [];
-    var i = 0;
+    var zeilen = [], i = 0;
     while (i < einheit.bloecke.length) {
       var b = einheit.bloecke[i];
-      /* gleiche Folgen zusammenfassen: 8 × (1 Min. laufen / 1,5 Min. gehen) */
       var muster = [b], j = i + 1;
       if (b.art === "laufen" && einheit.bloecke[j] && einheit.bloecke[j].art === "gehen") {
         muster.push(einheit.bloecke[j]); j++;
@@ -292,9 +334,10 @@
       while (passt(einheit.bloecke, i + n * schritt, muster)) n++;
 
       if (n > 1) {
+        var summe = n * muster.reduce(function (a, m) { return a + m.sek; }, 0);
         zeilen.push('<li><span class="punkt lauf"></span><span>' + n + ' × ' +
           muster.map(function (m) { return dauerText(m.sek) + " " + ARTEN[m.art].name.toLowerCase(); }).join(" / ") +
-          '</span><span class="dauer">' + minText(n * muster.reduce(function (a, m) { return a + m.sek; }, 0)) + '</span></li>');
+          '</span><span class="dauer">' + minText(summe) + '</span></li>');
         i += n * schritt;
       } else {
         zeilen.push('<li><span class="punkt ' + ARTEN[b.art].farbe + '"></span><span>' +
@@ -305,13 +348,24 @@
     return '<ul class="bloecke">' + zeilen.join("") + '</ul>';
   }
 
-  function passt(bloecke, start, muster) {
-    for (var k = 0; k < muster.length; k++) {
-      var b = bloecke[start + k];
-      if (!b || b.art !== muster[k].art || b.sek !== muster[k].sek) return false;
+  function zahlenHtml(einheit) {
+    if (!einheit.laufSek) {
+      return '<div class="zahlenzeile">' +
+        '<div class="zahl"><b>' + Math.round(einheit.gesamtSek / 60) + '</b><span>Minuten gesamt</span></div>' +
+        '<div class="zahl"><b>0</b><span>Minuten laufen</span></div>' +
+        '<div class="zahl"><b>zügig</b><span>Gehtempo</span></div>' +
+      '</div>';
     }
-    return true;
+    return '<div class="zahlenzeile">' +
+      '<div class="zahl"><b>' + Math.round(einheit.gesamtSek / 60) + '</b><span>Minuten gesamt</span></div>' +
+      '<div class="zahl"><b>' + Math.round(einheit.laufSek / 60) + '</b><span>Minuten laufen</span></div>' +
+      '<div class="zahl"><b>' + dauerText(einheit.laengstesLaufSek) + '</b><span>längstes Stück</span></div>' +
+    '</div>';
   }
+
+  /* ==========================================================
+     7. Ansicht „Heute"
+     ========================================================== */
 
   function naechsterTrainingstagText() {
     if (!zustand.tage.length) return "Keine Trainingstage gewählt.";
@@ -334,18 +388,19 @@
       ? "Woche " + e.woche + " von " + PLAN.length
       : "Plan geschafft";
 
-    /* --- Hauptkarte --- */
     var k = $("heuteKarte");
 
     if (!e) {
       k.innerHTML =
         '<div class="etikett">Geschafft</div>' +
-        '<div class="heute-kopf"><span class="titel">Du läufst 30 Minuten am Stück.</span></div>' +
-        '<p>Acht Wochen, ' + st.gesamt + ' Einheiten, ' + minText(st.laufSek) + ' Laufzeit. ' +
-        'Was jetzt kommt: dieselben drei Einheiten pro Woche, nur ohne Plan im Nacken. ' +
-        'Halt die 30 Minuten, dann verlänger alle zwei Wochen eine Einheit um fünf Minuten.</p>' +
+        '<div class="heute-kopf"><span class="titel">Du läufst 25 Minuten am Stück.</span></div>' +
+        '<p>' + PLAN.length + ' Wochen, ' + st.einheitenGelaufen + ' Einheiten, ' +
+        minText(st.laufSek) + ' Laufzeit. Angefangen hast du mit einem Spaziergang.</p>' +
+        '<p>Was jetzt kommt: dieselben zwei Einheiten pro Woche, nur ohne Plan im Nacken. ' +
+        'Halt die 25 Minuten vier Wochen lang, dann häng alle zwei Wochen zwei Minuten dran – ' +
+        'so kommst du bis Ostern auf 5 Kilometer.</p>' +
         '<div class="knopfzeile">' +
-          '<button class="knopf" id="nochmal">Letzte Einheit noch einmal laufen</button>' +
+          '<button class="knopf" id="nochmal">Letzte Einheit noch einmal</button>' +
           '<button class="knopf zweit" data-zu="fortschritt">Fortschritt ansehen</button>' +
         '</div>';
       var letzte = alleEinheiten()[alleEinheiten().length - 1];
@@ -353,56 +408,72 @@
     } else {
       var w = wocheVon(e);
       var schonHeute = st.letztesDatum === heuteIso();
-      var gestern = st.tageSeitLetztem === 1;
-
       var status = "";
+
       if (schonHeute) {
         status = '<div class="hinweis" style="margin-bottom:14px">Heute schon trainiert. ' +
-                 'Ein Ruhetag gehört zum Training – morgen geht es weiter.</div>';
-      } else if (gestern) {
+                 'Der Ruhetag danach gehört zum Plan – die nächste Einheit wartet.</div>';
+      } else if (st.tageSeitLetztem === 1) {
         status = '<div class="hinweis" style="margin-bottom:14px">Gestern bist du gelaufen. ' +
-                 'Wenn die Beine schwer sind: heute pausieren, morgen laufen.</div>';
-      } else if (st.tageSeitLetztem !== null && st.tageSeitLetztem >= 10) {
-        status = '<div class="hinweis" style="margin-bottom:14px">Deine letzte Einheit ist ' +
-                 st.tageSeitLetztem + ' Tage her. Geh eine Woche zurück und wiederhol sie – ' +
-                 'das ist kein Rückschritt, sondern der kürzere Weg.</div>';
+                 'Zwischen zwei Einheiten sollten ein bis zwei Tage liegen – wenn die Beine ' +
+                 'schwer sind, heute lieber spazieren.</div>';
+      } else if (st.tageSeitLetztem !== null && st.tageSeitLetztem >= 14) {
+        status = '<div class="hinweis achtung" style="margin-bottom:14px">' +
+                 '<b style="display:block">Deine letzte Einheit ist ' + st.tageSeitLetztem + ' Tage her.</b>' +
+                 'Nach mehr als zwei Wochen Pause eine Woche zurückgehen und sie wiederholen. ' +
+                 'Das ist kein Rückschritt, sondern der kürzere Weg.' +
+                 (e.woche > 1 ? '<div class="knopfzeile" style="margin-top:10px">' +
+                   '<button class="knopf zweit klein" id="zurueckWoche">Woche ' + (e.woche - 1) + ' wiederholen</button>' +
+                 '</div>' : '') +
+                 '</div>';
       }
+
+      var istGehrunde = !e.laufSek;
+      var kurz = kurzVariante(e);
 
       k.innerHTML =
         status +
         '<div class="etikett">Deine nächste Einheit</div>' +
         '<div class="heute-kopf">' +
           '<span class="titel">Woche ' + e.woche + ' · Einheit ' + e.nr + '</span>' +
-          '<span class="meta">' + esc(w.titel) + '</span>' +
+          '<span class="meta">' + esc(w.titel) + (istGehrunde ? ' · Gehrunde' : '') + '</span>' +
         '</div>' +
         '<p style="color:var(--leise);margin-top:6px">' + esc(w.ziel) + '</p>' +
-        '<div class="zahlenzeile">' +
-          '<div class="zahl"><b>' + Math.round(e.gesamtSek / 60) + '</b><span>Minuten gesamt</span></div>' +
-          '<div class="zahl"><b>' + Math.round(e.laufSek / 60) + '</b><span>Minuten laufen</span></div>' +
-          '<div class="zahl"><b>' + dauerText(e.laengstesLaufSek) + '</b><span>längstes Stück</span></div>' +
-        '</div>' +
+        zahlenHtml(e) +
         streifenHtml(e) +
         bloeckeHtml(e) +
         '<div class="knopfzeile" style="margin-top:18px">' +
           '<button class="knopf voll" id="start">▶︎ Training starten</button>' +
         '</div>' +
         '<div class="knopfzeile" style="margin-top:10px">' +
-          '<button class="knopf zweit klein" id="ohneTimer">Ohne Timer gelaufen – abhaken</button>' +
-        '</div>';
+          '<button class="knopf zweit klein" id="startKurz">Nur ' +
+            Math.round(kurz.gesamtSek / 60) + ' Min. Zeit? Kurzvariante</button>' +
+          '<button class="knopf zweit klein" id="ohneTimer">Ohne Timer gelaufen</button>' +
+        '</div>' +
+        '<p style="margin-top:12px;font-size:.84rem;color:var(--leise)">' +
+          'Die Kurzvariante ist kein halbes Training: ' +
+          (kurz.laufSek ? Math.round(kurz.laufSek / 60) + ' Minuten laufen in ' +
+            Math.round(kurz.gesamtSek / 60) + ' Minuten. ' : '') +
+          'Sie zählt im Plan genauso.</p>';
 
       $("start").onclick = function () { Trainer.start(e); };
+      $("startKurz").onclick = function () { Trainer.start(kurz); };
       $("ohneTimer").onclick = function () {
-        einheitSpeichern(e, e.gesamtSek, null, "");
+        var neu = einheitSpeichern(e, e.gesamtSek, null, "");
         zeichneAlles();
+        if (neu.length) zeigeAbzeichen(neu);
         wechsle("fortschritt");
       };
+      if ($("zurueckWoche")) {
+        $("zurueckWoche").onclick = function () { wocheWiederholen(e.woche - 1); };
+      }
     }
 
     /* --- Trainingstage --- */
     $("tageKarte").innerHTML =
       '<div class="etikett">Trainingstage</div>' +
-      '<p style="font-size:.92rem;color:var(--leise)">Drei Einheiten pro Woche mit je einem ' +
-      'Tag Pause dazwischen. Tipp: Montag, Mittwoch, Freitag.</p>' +
+      '<p style="font-size:.92rem;color:var(--leise)">Zwei Einheiten pro Woche mit ' +
+      'mindestens zwei Tagen Pause dazwischen. Vorschlag: Montag und Donnerstag.</p>' +
       '<div class="tage">' + TAGE_KURZ.map(function (t, i) {
         return '<button data-tag="' + i + '" aria-pressed="' +
           (zustand.tage.indexOf(i) !== -1) + '">' + t + '</button>';
@@ -414,7 +485,7 @@
         var i = +b.getAttribute("data-tag");
         var pos = zustand.tage.indexOf(i);
         if (pos === -1) zustand.tage.push(i); else zustand.tage.splice(pos, 1);
-        zustand.tage.sort();
+        zustand.tage.sort(function (a, b2) { return a - b2; });
         sichern();
         zeichneHeute();
       };
@@ -423,7 +494,8 @@
     /* --- Motivation --- */
     var tagNr = Math.floor(new Date().setHours(0, 0, 0, 0) / 86400000);
     var spruch = SPRUECHE[tagNr % SPRUECHE.length];
-    var fokus = e ? wocheVon(e).fokus : "Du hast den Plan durchgezogen. Das schafft kaum jemand beim ersten Anlauf.";
+    var fokus = e ? wocheVon(e).fokus
+                  : "Du hast den Plan durchgezogen. Das schafft kaum jemand beim ersten Anlauf.";
 
     $("spruchKarte").innerHTML =
       '<div class="etikett">Für heute</div>' +
@@ -431,15 +503,19 @@
       '<div class="hinweis" style="margin-top:14px">' +
         '<b style="display:block;margin-bottom:4px">' +
         (e ? "Fokus in Woche " + e.woche : "Und jetzt?") + '</b>' + esc(fokus) +
+      '</div>' +
+      '<div class="knopfzeile" style="margin-top:14px">' +
+        '<button class="knopf zweit klein" data-zu="tipps">Tipps für Anfängerinnen</button>' +
       '</div>';
   }
 
   /* ==========================================================
-     7. Ansicht „Plan"
+     8. Ansicht „Plan"
      ========================================================== */
 
   function zeichnePlan() {
     var aktiv = naechsteEinheit();
+
     var html = PLAN.map(function (w) {
       var fertigAnzahl = w.einheiten.filter(function (e) { return istErledigt(e.id); }).length;
       var kompl = fertigAnzahl === w.einheiten.length;
@@ -452,10 +528,11 @@
           '<button class="haken" data-haken="' + e.id + '" aria-pressed="' + !!d + '" ' +
             'aria-label="Einheit ' + e.nr + ' abhaken">✓</button>' +
           '<div class="e-text">' +
-            '<b>Einheit ' + e.nr + '</b>' +
-            '<span>' + Math.round(e.gesamtSek / 60) + ' Min. · ' +
-              Math.round(e.laufSek / 60) + ' Min. laufen · längstes Stück ' + dauerText(e.laengstesLaufSek) +
-              (d && d.datum ? ' · ' + datumHuebsch(d.datum) : '') +
+            '<b>Einheit ' + e.nr + (e.laufSek ? '' : ' · Gehrunde') + '</b>' +
+            '<span>' + Math.round(e.gesamtSek / 60) + ' Min.' +
+              (e.laufSek ? ' · ' + Math.round(e.laufSek / 60) + ' Min. laufen · längstes Stück ' +
+                dauerText(e.laengstesLaufSek) : ' · zügig gehen') +
+              (d && d.datum ? ' · ' + datumHuebsch(d.datum) + (d.kurz ? ' (kurz)' : '') : '') +
             '</span>' +
           '</div>' +
           '<button class="knopf klein ' + (istNaechste ? '' : 'zweit') + '" data-start="' + e.id + '">' +
@@ -475,6 +552,11 @@
         '</summary>' +
         '<div class="inhalt">' + zeilen +
           '<div class="hinweis" style="margin-top:12px">' + esc(w.fokus) + '</div>' +
+          (fertigAnzahl
+            ? '<div class="knopfzeile" style="margin-top:12px">' +
+                '<button class="knopf zweit klein" data-wdh="' + w.nr + '">Woche wiederholen</button>' +
+              '</div>'
+            : '') +
         '</div>' +
       '</details>';
     }).join("");
@@ -488,25 +570,43 @@
         if (zustand.erledigt[id]) {
           delete zustand.erledigt[id];
           sichern();
+          zeichneAlles();
         } else {
-          var e = alleEinheiten().filter(function (x) { return x.id === id; })[0];
-          einheitSpeichern(e, e.gesamtSek, null, "");
+          var e = einheitNachId(id);
+          var neu = einheitSpeichern(e, e.gesamtSek, null, "");
+          zeichneAlles();
+          if (neu.length) zeigeAbzeichen(neu);
         }
-        zeichneAlles();
       };
     });
 
     Array.prototype.forEach.call(l.querySelectorAll("[data-start]"), function (b) {
       b.onclick = function () {
         var id = b.getAttribute("data-start");
-        var e = alleEinheiten().filter(function (x) { return x.id === id; })[0];
-        Trainer.start(e, istErledigt(id));
+        Trainer.start(einheitNachId(id), istErledigt(id));
       };
+    });
+
+    Array.prototype.forEach.call(l.querySelectorAll("[data-wdh]"), function (b) {
+      b.onclick = function () { wocheWiederholen(+b.getAttribute("data-wdh")); };
     });
   }
 
+  /* Setzt die Haken einer Woche zurück. Der Verlauf und damit alle
+     Zahlen und Abzeichen bleiben erhalten. */
+  function wocheWiederholen(nr) {
+    var w = PLAN[nr - 1];
+    if (!w) return;
+    if (!confirm("Woche " + nr + " noch einmal laufen?\n\nDie Haken dieser Woche werden " +
+                 "entfernt. Deine gelaufenen Einheiten, Zahlen und Abzeichen bleiben erhalten.")) return;
+    w.einheiten.forEach(function (e) { delete zustand.erledigt[e.id]; });
+    sichern();
+    zeichneAlles();
+    wechsle("heute");
+  }
+
   /* ==========================================================
-     8. Ansicht „Fortschritt"
+     9. Ansicht „Fortschritt"
      ========================================================== */
 
   function zeichneFortschritt() {
@@ -537,7 +637,7 @@
         '<div class="kachel"><b>' + minText(st.trainingsSek) + '</b><span>Trainingszeit gesamt</span></div>' +
         '<div class="kachel"><b>' + minText(st.laufSek) + '</b><span>davon gelaufen</span></div>' +
         '<div class="kachel"><b>' + (st.laengstes ? dauerText(st.laengstes) : "–") + '</b><span>längstes Laufstück</span></div>' +
-        '<div class="kachel"><b>' + st.inLetzten7Tagen + ' / 3</b><span>Einheiten diese Woche</span></div>' +
+        '<div class="kachel"><b>' + st.inLetzten7Tagen + ' / ' + zustand.proWoche + '</b><span>Einheiten diese Woche</span></div>' +
       '</div>';
 
     $("heatKarte").innerHTML =
@@ -545,7 +645,8 @@
       '<p style="margin-top:12px;font-size:.85rem;color:var(--leise)">' +
         (st.letztesDatum
           ? "Letztes Training: " + datumHuebsch(st.letztesDatum) +
-            (st.tageSeitLetztem === 0 ? " (heute)" : st.tageSeitLetztem === 1 ? " (gestern)" : " (vor " + st.tageSeitLetztem + " Tagen)")
+            (st.tageSeitLetztem === 0 ? " (heute)" : st.tageSeitLetztem === 1 ? " (gestern)" :
+             " (vor " + st.tageSeitLetztem + " Tagen)")
           : "Noch kein Training eingetragen.") +
       '</p>';
 
@@ -558,11 +659,8 @@
           '<span>' + esc(hat ? a.text : "noch offen") + '</span></div>';
       }).join("") + '</div>';
 
-    /* Verlauf */
-    var eintraege = erledigteEinheiten().map(function (e) {
-      return { e: e, d: zustand.erledigt[e.id] };
-    }).sort(function (a, b) {
-      return (b.d.datum || "").localeCompare(a.d.datum || "");
+    var eintraege = zustand.verlauf.slice().sort(function (a, b) {
+      return String(b.datum || "").localeCompare(String(a.datum || ""));
     }).slice(0, 12);
 
     $("verlaufKarte").innerHTML =
@@ -570,32 +668,36 @@
       (eintraege.length
         ? '<ul class="verlauf">' + eintraege.map(function (x) {
             return '<li>' +
-              '<span class="gefuehl">' + (x.d.gefuehl ? GEFUEHLE[x.d.gefuehl - 1] : "👟") + '</span>' +
-              '<span><b>W' + x.e.woche + ' · Einheit ' + x.e.nr + '</b>' +
-                (x.d.notiz ? '<br><span style="color:var(--leise);font-size:.84rem">' + esc(x.d.notiz) + '</span>' : '') +
+              '<span class="gefuehl">' + (x.gefuehl ? GEFUEHLE[x.gefuehl - 1] : "👟") + '</span>' +
+              '<span><b>W' + x.woche + ' · Einheit ' + x.nr + (x.kurz ? ' · kurz' : '') + '</b>' +
+                (x.notiz ? '<br><span style="color:var(--leise);font-size:.84rem">' + esc(x.notiz) + '</span>' : '') +
               '</span>' +
-              '<span class="datum">' + (x.d.datum ? datumHuebsch(x.d.datum) : "") + '</span>' +
+              '<span class="datum">' + datumHuebsch(x.datum) + '</span>' +
             '</li>';
           }).join("") + '</ul>'
-        : '<p style="color:var(--leise)">Hier stehen deine gelaufenen Einheiten, sobald die erste im Kasten ist.</p>');
+        : '<p style="color:var(--leise)">Hier stehen deine Einheiten, sobald die erste im Kasten ist.</p>');
 
     zeichneEinstellungen();
   }
 
   function fortschrittSatz(st) {
-    if (st.anzahl === 0) return "Noch nichts gelaufen. Die erste Einheit dauert 30 Minuten – davon acht laufend.";
-    if (st.anzahl === st.gesamt) return "Plan komplett. 30 Minuten am Stück.";
+    if (st.anzahl === 0) {
+      return "Noch nichts eingetragen. Die erste Einheit ist ein halbstündiger Spaziergang – " +
+             "gelaufen wird erst ab Woche 2.";
+    }
+    if (st.anzahl >= st.gesamt) return "Plan komplett. 25 Minuten am Stück.";
     var e = naechsteEinheit();
     return "Als Nächstes: Woche " + e.woche + ", Einheit " + e.nr + ". Noch " +
-      (st.gesamt - st.anzahl) + " Einheiten bis zu deinen 30 Minuten.";
+      (st.gesamt - st.anzahl) + " Einheiten – bei zwei pro Woche etwa " +
+      Math.ceil((st.gesamt - st.anzahl) / 2) + " Wochen.";
   }
 
   function heatHtml(st) {
     var heute = new Date(); heute.setHours(0, 0, 0, 0);
     var ende = new Date(heute);
-    ende.setDate(ende.getDate() + (6 - wochentagIndex(heute)));   /* Sonntag dieser Woche */
+    ende.setDate(ende.getDate() + (6 - wochentagIndex(heute)));
     var start = new Date(ende);
-    start.setDate(start.getDate() - 55);                          /* 8 Wochen à 7 Tage */
+    start.setDate(start.getDate() - 55);
 
     var gesetzt = {};
     st.daten.forEach(function (d) { gesetzt[d] = true; });
@@ -652,9 +754,7 @@
         try {
           var d = JSON.parse(leser.result);
           if (!d || typeof d !== "object" || !d.erledigt) throw new Error("Format");
-          var s = standard();
-          for (var k in s) if (d[k] !== undefined) s[k] = d[k];
-          zustand = s; sichern(); zeichneAlles();
+          zustand = migriere(d); sichern(); zeichneAlles();
           alert("Daten geladen.");
         } catch (e) {
           alert("Diese Datei passt nicht. Erwartet wird eine Sicherung aus Laufstart.");
@@ -665,7 +765,7 @@
     };
 
     $("reset").onclick = function () {
-      if (confirm("Wirklich alles löschen? Alle gelaufenen Einheiten, Abzeichen und Notizen sind dann weg.")) {
+      if (confirm("Wirklich alles löschen? Alle Einheiten, Abzeichen und Notizen sind dann weg.")) {
         zustand = standard(); sichern(); zeichneAlles();
       }
     };
@@ -677,37 +777,56 @@
   }
 
   /* ==========================================================
-     9. Einheit speichern
+     10. Ansicht „Tipps"
+     ========================================================== */
+
+  function zeichneTipps() {
+    $("tippsListe").innerHTML = TIPPS.map(function (gruppe, i) {
+      return '<details class="woche"' + (i === 0 ? ' open' : '') + '>' +
+        '<summary>' +
+          '<span class="w-nr">' + gruppe.symbol + '</span>' +
+          '<span class="w-text"><b>' + esc(gruppe.gruppe) + '</b>' +
+            '<span>' + gruppe.punkte.length + ' Punkte</span></span>' +
+        '</summary>' +
+        '<div class="inhalt">' + gruppe.punkte.map(function (p) {
+          return '<div class="tipp"><b>' + esc(p[0]) + '</b><p>' + esc(p[1]) + '</p></div>';
+        }).join("") + '</div>' +
+      '</details>';
+    }).join("");
+  }
+
+  /* ==========================================================
+     11. Einheit speichern
      ========================================================== */
 
   function einheitSpeichern(einheit, dauerSek, gefuehl, notiz) {
-    zustand.erledigt[einheit.id] = {
+    zustand.verlauf.push({
+      id: einheit.id,
+      woche: einheit.woche,
+      nr: einheit.nr,
       datum: heuteIso(),
       dauer: Math.round(dauerSek),
+      laufSek: einheit.laufSek,
+      laengstes: einheit.laengstesLaufSek,
       gefuehl: gefuehl || null,
-      notiz: (notiz || "").slice(0, 300)
-    };
+      notiz: (notiz || "").slice(0, 300),
+      kurz: !!einheit.kurz
+    });
+    zustand.erledigt[einheit.id] = { datum: heuteIso(), kurz: !!einheit.kurz };
     sichern();
     return pruefeAbzeichen();
   }
 
   /* ==========================================================
-     10. Trainingsansicht
+     12. Trainingsansicht
      ========================================================== */
 
   var UMFANG = 2 * Math.PI * 54;
 
   var Trainer = {
-    einheit: null,
-    idx: 0,
-    restMs: 0,
-    echtMs: 0,
-    laeuft: false,
-    letzterTick: 0,
-    uhrId: null,
-    wachlicht: null,
-    letzteSekunde: null,
-    wiederholung: false,
+    einheit: null, idx: 0, restMs: 0, echtMs: 0,
+    laeuft: false, letzterTick: 0, uhrId: null,
+    wachlicht: null, letzteSekunde: null, wiederholung: false,
 
     start: function (einheit, wiederholung) {
       this.einheit = einheit;
@@ -723,7 +842,8 @@
       $("trainerFertig").style.display = "none";
       $("trainer").classList.add("offen");
       $("tPause").textContent = "Pause";
-      $("tEinheit").textContent = "Woche " + einheit.woche + " · Einheit " + einheit.nr;
+      $("tEinheit").textContent = "Woche " + einheit.woche + " · Einheit " + einheit.nr +
+        (einheit.kurz ? " · kurz" : "");
 
       Klang.wecken();
       this.ansagen(einheit.bloecke[0].art);
@@ -737,7 +857,6 @@
 
     aktuell: function () { return this.einheit.bloecke[this.idx]; },
 
-    /* Position im Plan in Millisekunden – für den Gesamtbalken */
     planPosition: function () {
       var summe = 0;
       for (var i = 0; i < this.idx; i++) summe += this.einheit.bloecke[i].sek * 1000;
@@ -753,15 +872,14 @@
       this.restMs -= delta;
       this.echtMs += delta;
 
-      /* Countdown in den letzten drei Sekunden eines Blocks */
       var sek = Math.ceil(this.restMs / 1000);
       if (sek !== this.letzteSekunde) {
-        if (sek > 0 && sek <= 3) { Klang.signal("tick"); }
+        if (sek > 0 && sek <= 3) Klang.signal("tick");
         this.letzteSekunde = sek;
       }
 
       if (this.restMs <= 0) {
-        var ueberhang = this.restMs;          /* negativ – wird verrechnet */
+        var ueberhang = this.restMs;
         if (this.idx + 1 >= this.einheit.bloecke.length) { this.fertig(); return; }
         this.idx++;
         this.restMs = this.aktuell().sek * 1000 + ueberhang;
@@ -773,10 +891,9 @@
     },
 
     ansagen: function (art) {
-      var a = ARTEN[art];
-      Klang.signal(art === "laufen" ? "laufen" : art === "gehen" ? "gehen" : "sonst");
+      Klang.signal(art === "laufen" ? "laufen" : (art === "gehen" ? "gehen" : "sonst"));
       Klang.ruettel(art === "laufen" ? [120, 80, 120, 80, 220] : [300]);
-      Klang.sprich(a.ansage);
+      Klang.sprich(ARTEN[art].ansage);
     },
 
     zeichnen: function () {
@@ -788,12 +905,12 @@
       trainer.classList.add(art.farbe);
 
       $("tAktion").textContent = this.laeuft ? art.name : "Pause";
-      $("tZeit").innerHTML = mmss(this.restMs / 1000);
+      $("tZeit").textContent = mmss(this.restMs / 1000);
       $("tBlockNr").textContent = "Block " + (this.idx + 1) + " von " + this.einheit.bloecke.length;
 
       var anteil = Math.max(0, Math.min(1, this.restMs / (b.sek * 1000)));
       var ring = $("tRing");
-      ring.style.stroke = "var(--" + (art.farbe === "warm" ? "warm" : art.farbe) + ")";
+      ring.style.stroke = "var(--" + art.farbe + ")";
       ring.setAttribute("stroke-dashoffset", (UMFANG * (1 - anteil)).toFixed(1));
 
       var gesamtMs = this.einheit.gesamtSek * 1000;
@@ -812,7 +929,7 @@
       this.laeuft = !this.laeuft;
       this.letzterTick = Date.now();
       $("tPause").textContent = this.laeuft ? "Pause" : "Weiter";
-      if (this.laeuft) { this.wachHalten(); } else { Klang.sprich("Pause"); }
+      if (this.laeuft) this.wachHalten(); else Klang.sprich("Pause");
       this.zeichnen();
     },
 
@@ -843,8 +960,6 @@
 
     abschluss: function () {
       var einheit = this.einheit;
-      /* Beim letzten Block zählt die volle geplante Dauer, auch wenn
-         z. B. das Aufwärmen übersprungen wurde. */
       var planSek = this.idx >= einheit.bloecke.length - 1
         ? einheit.gesamtSek
         : this.planPosition() / 1000;
@@ -858,9 +973,10 @@
 
       f.innerHTML =
         '<div style="font-size:3rem;line-height:1">🎉</div>' +
-        '<h1 style="margin-top:8px">Einheit geschafft</h1>' +
-        '<p style="color:var(--leise)">Woche ' + einheit.woche + ' · Einheit ' + einheit.nr + ' · ' +
-          minText(dauerSek) + ' unterwegs, ' + Math.round(einheit.laufSek / 60) + ' Minuten davon gelaufen.</p>' +
+        '<h1 style="margin-top:8px">' + (einheit.laufSek ? "Einheit geschafft" : "Runde geschafft") + '</h1>' +
+        '<p style="color:var(--leise)">Woche ' + einheit.woche + ' · Einheit ' + einheit.nr +
+          (einheit.kurz ? ' · Kurzvariante' : '') + ' · ' + minText(dauerSek) + ' unterwegs' +
+          (einheit.laufSek ? ', ' + Math.round(einheit.laufSek / 60) + ' Minuten davon gelaufen' : '') + '.</p>' +
         '<div style="text-align:left;margin-top:18px">' +
           '<div class="etikett">Wie war es?</div>' +
           '<div class="gefuehl-wahl">' + GEFUEHLE.map(function (g, i) {
@@ -869,10 +985,7 @@
           '<div class="etikett">Notiz (freiwillig)</div>' +
           '<textarea id="fNotiz" placeholder="Strecke, Wetter, wie sich die Beine angefühlt haben …"></textarea>' +
         '</div>' +
-        '<div class="steuerung"><button class="knopf" id="fSpeichern">Eintragen und schließen</button></div>' +
-        (this.wiederholung
-          ? '<p style="color:var(--leise);font-size:.82rem;margin-top:10px">Diese Einheit war schon abgehakt – der Eintrag wird aktualisiert.</p>'
-          : '');
+        '<div class="steuerung"><button class="knopf" id="fSpeichern">Eintragen und schließen</button></div>';
 
       Array.prototype.forEach.call(f.querySelectorAll("[data-gefuehl]"), function (b) {
         b.onclick = function () {
@@ -915,10 +1028,9 @@
     }
   };
 
-  /* Bildschirmsperre nach Rückkehr in den Vordergrund erneut verhindern */
   document.addEventListener("visibilitychange", function () {
     if (document.visibilityState === "visible" && $("trainer").classList.contains("offen") && Trainer.laeuft) {
-      Trainer.letzterTick = Date.now() - 0;
+      Trainer.letzterTick = Date.now();
       Trainer.wachHalten();
     }
   });
@@ -931,11 +1043,11 @@
   }
 
   /* ==========================================================
-     11. Navigation und Start
+     13. Navigation und Start
      ========================================================== */
 
   function wechsle(name) {
-    ["heute", "plan", "fortschritt"].forEach(function (n) {
+    SEITEN.forEach(function (n) {
       $("seite-" + n).classList.toggle("aktiv", n === name);
     });
     Array.prototype.forEach.call(document.querySelectorAll(".nav button"), function (b) {
@@ -956,16 +1068,17 @@
     wechsle(b.getAttribute("data-seite") || b.getAttribute("data-zu"));
   });
 
-  $("tPause").onclick        = function () { Trainer.pause(); };
-  $("tWeiterBlock").onclick  = function () { Trainer.blockUeberspringen(); };
-  $("tBeenden").onclick      = function () { Trainer.abbrechen(); };
+  $("tPause").onclick       = function () { Trainer.pause(); };
+  $("tWeiterBlock").onclick = function () { Trainer.blockUeberspringen(); };
+  $("tBeenden").onclick     = function () { Trainer.abbrechen(); };
 
   document.addEventListener("keydown", function (ev) {
     if (!$("trainer").classList.contains("offen")) return;
     if (ev.code === "Space") { ev.preventDefault(); Trainer.pause(); }
-    if (ev.code === "Escape") { Trainer.abbrechen(); }
+    if (ev.code === "Escape") Trainer.abbrechen();
   });
 
   pruefeAbzeichen();
+  zeichneTipps();
   zeichneAlles();
 })();
