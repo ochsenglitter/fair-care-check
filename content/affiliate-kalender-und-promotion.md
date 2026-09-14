@@ -49,6 +49,28 @@ Geordnet nach Bedeutung für deine Nische, nicht nach Datum.
 | 12 | **Singles Day** | **Mi 11.11.2026** | 1 Woche | Vor allem Elektronik. Mitnehmen, nicht groß aufziehen – sonst verbrennst du Aufmerksamkeit vor der Black Week |
 | — | **Sommerferien / Reisen** | Juni–Juli | 4 Wochen | Packen, Autofahrt, Strandkram. Passt zum Travel-Add-on, wenn es später kommt |
 
+## Das Fenster, das fast alle verschenken: die Herbstferien
+
+**Mo 19.10. – Fr 30.10.2026.** Zwei Wochen ohne Schule. Der Schulschmerz ist
+weg, also verkauft Sarah dort nicht – aber Affiliate läuft in diesen zwei
+Wochen besser als im Oktoberschnitt, weil die Mütter mehr am Handy sind und
+konkrete Probleme haben:
+
+| Thema | Wann genau | Warum es zieht |
+|---|---|---|
+| Autofahrt und Reise | 17.–19.10., Freitag bis Sonntag vor Ferienbeginn | Wer Samstag losfährt, kauft Freitag. Nackenkissen, Kopfhörer, Reiseapotheke, Beschäftigung für die Rückbank |
+| Regentage | ab dem zweiten Ferientag, wetterabhängig | Spiele, Bastelkram, Backzubehör. Reagiere auf das echte Wetter, nicht auf den Plan |
+| Langeweile | zweite Ferienwoche | Was Kinder allein machen können, ohne dass du daneben sitzt |
+| Aufräumen im Kinderzimmer | letzte drei Ferientage | Der Moment, in dem Mütter das Chaos der Ferien beseitigen. Ordnungssysteme, Kisten, Etiketten |
+
+Das ist gleichzeitig der Vorlauf für den Sarah-Launch am 02.11. Du verkaufst in
+den Ferien nichts Schulisches, aber du bleibst täglich sichtbar – und das ist
+die Voraussetzung dafür, dass der Launch am ersten Schultag funktioniert.
+
+**Die vier Tage davor, 15.–18.10., nicht verschenken.** Das sind die letzten
+Schultage mit Zettelstapel auf dem Tisch. Wer sich dort in die Warteliste
+einträgt, tut es aus akutem Schmerz.
+
 **Was du auslässt:** Valentinstag (funktioniert in deiner Nische kaum),
 Halloween (bindet Aufmerksamkeit drei Wochen vor der Black Week), jedes Event
 ohne Bezug zu Familie und Haushalt.
