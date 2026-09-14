@@ -106,6 +106,29 @@ implizit bei Fenja, aber ohne Fachtiefe.
 Mental Load hier wirklich ist – und ob Datenschutz-Empfindlichkeit dagegen
 spricht.
 
+### B3. Content- und Story-Planung – gehört sie überhaupt in die Familie?
+
+Aufgekommen am 2026-09-14 beim Bau des Story-Plans in `content/`. Antonia
+lässt sich ihr tägliches Story-Briefing von ihrer eigenen Fenja erstellen,
+weil Fenja ihren Kalender kennt.
+
+Content-Planung ist **kein Bereich aus der Einordnungstabelle**. Sie betrifft
+Antonias Arbeit, nicht den Mental Load einer Familie. Nach Verfahrensschritt 4
+wäre sie damit ein Add-on-Kandidat – die Filterfrage („Welchen konkreten Mental
+Load muss eine Mutter danach nicht mehr selbst übernehmen?") beantwortet sie
+aber nicht. Eine Mutter ohne Instagram-Konto hat hier gar kein Problem.
+
+**Vorschlag:** Nicht aufnehmen. Weder in Fenja noch als Add-on. Für Antonias
+eigenen Gebrauch bleibt der Story-Plan ein externes Dokument, das Fenja als
+Kontext liest – Fenja liefert dabei ausschließlich das, wofür sie ohnehin
+zuständig ist (Tagesplanung, Termine, Vorbereitungsbedarf). Damit wandert
+keine Funktion in Fenja hinein.
+
+Falls daraus später doch ein Produkt werden soll, wäre es **kein Familien-,
+sondern ein Business-Produkt** und gehört in eine eigene Linie – nicht in die
+Leiter Sarah → Fenja → Add-ons. Das wäre eine strategische Entscheidung, keine
+Einordnungsfrage.
+
 ---
 
 ## C. Produktentscheidungen
