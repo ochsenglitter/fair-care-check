@@ -30,7 +30,7 @@ laufen:
 | Ferien-Vorlauf | 15.–25.10. | Leichter Content, Warteliste füllen, Beta vorbereiten |
 | **Cart open** | **Mo 26.10. – So 01.11.** | Founding-Launch, sieben Tage |
 | Beta-Betreuung | 02.–20.11. | Die Founding-Kohorte begleiten, Testimonials sammeln |
-| Black Week | 23.–29.11. | **Kein Sarah-Verkauf.** Affiliate-Vollgas |
+| Black Week | 23.–30.11. | **Kein Sarah-Verkauf.** Affiliate-Vollgas (Black Friday 27.11., Cyber Monday 30.11.) |
 | Early Access | Januar | 49 €, öffentlich, mit Testimonials, zum Halbjahreswechsel |
 
 Wenn die Ferien anders liegen, verschiebt sich das ganze Raster – aber die
@@ -119,9 +119,11 @@ Antwortfenster 16:00 bleibt. Der Feed-Post kommt zusätzlich.
 Jede Frage, die dreimal kommt, gehört in die Anleitung. Am Ende: Testimonials
 einsammeln, solange die Erleichterung frisch ist.
 
-**23.–29.11. Black Week.** Affiliate-Vollgas nach dem Plan aus der
-Story-Systematik: Evergreen-Regal vorne, drei Link-Slots am Tag, Q4-Peaks
-vorbereitet. Sarah kommt in dieser Woche nicht vor.
+**23.–30.11. Black Week.** Black Friday am 27.11., Cyber Monday am 30.11.
+Affiliate-Vollgas nach der Event-Mechanik in
+`affiliate-kalender-und-promotion.md`: Wunschliste ab dem 09.11.,
+Countdown ab dem 20.11., Evergreen-Regal vorne, drei bis vier Link-Slots am
+Tag. Sarah kommt in dieser Woche nicht vor.
 
 **Januar, Early Access ca. 49 €.** Öffentlich, mit Testimonials aus der Beta.
 Zum Halbjahreswechsel: neue Stundenpläne, neue Zettel, Zeugnisse. Der zweite
