@@ -125,9 +125,34 @@ ZUSATZ AM SONNTAG
 Gib mir zusätzlich eine Wochenvorschau: welche Tage der kommenden Woche mit
 Terminen kollidieren, was ich vorproduzieren sollte und an welchem Tag ein
 Tausch wahrscheinlich wird.
+
+Und trage deinen Teil in das Dokument "06 Wochenprotokoll" im selben
+Drive-Ordner ein: welche Tage diese Woche getauscht wurden und warum, welche
+Tage ausgefallen sind, welche Termine der kommenden Woche mit den Story-Blöcken
+kollidieren. Das ist der Rückkanal für die Planung - schreib nur, was du aus
+Kalender und Plan weißt, keine Bewertung.
 ```
 
 ---
+
+## Die zwei Kreisläufe
+
+Fenja liefert an Antonia, nicht an Claude. Es gibt keine direkte Verbindung
+zwischen beiden – **Drive ist die Leitung.**
+
+| | Täglich | Wöchentlich (sonntags) |
+|---|---|---|
+| Wer | Fenja → Antonia | Fenja + Antonia → Dokument 06 → Claude |
+| Was | Kalender + Plan → Briefing 06:45 → filmen | Was lief, was wurde getauscht, die Zahlen |
+| Ergebnis | die Story von heute | der angepasste Plan für nächste Woche |
+
+**Der Rückkanal ist Dokument 06 „Wochenprotokoll"** im selben Drive-Ordner.
+Fenja trägt dort sonntags ein, was sie weiß (Tauschvorgänge, Kollisionen der
+kommenden Woche, ausgefallene Tage). Antonia trägt die Zahlen und die stärksten
+Antworten ein. Claude liest das Dokument, passt den Plan an und legt die neue
+Fassung in denselben Ordner – ab Montag liest Fenja den neuen Stand.
+
+Kein Kopieren, kein Weiterleiten. Beide schreiben in denselben Ordner.
 
 ## Schritt 3: Abends
 

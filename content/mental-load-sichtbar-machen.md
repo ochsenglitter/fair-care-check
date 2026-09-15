@@ -196,8 +196,9 @@ reicht – du schreibst diese Notizen ohnehin. Namen abdecken, wenn du möchtest
 
 **07:00 · Block 1 · 6 Frames**
 
-1. Der Zettel liegt auf dem Tisch. „Das hab ich heute Morgen um halb sieben
-   geschrieben."
+1. **Live schreiben, nicht den fertigen Zettel zeigen.** Die Hand im Bild, der
+   Stift in Bewegung – das hält die Leute im Frame. (So hat Antonia es an Tag 1
+   tatsächlich gemacht, und es ist besser als die ursprüngliche Fassung.)
 2. Vorlesen, Zeile für Zeile. Nicht erklären, nur vorlesen.
 3. Du kreist mit rotem Stift **die Fragezeichen** ein.
 4. „Drei Zeilen. Drei Fragezeichen."
