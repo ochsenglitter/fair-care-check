@@ -29,12 +29,12 @@ unter B3 in `produktplanung/offene-fragen.md`.
 
 Alle Planungsdokumente liegen als Google Docs in
 
-**AE Social Media Management → Contentplanung → 30 Tage Kopf frei –
-Contentplanung**
+**AE Social Media Management → Contentplanung → Mental Load sichtbar
+machen**
 
 | Dokument | Entspricht |
 |---|---|
-| 01 Story-Plan – 30 Tage Kopf frei | `30-tage-kopf-frei.md` |
+| 01 Story-Serie – Mental Load sichtbar machen | `mental-load-sichtbar-machen.md` |
 | 02 Feed und Reels | `feed-und-reels.md` |
 | 03 Affiliate – Eventkalender und Promotion | `affiliate-kalender-und-promotion.md` |
 | 04 Launch – Sarah Founding | `launch-sarah.md` |
@@ -55,8 +55,8 @@ Kopiere den Block zwischen den Linien.
 ```
 STORY-BRIEFING – tägliche Aufgabe
 
-Du hast das Dokument "30 Tage Kopf frei" als Wissensquelle. Erstelle mir
-jeden Morgen um 06:45 ein Story-Briefing.
+Du hast den Drive-Ordner "Mental Load sichtbar machen" als Wissensquelle.
+Erstelle mir jeden Morgen um 06:45 ein Story-Briefing.
 
 STARTDATUM DER SERIE: 15.09.2026 = Tag 1.
 Die Tagesnummer läuft fortlaufend weiter, auch wenn Themen getauscht werden.
@@ -64,7 +64,7 @@ Die Tagesnummer läuft fortlaufend weiter, auch wenn Themen getauscht werden.
 SO GEHST DU VOR
 
 1. Bestimme die heutige Tagesnummer aus dem Startdatum.
-2. Schlag das Thema dieses Tages im Dokument nach.
+2. Schlag Titel, Typ und die Frames dieses Tages in Dokument 01 nach.
 3. Sieh in meinen Kalender: Termine, Arbeitszeiten, Betreuungszeiten,
    Fahrdienste, Vorbereitungsbedarf für heute.
 4. Prüfe die Tauschregel:

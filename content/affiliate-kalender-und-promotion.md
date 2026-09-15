@@ -12,7 +12,7 @@ Zwei Dinge entscheiden über den Affiliate-Umsatz: **wann** du promotest und
 **Amazon legt sein zweites Prime-Event traditionell auf Anfang Oktober.** Das
 genaue Datum wird erst zwei bis drei Wochen vorher bekanntgegeben – bitte
 prüfen, sobald es steht. Wenn es wie in den Vorjahren auf den 6./7. Oktober
-fällt, trifft es **Tag 22 bis 24 deines Story-Plans** – also mitten in Woche 4,
+fällt, trifft es **Tag 22 bis 24 der Serie „Mental Load sichtbar machen"** – also mitten in Woche 4,
 in der Sarah vorbereitet wird.
 
 Das ist der zweitbeste Amazon-Zeitraum des Jahres. Auslassen ist keine Option,

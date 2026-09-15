@@ -1,7 +1,8 @@
 # Sarah – Founding-Launch
 
-Anschluss an die 30 Tage. Die Warteliste öffnet an Tag 27 (11.10.), die Serie
-endet an Tag 30 (14.10.). Danach kommt der Verkauf.
+Anschluss an die Story-Serie „Mental Load sichtbar machen". Die Warteliste
+öffnet an Tag 27 (11.10.), die Serie endet an Tag 30 (14.10.). Danach kommt
+der Verkauf.
 
 > **Alle Preise hier sind Arbeitsannahmen** aus
 > `produktplanung/produktleiter-und-preise.md` und vor der Salespage

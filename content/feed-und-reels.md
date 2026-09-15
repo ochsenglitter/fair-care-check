@@ -1,6 +1,8 @@
-# Feed und Reels – die zweite Ebene der 30 Tage
+# Feed und Reels – die zweite Ebene
 
-Der Story-Plan (`30-tage-kopf-frei.md`) holt die bestehenden Follower zurück.
+Zur Story-Serie „Mental Load sichtbar machen" (30 Tage).
+
+Der Story-Plan (`mental-load-sichtbar-machen.md`) holt die bestehenden Follower zurück.
 Dieser Plan hier bringt neue dazu und baut die DM-Liste. Beide laufen parallel
 und stützen sich: Was montags im Reel läuft, greifen die Stories am selben Tag
 auf.
