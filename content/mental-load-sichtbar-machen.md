@@ -91,6 +91,58 @@ verspricht nur einen.
 Mit dieser Regel kannst du jeden Sticker selbst erfinden. Die Antworten auf die
 rechte Spalte sind lang und persönlich – die auf die linke einsilbig.
 
+## Sarah nebenbei zeigen – ohne zu verkaufen
+
+Das System darf schon vor Tag 24 vorkommen. Aber nur als **Ergebnis**, nie als
+Lösung. Die Neugier muss beim Zuschauer entstehen, nicht bei dir.
+
+| Nicht | Sondern |
+|---|---|
+| „Das liest meinen Elternbrief und macht daraus einen Termin." | „Ich wusste heute früh, dass Emma ihr Lesebuch braucht. Stand in keinem Kalender." |
+| ein Demo-Frame | ein Nebensatz im normalen Ablauf |
+| eine Erklärung | eine offene Frage |
+
+### Die fünf Regeln
+
+1. **Nie erklären.** Fragt jemand nach: „Erzähl ich euch später." Nicht
+   ausweichen, nicht auflösen. Beides wäre schlechter.
+2. **Nur Schule.** Ein Zahnarzttermin oder ein Fahrdienst wäre Fenja-Gebiet –
+   damit versprichst du wieder etwas, das Sarah nicht hält.
+3. **Kein Name.** „Sarah" fällt zum ersten Mal an Tag 24.
+4. **Höchstens drei Frames in Woche 1 und 2 zusammen.** Nie zwei am selben Tag,
+   nie an zwei Tagen hintereinander. Selten macht neugierig, häufig macht
+   Werbung.
+5. **Null in Woche 3.** Dort muss der Schmerz stehen bleiben. Wer in der
+   Schulwoche entspannt wirkt, bekommt keine Antworten – und ohne Antworten
+   gibt es keine Salespage.
+
+### Der Reaktiv-Frame
+
+Zählt **nicht** gegen die Quote, weil er aus der Community kommt und nicht aus
+dem Plan: Wenn Leute fragen, darfst du das zeigen.
+
+> „Drei von euch haben gefragt, woher ich weiß, dass heute Sportzeug mit muss.
+> Erzähl ich euch nächste Woche."
+
+Das verdoppelt die Neugier und kostet dich nichts. Diese Fragen sind außerdem
+Marktforschung, ohne dass du danach fragen musst – sammle sie.
+
+### Fenja schlägt den Moment vor
+
+Sie weiß, was heute ansteht. Im Briefing steht dann eine Zeile:
+
+> Heute möglich: unerklärter Moment (Vorlesetag Emma). Quote diese Woche: 1 von
+> 3 verbraucht.
+
+So entsteht der Frame aus dem echten Tag statt aus einem Plan – und genau
+deshalb wirkt er nicht inszeniert.
+
+### Was das für Tag 24 bedeutet
+
+Die Auflösung wird stärker, nicht schwächer. Der erste Satz dort heißt dann:
+
+> „Ihr habt mich drei Wochen lang gefragt, woher ich das weiß."
+
 ## Muss alles Schule sein? Nein – aber der Anspruch an Tag 24 muss stimmen
 
 Die Serie zeigt **den ganzen Mental Load**, nicht nur Schule. Alles andere wäre
@@ -602,7 +654,8 @@ Betreuungsplanung gehören zu Fenja und kommen hier nicht vor.
 
 **07:00 · Block 1 · 6 Frames**
 
-1. Der Elternbrief in der Hand. „Der kam heute Morgen."
+1. „Ihr habt mich drei Wochen lang gefragt, woher ich das weiß." Dann der
+   Elternbrief in der Hand: „Der kam heute Morgen."
 2. Du fotografierst ihn ab. Sonst nichts.
 3.–5. Was daraus wird: der Termin. Die Frist. Das To-do. Die Erinnerung an das,
    was vorher besorgt werden muss. Die Zuordnung, welches Kind betroffen ist.
