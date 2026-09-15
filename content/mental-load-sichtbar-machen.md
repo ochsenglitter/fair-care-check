@@ -17,11 +17,78 @@ Nicht lösen. Nicht aufräumen. Nicht abgeben. **Zeigen.**
 Das ist die ganze tägliche Handlung. Sie ist bewusst klein, weil sie 30 Tage
 lang durchhaltbar sein muss.
 
+## To-Do oder Mental Load? Die Unterscheidung, die alles entscheidet
+
+Ein **To-Do** ist „Turnbeutel einpacken". Das ist abends erledigt und weg.
+
+**Mental Load** ist: dass ich es weiß. Dass mich niemand daran erinnert. Und
+dass es nächsten Mittwoch wieder da ist.
+
+Der ist abends **nicht weg**. Er kommt wieder.
+
+Deshalb wird in dieser Serie nichts abgehakt. Jede Zeile bekommt drei Angaben:
+
+| Was | Wer erinnert mich | Wann kommt's wieder |
+|---|---|---|
+| Turnbeutel | niemand | jeden Mittwoch |
+| Zahnarzt Emma | niemand | in 6 Monaten |
+| Winterjacke zu klein | niemand | jede Saison |
+| Geschenk Samstag | niemand | beim nächsten Kindergeburtstag |
+
+**Die mittlere Spalte ist der Mental Load. Die rechte ist der Grund, warum er
+nicht endet.**
+
+Die linke Spalte allein wäre eine To-do-Liste – und die interessiert niemanden.
+
+### Abends wird nicht abgehakt
+
+Der alte Abendframe „was ist weg, was ist geblieben" war falsch: Er misst
+erledigte Aufgaben, nicht Mental Load. Richtig ist:
+
+> **Du streichst abends nur, was nie wieder kommt.**
+> „Ich hab heute elf Sachen erledigt. Gestrichen hab ich zwei."
+
+Das ist der Beweis in einem Satz. Der Zettel wird nicht kürzer, obwohl du den
+ganzen Tag gearbeitet hast.
+
+### Die Sticker-Regel
+
+> **Frag nie nach der Aufgabe. Frag nach dem Erinnern, dem Vorausdenken oder
+> der Wiederholung.**
+
+| schlecht (Aufgabe) | gut (Mental Load) |
+|---|---|
+| „Wer räumt bei euch die Spülmaschine aus?" | „Wer merkt, dass sie ausgeräumt werden muss?" |
+| „Wer kauft die Geschenke?" | „Wer weiß drei Wochen vorher, dass ein Geburtstag ansteht?" |
+| „Wer packt den Turnbeutel?" | „Wer erinnert dich an den Turnbeutel?" |
+
+Mit dieser Regel kannst du jeden Sticker selbst erfinden. Die Antworten auf die
+rechte Spalte sind lang und persönlich – die auf die linke einsilbig.
+
+## Muss alles Schule sein? Nein – aber der Anspruch an Tag 24 muss stimmen
+
+Die Serie zeigt **den ganzen Mental Load**, nicht nur Schule. Alles andere wäre
+30 Tage monoton, und Woche 2 ist dein Affiliate-Geschäft.
+
+Der Fehler wäre, daraus am Ende ein Versprechen zu machen, das Sarah nicht
+halten kann. Sarah ist ausschließlich Schule. Deshalb heißt der Satz an Tag 24
+nicht „jetzt ist alles weg", sondern:
+
+> **„Ich hab nicht alles abgegeben. Ich hab einen Bereich abgegeben. Den, der
+> jede Woche neu reinkommt."**
+
+Das ist glaubwürdig – und es ist gleichzeitig deine Produktleiter: Schule zuerst
+(Sarah), die anderen Bereiche später (Fenja, Add-ons). **Tag 21 sortiert die
+gesammelten Antworten nach Bereichen**, und nur einer davon wird jetzt gelöst.
+
+Ohne diese Abgrenzung baust du 23 Tage lang eine Erwartung auf, die Sarah
+enttäuscht.
+
 ## Was du nicht tust
 
 **Du gibst nichts ab** – nicht in Woche 1, nicht in Woche 2, nicht in Woche 3.
-Abgegeben wird genau einmal, an Tag 24, an Sarah. Das ist die Pointe der Serie,
-nicht die tägliche Aufgabe.
+Abgegeben wird genau einmal, an Tag 24, und nur für einen Bereich. Das ist die
+Pointe der Serie, nicht die tägliche Aufgabe.
 
 Wenn du früher „abgibst", hast du am Ende nichts mehr zu zeigen.
 
@@ -98,24 +165,28 @@ Ziel dieser Woche sind **Antworten**, nicht Klicks. Null Affiliate-Frames.
 ## Tag 1 (Di 15.09.) – Was gerade alles in meinem Kopf ist
 *Persönlich · kein Affiliate · nicht verschiebbar*
 
-**Requisiten:** ein Zettel, ein Stift, Küchentisch.
+**Requisiten:** ein Zettel, ein Stift, Küchentisch. Drei Spalten vorzeichnen.
 
-**07:00 · Block 1 · 5 Frames**
+**07:00 · Block 1 · 6 Frames**
 
 1. Du, ungeschminkt: „Ich fange heute was an, das 30 Tage dauert."
-2. Du: „Ich zeige euch jeden Tag eine Sache, die in meinem Kopf ist und die
-   keiner sieht."
-3. Zettel, du schreibst live mit, während du sprichst: „Turnbeutel muss Mittwoch
-   mit. Geschenk für Samstag. Zahnarzt anrufen. Die Winterjacke ist zu klein."
-4. Nah auf den Zettel. Text im Bild: „Das sind vier. Bis heute Abend werden's
-   zwanzig."
-5. Du: „Ich löse das heute nicht. Ich schreib's nur auf." → Fragesticker: „Was
-   steht heute bei dir im Kopf?"
+2. Du: „Ich zeige euch jeden Tag, was in meinem Kopf ist. Und warum es da nicht
+   rausgeht."
+3. Der Zettel mit drei Spalten: **WAS · WER ERINNERT MICH · WANN KOMMT'S
+   WIEDER**
+4. Live vier Zeilen füllen, laut mitsprechen: „Turnbeutel – niemand – jeden
+   Mittwoch." „Zahnarzt Emma – niemand – in sechs Monaten." „Winterjacke zu
+   klein – niemand – jede Saison." „Geschenk Samstag – niemand – beim nächsten
+   Kindergeburtstag."
+5. Nah auf die **mittlere Spalte**: „Die mittlere Spalte ist leer. Das ist der
+   ganze Punkt."
+6. Fragesticker: „Wer erinnert dich an die Sachen auf deiner Liste?"
 
-**12:30 · 3 Frames** Drei Antworten vorlesen und kommentieren. Umfrage: „Hast du
-auch so eine Liste? Ja / Nur im Kopf"
+**12:30 · 3 Frames** Antworten vorlesen. Umfrage: „Wird deine Liste abends
+kürzer? Ja / Nie"
 
-**20:30 · 3 Frames** Derselbe Zettel am Abend: was ist weg, was steht noch da.
+**20:30 · 3 Frames** Derselbe Zettel am Abend. Du streichst **nur, was nie
+wieder kommt**. „Ich hab heute elf Sachen erledigt. Gestrichen hab ich zwei." 
 
 ## Tag 2 (Mi 16.09.) – Der unsichtbare Morgen
 *Zahlen · kein Affiliate*
@@ -135,14 +206,16 @@ Je ein Frame, Uhrzeit oben im Bild, **kein Sprechen**, nur Musik:
 
 **12:30 · 3 Frames** Umfrage: „Wie viele wären es bei dir? Unter 10 / Über 20"
 
-**20:30 · 3 Frames** Die Ergebnisse.
+**20:30 · 3 Frames** Die Ergebnisse. Schlusssatz: „Elf Sachen erledigt. Und
+morgen früh fängt es genauso wieder an." Nicht „geschafft" – sondern „wieder von
+vorn".
 
 ## Tag 3 (Do 17.09.) – Was nur ich weiß
 *Alleinverantwortung · kein Affiliate · höchste Antwortrate der Serie*
 
 **Requisiten:** nur du. Ruhig sprechen, nicht schneiden.
 
-**07:00 · Block 1 · 5 Frames**
+**07:00 · Block 1 · 6 Frames**
 
 Je ein Frame, je eine Sache:
 
@@ -152,10 +225,12 @@ Je ein Frame, je eine Sache:
 3. „Ich weiß, dass wir Samstag ein Geschenk brauchen."
 4. „Ich weiß, wann die Kita-Beiträge abgebucht werden."
 5. Der Satz: **„Es gibt keine zweite Person, die das alles weiß."**
+6. Und der zweite: **„Nichts davon ist einmalig. Alles kommt wieder."**
 
-Ohne Anklage, ohne Musikdramatik. Die Wirkung entsteht durch die Menge.
+Ohne Anklage, ohne Musikdramatik. Die Wirkung entsteht durch die Menge – und
+durch die Wiederkehr.
 
-**12:30 · 3 Frames** Fragesticker: „Was weißt nur du?"
+**12:30 · 3 Frames** Fragesticker: „Was kommt bei dir jede Woche wieder?"
 
 **20:30 · 4 Frames** Die stärksten Antworten anonym reteilen.
 
@@ -295,7 +370,8 @@ sieht's nach 3 Minuten aus". Werbekennzeichnung sichtbar im Frame.
 
 Keine Anklage – es gibt niemanden, den man anklagen könnte. Das ist der Punkt.
 
-**12:30 · 3 Frames** Fragesticker: „Was bleibt bei dir liegen?"
+**12:30 · 3 Frames** Fragesticker: „Was hast du zuletzt vergessen, obwohl du
+es wusstest?"
 
 **20:30 · 4 Frames** Antworten – hier kommen die besten Geschichten.
 
@@ -436,11 +512,15 @@ beschönigen, nichts auflösen.
 ## Tag 21 (Mo 05.10.) – Die fünf häufigsten Schul-Mental-Loads
 *Community + Sarah-Setup*
 
-**07:00 · Block 1 · 5 Frames** Die fünf Ergebnisse aus Tag 17 und 19, je ein
-Frame, wörtlich aus den Antworten.
+**07:00 · Block 1 · 5 Frames** Die gesammelten Antworten **nach Bereichen
+sortiert**, je ein Frame: Schule · Haushalt · Essen · Termine · Ferien.
+Schlussframe: „Fünf Bereiche. Ich fange mit einem an."
 
-**12:30 · 3 Frames** „Ich hab angefangen, was dagegen zu bauen." Erste
-Andeutung. **Kein Link.**
+**12:30 · 3 Frames** „Ich hab angefangen, was dagegen zu bauen. Für einen
+Bereich." Erste Andeutung. **Kein Link.**
+
+Diese Sortierung ist die Vorbereitung für Tag 24 – und für alles, was nach
+Sarah kommt.
 
 **20:30 · 3 Frames** Umfrage: „Soll ich zeigen, wie?"
 
@@ -502,8 +582,9 @@ Betreuungsplanung gehören zu Fenja und kommen hier nicht vor.
    was vorher besorgt werden muss. Die Zuordnung, welches Kind betroffen ist.
 6. Der Satz: **„Und ich hab nichts eingetragen."**
 
-**12:30 · 3 Frames** „Das ist das erste Mal in 24 Tagen, dass ich etwas
-abgegeben habe."
+**12:30 · 3 Frames** Der Satz, der den Anspruch begrenzt und ihn dadurch
+glaubwürdig macht: **„Ich hab nicht alles abgegeben. Ich hab einen Bereich
+abgegeben. Den, der jede Woche neu reinkommt."** 
 
 **20:30 · 3 Frames** Fragen beantworten.
 
@@ -545,6 +626,9 @@ Marktforschung, hier kommen die Einwände.
 *Einwände*
 
 **07:00 · Block 1 · 5 Frames** Die fünf häufigsten Fragen, ehrlich beantwortet.
+Eine davon kommt sicher: **„Und der Rest?"** Antwort: „Schule zuerst, weil sie
+jede Woche wiederkommt. Der Rest später." Keine Versprechen zu Terminen oder
+Preisen.
 
 **12:30 · 3 Frames** Link.
 
