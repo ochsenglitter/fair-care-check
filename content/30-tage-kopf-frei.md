@@ -75,25 +75,30 @@ Ziel dieser Woche sind **Antworten**, nicht Klicks. Null Affiliate-Frames.
   kommentieren, nur zeigen. Letzter Frame: die Summe.
 - **12:30 (3 Frames)** „X Aufgaben vor 8 Uhr." Umfrage: „Wie viele wären es bei
   dir? Unter 10 / Über 20"
-- **20:30 (3 Frames)** Die Ergebnisse. Ausblick: „Morgen: was mein Mann nicht
-  sieht."
+- **20:30 (3 Frames)** Die Ergebnisse. Ausblick: „Morgen: was nur ich weiß."
 
-### Tag 3 – Was mein Mann nicht sieht
-*Typ: Reibung – höchste Antwortrate der ganzen Serie*
+### Tag 3 – Was nur ich weiß
+*Typ: Alleinverantwortung – höchste Antwortrate der ganzen Serie*
 
-- **07:00 (5 Frames)** Fünf konkrete unsichtbare Dinge: der Zahnarzttermin, den
-  du im Kopf hast. Die Schuhgröße. Das Geschenk für den Kindergeburtstag am
-  Samstag. Ruhig erzählt, nicht anklagend – das ist der Unterschied zwischen
-  deiner Marke und einem Wutpost.
-- **12:30 (3 Frames)** Fragesticker: „Was sieht bei euch keiner?"
+- **07:00 (5 Frames)** Fünf konkrete Dinge, die nur du weißt: die Schuhgröße.
+  Der Zahnarzttermin, der in keinem Kalender steht. Das Geschenk für Samstag.
+  Wann die Kita-Beiträge abgebucht werden. Welches Kind aus welcher Jacke
+  rausgewachsen ist.
+- Der Satz, der die Folge trägt: **„Es gibt keine zweite Person, die das alles
+  weiß."** Ruhig gesagt, ohne Anklage. Die Wirkung entsteht durch die Menge,
+  nicht durch den Vorwurf.
+- **12:30 (3 Frames)** Fragesticker: „Was weißt nur du?"
 - **20:30 (4 Frames)** Die stärksten Antworten reteilen, anonym.
 
-### Tag 4 – Wer macht bei euch die Arzttermine?
+### Tag 4 – Wie viele wissen es?
 *Typ: Abstimmung*
 
-- **07:00 (5 Frames)** Fünf Umfragen hintereinander, je „ich / Partner /
-  geteilt": Arzttermine · Geschenke · Elternbriefe · Kleidergrößen ·
-  Ferienbetreuung
+- **07:00 (5 Frames)** Fünf Umfragen hintereinander, Antwortoptionen immer
+  „nur ich / noch jemand": Wer weiß, wann der nächste Zahnarzttermin ist? ·
+  Wer denkt an Geschenke? · Wer liest die Elternbriefe? · Wer kennt die
+  Kleidergrößen? · Wer plant die Ferienbetreuung?
+- Die Optionen funktionieren für jede Familienform. Niemand muss sich
+  einsortieren, um mitzumachen.
 - **12:30 (3 Frames)** Zwischenstände live zeigen.
 - **20:30 (3 Frames)** Endergebnis als eine Grafik. „Die könnt ihr morgen
   weiterleiten." Ausblick.
@@ -159,11 +164,13 @@ trägt.
 - **20:30 (3 Frames)** Nachfragen beantworten.
 - **Affiliate:** 1 Frame
 
-### Tag 11 – Die Spülmaschine
-*Typ: Reibung*
+### Tag 11 – Was liegen bleibt, wenn ich es nicht mache
+*Typ: Alleinverantwortung*
 
-- **07:00 (5 Frames)** Die Szene, wie sie bei euch wirklich läuft.
-- **12:30 (3 Frames)** Fragesticker: „Wie ist das bei euch geregelt?"
+- **07:00 (5 Frames)** Die ehrliche Beobachtung: was passiert, wenn du drei
+  Tage nichts tust. Der Wäschekorb, der Kühlschrank, der Zettel an der Tür.
+  Keine Anklage, nur Beobachtung – es gibt niemanden, den man anklagen könnte.
+- **12:30 (3 Frames)** Fragesticker: „Was bleibt bei dir liegen?"
 - **20:30 (4 Frames)** Antworten – hier kommen die besten Geschichten.
 - **Affiliate:** keiner
 
@@ -217,10 +224,12 @@ Tag 17 und Tag 19 ist bares Geld.
 - **12:30 (3 Frames)** Fragesticker: „Wie viele wären es bei dir?"
 - **20:30 (3 Frames)** Antworten.
 
-### Tag 17 – Wer weiß bei euch, wann das Sportzeug mit muss?
-*Typ: Reibung · wichtigster Marktforschungstag*
+### Tag 17 – Was passiert, wenn ich es vergesse?
+*Typ: Alleinverantwortung · wichtigster Marktforschungstag*
 
-- **07:00 (5 Frames)** Die Szene: Dienstagmorgen, 7:20 Uhr.
+- **07:00 (5 Frames)** Die Szene: Dienstagmorgen, 7:20 Uhr, das Sportzeug.
+  Der Punkt der Folge: Es gibt kein Netz darunter. Wenn du es vergisst, ist
+  es vergessen.
 - **12:30 (3 Frames)** Fragesticker: „Was habt ihr zuletzt vergessen?"
 - **20:30 (4 Frames)** Antworten anonym reteilen.
 - **Diese Antworten sammelst du.** Sie sind die Copy für Sarahs Salespage.
