@@ -121,7 +121,9 @@ REGELN
   was mache und welches Material mein Tag heute liefert.
 - Halte dich kurz. Das Briefing muss in einer Minute lesbar sein.
 
-ZUSATZ AM SONNTAG
+ZUSATZ AM MONTAG (Tag 7, 14, 21 und 28 - die Serienwochen enden montags,
+weil die Serie an einem Dienstag gestartet ist)
+
 Gib mir zusätzlich eine Wochenvorschau: welche Tage der kommenden Woche mit
 Terminen kollidieren, was ich vorproduzieren sollte und an welchem Tag ein
 Tausch wahrscheinlich wird.
@@ -140,14 +142,19 @@ Kalender und Plan weißt, keine Bewertung.
 Fenja liefert an Antonia, nicht an Claude. Es gibt keine direkte Verbindung
 zwischen beiden – **Drive ist die Leitung.**
 
-| | Täglich | Wöchentlich (sonntags) |
+| | Täglich | Wöchentlich (montags) |
 |---|---|---|
 | Wer | Fenja → Antonia | Fenja + Antonia → Dokument 06 → Claude |
 | Was | Kalender + Plan → Briefing 06:45 → filmen | Was lief, was wurde getauscht, die Zahlen |
 | Ergebnis | die Story von heute | der angepasste Plan für nächste Woche |
 
+**Der Wochentag ist Montag, nicht Sonntag.** Die Serie startet an einem
+Dienstag, also enden die Serienwochen montags: Tag 7 (21.09.), Tag 14 (28.09.),
+Tag 21 (05.10.), Tag 28 (12.10.). An genau diesen Tagen schaut Antonia in der
+Story ohnehin zurück – das Protokoll wird am selben Abend gefüllt.
+
 **Der Rückkanal ist Dokument 06 „Wochenprotokoll"** im selben Drive-Ordner.
-Fenja trägt dort sonntags ein, was sie weiß (Tauschvorgänge, Kollisionen der
+Fenja trägt dort montags ein, was sie weiß (Tauschvorgänge, Kollisionen der
 kommenden Woche, ausgefallene Tage). Antonia trägt die Zahlen und die stärksten
 Antworten ein. Claude liest das Dokument, passt den Plan an und legt die neue
 Fassung in denselben Ordner – ab Montag liest Fenja den neuen Stand.
