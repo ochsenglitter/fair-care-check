@@ -17,39 +17,65 @@ Nicht lösen. Nicht aufräumen. Nicht abgeben. **Zeigen.**
 Das ist die ganze tägliche Handlung. Sie ist bewusst klein, weil sie 30 Tage
 lang durchhaltbar sein muss.
 
-## To-Do oder Mental Load? Die Unterscheidung, die alles entscheidet
+## To-Do oder Mental Load? Der Test dauert eine Sekunde
 
-Ein **To-Do** ist „Turnbeutel einpacken". Das ist abends erledigt und weg.
+**Ein To-Do endet mit einem Punkt. Mental Load endet mit einem Fragezeichen.**
 
-**Mental Load** ist: dass ich es weiß. Dass mich niemand daran erinnert. Und
-dass es nächsten Mittwoch wieder da ist.
+Dein eigener Morgenzettel ist der Beweis:
 
-Der ist abends **nicht weg**. Er kommt wieder.
+| Was du geschrieben hast | Warum das kein To-Do ist |
+|---|---|
+| „Termin heute – Überschneidung mit J.s Termin?" | Du erledigst nichts. Du **gleichst zwei Dinge ab**, die nur du beide im Kopf hast |
+| „Rezept Salbe abholen, noch da?" | Das „noch da?" ist die Arbeit. Du **führst einen Vorrat mit**, den dir niemand meldet |
+| „Mittagessen: Was ist im Kühlschrank, was kochen?" | Eine **Entscheidung unter vier Bedingungen**: was da ist, wer isst, wie viel Zeit, was gab's gestern |
 
-Deshalb wird in dieser Serie nichts abgehakt. Jede Zeile bekommt drei Angaben:
+Ein To-Do wäre: „Salbe abholen." Geschrieben hast du: „Salbe abholen, **noch
+da?**"
 
-| Was | Wer erinnert mich | Wann kommt's wieder |
+Du kannst das also längst. Du hast es nur für eine To-do-Liste gehalten.
+
+### Die fünf Sorten Kopfarbeit
+
+Damit du nie wieder überlegen musst, was du zeigen sollst. Jede Sorte ist ein
+Story-Frame und ein Fragesticker:
+
+| Sorte | Klingt so | Beispiel von deinem Zettel |
 |---|---|---|
-| Turnbeutel | niemand | jeden Mittwoch |
-| Zahnarzt Emma | niemand | in 6 Monaten |
-| Winterjacke zu klein | niemand | jede Saison |
-| Geschenk Samstag | niemand | beim nächsten Kindergeburtstag |
+| **Abgleichen** | „Passt das mit …?" | die Terminüberschneidung |
+| **Nachhalten** | „Ist das noch …?" | die Salbe |
+| **Entscheiden** | „Was davon, unter welchen Bedingungen?" | das Mittagessen |
+| **Vorausdenken** | „Wenn X, dann brauche ich vorher Y" | Termin um 14 Uhr → wer holt dann ab? |
+| **Behalten** | Wissen, das nirgends steht | Schuhgröße, Impftermin, Kleidergröße |
 
-**Die mittlere Spalte ist der Mental Load. Die rechte ist der Grund, warum er
-nicht endet.**
+### Der zweite Test: kommt es wieder?
 
-Die linke Spalte allein wäre eine To-do-Liste – und die interessiert niemanden.
-
-### Abends wird nicht abgehakt
-
-Der alte Abendframe „was ist weg, was ist geblieben" war falsch: Er misst
-erledigte Aufgaben, nicht Mental Load. Richtig ist:
+Mental Load ist abends nicht weg, auch wenn die Aufgabe erledigt ist. Die Salbe
+ist abgeholt – aber in vier Wochen fragst du dich wieder, ob noch welche da ist.
 
 > **Du streichst abends nur, was nie wieder kommt.**
 > „Ich hab heute elf Sachen erledigt. Gestrichen hab ich zwei."
 
-Das ist der Beweis in einem Satz. Der Zettel wird nicht kürzer, obwohl du den
-ganzen Tag gearbeitet hast.
+Der Zettel wird nicht kürzer, obwohl du den ganzen Tag gearbeitet hast. Das ist
+der Beweis in einem Satz.
+
+### Falls du es noch deutlicher zeigen willst
+
+Für einzelne Tage (etwa Tag 16) funktioniert die Langform: drei Spalten statt
+einer Zeile.
+
+| Was | Wer erinnert mich | Wann kommt's wieder |
+|---|---|---|
+| Salbe | niemand | in vier Wochen |
+| Turnbeutel | niemand | jeden Mittwoch |
+| Winterjacke zu klein | niemand | jede Saison |
+
+Die mittlere Spalte ist leer. Das ist der Punkt.
+
+### Nebenbei, und wichtig für Woche 4
+
+Auf deinem Zettel steht **nichts von Schule**. Termine, Gesundheit, Essen – drei
+verschiedene Bereiche. Genau deshalb sortiert Tag 21 nach Bereichen und Tag 24
+verspricht nur einen.
 
 ### Die Sticker-Regel
 
@@ -165,22 +191,20 @@ Ziel dieser Woche sind **Antworten**, nicht Klicks. Null Affiliate-Frames.
 ## Tag 1 (Di 15.09.) – Was gerade alles in meinem Kopf ist
 *Persönlich · kein Affiliate · nicht verschiebbar*
 
-**Requisiten:** ein Zettel, ein Stift, Küchentisch. Drei Spalten vorzeichnen.
+**Requisiten:** dein echter Morgenzettel und ein roter Stift. Der von heute
+reicht – du schreibst diese Notizen ohnehin. Namen abdecken, wenn du möchtest.
 
 **07:00 · Block 1 · 6 Frames**
 
-1. Du, ungeschminkt: „Ich fange heute was an, das 30 Tage dauert."
-2. Du: „Ich zeige euch jeden Tag, was in meinem Kopf ist. Und warum es da nicht
-   rausgeht."
-3. Der Zettel mit drei Spalten: **WAS · WER ERINNERT MICH · WANN KOMMT'S
-   WIEDER**
-4. Live vier Zeilen füllen, laut mitsprechen: „Turnbeutel – niemand – jeden
-   Mittwoch." „Zahnarzt Emma – niemand – in sechs Monaten." „Winterjacke zu
-   klein – niemand – jede Saison." „Geschenk Samstag – niemand – beim nächsten
-   Kindergeburtstag."
-5. Nah auf die **mittlere Spalte**: „Die mittlere Spalte ist leer. Das ist der
-   ganze Punkt."
-6. Fragesticker: „Wer erinnert dich an die Sachen auf deiner Liste?"
+1. Der Zettel liegt auf dem Tisch. „Das hab ich heute Morgen um halb sieben
+   geschrieben."
+2. Vorlesen, Zeile für Zeile. Nicht erklären, nur vorlesen.
+3. Du kreist mit rotem Stift **die Fragezeichen** ein.
+4. „Drei Zeilen. Drei Fragezeichen."
+5. „Ein To-Do wäre: Salbe abholen. Ich hab geschrieben: Salbe abholen, **noch
+   da?**"
+6. „Das Fragezeichen ist die Arbeit. Und die sieht keiner." → Fragesticker:
+   „Wie viele Fragezeichen stehen auf deinem Zettel?"
 
 **12:30 · 3 Frames** Antworten vorlesen. Umfrage: „Wird deine Liste abends
 kürzer? Ja / Nie"
@@ -444,9 +468,10 @@ nicht"
 **07:00 · Block 1 · 5 Frames**
 
 1. „Ich hab eine Woche notiert, wann ich an Schule gedacht habe. Mit Uhrzeit."
-2.–4. Die Liste, vorgelesen: „Montag 6:20 – Turnbeutel. Montag 21:40 –
-   fällt mir ein, dass Mittwoch Abgabe ist. Dienstag 7:15 – Geld für den
-   Ausflug."
+2.–4. Die Liste vorgelesen, hier in der Langform mit drei Angaben pro Zeile:
+   „Montag 6:20 – Turnbeutel – erinnert mich niemand – jeden Mittwoch."
+   „Montag 21:40 – fällt mir ein, dass Mittwoch Abgabe ist – stand in einem
+   Brief vom 3. – einmalig, aber nächste Woche kommt der nächste."
 5. „Neunzehn Mal. In einer Woche. Für zwei Kinder."
 
 **12:30 · 3 Frames** Fragesticker: „Wie viele wären es bei dir?"
