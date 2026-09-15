@@ -39,9 +39,10 @@ machen**
 | 03 Affiliate – Eventkalender und Promotion | `affiliate-kalender-und-promotion.md` |
 | 04 Launch – Sarah Founding | `launch-sarah.md` |
 | 05 Fenja-Übergabe | diese Datei |
+| 06 Wochenprotokoll | der Rückkanal, montags |
 
-Fenja braucht als Wissensquelle mindestens **01**, für den Sonntagsblick
-zusätzlich **02**, **03** und **04**.
+Fenja braucht als Wissensquelle mindestens **01**, für den Montagsblick
+zusätzlich **02**, **03**, **04** und **06**.
 
 Das Repository bleibt die Quelle, Drive ist die Lesekopie für Fenja. Nach jeder
 Änderung hier wird der entsprechende Google Doc neu abgelegt.
