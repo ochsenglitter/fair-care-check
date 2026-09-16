@@ -77,3 +77,8 @@ davon aber alles.
 Alles außerhalb von Schule. Familienlogistik, Hobbys, Fahrdienste, Arbeitszeiten
 und Betreuung allgemein gehören zu Fenja. Ferienplanung gehört ins School
 Holidays Add-on. Siehe `../abgrenzung-und-arbeitsregeln.md`.
+
+## Wie Sarah gebaut wird
+
+Zeitplan, die vier Bausteine und die Liste dessen, was ausdrücklich nicht
+gebaut wird: **`bauplan.md`**.

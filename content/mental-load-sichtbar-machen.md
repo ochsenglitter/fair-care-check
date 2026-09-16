@@ -690,6 +690,13 @@ selbst aufbaut?"
 **12:30 · 4 Frames** Fragesticker: „Was müsste es können?" – letzte
 Marktforschung, hier kommen die Einwände.
 
+**12:30 · +1 Frame · Umfrage: „Welche KI hast du auf dem Handy?"**
+Vier Optionen: ChatGPT / Gemini / Claude / gar keine. Sieht aus wie Neugier,
+ist aber die wichtigste Zahl des ganzen Monats: Danach entscheidet sich, für
+welche Umgebung die Sarah-Anleitung geschrieben wird. Siehe
+`produktplanung/sarah/bauplan.md`, Abschnitt 6, und C3 in
+`produktplanung/offene-fragen.md`. **Das Ergebnis am selben Abend notieren.**
+
 **20:30 · 3 Frames** „Morgen mach ich die Warteliste auf."
 
 ## Tag 27 (So 11.10.) – Warteliste öffnen

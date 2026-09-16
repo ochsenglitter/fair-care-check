@@ -1,6 +1,6 @@
 # Offene Abgrenzungsfragen
 
-Stand: 2026-09-12
+Stand: 2026-09-16
 
 Laut Arbeitsregel darf ich Funktionen, die mehrere Bereiche betreffen, nicht
 selbst zuordnen. Die folgenden Punkte sind mir beim Aufbereiten der Architektur
@@ -177,3 +177,25 @@ Zum Lieferumfang gehören „Updates". Bei Einmalprodukten ohne SaaS ist offen,
 
 **Vorschlag:** Vor dem ersten Launch festlegen und auf der Salespage konkret
 benennen – die Frage kommt sonst im Verkaufsgespräch.
+
+Hängt unmittelbar am Auslieferungsformat von Sarah (Download-Paket oder
+ThriveCart Learn). Siehe `sarah/bauplan.md`, Abschnitt 7.
+
+### C3. Für welche KI-Umgebung wird Sarah geschrieben?
+
+Aufgekommen am 16.09.2026 beim Bauplan für Sarah.
+
+Die Kundin baut in ihrer **eigenen** KI-Umgebung – das ist gesetzt. Offen ist,
+für welche Umgebung die Klick-Anleitung geschrieben wird: ChatGPT, Claude oder
+Gemini. Die Bausteine (Stammdaten-Vorlage, Instruction, Kalenderübergabe) sind
+plattformunabhängig, die Anleitung ist es nicht.
+
+Das ist keine technische Frage. Entscheidend ist, was die Zielgruppe schon auf
+dem Handy hat: Eine Anleitung für eine App, die erst installiert werden muss,
+verliert Käuferinnen vor dem ersten Schritt.
+
+**Vorschlag:** Nicht raten, sondern messen. Sticker-Umfrage an **Tag 26
+(10.10.2026)**: „Welche KI hast du auf dem Handy?" Das Ergebnis liegt vor,
+bevor die Anleitung ab 15.10. geschrieben wird. Fällt die Antwort uneindeutig
+aus, wird die Anleitung für die stärkste Option geschrieben und für die
+zweitstärkste als Variante nachgezogen – nicht drei Anleitungen parallel.
