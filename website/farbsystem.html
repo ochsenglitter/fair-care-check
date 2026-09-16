@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Farbsystem · Ochsenglitter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<style>
+.fs-grid { display:grid; gap:var(--og-space-lg); grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }
+.fs-row { display:grid; grid-template-columns:64px 1fr; gap:var(--og-space-sm);
+  align-items:start; padding:var(--og-space-sm) 0; border-bottom:1px solid var(--og-taupe); }
+.fs-chip { width:64px; height:64px; border-radius:var(--og-radius); }
+.fs-hex { font-family:var(--og-font-heading); font-size:20px; margin:0; }
+.fs-role { font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--og-anthracite); margin:2px 0 0; font-weight:600; }
+.fs-note { font-size:13px; color:#776B5B; margin:4px 0 0; }
+.fs-demo { padding:var(--og-space-md); background:var(--og-cream-2);
+  border:1px solid var(--og-taupe); border-radius:var(--og-radius); }
+.fs-btn { display:inline-block; padding:14px 32px; border-radius:var(--og-radius);
+  color:#fff; font-size:14px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; }
+</style>
+</head>
+<body>
+
+<header class="og-header">
+  <div class="og-container og-container--wide og-header__inner">
+    <span class="og-logo">Ochsenglitter</span>
+    <span class="og-pillar">Farbsystem · intern</span>
+  </div>
+</header>
+
+<main>
+<section class="og-hero">
+  <div class="og-container">
+    <h1>Zwei Familien, <em class="og-highlight">drei Tiefen</em></h1>
+    <p class="og-hero__lead">Die Familie sagt, in welcher Welt man ist.
+    Die Tiefe sagt, welche Funktion ein Element hat. Farbe kennzeichnet nie
+    eine einzelne Seite.</p>
+  </div>
+</section>
+
+<section class="og-section">
+  <div class="og-container og-container--wide">
+    <div class="fs-grid">
+      <div>
+        <span class="og-pillar">Erdton</span>
+        <h2>Kernmarke</h2>
+        <p>Blog, Fair Care Check, Ressourcen, Über mich.</p>
+        <div class="fs-row">
+      <div class="fs-chip" style="background:#E3AFA6"></div>
+      <div>
+        <p class="fs-hex">#E3AFA6</p>
+        <p class="fs-role">hell</p>
+        <p class="fs-note">nur Dekor: Punkte, Linien, Aufzählungszeichen · 1,7:1 auf Creme</p>
+      </div>
+    </div><div class="fs-row">
+      <div class="fs-chip" style="background:#B27D5F"></div>
+      <div>
+        <p class="fs-hex">#B27D5F</p>
+        <p class="fs-role">mittel</p>
+        <p class="fs-note">nur große Schrift: kursive Headline, Wortmarke · 3,2:1 auf Creme</p>
+      </div>
+    </div><div class="fs-row">
+      <div class="fs-chip" style="background:#8A4A3A"></div>
+      <div>
+        <p class="fs-hex">#8A4A3A</p>
+        <p class="fs-role">tief</p>
+        <p class="fs-note">alles Lesbare: Links, Labels, Buttonfläche · 6,1:1 auf Creme</p>
+      </div>
+    </div>
+        <div class="fs-demo" style="margin-top:var(--og-space-md)">
+          <p class="og-pillar" style="color:#8A4A3A">Weniger denken</p>
+          <h3>Mental Load <em style="font-style:italic;color:#B27D5F">reduzieren</em></h3>
+          <p style="font-size:15px">Ein <a href="#" style="color:#8A4A3A">Link im Fließtext</a>,
+          darunter der ruhige Button.</p>
+          <span class="fs-btn" style="background:#2B2B2B">Weiterlesen</span>
+        </div>
+      </div>
+
+      <div>
+        <span class="og-pillar">Beere</span>
+        <h2>Produktfamilie</h2>
+        <p>Sarah, Fenja, Add-ons.</p>
+        <div class="fs-row">
+      <div class="fs-chip" style="background:#E9A6BC"></div>
+      <div>
+        <p class="fs-hex">#E9A6BC</p>
+        <p class="fs-role">hell</p>
+        <p class="fs-note">nur Dekor: Punkte, Linien, Aufzählungszeichen · 1,8:1 auf Creme</p>
+      </div>
+    </div><div class="fs-row">
+      <div class="fs-chip" style="background:#C43A66"></div>
+      <div>
+        <p class="fs-hex">#C43A66</p>
+        <p class="fs-role">mittel</p>
+        <p class="fs-note">nur große Schrift: kursive Headline · 4,6:1 auf Creme</p>
+      </div>
+    </div><div class="fs-row">
+      <div class="fs-chip" style="background:#A12B50"></div>
+      <div>
+        <p class="fs-hex">#A12B50</p>
+        <p class="fs-role">tief</p>
+        <p class="fs-note">alles Lesbare, Kauf-Button · 6,4:1 auf Creme</p>
+      </div>
+    </div>
+        <div class="fs-demo" style="margin-top:var(--og-space-md)">
+          <p class="og-pillar" style="color:#A12B50">Early Access</p>
+          <h3>Schulmail rein. <em style="font-style:italic;color:#C43A66">Sarah macht den Rest.</em></h3>
+          <p style="font-size:15px">Hier darf die eine <a href="#" style="color:#A12B50">laute Farbe</a>
+          stehen – auf der Seite, auf der gekauft wird.</p>
+          <span class="fs-btn" style="background:#A12B50">Ja, ich will Sarah</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="og-section">
+  <div class="og-container">
+    <h2>Was entfällt</h2>
+    <p>Vier Farben aus dem Bestand, die auf Websites nicht bleiben können.</p>
+    <div class="fs-row">
+      <div class="fs-chip" style="background:#EB5086"></div>
+      <div>
+        <p class="fs-hex">#EB5086</p>
+        <p class="fs-role">Pink, Sarah-Buttons</p>
+        <p class="fs-note">entfällt – weißer Text darauf nur 3,5:1</p>
+      </div>
+    </div><div class="fs-row">
+      <div class="fs-chip" style="background:#B6914C"></div>
+      <div>
+        <p class="fs-hex">#B6914C</p>
+        <p class="fs-role">Gold, Sarah-Kicker</p>
+        <p class="fs-note">nur im Druckmaterial – 2,7:1 ist zu wenig für Kleinschrift</p>
+      </div>
+    </div><div class="fs-row">
+      <div class="fs-chip" style="background:#C2A36B"></div>
+      <div>
+        <p class="fs-hex">#C2A36B</p>
+        <p class="fs-role">Messing, Fair Care Check</p>
+        <p class="fs-note">nur im Druckmaterial – 2,2:1</p>
+      </div>
+    </div><div class="fs-row">
+      <div class="fs-chip" style="background:#C98F86"></div>
+      <div>
+        <p class="fs-hex">#C98F86</p>
+        <p class="fs-role">Rosé dunkel, Website</p>
+        <p class="fs-note">ersetzt durch Erdton tief – 2,5:1 reicht für Text nicht</p>
+      </div>
+    </div>
+    <div class="og-summary" style="margin-top:var(--og-space-md)">
+      <strong>Nicht verwechseln:</strong> Gold und Messing bleiben im
+      Care-Cards-System für Workbooks und Decks. Auf Papier gelten andere
+      Bedingungen als auf einem Handy im Hellen.
+    </div>
+  </div>
+</section>
+
+<section class="og-section">
+  <div class="og-container">
+    <h2>Was unverändert bleibt</h2>
+    <ul>
+      <li>Der cremefarbene Grund – ein Wert genügt: <strong>#F7F3EE</strong>.</li>
+      <li>Serifen-Display für Überschriften.</li>
+      <li>Genau <strong>eine</strong> kursiv ausgezeichnete Zeile pro Headline.</li>
+      <li>Gesperrte Kleinkapitälchen als Label.</li>
+      <li>Rundung <strong>2 px</strong> – künftig überall, auch bei Sarah.</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer class="og-footer">
+  <div class="og-container">
+    <p>Regeln und Herleitung: <code>produktplanung/farbsystem.md</code></p>
+  </div>
+</footer>
+</body>
+</html>
