@@ -55,14 +55,16 @@ kennt, gestaltet auf einer WordPress-Seite **fast nichts** – die Klassen
 stehen dort schlicht nirgends. Ein Blogartikel kommt als
 `.wp-block-post-title`, `.entry-content`, `.wp-block-details` und so weiter.
 
-`styles.css` hat deshalb jetzt drei Teile:
+`styles.css` ist deshalb **eine Datei in Lesereihenfolge** mit zwei
+tragenden Abschnitten:
 
-| Teil | Inhalt | Wirkt |
-|---|---|---|
-| 1 | Kernsystem, unverändert wie geliefert | – |
-| 2 | Anbindung an die echten WordPress-Selektoren | sofort, ohne Handgriff im Editor |
-| 3 | Helfer-Klassen für die Artikel-Bausteine | wenn du die Klasse im Block einträgst |
-| 4 | Ruhigere Gestaltung (Stand „cleaner") | sofort |
+| Abschnitt | Wirkt |
+|---|---|
+| Komponenten mit `.og-`Klassen | wenn du die Klasse im Block einträgst |
+| Anbindung an die WordPress-Selektoren | sofort, ohne Handgriff im Editor |
+
+Nichts wird weiter unten wieder zurückgenommen – die Datei lässt sich am
+Stück ins CSS-Feld kopieren und von oben nach unten lesen.
 
 Das Original liegt unverändert in `quelle/`.
 

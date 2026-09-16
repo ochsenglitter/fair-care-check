@@ -18,22 +18,36 @@ Musterseite ansehen: Doppelklick auf `styleguide.html`.
 
 ## Aufbau von `styles.css`
 
-| Teil | Inhalt | Wirkt |
-|---|---|---|
-| 1 | Kernsystem, unverändert wie geliefert | – |
-| 2 | Anbindung an die WordPress-Selektoren (`.wp-block-…`) | sofort |
-| 3 | Helfer-Klassen für die Artikel-Bausteine (`.og-…`) | wenn im Block eingetragen |
-| 4 | Ruhigere Gestaltung: Flächen und Rahmen raus, Weißraum rein | sofort |
+**Eine Datei, in Lesereihenfolge.** Nichts wird weiter unten wieder
+zurückgenommen – was dort steht, gilt. Zum Einfügen ins WordPress-CSS-Feld
+komplett kopieren.
 
-Teil 2 ist der Grund, warum die Datei umgebaut wurde: WordPress erzeugt sein
-Markup selbst. Eine Datei, die nur `.og-`-Klassen kennt, gestaltet auf einer
-WordPress-Seite fast nichts.
+| Abschnitt | Inhalt |
+|---|---|
+| Tokens | Farben, Textfarben, Schriften, Abstände, Lesespalten |
+| Basis und Layout | Grundschrift, Überschriften, Container, Abstände |
+| Komponenten | Säulen-Kennzeichnung, Karte, Newsletter-Block, Zwischenfazit, Werbekennzeichnung, Produktzeile, Schritte, Eingabefelder, Fußbereich |
+| Anbindung an WordPress | alles `.wp-block-…` – Query Loop, Beitragstitel, Buttons, Zitat, Tabelle, Details-Block |
+| Mobil | Anpassungen unter 640 px |
 
-Teil 4 ist der Aufräum-Schritt: Inhalt steht auf der Fläche statt in Kästen,
-Gruppen hält der Weißraum zusammen, als Trennmittel bleibt die Haarlinie.
-Farben, Schriften und Abstände stammen weiter allein aus dem Kernsystem –
-geändert ist nur, wie viel davon sichtbar ist. Wer die kastigere Variante
-zurück will, löscht Teil 4.
+Der Unterschied zwischen den beiden mittleren Blöcken ist praktisch wichtig:
+
+- Die **WordPress-Anbindung wirkt sofort**, ohne dass du im Editor etwas
+  anfasst. Ohne sie gestaltet die Datei auf WordPress fast nichts, weil
+  WordPress sein Markup selbst erzeugt (`.wp-block-post-title`,
+  `.entry-content`, …) und die `.og-`Klassen dort nirgends stehen.
+- Die **`.og-`Klassen** trägst du im Block unter *Erweitert › Zusätzliche
+  CSS-Klasse* ein.
+
+## Gestaltungsprinzip
+
+Inhalt steht auf der Fläche, nicht in Kästen. Gruppen hält der Weißraum
+zusammen, als Trennmittel bleibt die Haarlinie, als Auszeichnung der rosé
+Strich – und der ist dem Zwischenfazit vorbehalten, damit er ein
+Erkennungszeichen bleibt. Eingabefelder sind eine Linie, keine Box.
+Schritt-Ziffern stehen frei, ohne Kreis.
+
+Die Ursprungsfassung mit Füllungen und Rahmen liegt unverändert in `quelle/`.
 
 ## Die drei Designsysteme im Business
 
