@@ -23,10 +23,17 @@ Musterseite ansehen: Doppelklick auf `styleguide.html`.
 | 1 | Kernsystem, unverändert wie geliefert | – |
 | 2 | Anbindung an die WordPress-Selektoren (`.wp-block-…`) | sofort |
 | 3 | Helfer-Klassen für die Artikel-Bausteine (`.og-…`) | wenn im Block eingetragen |
+| 4 | Ruhigere Gestaltung: Flächen und Rahmen raus, Weißraum rein | sofort |
 
 Teil 2 ist der Grund, warum die Datei umgebaut wurde: WordPress erzeugt sein
 Markup selbst. Eine Datei, die nur `.og-`-Klassen kennt, gestaltet auf einer
 WordPress-Seite fast nichts.
+
+Teil 4 ist der Aufräum-Schritt: Inhalt steht auf der Fläche statt in Kästen,
+Gruppen hält der Weißraum zusammen, als Trennmittel bleibt die Haarlinie.
+Farben, Schriften und Abstände stammen weiter allein aus dem Kernsystem –
+geändert ist nur, wie viel davon sichtbar ist. Wer die kastigere Variante
+zurück will, löscht Teil 4.
 
 ## Die drei Designsysteme im Business
 

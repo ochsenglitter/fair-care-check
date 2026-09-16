@@ -592,3 +592,145 @@ a.og-card h3 { color: var(--og-anthracite); }
   .og-product img { width: 72px; }
   .wp-block-button__link, .og-button { display: block; text-align: center; }
 }
+
+/* ===================================================================
+   TEIL 4 — RUHIGERE GESTALTUNG
+   Ergänzt 2026-09-16 auf den Wunsch „cleaner".
+
+   Prinzip: Inhalt steht auf der Fläche, nicht in Kästen. Wo vorher ein
+   Rahmen oder eine Füllung eine Gruppe zusammengehalten hat, macht das
+   jetzt der Weißraum. Übrig bleibt die Haarlinie als einziges
+   Trennmittel – und der rosé Strich als einzige Auszeichnung.
+
+   Farben, Schriften und Abstände stammen weiterhin ausschließlich aus
+   dem Kernsystem. Geändert wird nur, wie viel davon sichtbar ist.
+   =================================================================== */
+
+/* ---------- Mehr Luft ---------- */
+
+.og-section { padding: var(--og-space-xl) 0; }
+
+:root { --wp--style--global--content-size: 720px; }
+
+.entry-content h2,
+.wp-block-post-content h2 { margin-top: var(--og-space-xl); }
+
+.entry-content > * + *,
+.wp-block-post-content > * + * { margin-top: var(--og-space-md); }
+
+/* ---------- Karten ohne Kasten ---------- */
+/* Vorher: Füllung in Creme-2 mit Innenabstand. Jetzt: nur Text,
+   getrennt durch eine Haarlinie nach oben. */
+
+.og-card,
+.wp-block-post-template > li {
+  background-color: transparent;
+  padding: var(--og-space-md) 0 0;
+  border-top: 1px solid var(--og-taupe);
+}
+.og-card img,
+.wp-block-post-template .wp-block-post-featured-image img {
+  margin-bottom: var(--og-space-md);
+}
+a.og-card { border: none; }
+a.og-card:hover { border: none; }
+a.og-card:hover h3 { color: var(--og-rose-text); }
+.wp-block-post-template { gap: var(--og-space-lg) var(--og-space-md); }
+
+/* ---------- Newsletter-Block ohne Rahmen ---------- */
+/* Vorher: weiße Fläche, Rahmen, zentriert. Jetzt: linksbündig,
+   oben und unten eine Haarlinie, viel Innenabstand. */
+
+.og-callout {
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid var(--og-taupe);
+  border-bottom: 1px solid var(--og-taupe);
+  text-align: left;
+  padding: var(--og-space-lg) 0;
+  margin: var(--og-space-xl) 0;
+}
+.og-callout h3 { margin-bottom: var(--og-space-xs); }
+.og-callout p { margin-bottom: var(--og-space-md); }
+
+/* ---------- Zwischenfazit: nur noch der Strich ---------- */
+
+.og-summary {
+  background-color: transparent;
+  padding: var(--og-space-xs) 0 var(--og-space-xs) var(--og-space-md);
+  font-size: 17px;
+}
+
+/* ---------- Werbekennzeichnung: Haarlinie statt Rahmen ---------- */
+
+.og-ad-notice {
+  border: none;
+  border-top: 1px solid var(--og-taupe);
+  border-bottom: 1px solid var(--og-taupe);
+  padding: var(--og-space-sm) 0;
+}
+
+/* ---------- Schritte: Ziffer statt Kreis ---------- */
+
+.og-steps li { padding-left: 46px; }
+.og-steps li::before {
+  border: none;
+  border-radius: 0;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  font-size: 22px;
+  color: var(--og-taupe-text);
+}
+
+/* ---------- Produktzeile: nur die Haarlinie bleibt ---------- */
+
+.og-product { padding: var(--og-space-lg) 0; }
+
+/* ---------- Eingabefelder: Linie statt Kasten ---------- */
+
+.og-input,
+input[type='email'],
+input[type='text'],
+.wp-block-search__input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--og-taupe);
+  border-radius: 0;
+  padding: 13px 0;
+}
+input[type='email']:focus,
+input[type='text']:focus { border-bottom-color: var(--og-anthracite); }
+
+/* ---------- Trennlinien sparsamer ---------- */
+
+.wp-block-separator { margin: var(--og-space-xl) auto; }
+
+@media (max-width: 640px) {
+  .og-section { padding: var(--og-space-lg) 0; }
+  .og-callout { padding: var(--og-space-md) 0; margin: var(--og-space-lg) 0; }
+  .og-card, .wp-block-post-template > li { padding: var(--og-space-sm) 0 0; }
+}
+
+/* ---------- Zitat und Zwischenfazit auseinanderhalten ---------- */
+/* Nach dem Aufräumen sahen beide gleich aus: rosé Strich, kursiv.
+   Der Strich bleibt jetzt dem Zwischenfazit vorbehalten – das ist ein
+   Funktionsbaustein und soll wiedererkennbar sein. Das Zitat trägt sich
+   über die Schrift allein. */
+
+.wp-block-quote {
+  border-left: none;
+  padding-left: 0;
+  font-size: 26px;
+  line-height: 1.35;
+  margin-top: var(--og-space-lg);
+  margin-bottom: var(--og-space-lg);
+}
+
+/* ---------- Fußbereich linksbündig wie alles andere ---------- */
+
+.og-footer {
+  text-align: left;
+  border-top: 1px solid var(--og-taupe);
+  padding: var(--og-space-lg) 0 var(--og-space-md);
+}

@@ -62,6 +62,7 @@ stehen dort schlicht nirgends. Ein Blogartikel kommt als
 | 1 | Kernsystem, unverändert wie geliefert | – |
 | 2 | Anbindung an die echten WordPress-Selektoren | sofort, ohne Handgriff im Editor |
 | 3 | Helfer-Klassen für die Artikel-Bausteine | wenn du die Klasse im Block einträgst |
+| 4 | Ruhigere Gestaltung (Stand „cleaner") | sofort |
 
 Das Original liegt unverändert in `quelle/`.
 
