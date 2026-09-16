@@ -55,16 +55,14 @@ kennt, gestaltet auf einer WordPress-Seite **fast nichts** – die Klassen
 stehen dort schlicht nirgends. Ein Blogartikel kommt als
 `.wp-block-post-title`, `.entry-content`, `.wp-block-details` und so weiter.
 
-`styles.css` ist deshalb **eine Datei in Lesereihenfolge** mit zwei
-tragenden Abschnitten:
+`styles.css` hat deshalb vier Abschnitte:
 
 | Abschnitt | Wirkt |
 |---|---|
-| Komponenten mit `.og-`Klassen | wenn du die Klasse im Block einträgst |
+| Kernsystem, unverändert wie geliefert | – |
+| Ergänzungen mit `.og-`Klassen | wenn du die Klasse im Block einträgst |
 | Anbindung an die WordPress-Selektoren | sofort, ohne Handgriff im Editor |
-
-Nichts wird weiter unten wieder zurückgenommen – die Datei lässt sich am
-Stück ins CSS-Feld kopieren und von oben nach unten lesen.
+| Mobil | unter 640 px |
 
 Das Original liegt unverändert in `quelle/`.
 
@@ -154,7 +152,22 @@ weiteren Artikel ein Klick statt neun.
   `og-ad-notice`. Auf der Seite „Lieblingsprodukte" gehört sie über die erste
   Produktkarte.
 
-## 8. Was ich ohne Zugriff nicht liefern kann
+## 8. Die Seiten liegen fertig im Repository
+
+Alle Seiten aus Abschnitt 2 des Briefings sind als statisches HTML gebaut und
+lassen sich sofort im Browser ansehen – Übersicht in `README.md`. Sie sind
+die Vorlage für die WordPress-Umsetzung: Struktur, Reihenfolge der
+Abschnitte und Klassen stimmen bereits. Beim Anlegen in WordPress wird der
+Inhalt in Blöcke übertragen, die Gestaltung kommt aus `styles.css`.
+
+Der Musterartikel `artikel-mental-load-reduzieren.html` enthält die
+Pflichtstruktur vollständig und ist die Vorlage, die du in WordPress einmal
+nachbaust und dann als Muster speicherst.
+
+**Alle Texte sind Entwürfe** – sie sitzen in der Struktur richtig, ersetzt
+werden müssen sie trotzdem.
+
+## 9. Was ich ohne Zugriff nicht liefern kann
 
 - Prüfen, welches Theme läuft und ob es ein Block-Theme ist
 - Kategorien, Seiten und Menü tatsächlich anlegen
