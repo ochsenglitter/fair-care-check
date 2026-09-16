@@ -1,0 +1,209 @@
+/* ===================================================================
+   OCHSENGLITTER — Website Designsystem (Kernmarke)
+   Playfair Display + Montserrat · Cream/Taupe/Anthrazit/Rosé
+   Hinweis: Farbwerte geschätzt anhand des Cover-Referenzbilds.
+   Bitte mit den exakten Canva-Werten abgleichen und unten anpassen.
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Farben */
+  --og-cream:       #F7F3EE;   /* Haupt-Hintergrund */
+  --og-cream-2:     #FBFAF7;   /* Karten/Boxen, etwas heller */
+  --og-taupe:       #D9CFC1;   /* Trennlinien, dezente Flächen */
+  --og-taupe-dark:  #B3A594;   /* Sekundärtext, Icons */
+  --og-anthracite:  #2B2B2B;   /* Fließtext, Headlines */
+  --og-rose:        #E3AFA6;   /* Akzent: Links, Badges, Hover */
+  --og-rose-deep:   #C98F86;   /* Akzent dunkler: Buttons/CTA */
+  --og-white:       #FFFFFF;
+
+  /* Typografie */
+  --og-font-heading: 'Playfair Display', serif;
+  --og-font-body:    'Montserrat', sans-serif;
+
+  /* Abstände */
+  --og-space-xs: 8px;
+  --og-space-sm: 16px;
+  --og-space-md: 32px;
+  --og-space-lg: 64px;
+  --og-space-xl: 96px;
+
+  --og-radius: 2px; /* bewusst fast kantig — editorial, nicht verspielt */
+}
+
+/* ---------- Basis ---------- */
+
+body {
+  background-color: var(--og-cream);
+  color: var(--og-anthracite);
+  font-family: var(--og-font-body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--og-font-heading);
+  font-weight: 600;
+  color: var(--og-anthracite);
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin-bottom: var(--og-space-sm);
+}
+
+h1 { font-size: clamp(32px, 5vw, 52px); }
+h2 { font-size: clamp(26px, 4vw, 36px); }
+h3 { font-size: 22px; }
+
+/* Kursive Playfair-Auszeichnung für einzelne Wörter im Titel,
+   wie im Cover-Referenzbild ("wirklich leichter") */
+em.og-highlight {
+  font-style: italic;
+  font-weight: 500;
+}
+
+p { margin-bottom: var(--og-space-sm); }
+
+a {
+  color: var(--og-rose-deep);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+a:hover { border-color: var(--og-rose-deep); }
+
+/* ---------- Layout ---------- */
+
+.og-container {
+  max-width: 760px; /* schmale Lesespalte, editorial */
+  margin: 0 auto;
+  padding: 0 var(--og-space-sm);
+}
+
+.og-section {
+  padding: var(--og-space-lg) 0;
+}
+
+hr, .og-divider {
+  border: none;
+  border-top: 1px solid var(--og-taupe);
+  margin: var(--og-space-md) 0;
+}
+
+/* ---------- Buttons / CTA ---------- */
+
+.og-button {
+  display: inline-block;
+  background-color: var(--og-anthracite);
+  color: var(--og-cream) !important;
+  font-family: var(--og-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: var(--og-radius);
+  border: none;
+  transition: background-color 0.2s ease;
+}
+.og-button:hover {
+  background-color: var(--og-rose-deep);
+  border-bottom: none;
+}
+
+.og-button--outline {
+  background-color: transparent;
+  color: var(--og-anthracite) !important;
+  border: 1px solid var(--og-anthracite);
+}
+.og-button--outline:hover {
+  background-color: var(--og-anthracite);
+  color: var(--og-cream) !important;
+}
+
+/* ---------- Kategorie-Kennzeichnung (Säulen) ---------- */
+/* dezent, keine Sticker/Badges — nur Farbpunkt + Kleinschrift */
+
+.og-pillar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--og-font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--og-taupe-dark);
+  margin-bottom: var(--og-space-xs);
+}
+.og-pillar::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--og-rose);
+}
+
+/* ---------- Blogartikel-Karte (Übersicht/Startseite) ---------- */
+
+.og-card {
+  background-color: var(--og-cream-2);
+  padding: var(--og-space-md);
+  margin-bottom: var(--og-space-md);
+}
+.og-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--og-space-sm);
+}
+.og-card h3 {
+  margin-bottom: var(--og-space-xs);
+}
+.og-card p {
+  color: var(--og-taupe-dark);
+  font-size: 15px;
+}
+
+/* ---------- Newsletter-/Lead-Magnet-Box ---------- */
+
+.og-callout {
+  background-color: var(--og-white);
+  border: 1px solid var(--og-taupe);
+  padding: var(--og-space-md);
+  text-align: center;
+  margin: var(--og-space-lg) 0;
+}
+.og-callout h3 {
+  margin-bottom: var(--og-space-xs);
+}
+.og-callout p {
+  color: var(--og-taupe-dark);
+  margin-bottom: var(--og-space-sm);
+}
+
+/* ---------- Zwischenfazit-Kasten ("Das Wichtigste in Kürze") ---------- */
+
+.og-summary {
+  border-left: 3px solid var(--og-rose);
+  background-color: var(--og-cream-2);
+  padding: var(--og-space-sm) var(--og-space-md);
+  margin: var(--og-space-md) 0;
+  font-size: 15px;
+}
+.og-summary strong {
+  font-family: var(--og-font-heading);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* ---------- Footer ---------- */
+
+.og-footer {
+  border-top: 1px solid var(--og-taupe);
+  padding: var(--og-space-md) 0;
+  font-size: 13px;
+  color: var(--og-taupe-dark);
+  text-align: center;
+}

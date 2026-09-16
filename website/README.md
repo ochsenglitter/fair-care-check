@@ -1,31 +1,43 @@
-# Website
+# ochsenglitter.de – Website der Kernmarke
 
-Die neue Website der Produktfamilie (Sarah, Fenja, Add-ons). Struktur,
-Seitenaufbau und Ausbaureihenfolge stehen in
-`../produktplanung/website-konzept.md` – **vor dem Bauen lesen.**
+Evergreen-Content- und SEO-Seite: Blog, Ressourcen, Lieblingsprodukte,
+Newsletter. Kein Shop, kein Mitgliederbereich.
+
+**Nicht verwechseln:** Die Verkaufsseiten für Sarah und Fenja sind ein
+eigenes Projekt mit eigenem Designsystem – siehe
+`../produktplanung/website-konzept.md`.
 
 ## Dateien
 
-    styles.css        Designsystem der Kernmarke. Verbindlich für alle Seiten.
-    styleguide.html   Musterseite: jeder Baustein einmal in echt.
+    styles.css              Designsystem, fertig für WordPress
+    styleguide.html         Musterseite: jeder Baustein einmal in echt
+    wordpress-umsetzung.md  Umsetzung Schritt für Schritt, Stand der Prüfung
+    quelle/                 Originaldateien, unverändert
 
-Die Musterseite im Browser öffnen (Doppelklick genügt) oder:
-
-    python3 -m http.server 8000
+Musterseite ansehen: Doppelklick auf `styleguide.html`.
 
 ## Aufbau von `styles.css`
 
-Die Datei hat zwei Teile:
+| Teil | Inhalt | Wirkt |
+|---|---|---|
+| 1 | Kernsystem, unverändert wie geliefert | – |
+| 2 | Anbindung an die WordPress-Selektoren (`.wp-block-…`) | sofort |
+| 3 | Helfer-Klassen für die Artikel-Bausteine (`.og-…`) | wenn im Block eingetragen |
 
-1. **Kernsystem** (oben, unverändert wie geliefert) – Farben, Typografie,
-   Buttons, Karten, Callout, Zwischenfazit, Footer.
-2. **Ergänzungen für die Website-Struktur** – Kopf und Navigation, Hero,
-   Raster, Zuständigkeits-Tabelle, Setup-Schritte, Briefing-Mock, Preisblock,
-   FAQ, Formular, Mobil-Anpassungen, Kontrastkorrekturen.
+Teil 2 ist der Grund, warum die Datei umgebaut wurde: WordPress erzeugt sein
+Markup selbst. Eine Datei, die nur `.og-`-Klassen kennt, gestaltet auf einer
+WordPress-Seite fast nichts.
 
-Der zweite Teil nutzt ausschließlich vorhandene Tokens. Neue Seiten bringen
-keine eigenen Farben oder Schriften mit. Fehlt ein Baustein, wird er hier
-ergänzt, nicht in der Seite.
+## Die drei Designsysteme im Business
+
+Sie bleiben absichtlich verschieden. Gemeinsamer Faden ist nur Playfair
+Display für Headlines.
+
+| System | Wofür |
+|---|---|
+| **Kernmarke** | diese Website |
+| Produktseiten | Sarah, Fenja, Add-ons – steht noch aus |
+| Care-Cards | Workbooks, Decks, Fair Care Check |
 
 ## Zwei offene Punkte an der Datei
 
@@ -37,11 +49,12 @@ ergänzt, nicht in der Seite.
   `--og-taupe-text` und `--og-rose-text` im selben Farbton. Beim Canva-Abgleich
   mit anpassen, sonst ist die Seite auf dem Handy im Hellen schlecht lesbar.
 
-## Regeln, die aus der Produktarchitektur kommen
+## Regeln aus dem Briefing
 
-- Navigation nach **Lebensbereich**, nie nach Produktstufe.
-- **Keine Vergleichsmatrix** Sarah gegen Fenja. Stattdessen die
-  Zuständigkeits-Tabelle (`.og-table`).
-- **Kein Preis auf einer Seite**, solange er Arbeitsannahme ist.
-- „einmalig" steht **am Betrag**, nicht im Kleingedruckten.
-- Kein Login, kein Kundenkonto, kein Mitgliederbereich.
+- Editorial, viel Weißraum, ruhig, zeitlos.
+- Keine Sticker, Emojis im Design, Cliparts, Farbverläufe, verspielten
+  Elemente.
+- Säulen-Kennzeichnung nur als Farbpunkt plus Kleinschrift, kein Badge.
+- Kursive Playfair-Auszeichnung für **ein** Wort pro Headline, nicht mehr.
+- Werbekennzeichnung sichtbar oben, nicht im Fußbereich.
+- Ein Footer-Link auf `/datenschutz/` deckt Impressum und Datenschutz ab.

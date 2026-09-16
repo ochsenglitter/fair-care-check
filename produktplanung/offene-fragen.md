@@ -160,11 +160,22 @@ Widerrufs-Abwicklung (Digistore24 oder Copecart), Auslieferung als
 duplizierbares Template plus PDF-Anleitung. Updates über dieselbe
 Auslieferungsseite, damit kein zweiter Kanal entsteht.
 
-### D3. Designwelt – ENTSCHIEDEN am 2026-09-16
+### D3. Designsystem der Produktseite
 
-Es gilt das Ochsenglitter-Website-Designsystem der Kernmarke (Playfair Display
-+ Montserrat, Creme/Taupe/Anthrazit/Rosé). Liegt als `website/styles.css` im
-Repository, Begründung und Bausteine in `website-konzept.md`, Abschnitt 5.
+Am 2026-09-16 kam das Designsystem der **Kernmarke** (Playfair Display +
+Montserrat, Creme/Taupe/Anthrazit/Rosé) – zusammen mit der Festlegung, dass
+im Business **drei Systeme nebeneinander** stehen und bewusst verschieden
+bleiben: Kernmarke, Produktseiten, Care-Cards. Gemeinsamer Faden ist nur
+Playfair Display für Headlines.
+
+Damit ist die Frage **enger, nicht beantwortet:** Das Kernmarken-System ist
+für einen Blog gebaut und nicht für Verkaufsseiten. Für Sarah und Fenja fehlt
+das System noch.
+
+**Vorschlag:** Kein drittes System von Grund auf. Playfair Display als
+gemeinsame Headline-Schrift übernehmen, aber eine eigene Zweitschrift und
+eine eigene Akzentfarbe wählen, damit Produktseiten und Blog auseinander zu
+halten sind. Die Bausteinliste steht in `website-konzept.md`, Abschnitt 5.
 
 ### D4. Was braucht die Kundin technisch? (Blocker)
 
@@ -188,25 +199,13 @@ ungeprüften Preis live gehen.
 in `produktleiter-und-preise.md` als final markieren. Alles andere bleibt
 Arbeitsannahme, bis die jeweilige Stufe ansteht.
 
-### D6. Bleibt der Fair Care Check optisch, wie er ist?
+### D6. Fair Care Check – GEKLÄRT am 2026-09-16
 
-Der Fair Care Check ist in Cormorant Garamond + Mulish mit Creme/Terrakotta/
-Gold gebaut – dem System für die Care-Arbeit-Materialien. Die Website nutzt
-Playfair Display + Montserrat mit Creme/Taupe/Anthrazit/Rosé. Das sind zwei
-verschiedene Welten.
+Die optische Abweichung ist **gewollt**. Der Fair Care Check gehört zum
+Care-Cards-System (Cormorant Garamond + Mulish), die Website zur Kernmarke.
+Laut Briefing bleiben die Systeme absichtlich getrennt.
 
-Das ist kein Schönheitsfehler: Der Rechner ist laut Konzept der erste Schritt
-im Funnel. Wer von der Startseite dorthin klickt und optisch woanders landet,
-verliert genau an der Stelle Vertrauen, an der er gerade seine Familiendaten
-eingeben soll.
-
-**Vorschlag:** Den Fair Care Check auf das Website-System umstellen, bevor er
-verlinkt wird. Der Aufwand ist überschaubar – die Farben und Schriften stehen
-in `styles.css` als Variablen ganz oben. Die Materialien zum Download
-(Workbooks, Decks) behalten ihr eigenes System; die Trennlinie verläuft
-zwischen *Website* und *Material*, nicht zwischen den Produkten.
-
-**Alternative**, falls die beiden Welten bewusst getrennt bleiben sollen: Dann
-braucht der Rechner einen erkennbaren Übergang – gleicher Kopf, gleiche
-Navigation, gleicher Footer –, damit er nicht wie eine fremde Seite wirkt.
-
+Bleibt ein praktischer Punkt, kein Designfehler: Wer von ochsenglitter.de in
+den Rechner klickt, soll merken, dass er dieselbe Marke nicht verlässt. Dafür
+genügt ein gemeinsamer Fußbereich mit demselben `/datenschutz/`-Link und ein
+Rückweg zur Website – nicht dasselbe Aussehen.

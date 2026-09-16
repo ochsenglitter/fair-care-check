@@ -2,7 +2,13 @@
 
 Stand: 2026-09-16
 
-Verbindliche Struktur, Gestaltung und Ausbaureihenfolge der neuen Website.
+**Achtung, zwei verschiedene Websites.** Diese Datei beschreibt die
+**Produktseite** für Sarah, Fenja und die Add-ons. Die Kernmarken-Website
+ochsenglitter.de (Blog, Ressourcen, Lieblingsprodukte, Newsletter) ist ein
+eigenes Projekt und liegt unter `website/` – mit einem **bewusst anderen**
+Designsystem.
+
+Verbindliche Struktur, Gestaltung und Ausbaureihenfolge der Produktseite.
 Abgeleitet aus `marke-und-philosophie.md`, `produktleiter-und-preise.md` und
 `abgrenzung-und-arbeitsregeln.md`. Bei Widersprüchen gelten die drei Dateien,
 nicht diese.
@@ -144,47 +150,23 @@ Preis. Kein voller Salespage-Apparat bei 19–29 €.
 
 ## 5. Gestaltung
 
-**Entschieden am 2026-09-16: Es gilt das Ochsenglitter-Website-Designsystem
-der Kernmarke.** Playfair Display + Montserrat, Creme / Taupe / Anthrazit /
-Rosé, fast kantige Ecken (2 px), schmale Lesespalte. Die Datei liegt als
-`website/styles.css` im Repository und ist für alle Seiten verbindlich.
+**Noch offen – und zwar bewusst.** Das Briefing zur Kernmarken-Website vom
+2026-09-16 legt fest, dass im Ochsenglitter-Business **drei eigenständige
+Designsysteme** nebeneinander stehen und absichtlich unterschiedlich bleiben:
 
-Damit ist offene Frage D3 beantwortet – und zwar in Richtung ruhig-editorial,
-nicht Tech-Optik. Das ist inhaltlich richtig: Die Zielgruppe kauft Entlastung,
-nicht Technik. Ein KI-Produkt, das aussieht wie ein ruhiges Familienmaterial,
-ist am Markt der eigentliche Unterschied.
+| System | Wofür | Stand |
+|---|---|---|
+| Kernmarke | ochsenglitter.de – Blog, Ressourcen, Newsletter | steht, liegt unter `website/` |
+| Produktseiten | Sarah, Fenja, Add-ons | **fehlt noch** |
+| Care-Cards | Workbooks, Decks, Fair Care Check | steht |
 
-**Achtung, zwei Punkte zur Datei selbst:**
+Gemeinsamer Faden aller drei ist allein **Playfair Display** für Headlines.
 
-1. Die Farbwerte sind laut Kommentar im Original aus dem Cover-Bild
-   geschätzt. Vor dem Launch gegen die exakten Canva-Werte abgleichen.
-2. Die Palette ist als Flächen- und Linienfarbe richtig, als **Textfarbe**
-   aber zu hell: Taupe auf Creme erreicht 2,2:1, Rosé 2,5:1 – nötig sind
-   4,5:1. Der Button wurde beim Hover sogar schlechter lesbar als im
-   Ruhezustand. Gelöst über zwei zusätzliche Text-Tokens im selben Farbton
-   (`--og-taupe-text`, `--og-rose-text`), die hellen Originaltöne bleiben für
-   alles Dekorative. Beim Canva-Abgleich mit anpassen.
+Für die Produktseite ist damit noch nichts entschieden. Das
+Kernmarken-System darf nicht einfach übernommen werden – es ist für einen
+Blog gebaut, nicht für Verkaufsseiten.
 
-### Bausteine
-
-Das Kernsystem bringt Typografie, Farben, Buttons, Karten, Callout,
-Zwischenfazit und Footer mit. Für die Konzept-Struktur fehlten acht Bausteine;
-sie sind ergänzt und unter `website/styleguide.html` als Musterseite zu sehen:
-
-| Baustein | Wofür |
-|---|---|
-| Kopf mit Bereichs-Navigation | Abschnitt 2 – Navigation nach Lebensbereich |
-| Hero mit Kicker und zwei Aktionen | Salespage-Abschnitt 1 |
-| Bereichs-Einstiege als Karten-Raster | Startseite |
-| Zuständigkeits-Tabelle | Abschnitt 2 – zwei Spalten, keine Häkchen |
-| Morgen-Briefing als Mock | Salespage-Abschnitt 4 |
-| Setup-Schritte, nummeriert | Salespage-Abschnitt 6 |
-| „Was es nicht ist"-Liste | Salespage-Abschnitt 7 |
-| Preisblock mit „einmalig" am Betrag | Salespage-Abschnitt 10 |
-| FAQ-Aufklapper | Salespage-Abschnitt 9 |
-| Formular für Lead-Magnet | Funnel, Abschnitt 7 |
-
-### Gestalterische Festlegungen
+### Was unabhängig vom System gilt
 
 - **Mobil zuerst.** Die Zielgruppe liest zwischen Tür und Angel auf dem Handy.
 - **Ein Screenshot sagt mehr als drei Absätze.** Das Morgen-Briefing als Bild
@@ -192,11 +174,20 @@ sie sind ergänzt und unter `website/styleguide.html` als Musterseite zu sehen:
 - **Keine Roboter-, Gehirn- oder Chip-Bildsprache.** Familienalltag zeigen.
 - **Ruhe statt Dringlichkeit.** Countdown-Balken und Verknappungs-Banner
   widersprechen dem Markenversprechen „weniger im Kopf".
-- **Keine Sticker und Badges.** Kategorien nur als Farbpunkt mit Kleinschrift,
-  so wie das Kernsystem es vorgibt.
 - **Preisdarstellung immer mit „einmalig"** direkt am Betrag.
-- **Kursive Playfair-Auszeichnung** für ein einzelnes Wort pro Headline, nicht
-  mehr. Das ist die Handschrift der Marke und nutzt sich bei Wiederholung ab.
+- **Textkontrast prüfen.** Beim Kernmarken-System erreichten die hellen
+  Palettentöne als Textfarbe nur 2,2:1 statt der nötigen 4,5:1. Derselbe
+  Fehler passiert in jeder warmen Palette – vor dem Launch messen.
+
+### Bausteine, die die Produktseite braucht
+
+Beim Aufbau des Kernmarken-Styleguides entstanden, dort aber wieder entfernt,
+weil sie nicht zu einem Blog gehören. Für die Produktseite gelten sie weiter
+als Anforderungsliste:
+
+Hero mit Mental-Load-Satz · Zuständigkeits-Tabelle (zwei Spalten, keine
+Häkchen) · Morgen-Briefing als Nachrichten-Mock · nummerierte Setup-Schritte ·
+„Was es nicht ist"-Liste · Preisblock mit „einmalig" am Betrag · FAQ-Aufklapper.
 
 ## 6. Technik
 
@@ -207,9 +198,9 @@ Domain.
 Das ist keine Sparlösung, sondern Folge des Geschäftsmodells: Kein Login, kein
 Abo, kein laufender Dienst heißt auch keine Serverarchitektur.
 
-- **Eine gemeinsame CSS-Datei** für alle Seiten: `website/styles.css`.
-  Verhindert das Auseinanderlaufen bei acht Seiten. Seiten bringen keine
-  eigenen Farben oder Schriften mit; fehlt ein Baustein, wird er dort ergänzt.
+- **Eine gemeinsame CSS-Datei** für alle Produktseiten, sobald das
+  Designsystem steht. Verhindert das Auseinanderlaufen bei acht Seiten.
+  Einzelne Seiten bringen keine eigenen Farben oder Schriften mit.
 - **Preise an genau einer Stelle** pro Seite, klar markiert. Solange die
   Preistabelle Arbeitsannahme ist, darf keine Seite mit Preis live gehen.
 - **Zahlung und Auslieferung über einen externen Anbieter**
@@ -289,8 +280,6 @@ Kundinnenstimmen erst hier – vorher gibt es keine echten.
 ## 10. Offene Punkte
 
 Vor dem Bau zu klären, siehe Abschnitt D in `offene-fragen.md`:
-Marke und Domain (D1), Zahlung und Auslieferung (D2), technische
-Voraussetzungen der Kundin (D4, Blocker), Preisfreigabe (D5) und die Frage,
-ob der Fair Care Check auf das Website-Design umgestellt wird (D6).
-
-Die Designwelt (D3) ist entschieden – siehe Abschnitt 5.
+Marke und Domain (D1), Zahlung und Auslieferung (D2), Designsystem der
+Produktseite (D3), technische Voraussetzungen der Kundin (D4, Blocker),
+Preisfreigabe (D5).
