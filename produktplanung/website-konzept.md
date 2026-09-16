@@ -144,21 +144,47 @@ Preis. Kein voller Salespage-Apparat bei 19–29 €.
 
 ## 5. Gestaltung
 
-**Empfehlung: eine durchgehende Designwelt, das warme Ochsenglitter-System.**
-Cormorant Garamond + Mulish, Creme/Terrakotta/Gold – also das, was der Fair
-Care Check bereits ist.
+**Entschieden am 2026-09-16: Es gilt das Ochsenglitter-Website-Designsystem
+der Kernmarke.** Playfair Display + Montserrat, Creme / Taupe / Anthrazit /
+Rosé, fast kantige Ecken (2 px), schmale Lesespalte. Die Datei liegt als
+`website/styles.css` im Repository und ist für alle Seiten verbindlich.
 
-Begründung: Die Zielgruppe kauft keine Technik, sie kauft Entlastung. Das
-übliche KI-Design (Schwarz, Neon, Terminal) signalisiert „Tech-Projekt, du
-musst dich einarbeiten" – und erzeugt genau die Hürde, die die Produkte
-abbauen sollen. Ein KI-Produkt, das aussieht wie ein ruhiges Familienmaterial,
-ist am Markt der eigentliche Unterschied. Zusätzlich hängt der Fair Care Check
-als Funnel-Einstieg sonst gestalterisch in der Luft.
+Damit ist offene Frage D3 beantwortet – und zwar in Richtung ruhig-editorial,
+nicht Tech-Optik. Das ist inhaltlich richtig: Die Zielgruppe kauft Entlastung,
+nicht Technik. Ein KI-Produkt, das aussieht wie ein ruhiges Familienmaterial,
+ist am Markt der eigentliche Unterschied.
 
-Das ist eine Markenentscheidung, keine reine Umsetzungsfrage – siehe offene
-Frage D3.
+**Achtung, zwei Punkte zur Datei selbst:**
 
-Gestalterische Festlegungen unabhängig von dieser Entscheidung:
+1. Die Farbwerte sind laut Kommentar im Original aus dem Cover-Bild
+   geschätzt. Vor dem Launch gegen die exakten Canva-Werte abgleichen.
+2. Die Palette ist als Flächen- und Linienfarbe richtig, als **Textfarbe**
+   aber zu hell: Taupe auf Creme erreicht 2,2:1, Rosé 2,5:1 – nötig sind
+   4,5:1. Der Button wurde beim Hover sogar schlechter lesbar als im
+   Ruhezustand. Gelöst über zwei zusätzliche Text-Tokens im selben Farbton
+   (`--og-taupe-text`, `--og-rose-text`), die hellen Originaltöne bleiben für
+   alles Dekorative. Beim Canva-Abgleich mit anpassen.
+
+### Bausteine
+
+Das Kernsystem bringt Typografie, Farben, Buttons, Karten, Callout,
+Zwischenfazit und Footer mit. Für die Konzept-Struktur fehlten acht Bausteine;
+sie sind ergänzt und unter `website/styleguide.html` als Musterseite zu sehen:
+
+| Baustein | Wofür |
+|---|---|
+| Kopf mit Bereichs-Navigation | Abschnitt 2 – Navigation nach Lebensbereich |
+| Hero mit Kicker und zwei Aktionen | Salespage-Abschnitt 1 |
+| Bereichs-Einstiege als Karten-Raster | Startseite |
+| Zuständigkeits-Tabelle | Abschnitt 2 – zwei Spalten, keine Häkchen |
+| Morgen-Briefing als Mock | Salespage-Abschnitt 4 |
+| Setup-Schritte, nummeriert | Salespage-Abschnitt 6 |
+| „Was es nicht ist"-Liste | Salespage-Abschnitt 7 |
+| Preisblock mit „einmalig" am Betrag | Salespage-Abschnitt 10 |
+| FAQ-Aufklapper | Salespage-Abschnitt 9 |
+| Formular für Lead-Magnet | Funnel, Abschnitt 7 |
+
+### Gestalterische Festlegungen
 
 - **Mobil zuerst.** Die Zielgruppe liest zwischen Tür und Angel auf dem Handy.
 - **Ein Screenshot sagt mehr als drei Absätze.** Das Morgen-Briefing als Bild
@@ -166,7 +192,11 @@ Gestalterische Festlegungen unabhängig von dieser Entscheidung:
 - **Keine Roboter-, Gehirn- oder Chip-Bildsprache.** Familienalltag zeigen.
 - **Ruhe statt Dringlichkeit.** Countdown-Balken und Verknappungs-Banner
   widersprechen dem Markenversprechen „weniger im Kopf".
+- **Keine Sticker und Badges.** Kategorien nur als Farbpunkt mit Kleinschrift,
+  so wie das Kernsystem es vorgibt.
 - **Preisdarstellung immer mit „einmalig"** direkt am Betrag.
+- **Kursive Playfair-Auszeichnung** für ein einzelnes Wort pro Headline, nicht
+  mehr. Das ist die Handschrift der Marke und nutzt sich bei Wiederholung ab.
 
 ## 6. Technik
 
@@ -177,8 +207,9 @@ Domain.
 Das ist keine Sparlösung, sondern Folge des Geschäftsmodells: Kein Login, kein
 Abo, kein laufender Dienst heißt auch keine Serverarchitektur.
 
-- **Gemeinsame Design-Tokens** in einer CSS-Datei für alle Seiten (Farben,
-  Schriften, Abstände). Verhindert das Auseinanderlaufen bei acht Seiten.
+- **Eine gemeinsame CSS-Datei** für alle Seiten: `website/styles.css`.
+  Verhindert das Auseinanderlaufen bei acht Seiten. Seiten bringen keine
+  eigenen Farben oder Schriften mit; fehlt ein Baustein, wird er dort ergänzt.
 - **Preise an genau einer Stelle** pro Seite, klar markiert. Solange die
   Preistabelle Arbeitsannahme ist, darf keine Seite mit Preis live gehen.
 - **Zahlung und Auslieferung über einen externen Anbieter**
@@ -258,5 +289,8 @@ Kundinnenstimmen erst hier – vorher gibt es keine echten.
 ## 10. Offene Punkte
 
 Vor dem Bau zu klären, siehe Abschnitt D in `offene-fragen.md`:
-Marke und Domain (D1), Zahlung und Auslieferung (D2), Designwelt (D3),
-technische Voraussetzungen der Kundin (D4), Preisfreigabe (D5).
+Marke und Domain (D1), Zahlung und Auslieferung (D2), technische
+Voraussetzungen der Kundin (D4, Blocker), Preisfreigabe (D5) und die Frage,
+ob der Fair Care Check auf das Website-Design umgestellt wird (D6).
+
+Die Designwelt (D3) ist entschieden – siehe Abschnitt 5.

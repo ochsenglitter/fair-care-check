@@ -1,0 +1,589 @@
+/* ===================================================================
+   OCHSENGLITTER — Website Designsystem (Kernmarke)
+   Playfair Display + Montserrat · Cream/Taupe/Anthrazit/Rosé
+   Hinweis: Farbwerte geschätzt anhand des Cover-Referenzbilds.
+   Bitte mit den exakten Canva-Werten abgleichen und unten anpassen.
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Farben */
+  --og-cream:       #F7F3EE;   /* Haupt-Hintergrund */
+  --og-cream-2:     #FBFAF7;   /* Karten/Boxen, etwas heller */
+  --og-taupe:       #D9CFC1;   /* Trennlinien, dezente Flächen */
+  --og-taupe-dark:  #B3A594;   /* Sekundärtext, Icons */
+  --og-anthracite:  #2B2B2B;   /* Fließtext, Headlines */
+  --og-rose:        #E3AFA6;   /* Akzent: Links, Badges, Hover */
+  --og-rose-deep:   #C98F86;   /* Akzent dunkler: Buttons/CTA */
+  --og-white:       #FFFFFF;
+
+  /* Typografie */
+  --og-font-heading: 'Playfair Display', serif;
+  --og-font-body:    'Montserrat', sans-serif;
+
+  /* Abstände */
+  --og-space-xs: 8px;
+  --og-space-sm: 16px;
+  --og-space-md: 32px;
+  --og-space-lg: 64px;
+  --og-space-xl: 96px;
+
+  --og-radius: 2px; /* bewusst fast kantig — editorial, nicht verspielt */
+}
+
+/* ---------- Basis ---------- */
+
+body {
+  background-color: var(--og-cream);
+  color: var(--og-anthracite);
+  font-family: var(--og-font-body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--og-font-heading);
+  font-weight: 600;
+  color: var(--og-anthracite);
+  line-height: 1.2;
+  letter-spacing: 0;
+  margin-bottom: var(--og-space-sm);
+}
+
+h1 { font-size: clamp(32px, 5vw, 52px); }
+h2 { font-size: clamp(26px, 4vw, 36px); }
+h3 { font-size: 22px; }
+
+/* Kursive Playfair-Auszeichnung für einzelne Wörter im Titel,
+   wie im Cover-Referenzbild ("wirklich leichter") */
+em.og-highlight {
+  font-style: italic;
+  font-weight: 500;
+}
+
+p { margin-bottom: var(--og-space-sm); }
+
+a {
+  color: var(--og-rose-deep);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+a:hover { border-color: var(--og-rose-deep); }
+
+/* ---------- Layout ---------- */
+
+.og-container {
+  max-width: 760px; /* schmale Lesespalte, editorial */
+  margin: 0 auto;
+  padding: 0 var(--og-space-sm);
+}
+
+.og-section {
+  padding: var(--og-space-lg) 0;
+}
+
+hr, .og-divider {
+  border: none;
+  border-top: 1px solid var(--og-taupe);
+  margin: var(--og-space-md) 0;
+}
+
+/* ---------- Buttons / CTA ---------- */
+
+.og-button {
+  display: inline-block;
+  background-color: var(--og-anthracite);
+  color: var(--og-cream) !important;
+  font-family: var(--og-font-body);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border-radius: var(--og-radius);
+  border: none;
+  transition: background-color 0.2s ease;
+}
+.og-button:hover {
+  background-color: var(--og-rose-deep);
+  border-bottom: none;
+}
+
+.og-button--outline {
+  background-color: transparent;
+  color: var(--og-anthracite) !important;
+  border: 1px solid var(--og-anthracite);
+}
+.og-button--outline:hover {
+  background-color: var(--og-anthracite);
+  color: var(--og-cream) !important;
+}
+
+/* ---------- Kategorie-Kennzeichnung (Säulen) ---------- */
+/* dezent, keine Sticker/Badges — nur Farbpunkt + Kleinschrift */
+
+.og-pillar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--og-font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--og-taupe-dark);
+  margin-bottom: var(--og-space-xs);
+}
+.og-pillar::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--og-rose);
+}
+
+/* ---------- Blogartikel-Karte (Übersicht/Startseite) ---------- */
+
+.og-card {
+  background-color: var(--og-cream-2);
+  padding: var(--og-space-md);
+  margin-bottom: var(--og-space-md);
+}
+.og-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--og-space-sm);
+}
+.og-card h3 {
+  margin-bottom: var(--og-space-xs);
+}
+.og-card p {
+  color: var(--og-taupe-dark);
+  font-size: 15px;
+}
+
+/* ---------- Newsletter-/Lead-Magnet-Box ---------- */
+
+.og-callout {
+  background-color: var(--og-white);
+  border: 1px solid var(--og-taupe);
+  padding: var(--og-space-md);
+  text-align: center;
+  margin: var(--og-space-lg) 0;
+}
+.og-callout h3 {
+  margin-bottom: var(--og-space-xs);
+}
+.og-callout p {
+  color: var(--og-taupe-dark);
+  margin-bottom: var(--og-space-sm);
+}
+
+/* ---------- Zwischenfazit-Kasten ("Das Wichtigste in Kürze") ---------- */
+
+.og-summary {
+  border-left: 3px solid var(--og-rose);
+  background-color: var(--og-cream-2);
+  padding: var(--og-space-sm) var(--og-space-md);
+  margin: var(--og-space-md) 0;
+  font-size: 15px;
+}
+.og-summary strong {
+  font-family: var(--og-font-heading);
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* ---------- Footer ---------- */
+
+.og-footer {
+  border-top: 1px solid var(--og-taupe);
+  padding: var(--og-space-md) 0;
+  font-size: 13px;
+  color: var(--og-taupe-dark);
+  text-align: center;
+}
+
+/* ===================================================================
+   ERGÄNZUNGEN FÜR DIE WEBSITE-STRUKTUR
+   Hinzugefügt 2026-09-16. Alles oberhalb dieser Linie ist das
+   Kernsystem und wird nur gegen die Canva-Originalwerte geändert.
+   Hier stehen nur Bausteine, die website-konzept.md verlangt und die
+   das Kernsystem noch nicht hatte. Keine neuen Farben, keine neuen
+   Schriften – ausschließlich vorhandene Tokens.
+   =================================================================== */
+
+/* ---------- Basis-Korrekturen ---------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body { margin: 0; -webkit-font-smoothing: antialiased; }
+
+img { max-width: 100%; height: auto; }
+
+:focus-visible {
+  outline: 2px solid var(--og-rose-deep);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+/* Sprungmarke für Tastatur und Screenreader */
+.og-skip {
+  position: absolute;
+  left: -9999px;
+  background: var(--og-anthracite);
+  color: var(--og-cream) !important;
+  padding: var(--og-space-xs) var(--og-space-sm);
+}
+.og-skip:focus { left: var(--og-space-sm); top: var(--og-space-sm); z-index: 100; }
+
+/* ---------- Breite Lesespalte ---------- */
+/* .og-container bleibt die schmale Textspalte (760px).
+   Für Raster und Tabellen braucht die Seite eine zweite Breite. */
+
+.og-container--wide { max-width: 1080px; }
+
+/* ---------- Kopf und Bereichs-Navigation ---------- */
+/* Die Navigation ordnet nach Lebensbereich, nie nach Produktstufe.
+   Deshalb bewusst keine Hervorhebung eines Eintrags als „Premium". */
+
+.og-header {
+  border-bottom: 1px solid var(--og-taupe);
+  padding: var(--og-space-sm) 0;
+}
+.og-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--og-space-sm);
+}
+.og-logo {
+  font-family: var(--og-font-heading);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--og-anthracite);
+  border-bottom: none;
+}
+.og-logo:hover { border-bottom: none; }
+
+.og-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--og-space-sm);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.og-nav a { color: var(--og-anthracite); }
+.og-nav a:hover { border-color: var(--og-rose-deep); }
+.og-nav a[aria-current='page'] { border-bottom-color: var(--og-rose); }
+
+/* ---------- Hero ---------- */
+
+.og-hero { padding: var(--og-space-xl) 0 var(--og-space-lg); }
+.og-hero h1 { margin-bottom: var(--og-space-sm); }
+.og-hero__lead {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--og-anthracite);
+  max-width: 34em;
+}
+.og-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--og-space-sm);
+  margin-top: var(--og-space-md);
+}
+
+/* Kicker über der Headline, gleiche Optik wie .og-pillar, ohne Punkt */
+.og-kicker {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--og-taupe-dark);
+  margin-bottom: var(--og-space-xs);
+}
+
+/* ---------- Raster ---------- */
+
+.og-grid {
+  display: grid;
+  gap: var(--og-space-md);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* Karte als ganzflächiger Link (Bereichs-Einstiege der Startseite) */
+a.og-card {
+  display: block;
+  border: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  color: var(--og-anthracite);
+  transition: border-color 0.2s ease;
+}
+a.og-card:hover { border-color: var(--og-taupe); }
+a.og-card h3 { color: var(--og-anthracite); }
+
+/* ---------- Zuständigkeits-Tabelle ---------- */
+/* Zwei Spalten, keine Häkchen, keine Kreuze. Eine Matrix mit
+   Häkchen würde Sarah optisch als beschnittene Fenja darstellen –
+   siehe website-konzept.md, Abschnitt 2. */
+
+.og-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+  margin: var(--og-space-md) 0;
+}
+.og-table th,
+.og-table td {
+  text-align: left;
+  padding: var(--og-space-sm) var(--og-space-sm) var(--og-space-sm) 0;
+  border-bottom: 1px solid var(--og-taupe);
+  vertical-align: top;
+}
+.og-table th {
+  font-family: var(--og-font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--og-taupe-dark);
+}
+.og-table td:last-child {
+  font-family: var(--og-font-heading);
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+/* ---------- Setup-Schritte ---------- */
+
+.og-steps {
+  list-style: none;
+  counter-reset: og-step;
+  padding: 0;
+  margin: var(--og-space-md) 0;
+}
+.og-steps li {
+  counter-increment: og-step;
+  position: relative;
+  padding-left: 52px;
+  margin-bottom: var(--og-space-md);
+}
+.og-steps li::before {
+  content: counter(og-step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--og-font-heading);
+  font-size: 17px;
+  color: var(--og-anthracite);
+  border: 1px solid var(--og-taupe);
+  border-radius: 50%;
+}
+.og-steps strong { display: block; margin-bottom: 2px; }
+
+/* ---------- Briefing-Mock ---------- */
+/* Das stärkste Verkaufselement der Seite: die Morgen-Nachricht im
+   Original zeigen statt Funktionen aufzählen. */
+
+.og-briefing {
+  background-color: var(--og-white);
+  border: 1px solid var(--og-taupe);
+  padding: var(--og-space-md);
+  margin: var(--og-space-md) 0;
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 420px;
+}
+.og-briefing__meta {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--og-taupe-dark);
+  border-bottom: 1px solid var(--og-taupe);
+  padding-bottom: var(--og-space-xs);
+  margin-bottom: var(--og-space-sm);
+}
+.og-briefing ul { padding-left: 1.1em; margin: 0 0 var(--og-space-sm); }
+.og-briefing li { margin-bottom: var(--og-space-xs); }
+.og-briefing li::marker { color: var(--og-rose); }
+
+/* ---------- „Was es nicht ist" ---------- */
+
+.og-not {
+  list-style: none;
+  padding: 0;
+  margin: var(--og-space-md) 0;
+}
+.og-not li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: var(--og-space-sm);
+}
+.og-not li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 14px;
+  height: 1px;
+  background-color: var(--og-taupe-dark);
+}
+
+/* ---------- Preisblock ---------- */
+/* „einmalig" steht am Betrag, nicht im Kleingedruckten.
+   Solange der Preis Arbeitsannahme ist, bleibt hier ein Platzhalter. */
+
+.og-price {
+  background-color: var(--og-cream-2);
+  border: 1px solid var(--og-taupe);
+  padding: var(--og-space-md);
+  text-align: center;
+  margin: var(--og-space-lg) 0;
+}
+.og-price__amount {
+  font-family: var(--og-font-heading);
+  font-size: clamp(38px, 6vw, 56px);
+  line-height: 1;
+  display: block;
+}
+.og-price__once {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--og-taupe-dark);
+  margin-top: var(--og-space-xs);
+}
+.og-price .og-button { margin-top: var(--og-space-md); }
+.og-price__note {
+  font-size: 13px;
+  color: var(--og-taupe-dark);
+  margin: var(--og-space-sm) 0 0;
+}
+
+/* ---------- FAQ ---------- */
+
+.og-faq { margin: var(--og-space-md) 0; }
+.og-faq details {
+  border-bottom: 1px solid var(--og-taupe);
+  padding: var(--og-space-sm) 0;
+}
+.og-faq summary {
+  cursor: pointer;
+  font-family: var(--og-font-heading);
+  font-size: 19px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--og-space-sm);
+}
+.og-faq summary::-webkit-details-marker { display: none; }
+.og-faq summary::after {
+  content: '+';
+  color: var(--og-taupe-dark);
+  font-family: var(--og-font-body);
+  font-weight: 300;
+}
+.og-faq details[open] summary::after { content: '–'; }
+.og-faq p { margin: var(--og-space-sm) 0 0; }
+
+/* ---------- Formular (Newsletter, Lead-Magnet) ---------- */
+
+.og-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--og-space-xs);
+  justify-content: center;
+}
+.og-input {
+  font-family: var(--og-font-body);
+  font-size: 16px;
+  color: var(--og-anthracite);
+  background-color: var(--og-white);
+  border: 1px solid var(--og-taupe);
+  border-radius: var(--og-radius);
+  padding: 13px var(--og-space-sm);
+  flex: 1 1 240px;
+  min-width: 0;
+}
+.og-input::placeholder { color: var(--og-taupe-dark); }
+.og-form .og-button { flex: 0 0 auto; cursor: pointer; }
+.og-form__note {
+  flex-basis: 100%;
+  font-size: 12px;
+  color: var(--og-taupe-dark);
+  margin: var(--og-space-xs) 0 0;
+}
+
+/* ---------- Mobil ---------- */
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .og-section { padding: var(--og-space-md) 0; }
+  .og-hero { padding: var(--og-space-lg) 0 var(--og-space-md); }
+  .og-hero__lead { font-size: 18px; }
+  .og-card, .og-callout, .og-price, .og-briefing { padding: var(--og-space-sm); }
+  .og-button { display: block; text-align: center; }
+  .og-hero__actions .og-button { width: 100%; }
+  .og-table td:last-child { white-space: normal; }
+}
+
+/* ---------- Lesbarkeit: Textfarben mit ausreichendem Kontrast ---------- */
+/* Gemessen gegen --og-cream (#F7F3EE). Die Originalwerte der Palette sind
+   als Flächen und Linien richtig, als *Textfarbe* aber zu hell:
+       --og-taupe-dark auf Creme   2,18:1
+       --og-rose-deep  auf Creme   2,45:1
+       Creme auf --og-rose-deep    2,45:1  (Button-Hover)
+   WCAG AA verlangt 4,5:1 für Fließtext. Zwei zusätzliche Tokens lösen das,
+   ohne die Palette zu verändern: gleicher Farbton, nur tiefer. Die hellen
+   Originaltöne bleiben für alles Dekorative (Punkte, Linien, Flächen).
+   Bei Abgleich mit den Canva-Werten bitte mit anpassen. */
+
+:root {
+  --og-taupe-text: #776B5B;  /* 4,7:1 auf Creme – Sekundärtext */
+  --og-rose-text:  #9B5A4F;  /* 4,8:1 auf Creme – Links, Button-Hover */
+}
+
+a { color: var(--og-rose-text); }
+a:hover { border-color: var(--og-rose-text); }
+
+.og-button:hover { background-color: var(--og-rose-text); }
+
+.og-pillar,
+.og-kicker,
+.og-card p,
+.og-callout p,
+.og-summary,
+.og-footer,
+.og-table th,
+.og-briefing__meta,
+.og-price__once,
+.og-price__note,
+.og-form__note,
+.og-input::placeholder,
+.og-faq summary::after { color: var(--og-taupe-text); }
+
+/* Die hellen Töne bleiben dekorativ – hier bewusst unverändert: */
+.og-pillar::before { background-color: var(--og-rose); }
+.og-summary { border-left-color: var(--og-rose); }
+.og-briefing li::marker { color: var(--og-rose); }

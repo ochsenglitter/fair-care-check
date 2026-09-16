@@ -160,15 +160,11 @@ Widerrufs-Abwicklung (Digistore24 oder Copecart), Auslieferung als
 duplizierbares Template plus PDF-Anleitung. Updates über dieselbe
 Auslieferungsseite, damit kein zweiter Kanal entsteht.
 
-### D3. Designwelt: warm oder KI-Optik?
+### D3. Designwelt – ENTSCHIEDEN am 2026-09-16
 
-Für KI-Produkte gibt es das dunkle, futuristische Salespage-System; für
-Care-Arbeit-Material das warme Ochsenglitter-System. Beides auf einer Seite
-geht nicht.
-
-**Vorschlag:** Durchgehend das warme System. Begründung in
-`website-konzept.md`, Abschnitt 5: Die Zielgruppe kauft Entlastung, nicht
-Technik – Tech-Optik erzeugt genau die Hürde, die das Produkt abbaut.
+Es gilt das Ochsenglitter-Website-Designsystem der Kernmarke (Playfair Display
++ Montserrat, Creme/Taupe/Anthrazit/Rosé). Liegt als `website/styles.css` im
+Repository, Begründung und Bausteine in `website-konzept.md`, Abschnitt 5.
 
 ### D4. Was braucht die Kundin technisch? (Blocker)
 
@@ -191,3 +187,26 @@ ungeprüften Preis live gehen.
 **Vorschlag:** Vor Stufe 1 den Founding-Preis für Sarah final entscheiden und
 in `produktleiter-und-preise.md` als final markieren. Alles andere bleibt
 Arbeitsannahme, bis die jeweilige Stufe ansteht.
+
+### D6. Bleibt der Fair Care Check optisch, wie er ist?
+
+Der Fair Care Check ist in Cormorant Garamond + Mulish mit Creme/Terrakotta/
+Gold gebaut – dem System für die Care-Arbeit-Materialien. Die Website nutzt
+Playfair Display + Montserrat mit Creme/Taupe/Anthrazit/Rosé. Das sind zwei
+verschiedene Welten.
+
+Das ist kein Schönheitsfehler: Der Rechner ist laut Konzept der erste Schritt
+im Funnel. Wer von der Startseite dorthin klickt und optisch woanders landet,
+verliert genau an der Stelle Vertrauen, an der er gerade seine Familiendaten
+eingeben soll.
+
+**Vorschlag:** Den Fair Care Check auf das Website-System umstellen, bevor er
+verlinkt wird. Der Aufwand ist überschaubar – die Farben und Schriften stehen
+in `styles.css` als Variablen ganz oben. Die Materialien zum Download
+(Workbooks, Decks) behalten ihr eigenes System; die Trennlinie verläuft
+zwischen *Website* und *Material*, nicht zwischen den Produkten.
+
+**Alternative**, falls die beiden Welten bewusst getrennt bleiben sollen: Dann
+braucht der Rechner einen erkennbaren Übergang – gleicher Kopf, gleiche
+Navigation, gleicher Footer –, damit er nicht wie eine fremde Seite wirkt.
+
