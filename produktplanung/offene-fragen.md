@@ -139,6 +139,11 @@ Punkte blockieren den Bau bzw. den Launch der Seite.
 
 ### D1. Läuft die Produktfamilie unter Ochsenglitter oder unter eigener Marke?
 
+**Neu am 2026-09-16:** Sarah ist bereits live – auf
+`sarah-earlyaccess.netlify.app`, nicht unter der eigenen Domain. Damit ist
+faktisch entschieden worden, ohne dass entschieden wurde. Einordnung und
+Vorschlag in `designwelten-bestand.md`.
+
 Der Fair Care Check ist Ochsenglitter. Sarah und Fenja sind ein anderes
 Angebot an dieselbe Zielgruppe. Davon hängen Domain, Design, Absender der
 E-Mails und die Frage ab, ob die bestehende Reichweite überhaupt trägt.

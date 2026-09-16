@@ -41,6 +41,7 @@ Mental-Load-Bereiche.
 | `abgrenzung-und-arbeitsregeln.md` | **Einordnungstabelle und Verfahren – vor jeder Feature-Entscheidung lesen** |
 | `offene-fragen.md` | Ungeklärte Abgrenzungen, Lücken, Produktentscheidungen |
 | `website-konzept.md` | Struktur, Gestaltung und Ausbaustufen der Website |
+| `designwelten-bestand.md` | Gemessene Farbwerte der bestehenden Seiten, Abgleich |
 | `sarah/README.md` | Vollständige Produktdefinition Sarah |
 | `fenja/README.md` | Vollständige Produktdefinition Fenja |
 | `fenja/add-ons/` | Die fünf Add-ons, je eine Datei |
