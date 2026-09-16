@@ -1,6 +1,6 @@
 # Offene Abgrenzungsfragen
 
-Stand: 2026-09-12
+Stand: 2026-09-16
 
 Laut Arbeitsregel darf ich Funktionen, die mehrere Bereiche betreffen, nicht
 selbst zuordnen. Die folgenden Punkte sind mir beim Aufbereiten der Architektur
@@ -129,3 +129,65 @@ Zum Lieferumfang gehören „Updates". Bei Einmalprodukten ohne SaaS ist offen,
 
 **Vorschlag:** Vor dem ersten Launch festlegen und auf der Salespage konkret
 benennen – die Frage kommt sonst im Verkaufsgespräch.
+
+---
+
+## D. Website
+
+Aufgefallen beim Erstellen von `website-konzept.md` (2026-09-16). Alle fünf
+Punkte blockieren den Bau bzw. den Launch der Seite.
+
+### D1. Läuft die Produktfamilie unter Ochsenglitter oder unter eigener Marke?
+
+Der Fair Care Check ist Ochsenglitter. Sarah und Fenja sind ein anderes
+Angebot an dieselbe Zielgruppe. Davon hängen Domain, Design, Absender der
+E-Mails und die Frage ab, ob die bestehende Reichweite überhaupt trägt.
+
+**Vorschlag:** Unter Ochsenglitter, als eigener Bereich. Die vorhandene
+Glaubwürdigkeit („die kennt meinen Alltag") ist der größte Startvorteil, und
+eine zweite Marke müsste Vertrauen von null aufbauen. Eigene Domain nur, wenn
+die Produktfamilie später klar eigenständig wird.
+
+### D2. Zahlungsanbieter und Auslieferung
+
+Die Kundin kauft einmalig und bekommt ein Paket aus Anleitung, Templates und
+Prompts. Offen ist, worüber verkauft wird und in welcher Form ausgeliefert
+wird (PDF, Notion-Duplikat, Download-Ordner). Hängt direkt an C2 (Updates):
+Wie die Updates die Kundin erreichen, entscheidet die Wahl mit.
+
+**Vorschlag:** Ein deutscher Anbieter mit Reverse-Charge- und
+Widerrufs-Abwicklung (Digistore24 oder Copecart), Auslieferung als
+duplizierbares Template plus PDF-Anleitung. Updates über dieselbe
+Auslieferungsseite, damit kein zweiter Kanal entsteht.
+
+### D3. Designwelt: warm oder KI-Optik?
+
+Für KI-Produkte gibt es das dunkle, futuristische Salespage-System; für
+Care-Arbeit-Material das warme Ochsenglitter-System. Beides auf einer Seite
+geht nicht.
+
+**Vorschlag:** Durchgehend das warme System. Begründung in
+`website-konzept.md`, Abschnitt 5: Die Zielgruppe kauft Entlastung, nicht
+Technik – Tech-Optik erzeugt genau die Hürde, die das Produkt abbaut.
+
+### D4. Was braucht die Kundin technisch? (Blocker)
+
+In der gesamten Produktarchitektur steht nicht, in welcher KI-Umgebung Sarah
+gebaut wird und was die Kundin dafür haben muss – kostenpflichtiges Konto,
+welcher Anbieter, welcher Kalender, welches Aufgaben-Tool. Ohne diese Antwort
+lassen sich `/so-funktioniert-es`, die FAQ und die Abschnitte „Setup" und
+„Was es nicht ist" auf keiner Salespage schreiben.
+
+**Vorschlag:** Vor allem anderen festlegen und als eigene Datei in
+`produktplanung/` dokumentieren (Voraussetzungen, Kosten für die Kundin,
+unterstützte Alternativen). Auf der Seite gehört das offen und früh genannt,
+nicht ins Kleingedruckte.
+
+### D5. Preisfreigabe vor Launch
+
+Die Preistabelle ist ausdrücklich Arbeitsannahme. Keine Seite darf mit einem
+ungeprüften Preis live gehen.
+
+**Vorschlag:** Vor Stufe 1 den Founding-Preis für Sarah final entscheiden und
+in `produktleiter-und-preise.md` als final markieren. Alles andere bleibt
+Arbeitsannahme, bis die jeweilige Stufe ansteht.

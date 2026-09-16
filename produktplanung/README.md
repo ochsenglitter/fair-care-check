@@ -40,6 +40,7 @@ Mental-Load-Bereiche.
 | `produktleiter-und-preise.md` | Leiter, Preistabelle, Regeln der Leiter |
 | `abgrenzung-und-arbeitsregeln.md` | **Einordnungstabelle und Verfahren – vor jeder Feature-Entscheidung lesen** |
 | `offene-fragen.md` | Ungeklärte Abgrenzungen, Lücken, Produktentscheidungen |
+| `website-konzept.md` | Struktur, Gestaltung und Ausbaustufen der Website |
 | `sarah/README.md` | Vollständige Produktdefinition Sarah |
 | `fenja/README.md` | Vollständige Produktdefinition Fenja |
 | `fenja/add-ons/` | Die fünf Add-ons, je eine Datei |
