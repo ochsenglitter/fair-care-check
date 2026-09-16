@@ -271,3 +271,35 @@ und die technischen Voraussetzungen der Kundin stehen nirgends (D4). Eine
 Verkaufsseite kann so nicht live gehen – die Liste aufbauen kann man aber
 sofort.
 
+### D8. Der Podcast kommt im Briefing nicht vor
+
+Am 2026-09-16 als bestehende Adresse genannt: `ochsenglitter.de/podcast/`.
+Die Sitemap im Website-Briefing hat sieben Menüpunkte – Start, Blog,
+Ressourcen, Lieblingsprodukte, Über mich, Newsletter, Kooperationen. Ein
+Podcast ist nicht darunter.
+
+Das ist keine Kleinigkeit. Wenn die neue Struktur so umgesetzt wird, wie sie
+im Briefing steht, fällt eine bestehende Inhaltssäule aus der Navigation –
+und je nachdem, wie umgebaut wird, bricht die Adresse. Bestehende Links aus
+Shownotes, Instagram-Beiträgen und Verzeichnissen laufen dann ins Leere, und
+die bei Google aufgebaute Sichtbarkeit dieser Seite geht verloren.
+
+**Zu entscheiden:**
+
+1. Läuft der Podcast weiter? Wenn nein: Die Adresse trotzdem bestehen lassen
+   oder per Weiterleitung auf den Blog schicken – nie ersatzlos löschen.
+2. Wenn ja: Wo steht er? Ein achter Menüpunkt macht die Leiste voll. Denkbar
+   ist auch, ihn als fünfte Säule in den Blog zu nehmen, wenn die Folgen
+   ohnehin thematisch zu den vier Säulen passen.
+3. Gibt es weitere bestehende Seiten, die im Briefing fehlen? Vor dem Umbau
+   einmal die vollständige Liste der vorhandenen Seiten durchgehen.
+
+**Vorschlag:** Podcast als eigenen Menüpunkt behalten, wenn er weiterläuft –
+Audio ist ein anderes Format als ein Blogartikel und gehört nicht in eine
+Textkategorie einsortiert. Dann aber „Kooperationen" aus dem Hauptmenü in
+den Fußbereich verschieben. Marken suchen dort ohnehin zuerst, und das
+Hauptmenü bleibt bei sieben Punkten.
+
+Ohne Zugriff auf die bestehende Seite ist das ein Vorschlag ins Blaue – die
+vollständige Bestandsaufnahme fehlt weiterhin.
+
