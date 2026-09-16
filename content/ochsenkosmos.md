@@ -41,13 +41,44 @@ Menschen. Pro investierter Stunde: ~15 Hörer gegen ~1.500 Views.
 Daraus folgt die Empfehlung im Abschnitt „Podcast" weiter unten: nicht als
 eigener Kanal, sondern als Nebenprodukt des Newsletters.
 
+### Verkauf: ThriveCart
+
+ThriveCart ist ein **Checkout-System, keine Website**. Es kann: Bestellabwicklung,
+Order Bumps, Upsells, Kundenverwaltung und ein **eingebautes
+Affiliate-Programm**. Es ist kein CMS für Blog, Podcast-Seite oder
+Markenauftritt.
+
+Zusammen mit Flodesk (Mails, Formulare, Landingpages) ist damit alles
+vorhanden, was der Launch am 02.11. braucht:
+
+| Baustein | Womit | Aufwand |
+|---|---|---|
+| Salespage für Sarah | Skill `ki-salespage` (im System vorhanden) | ein Nachmittag |
+| Checkout | ThriveCart | 1–2 Std |
+| Anmeldeformular Warteliste | Flodesk | 1 Std |
+
+**Daraus folgt: Es fehlt keine Website.** Die ursprünglich für „Website
+überarbeiten" reservierten zwei Ferienwochen sind damit weitgehend frei – für
+Beta-Vorbereitung, Affiliate und Puffer. Zwei Wochen ohne Puffer vor einem
+Launch sind ein Risiko.
+
+**Ungenutzter Hebel:** Das Affiliate-Programm in ThriveCart. Bei 29 € lohnt es
+nicht, ab Early Access (49 €) und erst recht bei Fenja (129–149 €) schon:
+andere Creatorinnen verkaufen das Produkt gegen Provision. Statt selbst
+Affiliate zu sein, wird man die, für die andere Affiliate sind – bei diesen
+Margen der deutlich größere Hebel.
+
 ### Noch offen
 
-1. **Website:** Welche Plattform? Was ist veraltet – Inhalte, Design oder beides?
-2. **Zeit:** Wie viele Stunden pro Woche realistisch für Content – ohne
+1. **Eigene Website:** Gibt es eine Domain neben ThriveCart? Falls ja: Was läuft
+   darauf, und wo soll der Fair Care Check hin?
+2. **Auslieferung von Sarah:** Download oder Bereich in ThriveCart Learn? Hängt
+   an der Regel „kein Login bei uns" – steht als C2 in
+   `produktplanung/offene-fragen.md`.
+3. **Zeit:** Wie viele Stunden pro Woche realistisch für Content – ohne
    Kooperationen, ohne Sarah?
-3. **Hilfe:** Gibt es jemanden für Schnitt, Grafik oder Website?
-4. Im Podcast-Konto waren **zwei Cover** zu sehen. Gibt es einen zweiten
+4. **Hilfe:** Gibt es jemanden für Schnitt, Grafik oder Website?
+5. Im Podcast-Konto waren **zwei Cover** zu sehen. Gibt es einen zweiten
    Podcast, und ist der aktiver?
 
 ## Die Liste reaktivieren – der kritischste Teil des Plans
@@ -127,7 +158,7 @@ funktionierendes Mailsystem voraus. Und Sarahs Salespage braucht ein Zuhause.
 | Kanal | Was er leistet | Dringlichkeit |
 |---|---|---|
 | **Newsletter** | die eigene Liste, unabhängig von Instagram | **sehr hoch** – der Launch hängt daran |
-| **Website** | Zuhause für Salespage und Fair Care Check | **hoch, terminiert** – muss vor dem 02.11. stehen |
+| **Verkaufsstrecke** | Salespage, Checkout, Formular – alles vorhanden, nur zu bauen | **hoch, terminiert** – muss vor dem 02.11. stehen |
 | **Feed täglich** | neue Follower, und die fehlen | hoch, aber nach dem Launch |
 | **Podcast** | Tiefe und Bindung bei wenigen | läuft als Nebenprodukt des Newsletters mit, kostet 20 Min |
 
@@ -192,23 +223,22 @@ Warteliste ein. Die brauchen ein Zuhause, und das Zuhause muss vorher getestet
 sein. Ein Mailsystem, das beim Launch zum ersten Mal benutzt wird, ist ein
 Risiko am falschen Tag.
 
-### 15.–18.10. – Bestandsaufnahme Website
+### 15.–18.10. – Verkaufsstrecke vorbereiten
 
-Vier Schultage, Serie ist vorbei, Ferien noch nicht da. Nichts bauen, nur
-aufschreiben: Was ist auf der Website veraltet? Was fehlt? Wo soll Sarahs
-Salespage hin? Wo lebt der Fair Care Check?
+Vier Schultage, Serie vorbei, Ferien noch nicht da. Kein Website-Projekt –
+ThriveCart und Flodesk sind da, es fehlen nur drei Bausteine:
 
-### 19.–30.10. – Ferien: Website
+1. Salespage für Sarah (Skill `ki-salespage`)
+2. Checkout in ThriveCart
+3. Anmeldeformular „Sarah Warteliste" in Flodesk
 
-Zwei Wochen ohne Schulcontent. Der beste Zeitraum im ganzen Quartal für eine
-Website-Überarbeitung, weil der Kopf nicht gleichzeitig eine Serie tragen muss.
+### 19.–30.10. – Ferien: fertigstellen und Puffer
 
-**Reihenfolge innerhalb der Website:**
+Die Verkaufsstrecke einmal komplett durchtesten – vom Link in der Story bis zur
+Bestätigungsmail. Danach: Beta-Vorbereitung, Affiliate-Content und Puffer.
 
-1. Salespage für Sarah (muss zum 02.11. stehen)
-2. Newsletter-Anmeldung sichtbar auf jeder Seite
-3. Fair Care Check einbinden
-4. Alles andere
+Zwei Wochen ohne Puffer vor einem Launch sind ein Risiko. Dieser Puffer ist
+kein Leerlauf, er ist Teil des Plans.
 
 Affiliate läuft in diesen zwei Wochen nebenher über Stories – siehe
 `affiliate-kalender-und-promotion.md`, das Ferienfenster.
