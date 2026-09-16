@@ -32,7 +32,7 @@ Herbstferien: **Mo 19.10. bis Fr 30.10.2026.** Erster Schultag danach:
 | **Cart open** | **Mo 02.11. – So 08.11.** | Founding-Launch, sieben Tage, erste Schulwoche |
 | Beta + Black-Week-Vorlauf | 09.–20.11. | Kohorte begleiten, Testimonials sammeln, Wunschlisten-Stories ab 09.11. |
 | Black Week | 23.–30.11. | **Kein Sarah-Verkauf.** Affiliate-Vollgas (Black Friday 27.11., Cyber Monday 30.11.) |
-| Early Access | Januar | 49 €, öffentlich, mit Testimonials, zum Halbjahreswechsel |
+| Zweite Stufe | Januar | 49 €, öffentlich, mit Testimonials, zum Halbjahreswechsel – **Name offen, siehe C4** |
 
 Die zwei Ferienwochen sind kein verlorener Monat. Sie sind ein eigenes
 Affiliate-Fenster: Autofahrt, Regentage, Ausflug, Beschäftigung für gelangweilte
@@ -138,6 +138,56 @@ gute Schulmoment im Jahr.
 
 ---
 
+## Die Warteliste steht schon
+
+Stand 16.09.2026: Die Anmeldeseite ist **live** und mit einem eigenen
+Flodesk-Segment verbunden.
+
+| | |
+|---|---|
+| Seite | `https://sarah-earlyaccess.netlify.app` |
+| Dankeseite | `https://sarah-earlyaccess.netlify.app/danke/` |
+| Segment | „Sarah Early Access" |
+
+Das ersetzt den Punkt „Neues Segment anlegen" – er ist erledigt. Und es nimmt
+den Druck aus der engsten Woche der Serie: Am **Tag 27 (11.10.)** muss nichts
+mehr gebaut werden, der Link funktioniert dann schon seit Wochen.
+
+### Die Seite ist da – die Story bleibt trotzdem beim Plan
+
+**Öffentlich verlinkt wird erst ab Tag 27.** Nicht aus Prinzipienreiterei: Die
+ganze Dramaturgie der 30 Tage hängt daran, dass drei Wochen lang niemand weiß,
+woher du das alles weißt. Ein Link-Sticker in Woche 1 löst die Frage auf, die
+Tag 24 beantworten soll – und danach ist die Serie nur noch eine lange Werbung.
+
+**Zwei Ausnahmen, beide 1:1 und keine davon in der Story:**
+
+- Fragt jemand per DM direkt „kann ich das haben?", schickst du den Link. Das
+  ist Antworten, nicht Bewerben.
+- Dasselbe gilt für Leute, die dich ohnehin schon gefragt haben (der
+  Reaktiv-Frame aus Dokument 01).
+
+Das hat einen zweiten Nutzen, der wichtiger ist als er klingt: **Du siehst vor
+Tag 27, ob die Seite überhaupt konvertiert.** Wenn der Link erst am Conversion-
+Tag zum ersten Mal live geht und die Seite nicht trägt, ist der ganze Lauf weg.
+Ein dünner Strom aus DMs ist der billigste Test, den du bekommen kannst.
+
+**Notier mit, wie viele DM-Anfragen kommen und wie viele sich eintragen.** Die
+Quote ist die realistischste Zahl, die du vor dem Launch hast – besser als jede
+Schätzung in der Rechnung weiter unten.
+
+### Der Name kollidiert mit der Preisleiter
+
+In `produktplanung/sarah/README.md` heißt die **zweite** Preisstufe „Early
+Access" (49 €, Januar). Die Seite, die jetzt live ist, heißt genauso – meint
+aber die **erste** Gruppe, die Founding-Kohorte im November zu 29 €.
+
+Zweimal derselbe Name für zwei verschiedene Preise, und die Leute vom November
+sehen den Januar-Namen wieder. Das muss vor dem 02.11. aufgelöst werden. Der
+Vorschlag steht als **C4** in `produktplanung/offene-fragen.md`.
+
+Solange das nicht entschieden ist: **auf der Seite keine Preisstufe benennen.**
+
 ## Der Vorlauf, den es schon gibt
 
 Stand 16.09.2026, aus Flodesk:
@@ -186,8 +236,10 @@ echt. Die Mail beantwortet genau eine Frage: *Warum diesmal?*
 
 Damit ist der niedrigere Preis nicht Downgrade, sondern Pointe.
 
-**Neues Segment anlegen: „Sarah Warteliste".** Die alte nicht umwidmen – wer
-mitgeht, trägt sich neu ein. Sauber, und es misst, wie viele mitkommen.
+Die Mail führt auf die Anmeldeseite, nicht direkt in ein Segment. **Das
+Zielsegment existiert bereits: „Sarah Early Access".** Die alte Warteliste wird
+nicht umgewidmet – wer mitgeht, trägt sich neu ein. Sauber, und es misst, wie
+viele mitkommen.
 
 ## Die Rechnung
 
