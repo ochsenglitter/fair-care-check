@@ -172,10 +172,33 @@ Damit ist die Frage **enger, nicht beantwortet:** Das Kernmarken-System ist
 für einen Blog gebaut und nicht für Verkaufsseiten. Für Sarah und Fenja fehlt
 das System noch.
 
-**Vorschlag:** Kein drittes System von Grund auf. Playfair Display als
-gemeinsame Headline-Schrift übernehmen, aber eine eigene Zweitschrift und
-eine eigene Akzentfarbe wählen, damit Produktseiten und Blog auseinander zu
-halten sind. Die Bausteinliste steht in `website-konzept.md`, Abschnitt 5.
+**Vorschlag (überarbeitet am 2026-09-16): zwei Systeme statt drei.**
+Das Kernmarken-System trägt auch die Produktseiten – erweitert um die
+Verkaufsbausteine, die ein Blog nicht braucht. Die Care-Cards bleiben
+getrennt, weil sie Material zum Ausdrucken sind und keine Website.
+
+Begründung:
+
+- Das Kernmarken-System hat die Hälfte der nötigen Bausteine schon: FAQ,
+  Zwischenfazit, nummerierte Schritte, Tabelle.
+- Wer von ochsenglitter.de auf die Verkaufsseite klickt, verlässt die Marke
+  nicht sichtbar. Vertrauen aus dem Blog überträgt sich auf den Kauf – das ist
+  der wichtigste Vorteil beim Einstiegsprodukt.
+- Ein System pflegen statt zwei. Jede Farbänderung nur einmal.
+- Ruhig-editorial ist für ein KI-Produkt an Mütter ein Unterscheidungsmerkmal,
+  kein Nachteil.
+
+**Dagegen spricht nur ein Fall:** Wenn die Produktfamilie später eine eigene
+Marke mit eigener Domain wird (offen in D1). Dann ist ein getrenntes System
+von Anfang an günstiger als eine spätere Trennung.
+
+Zu ergänzen wären: Preisblock mit „einmalig" am Betrag, Hero mit
+Mental-Load-Satz, Nutzen-Liste „Was du danach nicht mehr selbst machst",
+Screenshot-Block für das Morgen-Briefing, Beweis- und Stimmen-Baustein.
+Das sind fünf Bausteine, kein zweites Designsystem.
+
+Das widerspricht der Briefing-Zeile „alle drei bleiben absichtlich
+unterschiedlich". Die Entscheidung liegt bei Antonia.
 
 ### D4. Was braucht die Kundin technisch? (Blocker)
 
@@ -209,3 +232,42 @@ Bleibt ein praktischer Punkt, kein Designfehler: Wer von ochsenglitter.de in
 den Rechner klickt, soll merken, dass er dieselbe Marke nicht verlässt. Dafür
 genügt ein gemeinsamer Fußbereich mit demselben `/datenschutz/`-Link und ein
 Rückweg zur Website – nicht dasselbe Aussehen.
+
+### D7. Wie erscheinen Sarah und Fenja auf ochsenglitter.de?
+
+Frage vom 2026-09-16: Müssen die Produkte in die Kernmarken-Website
+integriert werden, oder genügt ein Verweis?
+
+**Vorschlag: Verweis, keine Integration – aber ein echter Verweis, kein
+Fußnoten-Link.** Die beiden Seiten haben verschiedene Aufgaben. Die
+Kernmarke ist gebaut, um **gefunden zu werden** (SEO, Pinterest, Evergreen).
+Eine Verkaufsseite ist gebaut, um Zugriffe **umzuwandeln**, die man ihr
+schickt. Vermischt schadet es beiden: Verkaufsseiten ranken schlecht, und
+Inhaltsseiten, die dauernd verkaufen, verlieren das Vertrauen, das sie
+teilbar macht.
+
+Wer über Google auf „Mental Load reduzieren" landet, ist problembewusst, aber
+nicht produktbewusst. In diesem Moment ein KI-System für 79 € zu verkaufen,
+wandelt schlecht – die E-Mail-Adresse einzusammeln wandelt gut. Der Funnel in
+`website-konzept.md`, Abschnitt 7, sieht genau das vor.
+
+**Gestaffelt umsetzen:**
+
+| Zeitpunkt | Auf ochsenglitter.de |
+|---|---|
+| Solange Sarah nicht live ist | gar nichts – nur Lead-Magneten und Newsletter. Eine angekündigte Sarah verschiebt nichts, aber bindet Aufmerksamkeit |
+| Sobald Sarah live ist | ein Menüpunkt; ein Block unten auf `/ressourcen/`; Produktlink am Ende thematisch passender Artikel (Pflichtstruktur Punkt 6); eine Zeile auf „Über mich" |
+| Sobald Fenja live ist | nichts Zusätzliches im Menü. Fenja läuft über Newsletter an Bestandskundinnen, nicht über Kaltverkehr |
+
+Der Menüpunkt heißt nicht „Sarah" – ein fremder Name aus der Google-Suche
+sagt niemandem etwas. Besser ein Wort, das den Nutzen benennt.
+
+**Die Verkaufsseiten selbst bleiben eigene Seiten** unter eigener Adresse
+(z. B. `ochsenglitter.de/sarah/`), mit eigenem Seitenaufbau. Ob sie im
+Kernmarken-Design laufen, hängt an D3.
+
+**Praktisch derzeit ohnehin blockiert:** Die Preise sind Arbeitsannahmen (D5)
+und die technischen Voraussetzungen der Kundin stehen nirgends (D4). Eine
+Verkaufsseite kann so nicht live gehen – die Liste aufbauen kann man aber
+sofort.
+
