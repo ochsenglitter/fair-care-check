@@ -1,8 +1,8 @@
 # Sarah – Founding-Launch
 
-Anschluss an die Story-Serie „Mental Load sichtbar machen". Die Warteliste
-öffnet an Tag 27 (11.10.), die Serie endet an Tag 30 (14.10.). Danach kommt
-der Verkauf.
+Anschluss an die Story-Serie „Mental Load sichtbar machen". Die Anmeldeseite
+steht bereits (siehe unten), **öffentlich verlinkt wird sie ab Tag 27
+(11.10.)**. Die Serie endet an Tag 30 (14.10.). Danach kommt der Verkauf.
 
 > **Alle Preise hier sind Arbeitsannahmen** aus
 > `produktplanung/produktleiter-und-preise.md` und vor der Salespage
@@ -132,7 +132,7 @@ Affiliate-Vollgas nach der Event-Mechanik in
 Countdown ab dem 20.11., Evergreen-Regal vorne, drei bis vier Link-Slots am
 Tag. Sarah kommt in dieser Woche nicht vor.
 
-**Januar, Early Access ca. 49 €.** Öffentlich, mit Testimonials aus der Beta.
+**Januar, zweite Stufe ca. 49 €.** Öffentlich, mit Testimonials aus der Beta.
 Zum Halbjahreswechsel: neue Stundenpläne, neue Zettel, Zeugnisse. Der zweite
 gute Schulmoment im Jahr.
 
@@ -268,7 +268,7 @@ wäre eine höhere Zahl Wunschdenken.
 
 Der Founding-Launch ist **kein Umsatzereignis.** Er ist der Testlauf, der dir
 die Testimonials, die Einwände und die fertige Anleitung liefert. Das Geld
-kommt im Januar, wenn Early Access öffentlich läuft und du eine Salespage
+kommt im Januar, wenn die zweite Stufe öffentlich läuft und du eine Salespage
 hast, die aus echten Sätzen echter Käuferinnen gebaut ist.
 
 Wer den Founding-Launch als Umsatzziel plant, verkauft zu hart und verbrennt
