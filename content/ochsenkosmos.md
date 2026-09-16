@@ -63,7 +63,8 @@ Beta-Vorbereitung, Affiliate und Puffer. Zwei Wochen ohne Puffer vor einem
 Launch sind ein Risiko.
 
 **Ungenutzter Hebel:** Das Affiliate-Programm in ThriveCart. Bei 29 € lohnt es
-nicht, ab Early Access (49 €) und erst recht bei Fenja (129–149 €) schon:
+nicht, ab dem öffentlichen Start (49 €) und erst recht bei Fenja (129–149 €)
+schon:
 andere Creatorinnen verkaufen das Produkt gegen Provision. Statt selbst
 Affiliate zu sein, wird man die, für die andere Affiliate sind – bei diesen
 Margen der deutlich größere Hebel.

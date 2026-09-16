@@ -2,8 +2,10 @@
 
 **Rolle in der Leiter:** Einstiegsprodukt
 **Zuständigkeitsbereich:** ausschließlich Schule
-**Preis (Arbeitsannahme):** 29 € Founding → 49 € Early Access → 59 € Launch →
-79 € Evergreen, einmalig
+**Preis (Arbeitsannahme):** 29 € Early Access → 49 € Öffentlicher Start →
+79 € Regulär, einmalig
+**Anmeldeseite:** `sarah-earlyaccess.netlify.app` (Flodesk-Segment „Sarah Early
+Access")
 
 ## Leitfrage
 

@@ -200,39 +200,8 @@ bevor die Anleitung ab 15.10. geschrieben wird. Fällt die Antwort uneindeutig
 aus, wird die Anleitung für die stärkste Option geschrieben und für die
 zweitstärkste als Variante nachgezogen – nicht drei Anleitungen parallel.
 
-### C4. „Early Access" bezeichnet zwei verschiedene Dinge
+---
 
-Aufgekommen am 16.09.2026.
-
-In `sarah/README.md` ist die Preisleiter: 29 € Founding → 49 € **Early Access**
-→ 59 € Launch → 79 € Evergreen. „Early Access" ist dort die **zweite** Stufe im
-Januar.
-
-Seit heute ist eine Anmeldeseite live, die genauso heißt –
-`sarah-earlyaccess.netlify.app`, mit dem Flodesk-Segment „Sarah Early Access".
-Sie sammelt aber die **erste** Gruppe: die Founding-Kohorte, Cart 02.–08.11.,
-29 €.
-
-Damit trägt dasselbe Wort zwei Preise. Wer sich jetzt als „Early Access"
-einträgt und im Januar öffentlich einen „Early Access" für 49 € sieht, zieht
-eine naheliegende und falsche Schlussfolgerung.
-
-**Vorschlag: Das Lebende gewinnt.** Die Seite ist online und hat bereits
-Adressen; sie umzubenennen kostet URL, Segment und Vertrauen. Die Leiter wird
-umbenannt, nicht die Seite:
-
-| Stufe | bisher | Vorschlag | Wann |
-|---|---|---|---|
-| 1 | Founding 29 € | **Early Access 29 €** | Cart 02.–08.11. |
-| 2 | Early Access 49 € | **Öffentlicher Start 49 €** | Januar |
-| 3 | Launch 59 € | *entfällt* | – |
-| 4 | Evergreen 79 € | **Regulär 79 €** | ab Frühjahr |
-
-Die dritte Stufe zu streichen ist Teil des Vorschlags, nicht Nebensache: Vier
-Preise für ein 29-€-Produkt sind mehr Treppe, als der Preis trägt, und jede
-Stufe muss einzeln kommuniziert und begründet werden.
-
-**Alle Preise bleiben Arbeitsannahmen** – hier geht es nur um die Namen und die
-Anzahl der Stufen. Entscheidung liegt bei Antonia, nötig **vor dem 02.11.**
-
-Bis dahin gilt: auf der Anmeldeseite keine Preisstufe benennen.
+**Entschieden und umgezogen:** C4 („Early Access" bezeichnete zwei Preisstufen)
+wurde am 16.09.2026 entschieden und steht jetzt unter „Entschiedene Punkte" in
+`abgrenzung-und-arbeitsregeln.md`.

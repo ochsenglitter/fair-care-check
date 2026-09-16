@@ -751,7 +751,7 @@ Morgen von Tag 2 – alle drei noch einmal, heute.
 |---|---|
 | 15.–18.10. | Letzte Schultage. Warteliste weiter füllen, solange der Zettelstapel noch liegt |
 | 19.–30.10. | Herbstferien. Kein Schulverkauf, dafür Reise-, Regentag- und Aufräum-Affiliate |
-| 02.–08.11. | Founding-Launch Sarah, erste Schulwoche nach den Ferien |
+| 02.–08.11. | Early-Access-Launch Sarah, erste Schulwoche nach den Ferien |
 | 23.–30.11. | Black Week, Affiliate-Vollgas |
 
 # Die Tauschregel

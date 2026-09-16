@@ -16,16 +16,19 @@ Optional später als Bündelung:
 
 | Produkt | Stufe | Preis |
 |---|---|---|
-| Sarah | Founding / Beta | ca. 29 € |
-| Sarah | Early Access | ca. 49 € |
-| Sarah | Launch | ca. 59 € |
-| Sarah | Evergreen | ca. 79 € einmalig |
+| Sarah | Early Access | ca. 29 € |
+| Sarah | Öffentlicher Start | ca. 49 € |
+| Sarah | Regulär | ca. 79 € einmalig |
 | Fenja | – | ca. 129–149 € einmalig |
 | Add-on (je) | – | ca. 19–29 € einmalig |
 | Fenja Complete | Bundle | ca. 249 € |
 
 **Alle Preise sind Arbeitsannahmen und noch nicht final.** Vor Verwendung auf
 Salespages, in Funnels oder in Anzeigen bitte gegenprüfen.
+
+Die **Namen** der drei Sarah-Stufen sind dagegen entschieden (16.09.2026, siehe
+`abgrenzung-und-arbeitsregeln.md`). „Founding" und „Evergreen" werden für Sarah
+nicht mehr verwendet.
 
 ## Regeln für die Leiter
 

@@ -1,4 +1,4 @@
-# Sarah – Founding-Launch
+# Sarah – Early-Access-Launch
 
 Anschluss an die Story-Serie „Mental Load sichtbar machen". Die Anmeldeseite
 steht bereits (siehe unten), **öffentlich verlinkt wird sie ab Tag 27
@@ -29,10 +29,10 @@ Herbstferien: **Mo 19.10. bis Fr 30.10.2026.** Erster Schultag danach:
 | Serienende | 12.–14.10. | Tag 28–30, noch Schulzeit |
 | Letzte Schultage | 15.–18.10. | Warteliste weiter füllen, solange der Schmerz akut ist |
 | Ferien | 19.10.–01.11. | Leichter Content, Reise- und Regentag-Affiliate, Beta vorbereiten |
-| **Cart open** | **Mo 02.11. – So 08.11.** | Founding-Launch, sieben Tage, erste Schulwoche |
+| **Cart open** | **Mo 02.11. – So 08.11.** | Early-Access-Launch, sieben Tage, erste Schulwoche |
 | Beta + Black-Week-Vorlauf | 09.–20.11. | Kohorte begleiten, Testimonials sammeln, Wunschlisten-Stories ab 09.11. |
 | Black Week | 23.–30.11. | **Kein Sarah-Verkauf.** Affiliate-Vollgas (Black Friday 27.11., Cyber Monday 30.11.) |
-| Zweite Stufe | Januar | 49 €, öffentlich, mit Testimonials, zum Halbjahreswechsel – **Name offen, siehe C4** |
+| Öffentlicher Start | Januar | 49 €, öffentlich, mit Testimonials, zum Halbjahreswechsel |
 
 Die zwei Ferienwochen sind kein verlorener Monat. Sie sind ein eigenes
 Affiliate-Fenster: Autofahrt, Regentage, Ausflug, Beschäftigung für gelangweilte
@@ -49,17 +49,17 @@ Produkt konkurriert in dieser Woche gegen Rabattschlachten und verliert.
 
 ---
 
-## Der Founding-Launch
+## Der Early-Access-Launch
 
-**Angebot:** Sarah, Founding-Preis ca. 29 € (Arbeitsannahme), begrenzte
+**Angebot:** Sarah, Early-Access-Preis ca. 29 € (Arbeitsannahme), begrenzte
 Kohorte – Vorschlag: 50 Plätze, nur für die Warteliste.
 
-**Warum begrenzt:** Nicht als Verknappungstrick. Die Founding-Frauen bekommen
+**Warum begrenzt:** Nicht als Verknappungstrick. Die ersten 50 bekommen
 persönliche Begleitung beim Einrichten, und das kannst du nicht für 500 leisten.
 Das ist der ehrliche Grund und er trägt die Verknappung.
 
 **Was „schließen" hier bedeutet:** Nicht, dass das Produkt verschwindet. Es
-endet der Founding-Preis und die persönliche Begleitung. Das sagst du auch so.
+endet der Early-Access-Preis und die persönliche Begleitung. Das sagst du auch so.
 Eine gespielte Verknappung bei einem Einmalprodukt ohne Abo würde deiner Marke
 mehr kosten, als sie einbringt.
 
@@ -102,7 +102,7 @@ Antwortfenster 16:00 bleibt. Der Feed-Post kommt zusätzlich.
   gar nichts abgeben willst."
 - Wer sich hier nicht angesprochen fühlt, kauft.
 
-#### Fr 06.11. · Die ersten Founding-Frauen
+#### Fr 06.11. · Die ersten Käuferinnen
 - **Feed:** Reel oder Post mit den ersten echten Rückmeldungen, Setup-Fotos,
   Screenshots.
 - **Story:** „X von 50 Plätzen sind weg."
@@ -122,7 +122,7 @@ Antwortfenster 16:00 bleibt. Der Feed-Post kommt zusätzlich.
 
 ## Nach dem Launch
 
-**09.–20.11. Beta-Betreuung.** Die Founding-Kohorte beim Einrichten begleiten.
+**09.–20.11. Beta-Betreuung.** Die Early-Access-Kohorte beim Einrichten begleiten.
 Jede Frage, die dreimal kommt, gehört in die Anleitung. Am Ende: Testimonials
 einsammeln, solange die Erleichterung frisch ist.
 
@@ -132,7 +132,7 @@ Affiliate-Vollgas nach der Event-Mechanik in
 Countdown ab dem 20.11., Evergreen-Regal vorne, drei bis vier Link-Slots am
 Tag. Sarah kommt in dieser Woche nicht vor.
 
-**Januar, zweite Stufe ca. 49 €.** Öffentlich, mit Testimonials aus der Beta.
+**Januar, öffentlicher Start ca. 49 €.** Öffentlich, mit Testimonials aus der Beta.
 Zum Halbjahreswechsel: neue Stundenpläne, neue Zettel, Zeugnisse. Der zweite
 gute Schulmoment im Jahr.
 
@@ -176,17 +176,28 @@ Ein dünner Strom aus DMs ist der billigste Test, den du bekommen kannst.
 Quote ist die realistischste Zahl, die du vor dem Launch hast – besser als jede
 Schätzung in der Rechnung weiter unten.
 
-### Der Name kollidiert mit der Preisleiter
+### Die Preisstufen heißen jetzt nach der Seite
 
-In `produktplanung/sarah/README.md` heißt die **zweite** Preisstufe „Early
-Access" (49 €, Januar). Die Seite, die jetzt live ist, heißt genauso – meint
-aber die **erste** Gruppe, die Founding-Kohorte im November zu 29 €.
+Entschieden am 16.09.2026. Die Seite war zuerst da, also gewinnt ihr Name –
+umbenannt wurde die Preisleiter, nicht die Seite:
 
-Zweimal derselbe Name für zwei verschiedene Preise, und die Leute vom November
-sehen den Januar-Namen wieder. Das muss vor dem 02.11. aufgelöst werden. Der
-Vorschlag steht als **C4** in `produktplanung/offene-fragen.md`.
+| Stufe | Name | Preis | Wann |
+|---|---|---|---|
+| 1 | **Early Access** | ca. 29 € | Cart 02.–08.11.2026, 50 Plätze |
+| 2 | **Öffentlicher Start** | ca. 49 € | Januar 2027 |
+| 3 | **Regulär** | ca. 79 € | ab Frühjahr 2027 |
 
-Solange das nicht entschieden ist: **auf der Seite keine Preisstufe benennen.**
+Die frühere vierte Stufe (59 €) entfällt. **„Founding" wird nicht mehr
+verwendet** – nicht für den Preis, nicht für die Kohorte, nicht für die Plätze.
+Ein Produkt trägt einen Namen, nicht zwei; das war ja gerade das Problem.
+
+Was die ersten 50 auszeichnet, wird beschrieben statt benannt: „Die ersten 50
+bekommen persönliche Begleitung beim Einrichten." Das sagt mehr als das Wort
+„Founding" und funktioniert auch bei jemandem, der den Begriff nicht kennt.
+
+Die Regel steht unter „Entschiedene Punkte" in
+`produktplanung/abgrenzung-und-arbeitsregeln.md`. **Die Preise selbst bleiben
+Arbeitsannahmen** – entschieden sind Namen und Anzahl der Stufen.
 
 ## Der Vorlauf, den es schon gibt
 
@@ -257,21 +268,21 @@ gesagt haben:
 
 | Größe | Ergebnis |
 |---|---|
-| Founding-Preis (Arbeitsannahme) | 29 € |
+| Early-Access-Preis (Arbeitsannahme) | 29 € |
 | **Umsatz** | **900–4.000 €** |
 
 Dieselbe Größenordnung wie das 200-€-Programm – mit einem Siebtel des Preises
 und ohne Gruppenbetreuung.
 
-**Die 50 Founding-Plätze bleiben realistisch.** Bei 15 Käufen aus 463 Wartenden
+**Die 50 Early-Access-Plätze bleiben realistisch.** Bei 15 Käufen aus 463 Wartenden
 wäre eine höhere Zahl Wunschdenken.
 
-Der Founding-Launch ist **kein Umsatzereignis.** Er ist der Testlauf, der dir
+Der Early-Access-Launch ist **kein Umsatzereignis.** Er ist der Testlauf, der dir
 die Testimonials, die Einwände und die fertige Anleitung liefert. Das Geld
-kommt im Januar, wenn die zweite Stufe öffentlich läuft und du eine Salespage
+kommt im Januar, wenn der öffentliche Start läuft und du eine Salespage
 hast, die aus echten Sätzen echter Käuferinnen gebaut ist.
 
-Wer den Founding-Launch als Umsatzziel plant, verkauft zu hart und verbrennt
+Wer den Early-Access-Launch als Umsatzziel plant, verkauft zu hart und verbrennt
 die Beziehung, die die 30 Tage gerade aufgebaut haben.
 
 ---

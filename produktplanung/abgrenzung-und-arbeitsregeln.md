@@ -60,3 +60,31 @@ Verkaufshebel.
   („Ich muss den Schulalltag meiner Kinder nicht mehr selbst im Kopf behalten").
 - **Preise sind vorläufig.** Alle Zahlen in `produktleiter-und-preise.md` sind
   Arbeitsannahmen. Vor Verwendung auf einer Salespage gegenprüfen.
+
+## Entschiedene Punkte
+
+### Sarahs Preisstufen heißen Early Access → Öffentlicher Start → Regulär
+
+Entschieden am 16.09.2026 (vorher C4 in `offene-fragen.md`).
+
+Anlass: Die Anmeldeseite `sarah-earlyaccess.netlify.app` war live und sammelte
+unter dem Namen „Early Access" die **erste** Gruppe, während die Preisleiter
+denselben Namen für die **zweite** Stufe im Januar vergab.
+
+| Stufe | Name | Preis | Wann |
+|---|---|---|---|
+| 1 | **Early Access** | ca. 29 € | Cart 02.–08.11.2026, 50 Plätze |
+| 2 | **Öffentlicher Start** | ca. 49 € | Januar 2027 |
+| 3 | **Regulär** | ca. 79 € | ab Frühjahr 2027 |
+
+Die frühere vierte Stufe („Launch", 59 €) entfällt: Vier Preise sind mehr
+Treppe, als ein 29-€-Produkt trägt, und jede Stufe müsste einzeln begründet
+werden.
+
+**Der Begriff „Founding" wird nicht mehr verwendet** – weder für den Preis noch
+für die Kohorte, die Launch-Woche oder die Plätze. Ein öffentlich sichtbares
+Produkt trägt einen Namen, nicht zwei. Was die erste Gruppe auszeichnet
+(persönliche Begleitung, 50 Plätze), wird beschrieben, nicht als zweiter Name
+geführt.
+
+Preise bleiben Arbeitsannahmen; entschieden sind Namen und Anzahl der Stufen.

@@ -39,7 +39,7 @@ nächsten vier Wochen. Das Produkt entsteht erst daraus.
 | **08.10. (Tag 24)** | Sarah ist vorzeigbar | erste Nennung in der Story möglich |
 | **15.–18.10.** | Anleitung schreiben – aus vier Wochen echter Nutzung | Text, Vorlage, Screenshots |
 | **19.–30.10. (Ferien)** | eine nicht-technische Freundin baut Sarah nach der Anleitung nach | die Anleitung ist erprobt |
-| **02.–08.11.** | Cart offen, 50 Founding-Plätze | Verkauf |
+| **02.–08.11.** | Cart offen, 50 Early-Access-Plätze | Verkauf |
 
 ### Die Reihenfolge ist der Kern
 
@@ -203,7 +203,8 @@ Diese Frage ist als **C3** in `../offene-fragen.md` eingetragen.
   Kundin?). Beides ist mit „kein SaaS, kein Login bei uns" vereinbar, solange
   die Kundin die Dateien tatsächlich besitzt. Vor dem 02.11. festlegen und auf
   der Salespage benennen.
-- **Preis**: 29 € Founding ist Arbeitsannahme, vor der Salespage gegenprüfen.
+- **Preis**: 29 € Early Access ist Arbeitsannahme, vor der Salespage gegenprüfen.
+  Die Stufennamen sind entschieden (`../abgrenzung-und-arbeitsregeln.md`).
 - **Umfang der Anleitung**: Richtwert ist das 60-Minuten-Kriterium, nicht eine
   Seitenzahl.
 

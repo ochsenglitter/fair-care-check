@@ -37,7 +37,7 @@ machen**
 | 01 Story-Serie – Mental Load sichtbar machen | `mental-load-sichtbar-machen.md` |
 | 02 Feed und Reels | `feed-und-reels.md` |
 | 03 Affiliate – Eventkalender und Promotion | `affiliate-kalender-und-promotion.md` |
-| 04 Launch – Sarah Founding | `launch-sarah.md` |
+| 04 Launch – Sarah Early Access | `launch-sarah.md` |
 | 05 Fenja-Übergabe | diese Datei |
 | 06 Wochenprotokoll | der Rückkanal, montags |
 
