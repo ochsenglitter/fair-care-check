@@ -129,6 +129,31 @@ sondern ein Business-Produkt** und gehört in eine eigene Linie – nicht in die
 Leiter Sarah → Fenja → Add-ons. Das wäre eine strategische Entscheidung, keine
 Einordnungsfrage.
 
+### B4. Was passiert mit „Senke den Mental Load"?
+
+Aufgekommen am 16.09.2026 bei der Planung des Sarah-Launches.
+
+Es gibt ein verkauftes Produkt außerhalb der Architektur: **„Senke den Mental
+Load"**, ein Online-Kurs mit Gruppenprogramm, über 200 €. Warteliste 463,
+verkauft 15 beim ersten Launch und 6 danach – insgesamt 21 Kundinnen.
+
+Das Format widerspricht gleich drei bindenden Regeln: **kein Kurs**, keine
+Gruppe, keine Logik, die auf Termine und Begleitung baut.
+
+Zugleich liefert es die vermutlich beste Erkenntnis der ganzen Produktfamilie:
+
+> Ein Kurs gegen Mental Load kostet Zeit. Zeit ist genau das, was die
+> Zielgruppe nicht hat. 448 von 463 haben deshalb nein gesagt.
+
+**Vorschlag:** Das Programm nicht weiterführen. Die Erkenntnis daraus wird zur
+Copy für Sarah („Ich wollte mich nicht besser organisieren, ich wollte weniger
+organisieren müssen") – belegt statt behauptet.
+
+**Vorher zu klären:** Gibt es gegenüber den 21 Kundinnen noch laufende
+Verpflichtungen (Zugang, Gruppe, Betreuung, Updates)? Falls ja, müssen die
+erfüllt oder sauber beendet werden, bevor das Programm eingestellt wird. Das
+ist eine Entscheidung für Antonia, keine Einordnungsfrage.
+
 ---
 
 ## C. Produktentscheidungen

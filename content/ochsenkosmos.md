@@ -7,19 +7,88 @@ Dieses Dokument arbeitet auf **Monatsebene**. Die Tagesarbeit steht in
 
 ---
 
-## Was ich nicht weiß – bitte einmal beantworten
+## Der Bestand, Stand 16.09.2026
 
-Der Plan unten steht unter Annahmen. Diese fünf Angaben machen ihn konkret:
+### Newsletter: Flodesk
 
-1. **Newsletter:** Welches System (Mailchimp, Brevo, ConvertKit, elopage …)?
-   Wie viele Abonnentinnen? Wann zuletzt gesendet?
-2. **Website:** Welche Plattform (WordPress, Wix, Squarespace …)? Was ist
-   veraltet – Inhalte, Design oder beides?
-3. **Podcast:** Wie heißt er, wie viele Folgen, wann kam die letzte? Läuft der
-   Hosting-Vertrag noch?
-4. **Zeit:** Wie viele Stunden pro Woche hast du realistisch für Content – ohne
-   Kooperationen und ohne Sarah?
-5. **Hilfe:** Gibt es jemanden für Schnitt, Grafik oder Website?
+| Segment | Adressen |
+|---|---|
+| Hauptliste | 3.069 |
+| Newsletter | 743 |
+| Warteliste „Senke den Mental Load" | 463 |
+| KI Familien Assistentin | 24 |
+| Unengaged | 0 |
+
+**Zuletzt gesendet: April 2025 – 17 Monate Pause.**
+
+Das ist der kritische Punkt im gesamten Plan. Siehe unten, Abschnitt
+„Die Liste reaktivieren".
+
+### Podcast: „Ochsenglitter"
+
+| | |
+|---|---|
+| Letzte 30 Tage | 119 Downloads, 35 Hörende, 27 Abonnierende |
+| Letzte 3 Monate | 622 Downloads |
+| Verlauf | Juli ~340 → August ~215 → September ~40 |
+
+Der Abfall ist der auslaufende Katalog. Ohne neue Folgen sinkt das weiter.
+
+**Die Rechnung:** Eine Folge kostet drei Stunden und erreicht 30–60 Hörer.
+Dieselben drei Stunden in Reels erreichen bei 97.000 Followern mehrere tausend
+Menschen. Pro investierter Stunde: ~15 Hörer gegen ~1.500 Views.
+
+Daraus folgt die Empfehlung im Abschnitt „Podcast" weiter unten: nicht als
+eigener Kanal, sondern als Nebenprodukt des Newsletters.
+
+### Noch offen
+
+1. **Website:** Welche Plattform? Was ist veraltet – Inhalte, Design oder beides?
+2. **Zeit:** Wie viele Stunden pro Woche realistisch für Content – ohne
+   Kooperationen, ohne Sarah?
+3. **Hilfe:** Gibt es jemanden für Schnitt, Grafik oder Website?
+4. Im Podcast-Konto waren **zwei Cover** zu sehen. Gibt es einen zweiten
+   Podcast, und ist der aktiver?
+
+## Die Liste reaktivieren – der kritischste Teil des Plans
+
+17 Monate Pause haben zwei Folgen:
+
+**Technisch.** Ein Versand an 3.069 Adressen nach so langer Stille erzeugt hohe
+Bounce- und Beschwerdequoten. Die Mailprovider werten das aus – danach landen
+auch künftige Mails schlechter, nicht nur diese eine.
+
+**Rechtlich.** Es gibt keine feste Verfallsfrist für eine Einwilligung. Bei
+Pausen dieser Länge wird ihre Fortgeltung aber strittig, weil der Zweckbezug
+verblasst. Das gehört von jemandem geprüft, der dafür haftet – hier steht keine
+Rechtsberatung.
+
+### Die Re-Permission-Mail löst beides
+
+> „Du hast dich vor einer Weile bei mir eingetragen. Dann war ich lange still.
+> Wenn du weiter von mir hören willst, klick hier. Wenn nicht, ist das völlig in
+> Ordnung – dann hörst du nichts mehr von mir."
+
+Das kostet Liste: Von 3.069 bleiben realistisch **600–1.200**. Das fühlt sich
+nach Verlust an und ist das Gegenteil. Die anderen hätten ohnehin nicht
+geöffnet und dabei die Zustellbarkeit ruiniert.
+
+### Der Wellenplan
+
+| Montag | Was | An wen |
+|---|---|---|
+| **21.09.** | Testsendung, Zustellbarkeit prüfen | ~250 der zuletzt Hinzugekommenen |
+| **28.09.** | Re-Permission Welle 1 | ~800, wenn die Testsendung sauber war |
+| **05.10.** | Re-Permission Welle 2 **+ eigene Mail an die 463** | ~1.200 |
+| **12.10.** | Re-Permission Welle 3 | der Rest |
+| 19.10.–01.11. | Wer zweimal nicht reagiert hat, wird nicht weiter angeschrieben | – |
+| **02.11.** | Launch | die reaktivierte Liste |
+
+Zwischen den Wellen jeweils Bounces und Beschwerden prüfen, bevor die nächste
+rausgeht. Läuft eine Welle schlecht, wird langsamer gemacht – nicht schneller.
+
+**Neues Segment anlegen: „Sarah Warteliste."** Die alte Warteliste nicht
+umwidmen. Begründung und Ansprache stehen in `launch-sarah.md`.
 
 ---
 
@@ -60,10 +129,11 @@ funktionierendes Mailsystem voraus. Und Sarahs Salespage braucht ein Zuhause.
 | **Newsletter** | die eigene Liste, unabhängig von Instagram | **sehr hoch** – der Launch hängt daran |
 | **Website** | Zuhause für Salespage und Fair Care Check | **hoch, terminiert** – muss vor dem 02.11. stehen |
 | **Feed täglich** | neue Follower, und die fehlen | hoch, aber nach dem Launch |
-| **Podcast** | Tiefe, Bindung, Autorität | niedrig – teuer, langsam, zahlt nicht auf den Launch ein |
+| **Podcast** | Tiefe und Bindung bei wenigen | läuft als Nebenprodukt des Newsletters mit, kostet 20 Min |
 
-Der Podcast ist das einzige, was bewusst nach hinten geht. Drei Stunden pro
-Folge, und in den nächsten sechs Wochen ist keine davon frei.
+Der Podcast bekommt als einziger Kanal keinen eigenen Slot. Drei Stunden pro
+Folge sind bei 27 Abonnierenden nicht zu rechtfertigen – als eingesprochener
+Newsletter kostet er 20 Minuten und läuft trotzdem.
 
 ---
 
@@ -79,8 +149,8 @@ Beispiel Woche 3 (Schule):
 | Stories | täglich | der Moment, roh und ungeschnitten |
 | Reel (Mi) | „Nichts davon steht in einem Kalender" | die Emotion, für Fremde |
 | Karussell (Sa) | „9 Dinge, die du wegen Schule im Kopf behalten musst" | die Liste zum Speichern und Weiterleiten |
-| Newsletter (So) | die Langfassung | was auf Instagram nicht reinpasst: Kontext, Zahlen, Einordnung |
-| Podcast (später) | das Gespräch dazu | Tiefe und Stimme |
+| Newsletter (Mo) | die Langfassung | was auf Instagram nicht reinpasst: Kontext, Zahlen, Einordnung |
+| Podcast (Mo) | derselbe Newsletter, eingesprochen | Tiefe und Stimme, 20 Min Zusatzaufwand |
 
 **Die Regel:** Das Wochenthema kommt aus der Story-Serie. Kein Kanal bekommt
 ein eigenes Thema, solange nicht alle anderen laufen.
@@ -152,11 +222,24 @@ Nach zwei Wochen entscheiden.
 
 Parallel: Black Week (23.–30.11.), der umsatzstärkste Zeitraum des Jahres.
 
-### Januar – Podcast
+### Podcast – als Nebenprodukt, ab sofort
 
-Nach dem Early-Access-Launch. Dann gibt es auch etwas zu erzählen: Wie es war,
-ein Produkt zu bauen. Was die Founding-Frauen berichtet haben. Das ist besser
-als jede Folge, die man jetzt aufnehmen könnte.
+Ursprünglich war der Podcast auf Januar geschoben. Die Zahlen (27
+Abonnierende, 119 Downloads im Monat) rechtfertigen keine drei Stunden pro
+Folge – aber sie rechtfertigen auch nicht, ihn sterben zu lassen.
+
+**Die Lösung: Der Newsletter wird eingesprochen.**
+
+Ab dem 21.09. entsteht jeden Montag ohnehin ein Newsletter. Der wird
+vorgelesen – acht bis zwölf Minuten, ungeschnitten. Zusatzaufwand: **20
+Minuten statt drei Stunden.**
+
+Damit läuft der Podcast ab Woche 1 wieder, hat automatisch das Thema, das
+gerade überall läuft, und nimmt keinem anderen Kanal Zeit weg. Das ist „ein
+Thema, fünf Ausspielungen" konsequent zu Ende gedacht.
+
+Wenn die Zahlen nach drei Monaten wieder wachsen, kann jederzeit auf richtige
+Folgen aufgestockt werden. Umgekehrt ist es schwerer.
 
 ---
 

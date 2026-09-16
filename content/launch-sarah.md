@@ -138,15 +138,81 @@ gute Schulmoment im Jahr.
 
 ---
 
+## Der Vorlauf, den es schon gibt
+
+Stand 16.09.2026, aus Flodesk:
+
+| Segment | Adressen |
+|---|---|
+| Hauptliste | 3.069 |
+| Newsletter | 743 |
+| Warteliste „Senke den Mental Load" | 463 |
+| KI Familien Assistentin | 24 |
+
+**Der Newsletter liegt seit April 2025 still – 17 Monate.** Die Liste muss vor
+dem Launch reaktiviert werden, sonst landet die Launch-Mail im Spam. Der
+Wellenplan steht in `ochsenkosmos.md`. Realistisch bleiben nach der
+Re-Permission 600–1.200 erreichbare Adressen.
+
+### Was die alte Warteliste lehrt
+
+„Senke den Mental Load" war ein Online-Kurs mit Gruppenprogramm, über 200 €.
+Ergebnis: **15 Käufe beim ersten Launch, 6 danach.** Das sind 3,2 % von 463.
+
+Der naheliegende Grund ist der Preis. Der wichtigere ist ein anderer:
+
+> **Ein Kurs gegen Mental Load kostet Zeit. Zeit ist genau das, was die
+> Zielgruppe nicht hat.**
+
+Müttern, die unter zu vielen Verpflichtungen leiden, wurde eine weitere
+Verpflichtung angeboten – wöchentlich, mit Terminen. 448 haben nein gesagt.
+Das war kein Marketingfehler, das war das Format.
+
+**Diese Erkenntnis ist Sarahs stärkste Copy**, weil sie belegt ist und nicht
+behauptet. Sie gehört an Tag 22 in die Story und in die Salespage.
+
+### Die Mail an die 463
+
+Eine eigene Mail, nicht Teil des Newsletters. Timing: **Mo 05.10.**, parallel
+zu Tag 21 („Ich hab angefangen, was dagegen zu bauen").
+
+Sie haben nicht gekauft, aber sie haben sich eingetragen – das Interesse war
+echt. Die Mail beantwortet genau eine Frage: *Warum diesmal?*
+
+> „Vor anderthalb Jahren habe ich dir einen Kurs angeboten. Du hast nicht
+> gekauft – und ich glaube inzwischen, du hattest recht. Ein Kurs hätte dich
+> Zeit gekostet. Zeit ist genau das, was du nicht hast. Deshalb habe ich
+> diesmal etwas gebaut, das keine Zeit kostet, sondern welche zurückgibt."
+
+Damit ist der niedrigere Preis nicht Downgrade, sondern Pointe.
+
+**Neues Segment anlegen: „Sarah Warteliste".** Die alte nicht umwidmen – wer
+mitgeht, trägt sich neu ein. Sauber, und es misst, wie viele mitkommen.
+
 ## Die Rechnung
 
-Bei 97.000 Followern und – nach den 30 Tagen – 12.000 bis 15.000 Story-Views:
+Gerechnet auf der eigenen Historie (3,2 % bei 200 €), nach oben angepasst für
+den siebtel Preis, nach unten für die Tatsache, dass die 463 schon einmal nein
+gesagt haben:
 
-| Größe | Annahme | Ergebnis |
-|---|---|---|
-| Warteliste bis 01.11. | 1,5–3 % der erreichten Follower | 400–900 Anmeldungen |
-| Kaufrate Warteliste → Founding | 8–15 % | 32–135 Käufe |
-| Founding-Preis (Arbeitsannahme) | 29 € | **900–3.900 €** |
+| Quelle | Erreichbar | Kaufrate | Käufe |
+|---|---|---|---|
+| Instagram-Warteliste (neu, heiß) | 400–900 | 5–10 % | 20–90 |
+| Reaktivierte Mailliste | 600–1.200 | 0,5–2 % | 3–24 |
+| Die 463 vom alten Programm | 140–230 | 3–8 % | 4–18 |
+| KI Familien Assistentin | 24 | 15–30 % | 4–7 |
+| **Summe** | | | **31–139** |
+
+| Größe | Ergebnis |
+|---|---|
+| Founding-Preis (Arbeitsannahme) | 29 € |
+| **Umsatz** | **900–4.000 €** |
+
+Dieselbe Größenordnung wie das 200-€-Programm – mit einem Siebtel des Preises
+und ohne Gruppenbetreuung.
+
+**Die 50 Founding-Plätze bleiben realistisch.** Bei 15 Käufen aus 463 Wartenden
+wäre eine höhere Zahl Wunschdenken.
 
 Der Founding-Launch ist **kein Umsatzereignis.** Er ist der Testlauf, der dir
 die Testimonials, die Einwände und die fertige Anleitung liefert. Das Geld
