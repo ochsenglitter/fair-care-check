@@ -4,354 +4,462 @@
 <meta charset="utf-8">
 <title>Property Performance Group</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="PPG übernimmt komplexe Immobilienprojekte, die intern nicht abgeschlossen werden – und steuert sie bis zum verbuchten Ergebnis.">
-<meta name="theme-color" content="#F1F0EC">
+<meta name="description" content="PPG übernimmt komplexe Immobilienprojekte, die intern nicht abgeschlossen werden – und steuert sie bis zu einem Ergebnis, das in Euro beziffert ist.">
+<meta name="theme-color" content="#0E1417">
 <meta property="og:title" content="Property Performance Group">
 <meta property="og:description" content="Wir holen das Geld heraus, das in Immobilienprozessen feststeckt.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231D4E5C'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Helvetica,sans-serif' font-weight='700' font-size='26' fill='%23F1F0EC'%3EP%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230E1417'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23C2A06B'%3EP%3C/text%3E%3C/svg%3E">
 <style>
 :root{
-  --paper:#F1F0EC; --surface:#FBFAF8; --surface-2:#E9E7E1;
-  --ink:#15191D; --ink-muted:#5B6169; --rule:#D6D4CE;
-  --accent:#1D4E5C; --accent-ink:#FBFAF8; --oxide:#943A25;
-  --mark:#B8CDD2;
-  --step:clamp(1rem,0.92rem + 0.4vw,1.075rem);
-  --gutter:clamp(1rem,5vw,3.5rem);
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --paper:#101316; --surface:#171B1F; --surface-2:#1E2329;
-    --ink:#E8E6E1; --ink-muted:#99A0A7; --rule:#2B3137;
-    --accent:#7FBCCB; --accent-ink:#101316; --oxide:#D4795C;
-    --mark:#27414A;
-  }
-}
-:root[data-theme="dark"]{
-  --paper:#101316; --surface:#171B1F; --surface-2:#1E2329;
-  --ink:#E8E6E1; --ink-muted:#99A0A7; --rule:#2B3137;
-  --accent:#7FBCCB; --accent-ink:#101316; --oxide:#D4795C;
-  --mark:#27414A;
+  --night:#0E1417;
+  --night-2:#141C20;
+  --paper:#F7F5F1;
+  --paper-2:#EFEBE4;
+  --ink:#16191B;
+  --ink-soft:#5C6469;
+  --paper-soft:#B7BFC3;
+  --brass:#C2A06B;
+  --brass-deep:#A5844F;
+  --hair:#DCD6CC;
+  --hair-night:#2A353A;
+
+  --gutter:clamp(1.25rem,6vw,5rem);
+  --measure:38rem;
+  --sec:clamp(4.5rem,11vw,9rem);
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation:none!important; transition:none!important}}
+
 body{
   margin:0; background:var(--paper); color:var(--ink);
-  font-family:"Source Serif 4",Georgia,"Times New Roman",serif;
-  font-size:var(--step); line-height:1.6;
-  -webkit-font-smoothing:antialiased;
+  font-family:Jost,"Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+  font-weight:300; font-size:clamp(1.0rem,.96rem + .28vw,1.125rem); line-height:1.75;
+  -webkit-font-smoothing:antialiased; letter-spacing:.005em;
 }
-h1,h2,h3,.mono,.label{font-family:Archivo,"Helvetica Neue",Arial,sans-serif}
-.mono,.num,.label{font-family:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace}
-h1,h2,h3{text-wrap:balance; margin:0; letter-spacing:-0.015em}
+h1,h2,h3,.display{
+  font-family:"Libre Caslon Display",Georgia,"Times New Roman",serif;
+  font-weight:400; letter-spacing:-.01em; line-height:1.14; text-wrap:balance; margin:0;
+}
+p{margin:0}
 a{color:inherit}
-.wrap{width:100%; max-width:64rem; margin-inline:auto; padding-inline:var(--gutter)}
-.label{
-  font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase;
-  color:var(--ink-muted); font-weight:500;
-}
+.wrap{width:100%; max-width:72rem; margin-inline:auto; padding-inline:var(--gutter)}
+.narrow{max-width:var(--measure)}
 
-/* ---------- Kopf ---------- */
-.topbar{
-  position:sticky; top:env(safe-area-inset-top,0px); z-index:20;
-  background:color-mix(in srgb,var(--paper) 92%,transparent);
-  backdrop-filter:blur(8px); border-bottom:1px solid var(--rule);
+.eyebrow{
+  font-size:.7rem; font-weight:400; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--brass-deep); margin-bottom:1.5rem; display:block;
 }
-.topbar .wrap{display:flex; align-items:center; gap:1rem; min-height:3.5rem}
-.wordmark{display:flex; align-items:baseline; gap:.55rem; text-decoration:none; margin-right:auto}
-.wordmark b{font-family:Archivo,sans-serif; font-weight:700; letter-spacing:.02em; font-size:1.05rem}
-.wordmark span{font-family:"IBM Plex Mono",monospace; font-size:.68rem; color:var(--ink-muted); letter-spacing:.08em}
-.btn{
-  display:inline-block; font-family:Archivo,sans-serif; font-weight:600; font-size:.85rem;
-  padding:.55rem 1.05rem; background:var(--accent); color:var(--accent-ink);
-  text-decoration:none; border:1px solid var(--accent);
+.night .eyebrow{color:var(--brass)}
+.rule{width:3.5rem; height:1px; background:var(--brass); border:0; margin:0 0 1.75rem}
+
+/* ---------- Navigation ---------- */
+.nav{
+  position:absolute; inset-block-start:env(safe-area-inset-top,0px); inset-inline:0; z-index:30;
 }
-.btn:hover{opacity:.9}
-.btn--ghost{background:transparent; color:var(--ink); border-color:var(--rule)}
+.nav .wrap{display:flex; align-items:center; gap:2rem; min-height:5.5rem}
+.brand{text-decoration:none; margin-right:auto; display:flex; align-items:baseline; gap:.7rem}
+.brand .mark{font-family:"Libre Caslon Display",Georgia,serif; font-size:1.5rem; color:var(--brass); line-height:1}
+.brand .name{
+  font-size:.66rem; letter-spacing:.26em; text-transform:uppercase; color:var(--paper-soft);
+}
+.nav-links{display:none; gap:2rem; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase}
+@media(min-width:56rem){.nav-links{display:flex}}
+.nav-links a{color:var(--paper-soft); text-decoration:none; padding-block:.35rem; border-bottom:1px solid transparent; transition:color .25s,border-color .25s}
+.nav-links a:hover{color:var(--paper); border-color:var(--brass)}
+
+.cta{
+  display:inline-block; font-size:.74rem; letter-spacing:.2em; text-transform:uppercase;
+  padding:1rem 2rem; border:1px solid var(--brass); color:var(--brass);
+  text-decoration:none; background:transparent; transition:background .3s,color .3s;
+}
+.cta:hover{background:var(--brass); color:var(--night)}
+.cta--solid{background:var(--brass); color:var(--night)}
+.cta--solid:hover{background:var(--brass-deep); border-color:var(--brass-deep); color:var(--night)}
+.cta--ink{border-color:var(--ink); color:var(--ink)}
+.cta--ink:hover{background:var(--ink); color:var(--paper)}
+
+/* ---------- Flächen ---------- */
+.night{background:var(--night); color:var(--paper)}
+.night h1,.night h2,.night h3{color:var(--paper)}
+.night .soft{color:var(--paper-soft)}
+.soft{color:var(--ink-soft)}
+section{padding-block:var(--sec)}
 
 /* ---------- Hero ---------- */
-.hero{padding-block:clamp(2.5rem,7vw,5rem) clamp(2rem,5vw,3.5rem)}
-.hero-grid{display:grid; gap:clamp(2rem,4vw,3rem); grid-template-columns:1fr}
-@media(min-width:56rem){.hero-grid{grid-template-columns:1.15fr .85fr; align-items:start}}
+.hero{
+  position:relative; min-height:min(46rem,92vh);
+  display:flex; align-items:flex-end;
+  padding-block:11rem clamp(3.5rem,8vw,6rem);
+  background:
+    radial-gradient(120% 90% at 78% 8%, rgba(194,160,107,.16), transparent 58%),
+    radial-gradient(90% 70% at 0% 100%, rgba(122,150,160,.12), transparent 60%),
+    var(--night);
+  overflow:hidden;
+}
+/* Optionales Hero-Foto: .hero mit style="--hero-image:url(...)" versehen */
+.hero::after{
+  content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background-image:var(--hero-image,none);
+  background-size:cover; background-position:center;
+  opacity:.28; mix-blend-mode:luminosity;
+}
+.hero .wrap{position:relative; z-index:1}
 .hero h1{
-  font-size:clamp(1.85rem,1.1rem + 3.4vw,3.15rem); font-weight:700; line-height:1.1;
-  margin-block:.75rem 1rem;
+  font-size:clamp(2.35rem,1.3rem + 4.6vw,4.6rem);
+  max-width:19ch; color:var(--paper);
 }
-.hero h1 em{font-style:normal; box-shadow:inset 0 -.36em 0 var(--mark)}
-.lede{font-size:clamp(1.05rem,1rem + .4vw,1.2rem); color:var(--ink-muted); max-width:34em; margin:0}
-.hero-actions{display:flex; flex-wrap:wrap; gap:.6rem; margin-top:1.6rem}
+.hero h1 .brass{color:var(--brass)}
+.hero-sub{
+  margin-top:2rem; max-width:34rem; color:var(--paper-soft);
+  font-size:clamp(1.05rem,1rem + .35vw,1.2rem);
+}
+.hero-actions{display:flex; flex-wrap:wrap; gap:1rem; margin-top:3rem}
 
-/* ---------- Statusblatt ---------- */
-.sheet{border:1px solid var(--rule); background:var(--surface)}
-.sheet-head{
-  display:flex; justify-content:space-between; align-items:baseline; gap:.75rem;
-  padding:.7rem .95rem; border-bottom:1px solid var(--rule); background:var(--surface-2);
+/* ---------- Leitsatz ---------- */
+.statement p{
+  font-family:"Libre Caslon Display",Georgia,serif;
+  font-size:clamp(1.5rem,1.1rem + 1.8vw,2.35rem); line-height:1.32; max-width:26ch;
 }
-.sheet-head .label{color:var(--ink)}
-.sheet table{width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums}
-.sheet th,.sheet td{padding:.6rem .95rem; text-align:right; border-bottom:1px solid var(--rule)}
-.sheet th:first-child,.sheet td:first-child{text-align:left}
-.sheet thead th{
-  font-family:"IBM Plex Mono",monospace; font-size:.66rem; font-weight:500;
-  letter-spacing:.1em; text-transform:uppercase; color:var(--ink-muted);
-}
-.sheet td{font-size:.92rem}
-.sheet td.pos{font-family:"Source Serif 4",serif}
-.sheet .num{font-size:.92rem}
-.sheet .num--soll{color:var(--ink-muted)}
-.sheet .num--ist{color:var(--accent); font-weight:500}
-.sheet tbody tr:last-child td{border-bottom:0}
-.sheet-foot{padding:.65rem .95rem; border-top:1px solid var(--rule); font-size:.78rem; color:var(--ink-muted)}
-
-/* ---------- Abschnitte ---------- */
-section{border-top:1px solid var(--rule)}
-.sec{padding-block:clamp(2.5rem,6vw,4rem)}
-.sec h2{font-size:clamp(1.3rem,1.1rem + .9vw,1.75rem); font-weight:600; margin-bottom:.4rem}
-.sec-intro{color:var(--ink-muted); max-width:38em; margin:0 0 2rem}
-
-.symptoms{list-style:none; padding:0; margin:0; display:grid; gap:0; border-top:1px solid var(--rule)}
-@media(min-width:44rem){.symptoms{grid-template-columns:1fr 1fr; column-gap:2.5rem}}
-.symptoms li{
-  border-bottom:1px solid var(--rule); padding:.85rem 0 .85rem 2.1rem; position:relative;
-}
-.symptoms li::before{
-  content:"—"; position:absolute; left:0; top:.85rem;
-  font-family:"IBM Plex Mono",monospace; color:var(--accent);
+.statement .after{
+  font-family:Jost,sans-serif; font-size:1.05rem; line-height:1.8;
+  max-width:var(--measure); margin-top:2.5rem; color:var(--ink-soft);
 }
 
-.chain{list-style:none; padding:0; margin:0; display:grid; gap:1.5rem}
-@media(min-width:48rem){.chain{grid-template-columns:repeat(4,1fr); gap:1.75rem}}
-.chain li{border-top:2px solid var(--accent); padding-top:.85rem}
-.chain .step{font-family:"IBM Plex Mono",monospace; font-size:.7rem; color:var(--ink-muted); letter-spacing:.1em}
-.chain h3{font-size:1rem; font-weight:600; margin:.3rem 0 .45rem}
-.chain p{margin:0; font-size:.94rem; color:var(--ink-muted)}
+/* ---------- Anlass ---------- */
+.two{display:grid; gap:clamp(2.5rem,6vw,5rem)}
+@media(min-width:56rem){.two{grid-template-columns:.85fr 1.15fr}}
+.list{list-style:none; margin:0; padding:0; border-top:1px solid var(--hair)}
+.night .list{border-color:var(--hair-night)}
+.list li{
+  border-bottom:1px solid var(--hair); padding-block:1.35rem;
+  display:grid; grid-template-columns:2.75rem 1fr; align-items:baseline;
+}
+.night .list li{border-color:var(--hair-night)}
+.list .n{
+  font-family:"Libre Caslon Display",Georgia,serif; font-size:.95rem; color:var(--brass-deep);
+}
+.night .list .n{color:var(--brass)}
 
-.case{display:grid; gap:0; border:1px solid var(--rule); background:var(--surface)}
-.case-row{display:grid; grid-template-columns:1fr; gap:.3rem; padding:1rem 1.1rem; border-bottom:1px solid var(--rule)}
-@media(min-width:44rem){.case-row{grid-template-columns:11rem 1fr; gap:1.5rem; align-items:baseline}}
-.case-row:last-child{border-bottom:0}
-.case-row p{margin:0}
-.case-row--result{background:var(--surface-2)}
-.case-row--result p{font-weight:600}
+/* ---------- Vorgehen ---------- */
+.steps{display:grid; gap:clamp(2.5rem,5vw,3.5rem); margin-top:4rem}
+@media(min-width:48rem){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:68rem){.steps{grid-template-columns:repeat(4,1fr); gap:2.5rem}}
+.step{border-top:1px solid var(--hair-night); padding-top:1.75rem}
+.step .no{
+  font-family:"Libre Caslon Display",Georgia,serif; font-size:2.6rem; color:var(--brass);
+  line-height:1; display:block; margin-bottom:1.1rem;
+}
+.step h3{font-size:1.25rem; margin-bottom:.8rem}
+.step p{font-size:.98rem; line-height:1.72}
 
-.bio{display:grid; gap:2rem}
-@media(min-width:52rem){.bio{grid-template-columns:1.2fr .8fr; gap:3rem}}
-.facts{list-style:none; padding:0; margin:0; border-top:1px solid var(--rule)}
-.facts li{display:flex; justify-content:space-between; gap:1rem; padding:.6rem 0; border-bottom:1px solid var(--rule); font-size:.9rem}
-.facts dt,.facts .k{color:var(--ink-muted)}
-.facts .v{font-family:"IBM Plex Mono",monospace; text-align:right}
+/* ---------- Referenz ---------- */
+.figures{
+  display:grid; gap:0; margin-top:4rem;
+  border-top:1px solid var(--hair);
+}
+@media(min-width:52rem){.figures{grid-template-columns:repeat(3,1fr)}}
+.figure{
+  padding:2.25rem 0; border-bottom:1px solid var(--hair);
+}
+@media(min-width:52rem){
+  .figure{padding:2.5rem 2.5rem 2.5rem 0; border-right:1px solid var(--hair)}
+  .figure:last-child{border-right:0; padding-right:0}
+}
+.figure .val{
+  font-family:"Libre Caslon Display",Georgia,serif;
+  font-size:clamp(2.4rem,1.6rem + 2.6vw,3.4rem); line-height:1; color:var(--brass-deep);
+  font-variant-numeric:tabular-nums; display:block;
+}
+.figure .cap{margin-top:1rem; font-size:.95rem; line-height:1.6; color:var(--ink-soft)}
+.figure .cap b{font-weight:500; color:var(--ink)}
 
-.contact{background:var(--surface); border:1px solid var(--rule); padding:clamp(1.25rem,4vw,2rem)}
-.contact h2{margin-bottom:.5rem}
-.contact-list{list-style:none; padding:0; margin:1.5rem 0 0; display:grid; gap:.8rem}
-.contact-list li{display:flex; flex-wrap:wrap; gap:.5rem 1rem; align-items:baseline; border-bottom:1px solid var(--rule); padding-bottom:.8rem}
-.contact-list .k{min-width:7rem}
+.dossier{display:grid; gap:0; margin-top:4rem; border-top:1px solid var(--hair)}
+.dossier-row{
+  padding-block:1.9rem; border-bottom:1px solid var(--hair);
+  display:grid; gap:.75rem;
+}
+@media(min-width:52rem){
+  .dossier-row{grid-template-columns:13rem 1fr; gap:3rem; align-items:baseline}
+}
+.dossier-row .k{
+  font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--brass-deep);
+}
+.dossier-row p{max-width:44rem}
+.footnote{margin-top:2rem; font-size:.88rem; color:var(--ink-soft); max-width:var(--measure)}
+.night .footnote{color:var(--paper-soft)}
+
+/* ---------- Team ---------- */
+.people{display:grid; gap:clamp(2.5rem,5vw,4rem); margin-top:4rem}
+@media(min-width:52rem){.people{grid-template-columns:repeat(2,1fr)}}
+.person{display:grid; gap:1.75rem; grid-template-columns:1fr; align-content:start}
+.portrait{
+  aspect-ratio:4/5; max-width:100%; width:100%;
+  background:linear-gradient(160deg,var(--paper-2),#DAD3C7);
+  display:flex; align-items:center; justify-content:center;
+  border:1px solid var(--hair);
+}
+.portrait span{
+  font-family:"Libre Caslon Display",Georgia,serif; font-size:3.25rem; color:var(--brass-deep);
+  letter-spacing:.04em;
+}
+.person h3{font-size:1.5rem; margin-bottom:.35rem}
+.person .role{
+  font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--brass-deep);
+  margin-bottom:1.25rem;
+}
+.person p+p{margin-top:1rem}
+.person p{font-size:.98rem; line-height:1.75; color:var(--ink-soft)}
+
+/* ---------- Kontakt ---------- */
+.contact-grid{display:grid; gap:clamp(2.5rem,6vw,5rem); margin-top:3.5rem}
+@media(min-width:52rem){.contact-grid{grid-template-columns:1.1fr .9fr}}
+.contact-list{list-style:none; margin:0; padding:0; border-top:1px solid var(--hair-night)}
+.contact-list li{
+  border-bottom:1px solid var(--hair-night); padding-block:1.25rem;
+  display:flex; flex-wrap:wrap; gap:.5rem 2rem; align-items:baseline;
+}
+.contact-list .k{
+  font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--paper-soft);
+  min-width:6rem;
+}
 .todo{
-  font-family:"IBM Plex Mono",monospace; font-size:.8rem; color:var(--oxide);
-  border:1px dashed var(--oxide); padding:.1rem .45rem;
+  font-size:.82rem; letter-spacing:.06em; color:var(--brass);
+  border:1px dashed var(--brass-deep); padding:.15rem .6rem;
 }
 
-footer{border-top:1px solid var(--rule); padding-block:2rem 3rem; font-size:.85rem; color:var(--ink-muted)}
-footer h2{font-size:1rem; font-weight:600; color:var(--ink); margin-bottom:.75rem}
-footer .cols{display:grid; gap:1.5rem}
-@media(min-width:44rem){footer .cols{grid-template-columns:1fr 1fr}}
-footer ul{list-style:none; padding:0; margin:0}
-footer li{padding:.2rem 0}
-:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+/* ---------- Fuß ---------- */
+footer{border-top:1px solid var(--hair-night); padding-block:4rem 5rem; font-size:.88rem}
+footer .cols{display:grid; gap:2.5rem}
+@media(min-width:52rem){footer .cols{grid-template-columns:repeat(3,1fr)}}
+footer h2{font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--brass); font-family:Jost,sans-serif; margin-bottom:1.25rem}
+footer ul{list-style:none; margin:0; padding:0}
+footer li{padding-block:.3rem; color:var(--paper-soft)}
+footer .sign{margin-top:3.5rem; padding-top:2rem; border-top:1px solid var(--hair-night); color:var(--paper-soft)}
+
+:focus-visible{outline:2px solid var(--brass); outline-offset:3px}
 </style>
 </head>
 <body>
 
-<header class="topbar">
+<nav class="nav">
   <div class="wrap">
-    <a class="wordmark" href="#top"><b>PPG</b><span>Property Performance Group</span></a>
-    <a class="btn" href="#kontakt">Gespräch anfragen</a>
+    <a class="brand" href="#top">
+      <span class="mark">PPG</span>
+      <span class="name">Property Performance Group</span>
+    </a>
+    <div class="nav-links">
+      <a href="#anlass">Anlass</a>
+      <a href="#vorgehen">Vorgehen</a>
+      <a href="#referenz">Referenz</a>
+      <a href="#team">Team</a>
+    </div>
+    <a class="cta" href="#kontakt">Kontakt</a>
   </div>
-</header>
+</nav>
 
 <main id="top">
 
-  <div class="hero wrap">
-    <div class="hero-grid">
-      <div>
-        <p class="label">Komplexe Immobilienprojekte · Umsetzung · messbares Ergebnis</p>
-        <h1>Wir holen das Geld heraus, das in Ihren <em>Immobilienprozessen</em> feststeckt.</h1>
-        <p class="lede">PPG übernimmt komplexe Immobilienprojekte, die intern nicht
-          abgeschlossen werden – und steuert sie bis zu einem Ergebnis, das in Euro
-          beziffert ist.</p>
-        <div class="hero-actions">
-          <a class="btn" href="#kontakt">Projekt besprechen</a>
-          <a class="btn btn--ghost" href="#referenz">Referenz ansehen</a>
-        </div>
-      </div>
-
-      <div class="sheet">
-        <div class="sheet-head">
-          <span class="label">Referenz · Backlog-Abrechnungen</span>
-          <span class="label">2025–2026</span>
-        </div>
-        <table>
-          <thead>
-            <tr><th scope="col">Position</th><th scope="col">angestoßen</th><th scope="col">realisiert</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="pos">Mieterhöhungen</td>
-              <td class="num num--soll">31</td>
-              <td class="num num--ist">85 %</td>
-            </tr>
-            <tr>
-              <td class="pos">Cashflow p. M.</td>
-              <td class="num num--soll">15.000 €</td>
-              <td class="num num--ist">12.750 €</td>
-            </tr>
-            <tr>
-              <td class="pos">Nachforderungen</td>
-              <td class="num num--soll">400.000 €</td>
-              <td class="num num--ist">265.000 €</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="sheet-foot">Nachforderungen identifiziert, davon zwei Drittel nach
-          sechs Monaten realisiert. Die Realisierung läuft weiter.</p>
+  <header class="hero night">
+    <div class="wrap">
+      <span class="eyebrow">Komplexe Immobilienprojekte</span>
+      <h1>Wir holen das Geld heraus, das in Ihren <span class="brass">Immobilienprozessen</span> feststeckt.</h1>
+      <p class="hero-sub">PPG übernimmt Projekte, die intern nicht abgeschlossen werden –
+        und steuert sie bis zu einem Ergebnis, das in Euro beziffert ist.</p>
+      <div class="hero-actions">
+        <a class="cta cta--solid" href="#kontakt">Projekt besprechen</a>
+        <a class="cta" href="#referenz">Referenz ansehen</a>
       </div>
     </div>
-  </div>
+  </header>
 
-  <section id="anlass">
-    <div class="sec wrap">
-      <p class="label">Anlass</p>
-      <h2>Wann Sie uns brauchen</h2>
-      <p class="sec-intro">Nicht, wenn etwas analysiert werden muss. Sondern wenn die
-        Analyse längst vorliegt und trotzdem nichts passiert.</p>
-      <ul class="symptoms">
-        <li>Projekte kommen nicht in die Umsetzung.</li>
-        <li>Es hat sich ein großer Backlog aufgebaut.</li>
-        <li>Prozesse funktionieren nicht mehr so, wie sie gedacht waren.</li>
-        <li>Wirtschaftliche Potenziale sind bekannt, werden aber nicht gehoben.</li>
-        <li>Eine Transformation steckt seit Monaten fest.</li>
-        <li>Verantwortlichkeiten sind ungeklärt.</li>
-        <li>Fachbereich und IT kommen nicht zusammen.</li>
-        <li>Operative Probleme bleiben über lange Zeit ungelöst.</li>
+  <section class="statement">
+    <div class="wrap">
+      <hr class="rule">
+      <p>Die Analyse liegt meistens schon vor.<br>Was fehlt, ist jemand,
+         der sie zu Ende bringt.</p>
+      <p class="after">In großen Immobilienorganisationen ist selten unklar, wo das
+        Problem liegt. Es gibt Gutachten, Auswertungen, Präsentationen. Was fehlt, ist
+        die Instanz, die Verantwortlichkeiten herstellt, das Thema durch die Organisation
+        trägt und am Ende nachweist, was tatsächlich realisiert wurde. Genau diese Rolle
+        übernehmen wir.</p>
+    </div>
+  </section>
+
+  <section id="anlass" class="night">
+    <div class="wrap two">
+      <div>
+        <span class="eyebrow">Anlass</span>
+        <h2 style="font-size:clamp(1.9rem,1.4rem + 1.8vw,2.8rem)">Wann Sie<br>uns brauchen</h2>
+      </div>
+      <ul class="list">
+        <li><span class="n">01</span><span>Projekte kommen nicht in die Umsetzung.</span></li>
+        <li><span class="n">02</span><span>Es hat sich ein großer Backlog aufgebaut.</span></li>
+        <li><span class="n">03</span><span>Prozesse funktionieren nicht mehr so, wie sie gedacht waren.</span></li>
+        <li><span class="n">04</span><span>Wirtschaftliche Potenziale sind bekannt, werden aber nicht gehoben.</span></li>
+        <li><span class="n">05</span><span>Eine Transformation steckt seit Monaten fest.</span></li>
+        <li><span class="n">06</span><span>Verantwortlichkeiten sind ungeklärt.</span></li>
+        <li><span class="n">07</span><span>Fachbereich und IT kommen nicht zusammen.</span></li>
+        <li><span class="n">08</span><span>Operative Probleme bleiben über lange Zeit ungelöst.</span></li>
       </ul>
     </div>
   </section>
 
-  <section id="vorgehen">
-    <div class="sec wrap">
-      <p class="label">Vorgehen</p>
-      <h2>Jedes Mandat folgt derselben Kette</h2>
-      <p class="sec-intro">Sie ist der Grund, warum am Ende eine Zahl steht und nicht
-        ein Statusbericht.</p>
-      <ol class="chain">
-        <li>
-          <span class="step">01</span>
+  <section id="vorgehen" class="night" style="padding-top:0">
+    <div class="wrap">
+      <hr class="rule">
+      <span class="eyebrow">Vorgehen</span>
+      <h2 style="font-size:clamp(1.9rem,1.4rem + 1.8vw,2.8rem); max-width:18ch">Jedes Mandat folgt derselben Kette</h2>
+      <p class="soft" style="max-width:var(--measure); margin-top:1.5rem">Sie ist der
+        Grund, warum am Ende eine Zahl steht und nicht ein weiterer Statusbericht.</p>
+      <div class="steps">
+        <article class="step">
+          <span class="no">I</span>
           <h3>Problem</h3>
-          <p>Was genau blockiert – im Prozess, im Vertrag, an der Schnittstelle, in der
-            Zuständigkeit.</p>
-        </li>
-        <li>
-          <span class="step">02</span>
-          <h3>Wirtschaftlicher Schaden</h3>
-          <p>Was das kostet. Entgangene Einnahmen, nicht gestellte Forderungen,
-            gebundene Kapazität – beziffert, nicht geschätzt.</p>
-        </li>
-        <li>
-          <span class="step">03</span>
+          <p class="soft">Was genau blockiert – im Prozess, im Vertrag, an der
+            Schnittstelle, in der Zuständigkeit.</p>
+        </article>
+        <article class="step">
+          <span class="no">II</span>
+          <h3>Schaden</h3>
+          <p class="soft">Was das kostet: entgangene Einnahmen, nicht gestellte
+            Forderungen, gebundene Kapazität. Beziffert, nicht geschätzt.</p>
+        </article>
+        <article class="step">
+          <span class="no">III</span>
           <h3>Umsetzung</h3>
-          <p>Struktur, Arbeitspakete, klare Verantwortlichkeiten, Steuerung des Teams.
-            Wir begleiten nicht, wir führen aus.</p>
-        </li>
-        <li>
-          <span class="step">04</span>
-          <h3>Messbares Ergebnis</h3>
-          <p>Was tatsächlich realisiert wurde – getrennt von dem, was nur identifiziert
-            oder beauftragt ist.</p>
-        </li>
-      </ol>
+          <p class="soft">Struktur, Arbeitspakete, klare Verantwortlichkeiten, Steuerung
+            des Teams. Wir begleiten nicht, wir führen aus.</p>
+        </article>
+        <article class="step">
+          <span class="no">IV</span>
+          <h3>Ergebnis</h3>
+          <p class="soft">Was tatsächlich realisiert wurde – sauber getrennt von dem,
+            was identifiziert oder beauftragt ist.</p>
+        </article>
+      </div>
     </div>
   </section>
 
   <section id="referenz">
-    <div class="sec wrap">
-      <p class="label">Referenz</p>
-      <h2>Backlog-Abrechnungen und Indexmieten im Filialnetz</h2>
-      <p class="sec-intro">Projektleitung in einem Konzern des
-        Lebensmitteleinzelhandels, Team von rund zehn Personen, Laufzeit Juni 2025 bis
-        Dezember 2026.</p>
-      <div class="case">
-        <div class="case-row">
-          <p class="label">Problem</p>
+    <div class="wrap">
+      <hr class="rule">
+      <span class="eyebrow">Referenz</span>
+      <h2 style="font-size:clamp(1.9rem,1.4rem + 1.8vw,2.8rem); max-width:20ch">Backlog-Abrechnungen und Indexmieten im Filialnetz</h2>
+      <p class="soft" style="max-width:var(--measure); margin-top:1.5rem">Projektleitung
+        in einem Konzern des Lebensmitteleinzelhandels. Team von rund zehn Personen,
+        Laufzeit Juni 2025 bis Dezember 2026.</p>
+
+      <div class="figures">
+        <div class="figure">
+          <span class="val">31</span>
+          <p class="cap"><b>Mieterhöhungen umgesetzt</b><br>davon 85 % realisiert</p>
+        </div>
+        <div class="figure">
+          <span class="val">12.750 €</span>
+          <p class="cap"><b>zusätzlicher Cashflow pro Monat</b><br>realisiert, aus
+            angestoßenen 15.000 €</p>
+        </div>
+        <div class="figure">
+          <span class="val">265.000 €</span>
+          <p class="cap"><b>Nachforderungen realisiert</b><br>von rund 400.000 €
+            identifiziert</p>
+        </div>
+      </div>
+
+      <div class="dossier">
+        <div class="dossier-row">
+          <span class="k">Problem</span>
           <p>Indexmieten wurden über Jahre nicht konsequent umgesetzt, Abrechnungen
             liefen in einen wachsenden Backlog.</p>
         </div>
-        <div class="case-row">
-          <p class="label">Schaden</p>
+        <div class="dossier-row">
+          <span class="k">Schaden</span>
           <p>Laufende Mieteinnahmen unter Vertragsniveau, dazu Forderungen, die nie
             gestellt wurden.</p>
         </div>
-        <div class="case-row">
-          <p class="label">Umsetzung</p>
-          <p>Prozess neu strukturiert, Verantwortlichkeiten hergestellt, Arbeitsstrukturen
-            aufgebaut, Team gesteuert, Rückrechnungen und Nachforderungen durchgezogen.</p>
+        <div class="dossier-row">
+          <span class="k">Umsetzung</span>
+          <p>Prozess neu strukturiert, Verantwortlichkeiten hergestellt,
+            Arbeitsstrukturen aufgebaut, Team gesteuert, Rückrechnungen und
+            Nachforderungen durchgezogen.</p>
         </div>
-        <div class="case-row case-row--result">
-          <p class="label">Ergebnis</p>
+        <div class="dossier-row">
+          <span class="k">Ergebnis</span>
           <p>31 Mieterhöhungen umgesetzt, davon 85 % realisiert – rund 12.750 €
             zusätzlicher laufender Cashflow pro Monat. Dazu rund 400.000 €
             Nachforderungen identifiziert, davon zwei Drittel innerhalb von sechs
             Monaten realisiert.</p>
         </div>
       </div>
+      <p class="footnote">Die Realisierung läuft weiter; die genannten Zahlen sind ein
+        Zwischenstand nach sechs Monaten. Identifizierte und realisierte Effekte weisen
+        wir grundsätzlich getrennt aus.</p>
     </div>
   </section>
 
-  <section id="profil">
-    <div class="sec wrap">
-      <p class="label">Wer das macht</p>
-      <h2>Antonia Elena Krefeld</h2>
-      <div class="bio">
-        <div>
-          <p>Senior-Projektmanagerin für komplexe Immobilienprojekte. Der Schwerpunkt
-            liegt dort, wo ein Projekt komplex geworden ist: viele Stakeholder, unklare
-            Verantwortlichkeiten, gewachsene Prozesse, operative Rückstände.</p>
-          <p>Erfahrung aus Commercial Real Estate, kaufmännischem Immobilienmanagement,
-            Property- und Asset-Management-Kontexten, Miet- und Vertragsmanagement,
-            Abrechnung und Backlog-Management – fachlich-prozessual auch im
-            SAP-RE-FX-Umfeld. Dazu Konzernstrukturen mit großen Vertragsbeständen und
-            hohen operativen Volumina sowie internationale und institutionelle
-            Real-Estate-Strukturen, unter anderem bei Jones Lang LaSalle und in der
-            Betreuung internationaler Immobilienfonds.</p>
-          <p>Der Unterschied zur klassischen Beratung liegt nicht in der Analyse,
-            sondern davor und danach: das wirtschaftliche Problem benennen – und die
-            Umsetzung so lange steuern, bis das Ergebnis verbucht ist.</p>
-        </div>
-        <ul class="facts">
-          <li><span class="k">Rolle</span><span class="v">Projektleitung · Interim</span></li>
-          <li><span class="k">Branche</span><span class="v">Real Estate</span></li>
-          <li><span class="k">Kontexte</span><span class="v">Konzern · institutionell</span></li>
-          <li><span class="k">Teamgröße zuletzt</span><span class="v">10</span></li>
-          <li><span class="k">Arbeitsweise</span><span class="v">remote · vor Ort</span></li>
-        </ul>
+  <section id="team" class="night">
+    <div class="wrap">
+      <hr class="rule">
+      <span class="eyebrow">Team</span>
+      <h2 style="font-size:clamp(1.9rem,1.4rem + 1.8vw,2.8rem); max-width:20ch">Wer Ihr Projekt übernimmt</h2>
+      <p class="soft" style="max-width:var(--measure); margin-top:1.5rem">Jedes Mandat
+        wird von der Projektleitung persönlich geführt und mit erfahrenen Consultants
+        besetzt, die zum Thema passen. Sie bekommen kein Junior-Team mit
+        Senior-Rechnung.</p>
+
+      <div class="people">
+        <article class="person">
+          <div class="portrait"><span>AK</span></div>
+          <div>
+            <h3>Antonia Elena Krefeld</h3>
+            <p class="role" style="color:var(--brass)">Gründerin · Projektleitung</p>
+            <p class="soft">Senior-Projektmanagerin für komplexe Immobilienprojekte.
+              Schwerpunkt dort, wo ein Projekt komplex geworden ist: viele Stakeholder,
+              unklare Verantwortlichkeiten, gewachsene Prozesse, operative Rückstände.</p>
+            <p class="soft">Erfahrung aus Commercial Real Estate, kaufmännischem
+              Immobilienmanagement, Property- und Asset-Management, Miet- und
+              Vertragsmanagement, Abrechnung und Backlog-Management – fachlich-prozessual
+              auch im SAP-RE-FX-Umfeld. Dazu Konzernstrukturen mit großen
+              Vertragsbeständen sowie internationale und institutionelle
+              Real-Estate-Strukturen, unter anderem bei Jones Lang LaSalle und in der
+              Betreuung internationaler Immobilienfonds.</p>
+          </div>
+        </article>
+
+        <article class="person">
+          <div class="portrait" style="background:linear-gradient(160deg,#1C262B,#161E22); border-color:var(--hair-night)">
+            <span style="color:var(--hair-night)">＋</span>
+          </div>
+          <div>
+            <h3>Weitere Teammitglieder</h3>
+            <p class="role" style="color:var(--brass)">Consultants</p>
+            <p class="soft">Hier werden die festen Teammitglieder mit Namen, Rolle und
+              Schwerpunkt aufgeführt.</p>
+            <p><span class="todo">Namen, Rollen und Fotos ergänzen</span></p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="kontakt">
-    <div class="sec wrap">
-      <div class="contact">
-        <p class="label">Kontakt</p>
-        <h2>Erzählen Sie uns, woran es hängt</h2>
-        <p class="lede">Ein erstes Gespräch klärt in der Regel zwei Dinge: ob das
-          Problem wirtschaftlich relevant genug für ein Mandat ist – und ob wir die
-          Richtigen dafür sind.</p>
+  <section id="kontakt" class="night" style="padding-top:0">
+    <div class="wrap">
+      <hr class="rule">
+      <span class="eyebrow">Kontakt</span>
+      <h2 style="font-size:clamp(1.9rem,1.4rem + 1.8vw,2.8rem); max-width:18ch">Erzählen Sie uns, woran es hängt</h2>
+      <div class="contact-grid">
+        <p class="soft">Ein erstes Gespräch klärt in der Regel zwei Dinge: ob das Problem
+          wirtschaftlich relevant genug für ein Mandat ist – und ob wir die Richtigen
+          dafür sind. Beides sagen wir Ihnen offen, auch wenn die Antwort nein lautet.</p>
         <ul class="contact-list">
-          <li><span class="k label">E-Mail</span><span class="todo">E-Mail-Adresse eintragen</span></li>
-          <li><span class="k label">Telefon</span><span class="todo">Telefonnummer eintragen</span></li>
-          <li><span class="k label">LinkedIn</span><span class="todo">Profil-URL eintragen</span></li>
+          <li><span class="k">E-Mail</span><span class="todo">Adresse eintragen</span></li>
+          <li><span class="k">Telefon</span><span class="todo">Nummer eintragen</span></li>
+          <li><span class="k">LinkedIn</span><span class="todo">Profil-URL eintragen</span></li>
         </ul>
       </div>
     </div>
@@ -359,18 +467,18 @@ footer li{padding:.2rem 0}
 
 </main>
 
-<footer id="impressum">
+<footer class="night" id="impressum">
   <div class="wrap">
     <div class="cols">
       <div>
         <h2>Impressum</h2>
         <ul>
           <li>Angaben gemäß § 5 DDG</li>
-          <li><span class="todo">Firmierung und Rechtsform</span></li>
+          <li><span class="todo">Firmierung, Rechtsform</span></li>
           <li><span class="todo">Anschrift</span></li>
           <li><span class="todo">Vertretungsberechtigte Person</span></li>
-          <li><span class="todo">Kontakt: E-Mail, Telefon</span></li>
-          <li><span class="todo">Registergericht und -nummer, falls eingetragen</span></li>
+          <li><span class="todo">E-Mail, Telefon</span></li>
+          <li><span class="todo">Register und Registernummer</span></li>
           <li><span class="todo">USt-IdNr. gemäß § 27a UStG</span></li>
         </ul>
       </div>
@@ -378,13 +486,18 @@ footer li{padding:.2rem 0}
         <h2>Rechtliches</h2>
         <ul>
           <li><span class="todo">Datenschutzerklärung ergänzen</span></li>
-          <li>Angaben zu Referenzen erfolgen ohne Nennung von Mandantennamen.</li>
-          <li>Genannte Ergebnisse sind Zwischenstände und nach identifiziertem und
-            realisiertem Effekt getrennt ausgewiesen.</li>
+          <li>Referenzen ohne Nennung von Mandantennamen.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Zahlen</h2>
+        <ul>
+          <li>Wirtschaftliche Effekte weisen wir getrennt nach identifiziert,
+            realisiert, beauftragt und vereinnahmt aus.</li>
         </ul>
       </div>
     </div>
-    <p style="margin-top:2rem">PPG · Property Performance Group</p>
+    <p class="sign">PPG · Property Performance Group</p>
   </div>
 </footer>
 

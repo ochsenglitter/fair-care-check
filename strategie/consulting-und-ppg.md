@@ -96,6 +96,21 @@ PPG wird dort relevant, wo Unternehmen:
 - Fachbereich und IT nicht zusammenbekommen
 - operative Probleme über längere Zeit ungelöst lassen
 
+### Sprechhaltung: immer Antonia **und Team**
+
+PPG tritt nach außen nie als Einzelperson auf. In jeder Außendarstellung – Website,
+Angebot, Pitch, Profil – steht **die Projektleitung namentlich plus Team**:
+
+> „Jedes Mandat wird von der Projektleitung persönlich geführt und mit erfahrenen
+> Consultants besetzt, die zum Thema passen."
+
+Grund: Ein Konzern vergibt ein Backlog- oder Transformationsmandat nicht an eine
+Einzelperson – das Ausfallrisiko ist ihm zu hoch. Die Teamaussage ist zugleich der
+Grund, warum PPG skalierbar ist und Weg B (siehe unten) überhaupt existiert.
+
+**Nie erfinden.** Keine Teamgrößen, Namen oder Referenzen behaupten, die es nicht
+gibt – dieselbe Nachweisregel wie bei den Zahlen.
+
 ### Die Grenze nach unten
 
 > **PPG darf keine generische Projektmanagementberatung werden.**

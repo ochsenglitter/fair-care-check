@@ -62,6 +62,9 @@ GitHub Pages erreichbar unter `/ppg/`.
 rot gestrichelt als `.todo` markiert:
 
 - Kontaktdaten (E-Mail, Telefon, LinkedIn)
+- Teammitglieder im Abschnitt „Team" (Namen, Rollen, Fotos)
+- Porträtfotos: ersetzen die Monogramm-Kacheln (`.portrait`)
+- optionales Hero-Foto: `<header class="hero night" style="--hero-image:url(bild.jpg)">`
 - Impressum nach § 5 DDG (Firmierung, Rechtsform, Anschrift, Vertretung,
   Register, USt-IdNr.)
 - Datenschutzerklärung
