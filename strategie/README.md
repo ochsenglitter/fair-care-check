@@ -1,7 +1,8 @@
 # Businessstrategie – Antonia Elena Krefeld
 
 **Stand:** 2026-09-17
-**Quelle:** `quelle/2026-09-17-master-briefing-businessstrategie.md`
+**Quellen:** `quelle/2026-09-17-master-briefing-businessstrategie.md` und
+`quelle/2026-09-17-profil-und-positionierung.md`
 
 Diese Ebene steht **über** der Produktarchitektur in `produktplanung/`. Sarah,
 Fenja und die Add-ons sind eine von vier Säulen – nicht das Business.
@@ -35,12 +36,16 @@ Kein starres Forecast, sondern die gewünschte Verteilung des Risikos.
 
 | # | Säule | Funktion | Datei |
 |---|---|---|---|
-| 1 | Consulting / Freelancing | kurzfristige Einkommenssicherheit | `consulting-und-ppg.md` |
+| 1 | Consulting / Freelancing | kurzfristige Einkommenssicherheit | `profil-und-positionierung.md`, `consulting-und-ppg.md` |
 | 2 | PPG – Property Performance Group | High-Ticket-B2B-Potenzial | `consulting-und-ppg.md` |
 | 3 | Ochsenglitter + digitale Produkte | skalierbares B2C-Business | `../produktplanung/` |
 | 4 | Creator / Affiliate / Kooperationen | Cashflow + Distribution | `creator-und-distribution.md` |
 
 Immobilien gehören zum **Vermögensaufbau**, nicht zum operativen Business.
+
+**Wer verkauft wird:** Senior-Projektmanagerin für komplexe Immobilienprojekte
+– **nicht** Indexmieten-/SAP-RE-FX-Spezialistin. Details in
+`profil-und-positionierung.md`.
 
 **Die Reihenfolge:**
 
@@ -141,7 +146,8 @@ Nicht jedes virale Thema wird automatisch ein Produkt.
 | Datei | Inhalt |
 |---|---|
 | `rangfolge-der-dokumente.md` | **Welches Dokument bei Widersprüchen gilt – zuerst lesen** |
-| `consulting-und-ppg.md` | Säulen 1+2: Suchprofil, ALDI-Proof, PPG-Positionierung |
+| `profil-und-positionierung.md` | **Als wer Antonia verkauft wird – bindend für Profile, Pitches, Mandatsbewertung, Stundensätze** |
+| `consulting-und-ppg.md` | Säulen 1+2: Suchprofil, PPG-Ausrichtung und -Angebot |
 | `creator-und-distribution.md` | Säule 4: Zielgruppe, Content-Pillars, Kooperationsregeln |
 | `zeitplan-bis-januar-2027.md` | Monatsprioritäten September–Januar |
 | `quelle/` | Originalbriefings, datiert und unverändert |

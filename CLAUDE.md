@@ -19,8 +19,30 @@ Kooperationen, neue Ideen) zuerst lesen:
 - `strategie/rangfolge-der-dokumente.md` – **welches Dokument bei Widersprüchen
   gilt**
 
-Dann die Datei der betroffenen Säule: `strategie/consulting-und-ppg.md`,
-`strategie/creator-und-distribution.md`, `strategie/zeitplan-bis-januar-2027.md`.
+Dann die Datei der betroffenen Säule: `strategie/profil-und-positionierung.md`,
+`strategie/consulting-und-ppg.md`, `strategie/creator-und-distribution.md`,
+`strategie/zeitplan-bis-januar-2027.md`.
+
+### Bindend für Profil, Mandate, Pitches, Stundensätze
+
+Bei **jeder** Bewertung von Stellen, Mandaten, PPG-Chancen, LinkedIn-Texten,
+Pitches, Bewerbungen, Angeboten und Stundensätzen gilt:
+
+> **Nicht** ausgehen von „Indexmieten-/SAP-RE-FX-Spezialistin".
+> **Sondern** von **Senior-Projektmanagerin für komplexe Immobilienprojekte** –
+> mit breiter Immobilienerfahrung, Konzernkompetenz, internationaler und
+> institutioneller Erfahrung, hoher Umsetzungsstärke, wirtschaftlichem Denken
+> und nachweisbarem finanziellen Impact.
+
+SAP RE-FX, Indexmieten, Backlogs und Abrechnungen sind **Proof**, nicht
+Positionierung. Zielstundensatz 100–120 €/h; die 80 €/h bei ALDI sind kein
+Benchmark. Bei Zahlen nach außen immer exakt zwischen **identifiziertem,
+realisiertem, beauftragtem und vereinnahmtem** Effekt unterscheiden.
+Details in `strategie/profil-und-positionierung.md`.
+
+**PPG** ist keine Indexmieten-Beratung und keine generische
+Projektmanagementberatung, sondern:
+REAL ESTATE + KOMPLEXE PROJEKTE + UMSETZUNG + WIRTSCHAFTLICHER IMPACT.
 
 ## Pflicht: Produktarchitektur vor Produktentscheidungen lesen
 

@@ -4,6 +4,10 @@
 **Priorität:** höchster Hebel bis Januar 2027. Diese Säule soll allein
 8.000–10.000 € Monatsumsatz **vertraglich gesichert** liefern.
 
+> **Zuerst lesen:** `profil-und-positionierung.md`. Dort steht, **als wer**
+> Antonia verkauft wird. Diese Datei beschreibt nur, **wo** gesucht und **wie**
+> verkauft wird.
+
 Kurzfristig ist egal, ob Umsatz über die Person oder über PPG kommt.
 Langfristig ist PPG skalierbarer, weil Leistungen auch durch weitere
 Consultants erbracht werden können.
@@ -14,41 +18,39 @@ Consultants erbracht werden können.
 
 | | |
 |---|---|
+| **Rolle** | Senior-Projektmanagerin / Projektleiterin / Interim Managerin für komplexe Immobilienprojekte |
 | **Start** | Januar 2027 oder zeitlich anschlussfähig |
 | **Umfang** | 20–30 h/Woche ideal, 20–40 h möglich |
 | **40 h** | nur bei wirtschaftlich und strategisch sehr attraktivem Mandat |
 | **Remote** | möglichst hoher Anteil |
-| **Stundensatz** | Ziel 100–120 €/h (bisher 80 €/h) |
+| **Stundensatz** | Ziel 100–120 €/h (bisher 80 €/h – kein Benchmark) |
 | **Laufzeit** | gerne längerfristig, 6–12+ Monate |
 | **Zielumsatz** | ca. 8.000–14.000 €/Monat aus einem Mandat |
 
-Langfristig soll Kapazität für das eigene Business erhalten bleiben – deshalb
-ist 20–30 h der Zielkorridor, nicht 40.
+Die konkreten Rollentitel, nach denen gesucht wird, stehen in
+`profil-und-positionierung.md`, Abschnitt „Ziel-Mandate".
 
-## Passende Themenfelder
+## Fachlicher Kontext – Proof, nicht Positionierung
 
-- Commercial Real Estate
-- kaufmännisches Immobilienmanagement
-- Property / Asset Management
-- Mietmanagement, Vertragsmanagement, Indexmieten
-- SAP RE-FX **fachlich / prozessual**
-- Prozessanalyse, Prozessoptimierung, Abrechnungsprozesse
-- Backlog-Projekte, Projektstabilisierung
-- Projektleitung, PMO, Transformation
-- Softwareeinführung im Immobilienbereich
-- Schnittstelle Fachbereich / IT / Dienstleister
+Diese Themen qualifizieren ein Mandat inhaltlich. Sie sind **nicht** die
+Positionierung und gehören nicht in die Überschrift eines Profils:
 
-## Die Abgrenzung, die in jedem Gespräch klar sein muss
+Commercial Real Estate · kaufmännisches Immobilienmanagement · Property- /
+Asset-Management · Mietmanagement · Vertragsmanagement · Indexmieten ·
+SAP RE-FX (fachlich/prozessual) · Prozessanalyse und -optimierung ·
+Abrechnungsprozesse · Backlog-Projekte · Projektstabilisierung ·
+Projektleitung · PMO · Transformation · Softwareeinführung im
+Immobilienbereich · Schnittstelle Fachbereich / IT / Dienstleister
 
-> **Keine technische SAP-Entwicklerin.**
+**Die Abgrenzung, die in jedem Gespräch klar sein muss:** keine technische
+SAP-Entwicklerin. Kein Customizing, kein ABAP, keine rein technische
+RE-FX-Beratung.
 
-Die Stärke liegt in Fachlichkeit, Prozessen, Projektsteuerung,
-Immobilienmanagement, wirtschaftlicher Analyse, Stabilisierung und Umsetzung.
-
-Marktindikation Freelancermap für SAP RE-FX: **ca. 115 €/h**. Das ist **kein**
-Auftrag, sich als technische RE-FX-Beraterin zu positionieren – es ist der
-Beleg dafür, dass die reale fachliche RE-FX-/CRE-/Prozesskompetenz deutlich
-höher bepreisbar ist als die bisherigen 80 €/h.
+**Zur Marktindikation:** Freelancermap nennt für SAP RE-FX ca. 115 €/h. Das ist
+**kein** Auftrag, sich als RE-FX-Beraterin zu positionieren – es ist nur der
+Beleg, dass der Zielkorridor 100–120 €/h marktüblich ist. Eine
+Senior-Projektleitung mit Konzern- und Ergebnisverantwortung liegt nicht unter
+einer Fachberatung.
 
 ## Marktindikationen aus der bisherigen Suche
 
@@ -57,59 +59,83 @@ höher bepreisbar ist als die bisherigen 80 €/h.
 - Prozess-/Architekturprojekte, Real-Estate-Digitalisierung
 - PMO / Projektleitung Softwareeinführung Immobilienverwaltung
 
----
+## Der Proof
 
-## Der Proof: ALDI Nord
+ALDI Nord, Juni 2025 – Dezember 2026: Projektleitung „Backlog-Abrechnungen",
+Team ca. 10 Personen, 31 umgesetzte Mieterhöhungen, ca. +15.000 € zusätzlicher
+monatlicher Cashflow, ca. 400.000 € Nachforderungen.
 
-Seit **Juni 2025** im Commercial-Real-Estate-/Mietmanagement-Umfeld, Projekt
-läuft bis Dezember 2026.
-
-**Themen:** Indexmietprozesse, SAP-RE-FX-Logik, Workflows, Rückrechnungen,
-Nachforderungen, Prozessstabilisierung, Backlogs, Abrechnungsprozesse.
-
-**Belastbare Zahlen aus einer Phase:**
-
-| Ergebnis | Zahl |
-|---|---|
-| umgesetzte Mieterhöhungen | **31** |
-| zusätzlicher monatlicher Cashflow | **ca. +15.000 €** |
-| identifizierte/realisierte Nachforderungen | **ca. 400.000 €** |
-
-**2026:** Projektleitung „Backlog-Abrechnungen", Team ca. 10 Personen,
-Prozesse und Arbeitsstrukturen aufgebaut.
-
-Dieser Proof gehört in Positionierung, Profil und jedes Akquisegespräch. Er ist
-das stärkste Argument für den Sprung von 80 € auf 100–120 €/h: das Mandat hat
-ein Vielfaches seiner Kosten zurückgeholt.
+Details, Formulierung und die **Regel zur Nachweisbarkeit** (identifiziert /
+realisiert / beauftragt / vereinnahmt sauber trennen) stehen in
+`profil-und-positionierung.md`.
 
 ---
 
 ## PPG – Property Performance Group
 
-**Was PPG leistet:** Unternehmen dabei helfen, wirtschaftliche Potenziale in
-Immobilienprozessen zu identifizieren **und tatsächlich umzusetzen**.
+### Die neue Ausrichtung
 
-Die Idee entstand aus dem Thema Indexmieten. PPG soll aber **nicht** als
-„Indexmieten-Beratung" wahrgenommen werden. Die Kompetenz ist breiter:
-Commercial Real Estate, Miet- und Vertragsprozesse, Backlogs, Abrechnung,
-Prozessanalyse, Prozessstabilisierung, Projektmanagement, Transformation,
-Umsetzung.
+PPG wird **nicht** primär als „Indexmieten-Beratung" positioniert. Indexmieten
+sind ein konkreter Use Case und ein Proof – nicht das Geschäft.
 
-### Das offene Problem
+> **Der größere Markt sind schwierige Immobilienprojekte.**
 
-> Es fehlt der eine einfache Satz, der beantwortet:
-> **„Was kaufen Unternehmen konkret von uns?"**
+PPG wird dort relevant, wo Unternehmen:
 
-Solange dieser Satz fehlt, ist PPG schwer verkäuflich. Das ist die
-Positionierungsaufgabe mit Priorität – siehe `offene-fragen.md` in
-`../produktplanung/` bzw. die laufende Arbeit an der Angebotsstruktur.
+- Projekte nicht in die Umsetzung bekommen
+- große Backlogs haben
+- Prozesse haben, die nicht funktionieren
+- wirtschaftliche Potenziale liegen lassen
+- in Transformationen feststecken
+- unklare Verantwortlichkeiten haben
+- Fachbereich und IT nicht zusammenbekommen
+- operative Probleme über längere Zeit ungelöst lassen
+
+### Die Grenze nach unten
+
+> **PPG darf keine generische Projektmanagementberatung werden.**
+
+Der Vorteil liegt genau in der Kombination:
+
+    REAL ESTATE + KOMPLEXE PROJEKTE + UMSETZUNG + WIRTSCHAFTLICHER IMPACT
+
+Fällt einer dieser vier Bestandteile aus der Positionierung, ist PPG
+austauschbar und konkurriert mit jeder Beratung am Markt.
+
+### Die offene Frage: „Was kaufen Unternehmen konkret von uns?"
+
+Entwurf aus dem Briefing:
+
+> „PPG übernimmt komplexe Immobilienprojekte, die feststecken – und bringt sie
+> zurück in eine steuerbare Umsetzung."
+
+Richtig, aber er endet bei **Steuerbarkeit**. Gekauft wird das **Ergebnis**.
+Vorschlag als direkte Antwort auf die Frage:
+
+> **„Unternehmen kaufen bei PPG die Umsetzung eines Immobilienprojekts, das sie
+> selbst nicht abgeschlossen bekommen – mit einem Ergebnis, das in Euro
+> beziffert ist."**
+
+Als Außenaussage kürzer:
+
+> **„PPG holt das Geld heraus, das in Immobilienprozessen, Verträgen und
+> Backlogs feststeckt – und steuert die Projekte, bis es verbucht ist."**
 
 ### Das verbindliche Muster für jede PPG-Aussage
 
     PROBLEM → WIRTSCHAFTLICHER SCHADEN → LÖSUNG → MESSBARES ERGEBNIS
 
-Jedes Angebot, jede Mail, jeder Pitch folgt dieser Kette. Der ALDI-Proof ist
-das gelebte Beispiel dafür.
+Am ALDI-Proof durchgespielt – so klingt jeder Pitch:
+
+| Schritt | Beispiel |
+|---|---|
+| **Problem** | Indexmieten wurden über Jahre nicht konsequent umgesetzt, Abrechnungen liefen in einen Backlog |
+| **Wirtschaftlicher Schaden** | laufende Mieteinnahmen unter Vertragsniveau, nicht gestellte Nachforderungen |
+| **Lösung** | Prozess strukturiert, Verantwortlichkeiten hergestellt, Team von ca. 10 Personen gesteuert, Umsetzung durchgezogen |
+| **Messbares Ergebnis** | 31 umgesetzte Mieterhöhungen, ca. +15.000 € monatlicher Cashflow, ca. 400.000 € Nachforderungen |
+
+Diese Tabelle ist die Vorlage für Angebote, Mails und Erstgespräche. Sie
+funktioniert, weil sie nicht von Kompetenz erzählt, sondern von Geld.
 
 ### Arbeitsregel
 
@@ -122,7 +148,24 @@ und echte Gespräche sind wichtiger als eine perfekte Website.
 
 | Weg | Was verkauft wird | Vorteil |
 |---|---|---|
-| **A** | Antonia persönlich als Senior Freelancerin / Interim Managerin | schneller, unmittelbar anschlussfähig an ALDI-Proof |
+| **A** | Antonia persönlich als Senior Freelancerin / Interim Managerin | schneller, unmittelbar anschlussfähig an den ALDI-Proof |
 | **B** | Projekte über PPG | skalierbar, Leistung auch durch weitere Consultants |
 
 Kurzfristig zählt nur, welcher Weg den Umsatz bringt. Beide laufen parallel.
+
+### Was für ein kaufbares PPG-Angebot noch fehlt
+
+Die Positionierung oben ist entscheidbar. Ein **kaufbares Angebot** braucht
+zusätzlich drei Festlegungen, die nur Antonia treffen kann:
+
+1. **Einstiegsleistung.** Womit fängt ein Kunde an – einer kurzen
+   Bestandsaufnahme mit beziffertem Potenzial, oder direkt mit der Umsetzung?
+   Eine kleine, klar umrissene Einstiegsleistung senkt die Kaufhürde erheblich.
+2. **Umfang und Dauer.** Wie lange dauert ein typisches Mandat, und wie viel
+   Kapazität bindet es pro Woche? Ohne das ist kein Preis kalkulierbar.
+3. **Preismodell.** Tagessatz, Festpreis pro Mandat oder erfolgsabhängiger
+   Anteil am gehobenen Potenzial? Der Erfolgsanteil passt zur Positionierung
+   („Ergebnis in Euro"), verlagert aber Risiko und Liquidität.
+
+Bis diese drei Punkte entschieden sind, wird über Weg A verkauft – der
+funktioniert heute schon.

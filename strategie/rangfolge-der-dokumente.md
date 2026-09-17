@@ -7,13 +7,32 @@ regelt, welches bei Widersprüchen gilt.
 
 | Rang | Dokument | Datum | Gilt für |
 |---|---|---|---|
-| 1 | `strategie/quelle/2026-09-17-master-briefing-businessstrategie.md` | 2026-09-17 | **alle** strategischen Businessentscheidungen |
-| 2 | `produktplanung/quelle/2026-09-12-produktarchitektur-original.md` | 2026-09-12 | Produktarchitektur, soweit Rang 1 nichts anderes sagt |
-| 3 | Arbeitsdokumente in `strategie/` und `produktplanung/` | laufend | Aufbereitungen – nie Quelle |
+| 1 | `strategie/quelle/2026-09-17-profil-und-positionierung.md` | 2026-09-17 | Profil, Positionierung, Mandatsbewertung, Stundensatz, PPG-Ausrichtung |
+| 2 | `strategie/quelle/2026-09-17-master-briefing-businessstrategie.md` | 2026-09-17 | **alle** übrigen strategischen Businessentscheidungen |
+| 3 | `produktplanung/quelle/2026-09-12-produktarchitektur-original.md` | 2026-09-12 | Produktarchitektur, soweit Rang 1–2 nichts anderes sagen |
+| 4 | Arbeitsdokumente in `strategie/` und `produktplanung/` | laufend | Aufbereitungen – nie Quelle |
 
-**Regel:** Das jüngere Originalbriefing gewinnt. Das ältere bleibt gültig,
-soweit das jüngere zum selben Punkt nichts sagt. Arbeitsdokumente gewinnen nie
-gegen eine Quelle.
+**Regel:** Das jüngere Originalbriefing gewinnt. Bei zwei Quellen vom selben Tag
+gewinnt die **speziellere**: Für Profil- und Positionierungsfragen ist das
+Profil-Briefing maßgeblich, für alles andere das Master-Briefing. Das ältere
+bleibt gültig, soweit das jüngere zum selben Punkt nichts sagt. Arbeitsdokumente
+gewinnen nie gegen eine Quelle.
+
+## Was das Profil-Briefing gegenüber dem Master-Briefing präzisiert
+
+Beide sind vom 17.09. Das Master-Briefing listet in Abschnitt 4 und 7 vor allem
+**Themenfelder** (Commercial Real Estate, SAP RE-FX, Indexmieten,
+Mietmanagement). Das Profil-Briefing stellt klar, dass das **Proof und
+fachlicher Kontext** ist – **nicht** die Positionierung.
+
+| Punkt | gilt |
+|---|---|
+| Positionierung | **Senior-Projektmanagerin für komplexe Immobilienprojekte** |
+| SAP RE-FX, Indexmieten, Mietmanagement | Proof und Erfahrung, nie Überschrift eines Profils |
+| Suchbegriffe für Mandate | Projektleitung / Interim / Programm / PMO Real Estate – Liste in `profil-und-positionierung.md` |
+| Nicht priorisieren | SAP-Entwicklung, Customizing, ABAP, rein technische RE-FX-Beratung |
+| PPG | nicht „Indexmieten-Beratung", sondern **schwierige Immobilienprojekte** |
+| Zahlen nach außen | identifiziert / realisiert / beauftragt / vereinnahmt strikt trennen |
 
 ## Zwei Ebenen, die nicht verwechselt werden dürfen
 
