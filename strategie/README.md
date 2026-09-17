@@ -149,6 +149,7 @@ Nicht jedes virale Thema wird automatisch ein Produkt.
 | `profil-und-positionierung.md` | **Als wer Antonia verkauft wird – bindend für Profile, Pitches, Mandatsbewertung, Stundensätze** |
 | `consulting-und-ppg.md` | Säulen 1+2: Suchprofil, PPG-Ausrichtung und -Angebot |
 | `creator-und-distribution.md` | Säule 4: Zielgruppe, Content-Pillars, Kooperationsregeln |
+| `linkedin/backlog.md` | fertige LinkedIn-Beiträge für die Mandatssuche, mit Status |
 | `zeitplan-bis-januar-2027.md` | Monatsprioritäten September–Januar |
 | `quelle/` | Originalbriefings, datiert und unverändert |
 

@@ -168,6 +168,17 @@ Am ALDI-Proof durchgespielt – so klingt jeder Pitch:
 Diese Tabelle ist die Vorlage für Angebote, Mails und Erstgespräche. Sie
 funktioniert, weil sie nicht von Kompetenz erzählt, sondern von Geld.
 
+### LinkedIn als Kanal der Mandatssuche
+
+LinkedIn ist **kein zweiter Ochsenglitter-Kanal**, sondern dient dem
+Anschlussmandat und der Bekanntheit von PPG. Zielleserschaft: Head of
+Immobilienmanagement, kaufmännische Leitung Real Estate, Asset Manager,
+Projektleitungen im Konzern, Vermittler für Interim-Mandate.
+
+Fertige Beiträge liegen in `linkedin/backlog.md`, die Schreibregeln im Skill
+`.claude/skills/linkedin-ppg/SKILL.md`. Rhythmus: ein Beitrag pro Woche,
+lieber vier gute im Monat als zwölf beliebige.
+
 ### Arbeitsregel
 
 > **Revenue > Branding.**
