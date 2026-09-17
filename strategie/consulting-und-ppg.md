@@ -40,7 +40,13 @@ Asset-Management · Mietmanagement · Vertragsmanagement · Indexmieten ·
 SAP RE-FX (fachlich/prozessual) · Prozessanalyse und -optimierung ·
 Abrechnungsprozesse · Backlog-Projekte · Projektstabilisierung ·
 Projektleitung · PMO · Transformation · Softwareeinführung im
-Immobilienbereich · Schnittstelle Fachbereich / IT / Dienstleister
+Immobilienbereich · **Migrationsprojekte** · **Outsourcing und Transition** ·
+**Ausschreibung und Vergabe** · Schnittstelle Fachbereich / IT / Dienstleister
+
+Der Block **Ausschreibung → Outsourcing → Migration** ist dabei kein
+Nebenschauplatz, sondern der beste Anlassfall für PPG: harte Stichtage, externe
+Dienstleister, große Datenbestände, viele Stakeholder. Erläuterung in
+`profil-und-positionierung.md`.
 
 **Die Abgrenzung, die in jedem Gespräch klar sein muss:** keine technische
 SAP-Entwicklerin. Kein Customizing, kein ABAP, keine rein technische

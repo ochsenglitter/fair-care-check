@@ -61,8 +61,9 @@ Erfahrung aus Commercial Real Estate, Immobilienmanagement, Property-/
 Asset-Management-Kontexten, Mietmanagement, Vertragsmanagement,
 Immobilienprozessen, Abrechnung, Backlog-Management, Prozessoptimierung,
 Projektmanagement, Projektsteuerung, Transformation, Digitalisierung/
-Systemumfeldern, SAP RE-FX (fachlich-prozessual), Investment-/Fondsumfeld und
-institutionellem Immobiliengeschäft.
+Systemumfeldern, SAP RE-FX (fachlich-prozessual), **Migrationsprojekten**,
+**Outsourcing und Transition**, **Ausschreibung und Vergabe**,
+Investment-/Fondsumfeld und institutionellem Immobiliengeschäft.
 
 Der Nutzen daraus in einer Zeile:
 
@@ -70,6 +71,26 @@ Der Nutzen daraus in einer Zeile:
     → wirtschaftliches Ergebnis
 
 Das ist die Kette, die die meisten Spezialistinnen nicht durchgehend überblicken.
+
+### Ausschreibung → Outsourcing → Migration
+
+Diese drei gehören zusammen und werden als **ein** Kompetenzblock verkauft, nicht
+als drei Stichworte:
+
+| Phase | Was passiert | Warum es scheitert |
+|---|---|---|
+| **Ausschreibung / Vergabe** | Leistung beschreiben, Anbieter auswählen, Verträge und SLAs verhandeln | Die Leistung ist zu unscharf beschrieben, um sie später steuern zu können |
+| **Outsourcing / Transition** | Aufgaben an einen Dienstleister übergeben, Schnittstellen und Steuerung aufsetzen | Die Übergabe wird begonnen und nie abgeschlossen; intern fehlt danach die Steuerungsfähigkeit |
+| **Migration** | Bestands-, Vertrags- und Buchungsdaten in die neue Struktur oder das neue System bringen | Datenqualität aus gewachsenen Beständen; niemand entscheidet die offenen Fälle |
+
+Genau diese Projekte laufen typischerweise aus dem Ruder: viele Stakeholder,
+externe Dienstleister, harte Stichtage, große Datenbestände, und am Ende eine
+Organisation, die den neuen Zustand nicht steuern kann. Damit sind sie der
+natürliche Anlassfall für dieses Profil – und für PPG.
+
+**Im Gespräch als eigener Satz:** „Ich habe Immobilienleistungen ausgeschrieben,
+an Dienstleister übergeben und die dazugehörigen Datenmigrationen gesteuert –
+und weiß deshalb, woran diese Projekte kippen."
 
 ### Konzernerfahrung – warum sie den Satz trägt
 
@@ -208,6 +229,9 @@ Aktiv suchen und bewerten:
 | **Interim** | Interim Project Manager Real Estate · Interim Manager Real Estate |
 | **Programm / Transformation** | Program Manager Real Estate · Transformation Manager Real Estate · Projektleiter Real Estate Transformation |
 | **Prozess / Digitalisierung** | Projektleiter Prozessoptimierung Immobilien · Projektleiter Digitalisierung Immobilien · Projektleiter Software-/Systemeinführung Immobilien |
+| **Migration** | Projektleiter Datenmigration Immobilien · Migrationsleitung Bestands- und Vertragsdaten · Projektleiter Systemmigration / S4HANA Real Estate |
+| **Outsourcing / Transition** | Transition Manager Real Estate · Projektleiter Outsourcing Immobilienverwaltung · Projektleiter Insourcing / Rückführung · Dienstleistersteuerung Property Management |
+| **Ausschreibung / Vergabe** | Projektleiter Ausschreibung Immobiliendienstleistungen · Vergabeverfahren Property / Facility Management · RfP-Leitung |
 | **PMO** | Senior PMO Real Estate · PMO Lead Real Estate |
 | **Sanierung / Stabilisierung** | Projektleiter Backlog-/Stabilisierungsprogramme · Projektsteuerung großer Immobilienorganisationen |
 | **Schnittstelle** | Projektleitung Real Estate / Business / IT |
