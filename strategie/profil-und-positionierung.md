@@ -105,12 +105,19 @@ und Arbeitsstrukturen aufgebaut, Umsetzung gesteuert.
 
 ### Die Zahlen
 
-| Ergebnis | Zahl |
-|---|---|
-| umgesetzte Mieterhöhungen | **31** |
-| zusätzlicher monatlicher Cashflow | **ca. +15.000 €** |
-| Nachforderungen | **ca. 400.000 €** |
-| Hochrechnung laufender Cashflow p. a. | **ca. 180.000 €** |
+Klarstellung von Antonia (2026-09-17): Von den Nachforderungen sind nach sechs
+Monaten **zwei Drittel realisiert**, von den Mieterhöhungen **85 %**.
+
+| Ergebnis | angestoßen / identifiziert | davon realisiert |
+|---|---|---|
+| Mieterhöhungen | **31 umgesetzt** | **85 % → ca. 26** |
+| laufender monatlicher Cashflow | ca. +15.000 € | **ca. +12.750 €** |
+| davon auf Jahressicht | ca. 180.000 € | **ca. 153.000 €** |
+| Nachforderungen | ca. **400.000 € identifiziert** | **ca. 265.000 €** (Stand nach 6 Monaten) |
+
+Die Realisierung der Nachforderungen läuft weiter – das verbleibende Drittel ist
+nicht verloren, sondern noch offen. Die Zahl ist ein Zwischenstand, kein
+Endergebnis.
 
 Der Satz, der daraus gehört:
 
@@ -118,7 +125,7 @@ Der Satz, der daraus gehört:
 > **Sondern:** „Ich habe komplexe Immobilienprozesse strukturiert und gesteuert
 > und daraus messbare wirtschaftliche Ergebnisse erzeugt."
 
-### ⚠️ Nachweisbarkeit – vor jeder externen Verwendung klären
+### Nachweisbarkeit – die Regel und die fertigen Formulierungen
 
 Bindende Regel aus dem Briefing:
 
@@ -127,20 +134,37 @@ Bindende Regel aus dem Briefing:
 > wirtschaftlichem Effekt unterscheiden. Keine Zahl stärker formulieren, als
 > sie nachweisbar ist.
 
-Zwei Zahlen sind aktuell nicht eindeutig zugeordnet:
+Damit ergeben sich drei belastbare Fassungen – je nachdem, wie viel Platz ist.
+Alle drei halten einer Nachfrage stand.
 
-1. **Die 400.000 €** werden im Briefing einmal als „identifiziert/realisiert"
-   und einmal als „realisiert bzw. identifiziert/umgesetzt" beschrieben. Für
-   ein Profil oder einen Pitch muss **eine** Kategorie feststehen. „Identifiziert"
-   ist deutlich schwächer als „vereinnahmt" – und ein Einwand im Gespräch, wenn
-   die Formulierung nicht hält.
-2. **Die 180.000 € p. a.** sind eine Hochrechnung aus 15.000 €/Monat. Sie
-   stimmt nur, wenn die Mieterhöhungen zwölf Monate laufen. Sauber formuliert:
-   „rund 15.000 € zusätzlicher **laufender** monatlicher Cashflow – auf
-   Jahressicht rund 180.000 €."
+**Kurz (Profil-Headline, eine Zeile):**
 
-Solange das nicht geklärt ist, in externen Texten die **monatliche** Zahl und
-die **Stückzahl** verwenden. Beide sind unstrittig und stark genug.
+> 31 umgesetzte Mieterhöhungen und rund 12.750 € realisierter zusätzlicher
+> Cashflow pro Monat.
+
+**Mittel (Akquisemail, LinkedIn):**
+
+> 31 Mieterhöhungen umgesetzt, davon 85 % realisiert – rund 12.750 €
+> zusätzlicher laufender Cashflow pro Monat. Dazu rund 400.000 €
+> Nachforderungen identifiziert, davon zwei Drittel innerhalb von sechs
+> Monaten realisiert.
+
+**Vollständig (Pitch, Angebot, Referenzblatt):**
+
+| | angestoßen | realisiert |
+|---|---|---|
+| Mieterhöhungen | 31 umgesetzt | 85 % |
+| laufender Cashflow p. M. | ca. 15.000 € | ca. 12.750 € |
+| Nachforderungen | ca. 400.000 € identifiziert | ca. 265.000 € nach 6 Monaten |
+
+**Warum die kleinere Zahl stärker ist:** „400.000 € identifiziert, davon zwei
+Drittel realisiert" ist überprüfbar und klingt nach jemandem, der den
+Unterschied kennt. „400.000 € erwirtschaftet" ist im ersten kritischen
+Gespräch angreifbar – und ein Einkäufer, der eine Zahl kippt, zweifelt danach
+an allen.
+
+**Was nicht behauptet wird:** „vereinnahmt". Realisiert ist belegt, vereinnahmt
+nicht geprüft. Wer nach dem Unterschied fragt, bekommt genau diese Antwort.
 
 ---
 
@@ -166,8 +190,8 @@ Einkäufer entscheidet. Vorschläge, nach Verwendung getrennt:
 
 > In Immobilienorganisationen liegt Geld in Verträgen, Prozessen und Backlogs
 > fest. Ich strukturiere und steuere die Projekte, die es herausholen – zuletzt
-> bei ALDI Nord: 31 umgesetzte Mieterhöhungen und rund 15.000 € zusätzlicher
-> monatlicher Cashflow.
+> bei ALDI Nord: 31 umgesetzte Mieterhöhungen und rund 12.750 € realisierter
+> zusätzlicher Cashflow pro Monat.
 
 **Was in keinem dieser Sätze vorkommen darf:** SAP RE-FX und Indexmieten. Die
 gehören in den Erfahrungsteil, nicht in die Positionierung.

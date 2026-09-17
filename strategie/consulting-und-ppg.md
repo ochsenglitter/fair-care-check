@@ -62,11 +62,16 @@ einer Fachberatung.
 ## Der Proof
 
 ALDI Nord, Juni 2025 – Dezember 2026: Projektleitung „Backlog-Abrechnungen",
-Team ca. 10 Personen, 31 umgesetzte Mieterhöhungen, ca. +15.000 € zusätzlicher
-monatlicher Cashflow, ca. 400.000 € Nachforderungen.
+Team ca. 10 Personen.
 
-Details, Formulierung und die **Regel zur Nachweisbarkeit** (identifiziert /
-realisiert / beauftragt / vereinnahmt sauber trennen) stehen in
+| | angestoßen | realisiert |
+|---|---|---|
+| Mieterhöhungen | 31 umgesetzt | 85 % |
+| laufender Cashflow p. M. | ca. 15.000 € | **ca. 12.750 €** |
+| Nachforderungen | ca. 400.000 € identifiziert | **ca. 265.000 €** nach 6 Monaten |
+
+Nach außen wird **immer die realisierte Zahl** genannt, mit der angestoßenen
+als Kontext. Fertige Formulierungen für Headline, Mail und Pitch stehen in
 `profil-und-positionierung.md`.
 
 ---
@@ -132,7 +137,7 @@ Am ALDI-Proof durchgespielt – so klingt jeder Pitch:
 | **Problem** | Indexmieten wurden über Jahre nicht konsequent umgesetzt, Abrechnungen liefen in einen Backlog |
 | **Wirtschaftlicher Schaden** | laufende Mieteinnahmen unter Vertragsniveau, nicht gestellte Nachforderungen |
 | **Lösung** | Prozess strukturiert, Verantwortlichkeiten hergestellt, Team von ca. 10 Personen gesteuert, Umsetzung durchgezogen |
-| **Messbares Ergebnis** | 31 umgesetzte Mieterhöhungen, ca. +15.000 € monatlicher Cashflow, ca. 400.000 € Nachforderungen |
+| **Messbares Ergebnis** | 31 Mieterhöhungen umgesetzt, davon 85 % realisiert – ca. 12.750 € zusätzlicher laufender Cashflow pro Monat; ca. 400.000 € Nachforderungen identifiziert, davon zwei Drittel in sechs Monaten realisiert |
 
 Diese Tabelle ist die Vorlage für Angebote, Mails und Erstgespräche. Sie
 funktioniert, weil sie nicht von Kompetenz erzählt, sondern von Geld.
