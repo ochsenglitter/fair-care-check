@@ -3,6 +3,14 @@
 Diese Datei ist die operative Regel für jede Produkt-, Website-, Funnel- und
 technische Entscheidung.
 
+**Vorgelagert:** Bevor überhaupt etwas eingeordnet wird, gilt die strategische
+Filterfrage aus `../strategie/README.md`:
+
+> „Kann das mit hoher Wahrscheinlichkeit bis Januar 2027 einen relevanten Teil
+> der 14.000-€-Umsatzlücke ersetzen?"
+
+**Nein → parken.** Erst wenn die Antwort Ja ist, wird eingeordnet.
+
 ## Grundregel
 
 > Funktionen werden **nicht eigenmächtig zwischen den Produkten verschoben**.
@@ -11,15 +19,24 @@ Bevor eine neue Funktion eingebaut wird, wird sie eingeordnet.
 
 ## Einordnungstabelle
 
-| Bereich | Produkt |
-|---|---|
-| Schule | **Sarah** |
-| allgemeine Familienkoordination | **Fenja** |
-| Essen | **Meal Planning Add-on** |
-| Reisen / Packen | **Travel Add-on** |
-| Weihnachten | **Christmas Add-on** |
-| Haushalt | **Home Add-on** |
-| Ferien | **School Holidays Add-on** |
+| Bereich | Produkt | Status |
+|---|---|---|
+| Schule | **Sarah** | aktiv |
+| allgemeine Familienkoordination | **Fenja** | als Nächstes |
+| schulisches Lernen (Klassenarbeiten, Referate) | **Sarah Lernen** | nur bei Bedarf |
+| längerfristige Schulplanung | **Sarah Pro** | nur bei Bedarf, **Abgrenzung offen (D1)** |
+| Essen | **Meal Planning Add-on** | Bau geparkt |
+| Reisen / Packen | **Travel Add-on** | Bau geparkt |
+| Weihnachten | **Christmas Add-on** | Bau geparkt |
+| Haushalt | **Home Add-on** | Bau geparkt |
+| Ferien | **School Holidays Add-on** | Bau geparkt |
+
+**Klassenfahrten und Ausflüge** bekommen **kein** eigenes Add-on – sie sind
+Kernfunktion von Sarah.
+
+„Bau geparkt" heißt: Die Einordnung gilt weiter, das Produkt wird aber nicht
+gebaut, solange Sarah und Fenja nicht nachweislich verkaufen. Architektur und
+Roadmap sind zwei Ebenen – siehe `../strategie/rangfolge-der-dokumente.md`.
 
 ## Verfahren bei jeder neuen Funktion
 
@@ -60,3 +77,12 @@ Verkaufshebel.
   („Ich muss den Schulalltag meiner Kinder nicht mehr selbst im Kopf behalten").
 - **Preise sind vorläufig.** Alle Zahlen in `produktleiter-und-preise.md` sind
   Arbeitsannahmen. Vor Verwendung auf einer Salespage gegenprüfen.
+- **Keine erfundenen Informationen.** Sarah und Fenja kennzeichnen, was FAKT,
+  was ABLEITUNG/VORSCHLAG und was ZU KLÄREN ist. Beide entscheiden nicht
+  autonom – die Mutter entscheidet.
+- **Sarah wird nicht mehr konzeptionell umgebaut.** Das Produkt ist weitgehend
+  fertig und soll verkauft werden. Änderungswünsche warten auf das Feedback der
+  ersten 100 Kundinnen.
+- **Viralität ist kein Produktgrund.** Content testet Interesse, Waitlist testet
+  Intent, ein kleines bezahltes Produkt testet Zahlungsbereitschaft – erst dann
+  wird skaliert.
