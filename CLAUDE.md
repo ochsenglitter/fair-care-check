@@ -44,6 +44,24 @@ Details in `strategie/profil-und-positionierung.md`.
 Projektmanagementberatung, sondern:
 REAL ESTATE + KOMPLEXE PROJEKTE + UMSETZUNG + WIRTSCHAFTLICHER IMPACT.
 
+**PPG tritt nie als Einzelperson auf.** In jeder Außendarstellung steht die
+Projektleitung namentlich **plus Team**. Keine Teamgrößen, Namen oder
+Referenzen behaupten, die es nicht gibt.
+
+### Designsystem PPG
+
+Für **jedes** PPG-Material (Website, Angebot, Pitchdeck, Referenzblatt,
+Profil-PDF) gilt `ppg/DESIGN.md` – Nachtblau/Papier im Wechsel, Libre Caslon
+Display + Jost, Messing als einziger Akzent, Haarlinien statt Karten, keine
+Schatten und keine abgerundeten Ecken. Referenzumsetzung: `ppg/index.html`.
+
+**Nicht mit dem Ochsenglitter-Design mischen.** Das warme Creme/Terrakotta-System
+gilt für Care-Arbeit-Materialien, nicht für PPG.
+
+**Zahlen in PPG-Materialien:** große Zahl = Umfang (identifiziert, angestoßen),
+kleine Zahl darunter = Nachweis (realisiert). Das Bereichslabel steht immer
+direkt über der großen Zahl.
+
 ## Pflicht: Produktarchitektur vor Produktentscheidungen lesen
 
 Vor **jeder** Produkt-, Website-, Funnel-, Copy- oder technischen Entscheidung

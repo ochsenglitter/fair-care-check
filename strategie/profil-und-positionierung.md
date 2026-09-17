@@ -178,11 +178,20 @@ Alle drei halten einer Nachfrage stand.
 | laufender Cashflow p. M. | ca. 15.000 € | ca. 12.750 € |
 | Nachforderungen | ca. 400.000 € identifiziert | ca. 265.000 € nach 6 Monaten |
 
-**Warum die kleinere Zahl stärker ist:** „400.000 € identifiziert, davon zwei
-Drittel realisiert" ist überprüfbar und klingt nach jemandem, der den
-Unterschied kennt. „400.000 € erwirtschaftet" ist im ersten kritischen
-Gespräch angreifbar – und ein Einkäufer, der eine Zahl kippt, zweifelt danach
-an allen.
+**Visuelle Hierarchie in Materialien:** Die **große Zahl ist der Umfang**
+(identifiziert, angestoßen, umgesetzt), die **kleine Zahl darunter ist der
+Nachweis** (realisiert). Das ist zulässig und wirkungsvoll – unter einer
+Bedingung: Das Bereichslabel („identifiziert", „angestoßen") steht **immer
+direkt über** der großen Zahl, und die realisierte Zahl steht **immer**
+unmittelbar darunter. Eine große Zahl ohne beides ist eine Falschaussage.
+
+Die Formatregel dazu steht in `../ppg/DESIGN.md`.
+
+**Warum die Realisierungsquote mitgenannt wird:** „400.000 € identifiziert,
+davon zwei Drittel realisiert" ist überprüfbar und klingt nach jemandem, der den
+Unterschied kennt – in dieser Rolle selbst schon ein Argument. „400.000 €
+erwirtschaftet" ist im ersten kritischen Gespräch angreifbar, und ein Einkäufer,
+der eine Zahl kippt, zweifelt danach an allen.
 
 **Was nicht behauptet wird:** „vereinnahmt". Realisiert ist belegt, vereinnahmt
 nicht geprüft. Wer nach dem Unterschied fragt, bekommt genau diese Antwort.

@@ -54,7 +54,7 @@ Weiterverkauf bestimmt.
 
 ## PPG-Website
 
-`ppg/index.html` – einseitige Website für PPG (Property Performance Group).
+`ppg/index.html` – einseitige Website, `ppg/DESIGN.md` – Designsystem. Website für PPG (Property Performance Group).
 Eigenständig, kein Build, keine Abhängigkeiten außer Google Fonts. Über
 GitHub Pages erreichbar unter `/ppg/`.
 
