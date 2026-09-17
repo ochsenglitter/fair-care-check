@@ -204,9 +204,8 @@ section{padding-block:var(--sec)}
 .night .footnote{color:var(--paper-soft)}
 
 /* ---------- Team ---------- */
-.people{display:grid; gap:clamp(2.5rem,5vw,4rem); margin-top:4rem}
-@media(min-width:52rem){.people{grid-template-columns:repeat(2,1fr)}}
-.person{display:grid; gap:1.75rem; grid-template-columns:1fr; align-content:start}
+.lead{display:grid; gap:2rem; margin-top:4rem; align-items:start}
+@media(min-width:52rem){.lead{grid-template-columns:19rem 1fr; gap:clamp(2.5rem,5vw,4.5rem)}}
 .portrait{
   aspect-ratio:4/5; max-width:100%; width:100%;
   background:linear-gradient(160deg,var(--paper-2),#DAD3C7);
@@ -217,13 +216,13 @@ section{padding-block:var(--sec)}
   font-family:"Libre Caslon Display",Georgia,serif; font-size:3.25rem; color:var(--brass-deep);
   letter-spacing:.04em;
 }
-.person h3{font-size:1.5rem; margin-bottom:.35rem}
-.person .role{
-  font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--brass-deep);
-  margin-bottom:1.25rem;
+.lead h3{font-size:1.65rem; margin-bottom:.4rem}
+.lead .role{
+  font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--brass);
+  margin-bottom:1.5rem;
 }
-.person p+p{margin-top:1rem}
-.person p{font-size:.98rem; line-height:1.75; color:var(--ink-soft)}
+.lead p+p{margin-top:1.1rem}
+.lead p{font-size:1rem; line-height:1.78}
 
 /* ---------- Kontakt ---------- */
 .contact-grid{display:grid; gap:clamp(2.5rem,6vw,5rem); margin-top:3.5rem}
@@ -423,45 +422,30 @@ footer .sign{margin-top:3.5rem; padding-top:2rem; border-top:1px solid var(--hai
       <hr class="rule">
       <span class="eyebrow">Team</span>
       <h2 style="font-size:clamp(1.9rem,1.4rem + 1.8vw,2.8rem); max-width:20ch">Wer Ihr Projekt übernimmt</h2>
-      <p class="soft" style="max-width:var(--measure); margin-top:1.5rem">Jedes Mandat
-        wird von der Projektleitung persönlich geführt und mit erfahrenen Consultants
-        besetzt, die zum Thema passen. Sie bekommen kein Junior-Team mit
-        Senior-Rechnung.</p>
+      <p class="soft" style="max-width:44rem; margin-top:1.5rem">Jedes Mandat wird von
+        der Projektleitung persönlich geführt. Je nach Thema und Umfang arbeiten
+        erfahrene Consultants mit – ausgewählt nach dem, was das Projekt braucht, nicht
+        nach Verfügbarkeit. Sie bekommen kein Junior-Team mit Senior-Rechnung.</p>
 
-      <div class="people">
-        <article class="person">
-          <div class="portrait"><span>AK</span></div>
-          <div>
-            <h3>Antonia Elena Krefeld</h3>
-            <p class="role" style="color:var(--brass)">Gründerin · Projektleitung</p>
-            <p class="soft">Senior-Projektmanagerin für komplexe Immobilienprojekte.
-              Schwerpunkt dort, wo ein Projekt komplex geworden ist: viele Stakeholder,
-              unklare Verantwortlichkeiten, gewachsene Prozesse, operative Rückstände.</p>
-            <p class="soft">Erfahrung aus Commercial Real Estate, kaufmännischem
-              Immobilienmanagement, Property- und Asset-Management, Miet- und
-              Vertragsmanagement, Abrechnung und Backlog-Management – fachlich-prozessual
-              auch im SAP-RE-FX-Umfeld. Dazu Ausschreibung und Vergabe von
-              Immobiliendienstleistungen, Outsourcing und Transition an externe
-              Dienstleister sowie die dazugehörigen Migrationsprojekte.</p>
-            <p class="soft">Konzernstrukturen mit großen Vertragsbeständen und hohen
-              operativen Volumina, dazu internationale und institutionelle
-              Real-Estate-Strukturen – unter anderem bei Jones Lang LaSalle und in der
-              Betreuung internationaler Immobilienfonds.</p>
-          </div>
-        </article>
-
-        <article class="person">
-          <div class="portrait" style="background:linear-gradient(160deg,#1C262B,#161E22); border-color:var(--hair-night)">
-            <span style="color:var(--hair-night)">＋</span>
-          </div>
-          <div>
-            <h3>Weitere Teammitglieder</h3>
-            <p class="role" style="color:var(--brass)">Consultants</p>
-            <p class="soft">Hier werden die festen Teammitglieder mit Namen, Rolle und
-              Schwerpunkt aufgeführt.</p>
-            <p><span class="todo">Namen, Rollen und Fotos ergänzen</span></p>
-          </div>
-        </article>
+      <div class="lead">
+        <div class="portrait"><span>AK</span></div>
+        <div>
+          <h3>Antonia Elena Krefeld</h3>
+          <p class="role">Gründerin · Projektleitung</p>
+          <p class="soft">Senior-Projektmanagerin für komplexe Immobilienprojekte.
+            Schwerpunkt dort, wo ein Projekt komplex geworden ist: viele Stakeholder,
+            unklare Verantwortlichkeiten, gewachsene Prozesse, operative Rückstände.</p>
+          <p class="soft">Erfahrung aus Commercial Real Estate, kaufmännischem
+            Immobilienmanagement, Property- und Asset-Management, Miet- und
+            Vertragsmanagement, Abrechnung und Backlog-Management – fachlich-prozessual
+            auch im SAP-RE-FX-Umfeld. Dazu Ausschreibung und Vergabe von
+            Immobiliendienstleistungen, Outsourcing und Transition an externe
+            Dienstleister sowie die dazugehörigen Migrationsprojekte.</p>
+          <p class="soft">Konzernstrukturen mit großen Vertragsbeständen und hohen
+            operativen Volumina, dazu internationale und institutionelle
+            Real-Estate-Strukturen – unter anderem bei Jones Lang LaSalle und in der
+            Betreuung internationaler Immobilienfonds.</p>
+        </div>
       </div>
     </div>
   </section>

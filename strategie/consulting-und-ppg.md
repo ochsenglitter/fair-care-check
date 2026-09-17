@@ -114,6 +114,11 @@ Grund: Ein Konzern vergibt ein Backlog- oder Transformationsmandat nicht an eine
 Einzelperson – das Ausfallrisiko ist ihm zu hoch. Die Teamaussage ist zugleich der
 Grund, warum PPG skalierbar ist und Weg B (siehe unten) überhaupt existiert.
 
+**Zusammenfassend, nicht einzeln.** Namentlich und mit Bild tritt nur die
+Projektleitung auf. Das übrige Team wird als Aussage beschrieben – keine
+Einzelprofile, keine Fotos, keine Namensliste, keine Teamgröße. Das wirkt
+souveräner als eine kurze Liste und bleibt richtig, wenn die Besetzung wechselt.
+
 **Nie erfinden.** Keine Teamgrößen, Namen oder Referenzen behaupten, die es nicht
 gibt – dieselbe Nachweisregel wie bei den Zahlen.
 

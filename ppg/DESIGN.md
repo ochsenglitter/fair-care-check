@@ -76,7 +76,7 @@ markiert: Eyebrow, Linien, Ziffern, Zahlen, Hover.
 | **Schritte** | römische Ziffern `I`–`IV` in Messing, Oberlinie |
 | **Zahlenblock** | siehe unten – eigene Regel |
 | **Dossier** | Label links, Text rechts, Haarlinien, letzte Zeile hervorgehoben |
-| **Porträt** | 4:5, Monogramm in Caslon/Messing als Platzhalter statt leerer Fläche |
+| **Porträt** | 4:5, Monogramm in Caslon/Messing als Platzhalter statt leerer Fläche. Nur die Projektleitung bekommt ein Porträt |
 | **Button** | rechteckig, 1px Rahmen, Versalien, füllt sich beim Hover |
 
 ## Zahlenblock – bindende Regel
@@ -95,12 +95,29 @@ direkt über** der großen Zahl, und die realisierte Zahl steht **immer** darunt
 Eine große Zahl ohne beides ist eine Falschaussage – siehe die Nachweisregel in
 `../strategie/profil-und-positionierung.md`.
 
+## Teamdarstellung – bindende Regel
+
+**Namentlich und mit Bild nur die Projektleitung.** Das übrige Team wird
+**zusammenfassend** beschrieben – keine Einzelprofile, keine Fotos, keine
+Namensliste, keine Teamgröße:
+
+> „Jedes Mandat wird von der Projektleitung persönlich geführt. Je nach Thema und
+> Umfang arbeiten erfahrene Consultants mit – ausgewählt nach dem, was das Projekt
+> braucht, nicht nach Verfügbarkeit."
+
+Das hat zwei Gründe. Erstens wirkt eine Zusammenfassung souveräner als eine
+kurze Namensliste – sie lässt die Größe offen, statt sie klein aussehen zu
+lassen. Zweitens bleibt sie richtig, wenn die Besetzung wechselt.
+
+**Nie erfinden:** keine Teamgrößen, Namen oder Referenzen behaupten, die es
+nicht gibt.
+
 ## Umgang mit Fotos
 
 Die Seite funktioniert ohne Fotos, gewinnt aber deutlich mit ihnen.
 
 - **Hero:** `<header class="hero night" style="--hero-image:url(bild.jpg)">`
-- **Porträts:** ersetzen die Monogramm-Kacheln (`.portrait`)
+- **Porträt der Projektleitung:** ersetzt die Monogramm-Kachel (`.portrait`)
 - Kein Stockmaterial. Ein echtes Porträt schlägt jedes gekaufte Bild.
 
 ## Was nicht vorkommt
