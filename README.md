@@ -51,3 +51,20 @@ Doppelklick auf `index.html` genügt. Wer einen Server möchte:
 
 © Ochsenglitter. Inhalte und Gestaltung sind nicht zur Weitergabe oder zum
 Weiterverkauf bestimmt.
+
+## PPG-Website
+
+`ppg/index.html` – einseitige Website für PPG (Property Performance Group).
+Eigenständig, kein Build, keine Abhängigkeiten außer Google Fonts. Über
+GitHub Pages erreichbar unter `/ppg/`.
+
+**Vor der Veröffentlichung ausfüllen** – alle offenen Stellen sind im Markup
+rot gestrichelt als `.todo` markiert:
+
+- Kontaktdaten (E-Mail, Telefon, LinkedIn)
+- Impressum nach § 5 DDG (Firmierung, Rechtsform, Anschrift, Vertretung,
+  Register, USt-IdNr.)
+- Datenschutzerklärung
+
+Die Referenz nennt den Mandanten bewusst **nicht** namentlich. Vor einer
+Nennung die Vertraulichkeitsvereinbarung prüfen.
