@@ -76,6 +76,7 @@ https://app.notion.com/p/3df904ff732d8116ac65c5c0278f24e1
 | **Content-Kalender** | jeder Beitrag für jede Plattform, eine Zeile |
 | **Affiliate-Partner** | Partner, Link, Code, Provision – **keine Zugangsdaten** |
 | **Ideen-Speicher** | schnell festhalten, bevor es weg ist |
+| **Content-Säulen** | die Säulen mit Unterthemen und den vier Absichten |
 
 **Ein Kalender für alle Kanäle**, nicht einer pro Plattform. Mehrfachverwertung
 läuft über die Mehrfachauswahl bei *Plattform* – ein Reel, das später ein
@@ -86,6 +87,30 @@ und Blog; *PPG* für LinkedIn. Zwei Zielgruppen, zwei Tonlagen.
 
 **Jeder Beitrag hat ein Ziel:** Sarah verkaufen, Fenja testen, Affiliate-Umsatz,
 E-Mail-Liste, Reichweite oder Mandat/PPG. Beiträge ohne Ziel sind Beschäftigung.
+
+### Die Säulen im Kalender
+
+Maßgeblich sind Antonias **eigene fünf Säulen** aus der ursprünglichen
+Content-Planung, nicht die englischen Positionierungsthemen aus dem
+Master-Briefing:
+
+| Säule | Unterthemen |
+|---|---|
+| **Alltag mit drei Kindern / Selfcare** | Vlog · Daily Routine · Morning Routine · Evening Routine · Einkaufen · Beauty · Mode |
+| **Momhacks** | Selbstständigkeit fördern · Gesundheit & Erste Hilfe · Ernährung · Lernen & Spielen · Putzen & Ordnung |
+| **Ausflüge / Reisen** | Wochenend-Ausflüge · Tagesausflüge · Urlaub mit dem Auto · Urlaub mit Flieger · Planung & Packen |
+| **Mental Load** | Finanziell unabhängig bleiben · Fürs Alter vorsorgen · Richtig trennen · Mental Load erkennen & teilen · Wert der Care-Arbeit |
+| **Meine Erfahrung & Meinung** | 1. vs. 3. Kind · DM-Themen · Beim ersten Kind gewusst · Beim dritten Kind nicht mehr · Moderne vs. frühere Eltern |
+| **Business & Geld** | ergänzt, weil diese Themen laut Briefing über Instagram getestet werden |
+
+Dazu die vier **Absichten** aus derselben Quelle: Entertain, Educate, Inspire,
+Promote – jeweils mit konkreten Beispielformaten.
+
+**Die englischen Themen aus Abschnitt 9 des Master-Briefings** (AI for Family
+Life, Work Smarter Not Harder usw.) beschreiben die **Positionierung** nach
+außen. Sie sind keine Planungsraster und tauchen im Kalender nicht auf.
+
+**PPG hat keine Säule.** LinkedIn läuft über *Marke: PPG*, Säule bleibt leer.
 
 Die alte gekaufte Vorlage „Content Planner Ochsenglitter" (zuletzt bearbeitet
 Februar 2025) bleibt unangetastet bestehen.
