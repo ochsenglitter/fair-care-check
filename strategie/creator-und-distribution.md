@@ -68,20 +68,26 @@ Behind the Business, Affiliate-/Produktempfehlungen.
 
 ## Wo geplant wird
 
-**Die laufende 30-Tage-Serie plus Founding-Launch** wird im Artefakt
-„Mental Load sichtbar machen" geplant, nicht in Notion:
+**Der Sarah-Founding-Launch** wird im Artefakt „Was heute ansteht" geplant,
+nicht in Notion:
 https://claude.ai/artifact/EfgrDosN5mhmsKbpuD2JEw
 
-Reiter: **Heute** (Tagesablauf, drei Story-Blöcke, fünf Zahlen) · **Feed**
-(13 Beiträge) · **Produktion** (Batch-Sonntage, Vorlauf, Kooperationsfenster) ·
-**Affiliate** (Jahreskalender, Regeln) · **Launch** (Phasen, Launch-Woche).
+Reiter: **Heute** (Tagesfrage, Aufgaben mit Haken, Story-Themen) · **Woche**
+(Rhythmus der Verkaufswoche, Grundrhythmus danach, alle Kanäle) · **Launch**
+(Phasen bis Januar, die vier offenen Zahlen, was wann verkauft wird) ·
+**Sätze** (DM-Antwort zum Kopieren, Montags-Story, Einwand, Abendsatz) ·
+**Regeln** (Anonymisieren, frei sprechen, niemals streichen, Kooperationen,
+Affiliate).
 
-**Warum dort und nicht in Notion:** Eine laufende Serie braucht eine
+Inhaltlich folgt es der `Launch-Choreografie Sarah · 18.–27.09.` aus dem
+Drive-Ordner. Die Zeitschiene steht in `strategie/zeitplan-bis-januar-2027.md`.
+
+**Warum dort und nicht in Notion:** Ein laufender Launch braucht eine
 Tagesansicht mit Haken, keine Datenbankzeile. Der Zustand wird geräteübergreifend
 gespeichert.
 
 **Notion bleibt zuständig für alles außerhalb der Serie:** LinkedIn/PPG,
-Affiliate-Partner, Ideen-Speicher und alles nach dem 14.10.
+Affiliate-Partner, Ideen-Speicher und alles nach dem 18.10.
 
 ## Notion
 

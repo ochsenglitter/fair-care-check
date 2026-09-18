@@ -226,18 +226,47 @@ entscheiden, ob Mental Load Reset ein **Bundle** (dann ist es Fenja Complete
 unter anderem Namen) oder ein **eigenes Produkt** (dann Filterfrage beantworten:
 welchen konkreten Mental Load nimmt es ab?) sein soll.
 
-### D8. Gibt es einen Founding-Preis unter 39 €?
+### D8. Gibt es einen Founding-Preis unter 39 €? — **dringend**
 
-Die 30-Tage-Serie plant für den **Founding-Launch am 02.–08.11.** einen Preis von
-**29 €** – bewusst nicht als Umsatzereignis, sondern als Testlauf für
-Testimonials, Einwände und die fertige Anleitung. In der Preistabelle stehen
-aber nur **39 € Early Access** und **49 € regulär**.
+**Aktualisiert 2026-09-18.** Der Founding-Launch liegt nicht im November,
+sondern läuft bereits: Verkauf offen **Mi 23.09.**, Founding-Preis endet
+**So 27.09., 23:59**, Preis steigt **Mo 28.09.**
 
-**Vorschlag:** Founding mit 29 € aufnehmen, ausdrücklich als einmalige,
-zahlenmäßig begrenzte Kohorte vor dem öffentlichen Early Access. Begründung
-trägt: Wer zuerst kauft, bekommt ein Produkt, das noch nicht durch echte
-Nutzerinnen gelaufen ist, und liefert dafür das Feedback. Das ist keine
-willkürliche Preisstaffel, sondern ein Gegenwert.
+Die Launch-Dokumente führen zwei Preise als Platzhalter, nicht einen:
 
-**Vor der ersten Nennung entscheiden** – der Preis steht sonst im Artefakt,
-aber nicht in der Produktplanung.
+| | |
+|---|---|
+| **Founding-Preis** | bis So 27.09., 23:59 — Arbeitsannahmen im Umlauf: 29 € und 49 € |
+| **Preis ab Mo 28.09.** | noch offen — daran hängt die gesamte Sonntagsargumentation |
+
+In der Preistabelle stehen bisher nur **39 € Early Access** und **49 € regulär**.
+
+**Vorschlag:** Founding als eigene Stufe aufnehmen, nicht platzbegrenzt, sondern
+datumsbegrenzt. Die Begründung trägt ohne künstliche Verknappung: Wer zuerst
+kauft, kauft ohne eine einzige Bewertung, kauft ein Produkt mit Kanten, und
+bekommt alles ohne Aufpreis, was daraus noch wird.
+
+**Der Preis ab Montag muss zum Januar-Preis passen** — im Januar kommt der große
+Sarah-Launch mit Testimonials. Drei Stufen (Founding · ab 28.09. · Januar)
+müssen als Reihe erklärbar sein.
+
+⚠️ **Am Montag wird wirklich erhöht.** Steht der Preis am Dienstag noch
+unverändert, ist die Begründung gegenüber genau den Käuferinnen gebrochen, die
+am meisten vertraut haben.
+
+### D9. Drei Entscheidungen, die den Verkaufsstart blockieren
+
+**Stand 2026-09-18.** Keine davon ist eine Produktarchitekturfrage, alle drei
+stehen aber als Platzhalter im Produkt und auf der Verkaufsseite:
+
+1. **V10 — Claude-Stufe und Monatskosten.** Fertig, wenn der Satz steht:
+   „Du brauchst [Stufe], ca. [X] € im Monat – das zahlst du an Claude, nicht an
+   mich." Er gehört **vor** den Kaufbutton, nicht in die Zugangsmail.
+2. **Support-Adresse und zugesagte Antwortzeit**, z. B. „werktags innerhalb von
+   48 Stunden". Support ist ausdrücklich **keine Begleitung**: eine Adresse,
+   eine Zusage, schriftlich.
+3. **Live-Session ja oder nein.** `Produktionswochenende` führt sie als Bonus
+   (Do 01.10.), `Launch-Choreografie` streicht sie ersatzlos. Beide sind
+   „Fassung 2" vom selben Wochenende. Der Tagesplan geht von **ohne Begleitung**
+   aus; die Entscheidung muss vor Mo 21.09. fallen, weil Verkaufsseite, alle vier
+   Mails und die Founding-Begründung daran hängen.
