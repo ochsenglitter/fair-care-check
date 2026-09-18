@@ -78,6 +78,11 @@ https://app.notion.com/p/3df904ff732d8116ac65c5c0278f24e1
 | **Ideen-Speicher** | schnell festhalten, bevor es weg ist |
 | **Content-Säulen** | die Säulen mit Unterthemen und den vier Absichten |
 
+**Kanäle im Kalender:** Instagram (Feed, Reel, Story) · TikTok · YouTube Shorts ·
+LinkedIn · Podcast · Newsletter · Blog · Threads.
+**Formate:** Karussell · Reel/Video · Einzelbild · Story-Serie · Podcast-Folge ·
+Textbeitrag · Artikel · E-Mail.
+
 **Ein Kalender für alle Kanäle**, nicht einer pro Plattform. Mehrfachverwertung
 läuft über die Mehrfachauswahl bei *Plattform* – ein Reel, das später ein
 YouTube Short und ein Newsletter-Abschnitt wird, ist ein Eintrag, nicht drei.
