@@ -67,17 +67,18 @@ einer Fachberatung.
 
 ## Der Proof
 
-ALDI Nord, Juni 2025 – Dezember 2026: Projektleitung „Backlog-Abrechnungen",
-Team ca. 10 Personen.
+**Öffentlich** (Website, LinkedIn, Pitch, Bewerbung): Projektleitung in einem
+Konzern mit mehreren tausend Mietverhältnissen.
 
-| | angestoßen | realisiert |
-|---|---|---|
-| Mieterhöhungen | 31 umgesetzt | 85 % |
-| laufender Cashflow p. M. | ca. 15.000 € | **ca. 12.750 €** |
-| Nachforderungen | ca. 400.000 € identifiziert | **ca. 265.000 €** nach 6 Monaten |
+| | öffentlich genannt |
+|---|---|
+| Mieterhöhungen | **30+ umgesetzt** |
+| laufender Cashflow p. M. | **rund 15.000 € angestoßen** |
+| Nachforderungen | **rund 400.000 € identifiziert** |
 
-Nach außen wird **immer die realisierte Zahl** genannt, mit der angestoßenen
-als Kontext. Fertige Formulierungen für Headline, Mail und Pitch stehen in
+Kein Mandantenname, keine Branche, kein Zeitraum, keine Teamgröße, keine
+Realisierungsquote. Das Kategoriewort steht immer dabei. Die drei
+Vertraulichkeitsstufen und die internen Zahlen stehen in
 `profil-und-positionierung.md`.
 
 ---
@@ -162,8 +163,8 @@ Am ALDI-Proof durchgespielt – so klingt jeder Pitch:
 |---|---|
 | **Problem** | Indexmieten wurden über Jahre nicht konsequent umgesetzt, Abrechnungen liefen in einen Backlog |
 | **Wirtschaftlicher Schaden** | laufende Mieteinnahmen unter Vertragsniveau, nicht gestellte Nachforderungen |
-| **Lösung** | Prozess strukturiert, Verantwortlichkeiten hergestellt, Team von ca. 10 Personen gesteuert, Umsetzung durchgezogen |
-| **Messbares Ergebnis** | 31 Mieterhöhungen umgesetzt, davon 85 % realisiert – ca. 12.750 € zusätzlicher laufender Cashflow pro Monat; ca. 400.000 € Nachforderungen identifiziert, davon zwei Drittel in sechs Monaten realisiert |
+| **Lösung** | Prozess strukturiert, Verantwortlichkeiten hergestellt, Team gesteuert, Umsetzung durchgezogen |
+| **Messbares Ergebnis** | mehr als 30 Mieterhöhungen umgesetzt, rund 15.000 € zusätzlicher monatlicher Cashflow angestoßen, rund 400.000 € Nachforderungen identifiziert |
 
 Diese Tabelle ist die Vorlage für Angebote, Mails und Erstgespräche. Sie
 funktioniert, weil sie nicht von Kompetenz erzählt, sondern von Geld.

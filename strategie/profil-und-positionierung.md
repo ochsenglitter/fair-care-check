@@ -113,88 +113,116 @@ auch internationale und institutionelle Real-Estate-Strukturen.
 
 ---
 
-## Der Proof: ALDI Nord
+## Der Proof
 
-**Juni 2025 – Dezember 2026**, ca. 40 h/Woche, aktuell 80 €/h.
+**Intern** (diese Datei, Gespräche unter NDA): ALDI Nord, Juni 2025 –
+Dezember 2026, ca. 40 h/Woche, 80 €/h. 2026 Projektleitung
+„Backlog-Abrechnungen", Team ca. 10 Personen.
 
 Themen: komplexe Immobilienprozesse, Indexmieten, SAP-RE-FX-Logik, Workflows,
 Rückrechnungen, Nachforderungen, Abrechnungen, Backlogs, Prozessstabilisierung,
 Projektsteuerung.
 
-**2026:** Projektleitung „Backlog-Abrechnungen", Team ca. 10 Personen, Prozesse
-und Arbeitsstrukturen aufgebaut, Umsetzung gesteuert.
+### Die Zahlen – interner Stand
 
-### Die Zahlen
-
-Klarstellung von Antonia (2026-09-17): Von den Nachforderungen sind nach sechs
-Monaten **zwei Drittel realisiert**, von den Mieterhöhungen **85 %**.
-
-| Ergebnis | angestoßen / identifiziert | davon realisiert |
+| Ergebnis | identifiziert / angestoßen | davon realisiert |
 |---|---|---|
-| Mieterhöhungen | **31 umgesetzt** | **85 % → ca. 26** |
-| laufender monatlicher Cashflow | ca. +15.000 € | **ca. +12.750 €** |
-| davon auf Jahressicht | ca. 180.000 € | **ca. 153.000 €** |
-| Nachforderungen | ca. **400.000 € identifiziert** | **ca. 265.000 €** (Stand nach 6 Monaten) |
+| Mieterhöhungen | 31 umgesetzt | 85 % → ca. 26 |
+| laufender monatlicher Cashflow | ca. +15.000 € | ca. +12.750 € |
+| auf Jahressicht | ca. 180.000 € | ca. 153.000 € |
+| Nachforderungen | ca. 400.000 € | ca. 265.000 € (Stand nach 6 Monaten) |
 
-Die Realisierung der Nachforderungen läuft weiter – das verbleibende Drittel ist
-nicht verloren, sondern noch offen. Die Zahl ist ein Zwischenstand, kein
-Endergebnis.
+Diese Tabelle bleibt **intern**. Nach außen gilt die Regel unten.
 
-Der Satz, der daraus gehört:
+---
+
+## Vertraulichkeit und Zahlen nach außen
+
+**Anweisung von Antonia (2026-09-18):** Nach außen werden die **identifizierten**
+Werte genannt, nicht die realisierten. Und alle Angaben werden so weit
+anonymisiert, dass daraus keine rechtlichen Probleme entstehen können.
+
+> ⚖️ Ich bin keine Juristin und kann die konkrete Vertraulichkeitsvereinbarung
+> nicht prüfen. Die Regeln hier sind eine vorsichtige Arbeitsgrundlage, kein
+> Rechtsrat. Vor dem ersten öffentlichen Einsatz sollte jemand mit
+> Vertragskenntnis einmal darüberschauen.
+
+### Drei Stufen
+
+| Stufe | Wo | Was genannt wird |
+|---|---|---|
+| **1 · Intern** | dieses Repo, eigene Unterlagen | alles: Mandant, Zeitraum, exakte Zahlen, Realisierungsquoten |
+| **2 · Vertraulich** | Gespräch unter NDA, konkretes Angebot | exakte Zahlen, Mandant nur wenn die Vereinbarung es erlaubt |
+| **3 · Öffentlich** | Website, LinkedIn, Profil, Pitch, Bewerbung | nur die Fassung unten |
+
+### Was öffentlich gilt
+
+**Genannt wird:**
+
+- **mehr als 30 Mieterhöhungen umgesetzt**
+- **rund 15.000 € zusätzlicher monatlicher Cashflow angestoßen**
+- **rund 400.000 € Nachforderungen identifiziert**
+
+**Weggelassen wird:**
+
+| Angabe | Grund |
+|---|---|
+| Name des Mandanten | Vertraulichkeit |
+| Branche (Lebensmitteleinzelhandel) | macht in Kombination identifizierbar |
+| Projektzeitraum mit Monaten | dito |
+| Teamgröße | dito |
+| Realisierungsquoten (85 %, zwei Drittel) | zusätzliches identifizierendes Detail |
+| „Filialnetz" | zu spezifisch |
+
+**Statt einer Branchenangabe:** „ein Konzern mit mehreren tausend
+Mietverhältnissen" oder „ein Unternehmen mit großem Mietvertragsbestand".
+
+**Der Gedanke dahinter:** Nicht die Zahlen sind identifizierend – 400.000 €
+Nachforderungen gibt es bei hunderten Unternehmen. Identifizierend ist die
+**Kombination** aus Branche, Zeitraum, Bestandsart, Teamgröße und exakter Zahl.
+Wer den Kontext entschärft, kann die Zahlen weitgehend behalten.
+
+### Die eine Bedingung, die bleibt
+
+**Das Kategoriewort steht immer dabei:** „identifiziert", „angestoßen",
+„umgesetzt". Eine Zahl ohne dieses Wort wird als erwirtschaftetes Ergebnis
+gelesen – und dann ist aus der vorsichtigen Aussage eine angreifbare geworden.
+
+    richtig:  rund 400.000 € identifizierte Nachforderungen
+    falsch:   rund 400.000 € Nachforderungen
+    falsch:   400.000 € erwirtschaftet
+
+„Identifiziert" ist die **schwächere** Kategorie – deshalb ist es unbedenklich,
+nur sie zu nennen. Sobald das Wort fehlt, behauptet die Zahl mehr, als sie soll.
+
+**Nie behauptet wird:** „realisiert" oder „vereinnahmt" in öffentlichen Texten.
+Wer im Gespräch nach der Realisierung fragt, bekommt die echte Antwort aus
+Stufe 1 oder 2.
+
+### Fertige Formulierungen für Stufe 3
+
+**Kurz (Profil-Headline):**
+
+> Mehr als 30 umgesetzte Mieterhöhungen und rund 400.000 € identifizierte
+> Nachforderungen.
+
+**Mittel (Akquisemail, LinkedIn):**
+
+> In meinem letzten Mandat habe ich die Abrechnungs- und Indexmietprozesse
+> eines Konzerns mit mehreren tausend Mietverhältnissen neu aufgesetzt und die
+> Umsetzung gesteuert: mehr als 30 Mieterhöhungen umgesetzt, rund 15.000 €
+> zusätzlicher monatlicher Cashflow angestoßen, rund 400.000 € Nachforderungen
+> identifiziert.
+
+**Der Satz, der dazugehört:**
 
 > **Nicht:** „Ich habe ein Projekt geleitet."
 > **Sondern:** „Ich habe komplexe Immobilienprozesse strukturiert und gesteuert
 > und daraus messbare wirtschaftliche Ergebnisse erzeugt."
 
-### Nachweisbarkeit – die Regel und die fertigen Formulierungen
-
-Bindende Regel aus dem Briefing:
-
-> Bei externer Kommunikation immer exakt zwischen **identifiziertem**,
-> **realisiertem**, **beauftragtem** und tatsächlich **vereinnahmtem**
-> wirtschaftlichem Effekt unterscheiden. Keine Zahl stärker formulieren, als
-> sie nachweisbar ist.
-
-Damit ergeben sich drei belastbare Fassungen – je nachdem, wie viel Platz ist.
-Alle drei halten einer Nachfrage stand.
-
-**Kurz (Profil-Headline, eine Zeile):**
-
-> 31 umgesetzte Mieterhöhungen und rund 12.750 € realisierter zusätzlicher
-> Cashflow pro Monat.
-
-**Mittel (Akquisemail, LinkedIn):**
-
-> 31 Mieterhöhungen umgesetzt, davon 85 % realisiert – rund 12.750 €
-> zusätzlicher laufender Cashflow pro Monat. Dazu rund 400.000 €
-> Nachforderungen identifiziert, davon zwei Drittel innerhalb von sechs
-> Monaten realisiert.
-
-**Vollständig (Pitch, Angebot, Referenzblatt):**
-
-| | angestoßen | realisiert |
-|---|---|---|
-| Mieterhöhungen | 31 umgesetzt | 85 % |
-| laufender Cashflow p. M. | ca. 15.000 € | ca. 12.750 € |
-| Nachforderungen | ca. 400.000 € identifiziert | ca. 265.000 € nach 6 Monaten |
-
-**Visuelle Hierarchie in Materialien:** Die **große Zahl ist der Umfang**
-(identifiziert, angestoßen, umgesetzt), die **kleine Zahl darunter ist der
-Nachweis** (realisiert). Das ist zulässig und wirkungsvoll – unter einer
-Bedingung: Das Bereichslabel („identifiziert", „angestoßen") steht **immer
-direkt über** der großen Zahl, und die realisierte Zahl steht **immer**
-unmittelbar darunter. Eine große Zahl ohne beides ist eine Falschaussage.
-
-Die Formatregel dazu steht in `../ppg/DESIGN.md`.
-
-**Warum die Realisierungsquote mitgenannt wird:** „400.000 € identifiziert,
-davon zwei Drittel realisiert" ist überprüfbar und klingt nach jemandem, der den
-Unterschied kennt – in dieser Rolle selbst schon ein Argument. „400.000 €
-erwirtschaftet" ist im ersten kritischen Gespräch angreifbar, und ein Einkäufer,
-der eine Zahl kippt, zweifelt danach an allen.
-
-**Was nicht behauptet wird:** „vereinnahmt". Realisiert ist belegt, vereinnahmt
-nicht geprüft. Wer nach dem Unterschied fragt, bekommt genau diese Antwort.
+**Visuelle Hierarchie in Materialien:** große Zahl, darüber das Kategoriewort
+als Label. Keine zweite Zahl darunter mehr – die Realisierungsquote entfällt
+öffentlich. Formatregel in `../ppg/DESIGN.md`.
 
 ---
 
@@ -220,8 +248,8 @@ Einkäufer entscheidet. Vorschläge, nach Verwendung getrennt:
 
 > In Immobilienorganisationen liegt Geld in Verträgen, Prozessen und Backlogs
 > fest. Ich strukturiere und steuere die Projekte, die es herausholen – zuletzt
-> bei ALDI Nord: 31 umgesetzte Mieterhöhungen und rund 12.750 € realisierter
-> zusätzlicher Cashflow pro Monat.
+> mehr als 30 umgesetzte Mieterhöhungen und rund 400.000 € identifizierte
+> Nachforderungen.
 
 **Was in keinem dieser Sätze vorkommen darf:** SAP RE-FX und Indexmieten. Die
 gehören in den Erfahrungsteil, nicht in die Positionierung.

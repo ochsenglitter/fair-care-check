@@ -7,8 +7,12 @@
 **Status pflegen.** Nach dem Posten `offen` durch `gepostet am TT.MM.` ersetzen,
 damit nichts doppelt geschrieben wird und wir sehen, was funktioniert hat.
 
-**Vor jedem Posten prüfen:** Mandant wird nicht genannt. Zahlen immer mit der
-Unterscheidung identifiziert / realisiert.
+**Vor jedem Posten prüfen:** LinkedIn ist Stufe 3 – öffentlich. Kein
+Mandantenname, keine Branche, kein Projektzeitraum, keine Teamgröße, keine
+Realisierungsquote. Nur gerundete **identifizierte bzw. angestoßene** Werte,
+das Kategoriewort immer dabei. Regel in
+`../profil-und-positionierung.md`, Abschnitt „Vertraulichkeit und Zahlen nach
+außen".
 
 **Rhythmus-Vorschlag:** ein Beitrag pro Woche, dienstags oder mittwochs
 vormittags. Lieber vier gute im Monat als zwölf beliebige.
@@ -22,15 +26,13 @@ Kapazität frei wird. Zuerst posten.
 
     Zum 31. Dezember endet mein aktuelles Mandat. Ab Januar habe ich wieder Kapazität.
 
-    Seit Juni 2025 arbeite ich in einem Konzern des Lebensmitteleinzelhandels im
-    Commercial-Real-Estate-Umfeld. 2026 habe ich dort die Projektleitung für die
-    Backlog-Abrechnungen übernommen, ein Team von rund zehn Personen geführt und
+    Zuletzt habe ich in einem Konzern mit mehreren tausend Mietverhältnissen die
+    Projektleitung für die Backlog-Abrechnungen übernommen, das Team geführt und
     die Prozesse dahinter neu aufgesetzt.
 
-    Was dabei herausgekommen ist: 31 umgesetzte Mieterhöhungen, davon 85 %
-    realisiert – rund 12.750 € zusätzlicher laufender Cashflow pro Monat. Dazu
-    rund 400.000 € Nachforderungen identifiziert, von denen zwei Drittel
-    innerhalb von sechs Monaten realisiert wurden.
+    Was dabei herausgekommen ist: mehr als 30 umgesetzte Mieterhöhungen, rund
+    15.000 € zusätzlicher monatlicher Cashflow angestoßen und rund 400.000 €
+    identifizierte Nachforderungen.
 
     Ich suche ein Anschlussmandat ab Januar 2027. 20 bis 30 Stunden die Woche,
     hoher Remote-Anteil, gern längerfristig.
@@ -74,9 +76,10 @@ Gut als zweiter Beitrag, direkt nach dem Verfügbarkeitspost.
     um die es geht: Ein Potenzial zu erkennen kann eine Analyse. Es durch eine
     Organisation zu tragen, bis es verbucht ist, kann sie nicht.
 
-    Deshalb nenne ich bei eigenen Zahlen immer beides. Bei den Nachforderungen
-    aus meinem aktuellen Projekt heißt das: rund 400.000 € identifiziert, davon
-    zwei Drittel nach sechs Monaten realisiert.
+    Deshalb sage ich über eigene Projekte öffentlich nur, was identifiziert oder
+    angestoßen wurde – zuletzt etwa rund 400.000 € identifizierte
+    Nachforderungen. Was davon realisiert ist, gehört ins Gespräch, nicht in
+    einen Beitrag.
 
     Wie handhaben Sie das in Ihren Reportings – wird der Realisierungsgrad
     mitgeführt oder erst am Jahresende sichtbar?
@@ -200,8 +203,8 @@ Mandatsgruppe.
 **Zweck:** der Fall mit Zahlen. Stark, deshalb sparsam einsetzen – nicht direkt
 nach dem Verfügbarkeitspost, sonst wiederholen sich die Zahlen.
 
-    Zwei Jahre lang waren Indexmieten in einem Filialnetz nicht konsequent
-    umgesetzt worden.
+    Zwei Jahre lang waren Indexmieten in einem großen Mietvertragsbestand nicht
+    konsequent umgesetzt worden.
 
     Nicht aus Nachlässigkeit. Die Zuständigkeit lag zwischen zwei Bereichen, der
     Prozess hatte an einer Stelle keine klare Regel, und was dadurch liegen
@@ -214,13 +217,12 @@ nach dem Verfügbarkeitspost, sonst wiederholen sich die Zahlen.
     Was wir gemacht haben, war nicht kompliziert, nur konsequent. Den Prozess
     auseinandergenommen und neu geschnitten. Für jede Fallgruppe eine
     Entscheidungsregel festgelegt. Verantwortlichkeiten benannt. Ein Team von
-    rund zehn Personen so aufgestellt, dass klar war, wer was entscheidet. Und
-    dann durchgezogen – Rückrechnungen, Mieterhöhungen, Nachforderungen.
+    das Team so aufgestellt, dass klar war, wer was entscheidet. Und dann
+    durchgezogen – Rückrechnungen, Mieterhöhungen, Nachforderungen.
 
-    Ergebnis: 31 Mieterhöhungen umgesetzt, davon 85 % realisiert. Rund 12.750 €
-    zusätzlicher laufender Cashflow pro Monat. Dazu rund 400.000 €
-    Nachforderungen identifiziert, davon zwei Drittel in sechs Monaten
-    realisiert. Die Realisierung läuft weiter.
+    Ergebnis: mehr als 30 umgesetzte Mieterhöhungen, rund 15.000 € zusätzlicher
+    monatlicher Cashflow angestoßen und rund 400.000 € identifizierte
+    Nachforderungen.
 
     Das Geld war die ganze Zeit da. Es hat nur niemand herausgeholt.
 

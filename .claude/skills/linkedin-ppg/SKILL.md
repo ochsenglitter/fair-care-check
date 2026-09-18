@@ -77,14 +77,23 @@ Hashtags: höchstens drei, fachlich (`#CommercialRealEstate`,
 
 ## Harte Regeln
 
-**Zahlen.** Immer exakt zwischen **identifiziert, realisiert, beauftragt und
-vereinnahmt** unterscheiden – siehe `strategie/profil-und-positionierung.md`.
-In Beiträgen gilt derselbe Aufbau wie auf der Website: der Umfang darf
-vorangestellt werden, die realisierte Zahl steht **immer** dabei.
+**Zahlen.** LinkedIn ist **Stufe 3 – öffentlich**. Genannt werden nur die
+**identifizierten beziehungsweise angestoßenen** Werte, gerundet, ohne
+Realisierungsquote:
 
-**Vertraulichkeit.** Der Mandant wird **nicht namentlich genannt**, solange die
-Vereinbarung nicht geprüft ist. Formulierung: „ein Konzern des
-Lebensmitteleinzelhandels", „ein Filialnetz".
+- mehr als 30 Mieterhöhungen umgesetzt
+- rund 15.000 € zusätzlicher monatlicher Cashflow angestoßen
+- rund 400.000 € Nachforderungen identifiziert
+
+Das **Kategoriewort** („identifiziert", „angestoßen", „umgesetzt") steht immer
+dabei. Ohne es wird die Zahl als erwirtschaftetes Ergebnis gelesen.
+
+**Vertraulichkeit.** Nicht genannt werden: Mandantenname, **Branche**,
+**Projektzeitraum**, **Teamgröße**, Realisierungsquoten, „Filialnetz".
+Stattdessen: „ein Konzern mit mehreren tausend Mietverhältnissen",
+„in meinem letzten Mandat". Die vollständige Regel steht in
+`strategie/profil-und-positionierung.md`, Abschnitt „Vertraulichkeit und Zahlen
+nach außen".
 
 **Keine erfundene Erfahrung.** Nur Fälle, Zahlen und Rollen, die es gab. Im
 Zweifel nachfragen statt ausschmücken.

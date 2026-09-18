@@ -36,9 +36,16 @@ Pitches, Bewerbungen, Angeboten und Stundensätzen gilt:
 
 SAP RE-FX, Indexmieten, Backlogs und Abrechnungen sind **Proof**, nicht
 Positionierung. Zielstundensatz 100–120 €/h; die 80 €/h bei ALDI sind kein
-Benchmark. Bei Zahlen nach außen immer exakt zwischen **identifiziertem,
-realisiertem, beauftragtem und vereinnahmtem** Effekt unterscheiden.
-Details in `strategie/profil-und-positionierung.md`.
+Benchmark.
+
+**Zahlen und Vertraulichkeit nach außen – bindend.** Öffentlich (Website,
+LinkedIn, Profil, Pitch, Bewerbung) werden **nur identifizierte bzw.
+angestoßene** Werte genannt, gerundet, **ohne Realisierungsquote**: 30+
+Mieterhöhungen umgesetzt · rund 15.000 € monatlicher Cashflow angestoßen ·
+rund 400.000 € Nachforderungen identifiziert. Das **Kategoriewort steht immer
+dabei**. **Nie öffentlich:** Mandantenname, Branche, Projektzeitraum,
+Teamgröße, Realisierungsquoten. Die drei Vertraulichkeitsstufen stehen in
+`strategie/profil-und-positionierung.md`.
 
 **PPG** ist keine Indexmieten-Beratung und keine generische
 Projektmanagementberatung, sondern:
@@ -58,9 +65,8 @@ Schatten und keine abgerundeten Ecken. Referenzumsetzung: `ppg/index.html`.
 **Nicht mit dem Ochsenglitter-Design mischen.** Das warme Creme/Terrakotta-System
 gilt für Care-Arbeit-Materialien, nicht für PPG.
 
-**Zahlen in PPG-Materialien:** große Zahl = Umfang (identifiziert, angestoßen),
-kleine Zahl darunter = Nachweis (realisiert). Das Bereichslabel steht immer
-direkt über der großen Zahl.
+**Zahlen in PPG-Materialien:** eine gerundete große Zahl, darüber das
+Kategoriewort als Label. Keine zweite Zahl, keine Realisierungsquote.
 
 ## Pflicht: Produktarchitektur vor Produktentscheidungen lesen
 

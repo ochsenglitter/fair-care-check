@@ -81,19 +81,25 @@ markiert: Eyebrow, Linien, Ziffern, Zahlen, Hover.
 
 ## Zahlenblock – bindende Regel
 
-Die **große Zahl ist der Umfang** (identifiziert, angestoßen, umgesetzt), die
-**kleine Zahl ist der Nachweis** (realisiert). Aufbau von oben nach unten:
+Öffentlich genannt wird **nur der identifizierte beziehungsweise angestoßene
+Wert**. Keine Realisierungsquote, keine zweite Zahl darunter. Aufbau:
 
-    identifiziert          ← Bereichslabel, Versalien, Messing, klein
+    IDENTIFIZIERT          ← Kategoriewort, Versalien, Messing, klein
     400.000 €              ← große Caslon-Zahl
     Nachforderungen        ← was es ist
-    ─────────────────
-    davon rund 265.000 € realisiert, Stand nach sechs Monaten
 
-**Die Bedingung, ohne die das nicht geht:** Das Bereichslabel steht **immer
-direkt über** der großen Zahl, und die realisierte Zahl steht **immer** darunter.
-Eine große Zahl ohne beides ist eine Falschaussage – siehe die Nachweisregel in
+**Die Bedingung, ohne die das nicht geht:** Das Kategoriewort – identifiziert,
+angestoßen, umgesetzt – steht **immer direkt über** der Zahl. Ohne dieses Wort
+wird die Zahl als erwirtschaftetes Ergebnis gelesen, und aus einer vorsichtigen
+Aussage wird eine angreifbare.
+
+**Zahlen werden gerundet**, nie auf die Einerstelle genau: „30+", „rund
+15.000 €", „rund 400.000 €". Exakte Werte gehören ins vertrauliche Gespräch,
+nicht auf eine öffentliche Seite – siehe die drei Vertraulichkeitsstufen in
 `../strategie/profil-und-positionierung.md`.
+
+**Nie öffentlich:** Mandantenname, Branche, Projektzeitraum, Teamgröße,
+Realisierungsquoten.
 
 ## Teamdarstellung – bindende Regel
 
