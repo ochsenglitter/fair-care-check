@@ -4,6 +4,10 @@
 **Skill:** `.claude/skills/linkedin-ppg/SKILL.md`
 **Zweck:** Anschlussmandat ab Januar 2027. Alles andere ist Nebenprodukt.
 
+**Auch in Notion:** Alle sechs Beiträge liegen als Einträge im Content-Kalender
+(Status „Zur Freigabe", Marke PPG) –
+https://app.notion.com/p/3df904ff732d8116ac65c5c0278f24e1
+
 **Status pflegen.** Nach dem Posten `offen` durch `gepostet am TT.MM.` ersetzen,
 damit nichts doppelt geschrieben wird und wir sehen, was funktioniert hat.
 

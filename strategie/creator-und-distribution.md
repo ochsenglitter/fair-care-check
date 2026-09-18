@@ -66,6 +66,30 @@ Behind the Business, Affiliate-/Produktempfehlungen.
 
 ---
 
+## Wo geplant wird: Notion
+
+**Content-Zentrale** (angelegt 2026-09-18):
+https://app.notion.com/p/3df904ff732d8116ac65c5c0278f24e1
+
+| Datenbank | Zweck |
+|---|---|
+| **Content-Kalender** | jeder Beitrag für jede Plattform, eine Zeile |
+| **Affiliate-Partner** | Partner, Link, Code, Provision – **keine Zugangsdaten** |
+| **Ideen-Speicher** | schnell festhalten, bevor es weg ist |
+
+**Ein Kalender für alle Kanäle**, nicht einer pro Plattform. Mehrfachverwertung
+läuft über die Mehrfachauswahl bei *Plattform* – ein Reel, das später ein
+YouTube Short und ein Newsletter-Abschnitt wird, ist ein Eintrag, nicht drei.
+
+**Marke trennt die Welten:** *Ochsenglitter* für Instagram, YouTube, Newsletter
+und Blog; *PPG* für LinkedIn. Zwei Zielgruppen, zwei Tonlagen.
+
+**Jeder Beitrag hat ein Ziel:** Sarah verkaufen, Fenja testen, Affiliate-Umsatz,
+E-Mail-Liste, Reichweite oder Mandat/PPG. Beiträge ohne Ziel sind Beschäftigung.
+
+Die alte gekaufte Vorlage „Content Planner Ochsenglitter" (zuletzt bearbeitet
+Februar 2025) bleibt unangetastet bestehen.
+
 ## Regel für Kooperationen
 
 Ziel: **Umsatz pro Contentstunde erhöhen.** Weniger schlecht bezahlte,
