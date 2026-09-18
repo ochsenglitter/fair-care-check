@@ -46,6 +46,35 @@ keinem dieser Monate steht, ist sie aktuell nicht dran.
 
 ---
 
+## ⚠️ Konflikt: Der November ist voll
+
+**Stand 2026-09-18.** Die 30-Tage-Story-Serie „Mental Load sichtbar machen"
+(Artefakt, seit 15.09. laufend) rechnet mit einem anderen Ablauf als der
+Monatsplan oben – und zwar aus einem guten Grund:
+
+> **Herbstferien Mo 19.10. – Fr 30.10.** Ein Schulprodukt startet nicht in den
+> Ferien. Kein Elternbrief, kein Zettel, kein vergessenes Sportzeug – und genau
+> dieser Schmerz verkauft Sarah.
+
+Daraus ergibt sich:
+
+| Zeitraum | Was läuft |
+|---|---|
+| 15.09.–14.10. | 30-Tage-Serie, Warteliste ab Tag 27 (11.10.) |
+| 19.10.–01.11. | Herbstferien, kein Schulverkauf |
+| **02.–08.11.** | **Founding-Launch Sarah**, erste Schulwoche nach den Ferien |
+| 09.–20.11. | Beta begleiten, Testimonials sammeln |
+| 23.–30.11. | Black Week – kein Sarah-Verkauf, Affiliate |
+| Januar | Sarah Early Access öffentlich |
+
+**Damit bleibt für „November: Fenja Beta / Presale" kein Platz.** Fenja rutscht
+realistisch in den Januar – parallel zum Sarah-Early-Access oder kurz danach.
+
+**Zu entscheiden:** Fenja in den Januar schieben, oder den Sarah-Launch anders
+legen. Nicht beides im November.
+
+---
+
 ## Meilenstein, an dem alles Digitale hängt
 
 > **100 zahlende Sarah-Kundinnen.**

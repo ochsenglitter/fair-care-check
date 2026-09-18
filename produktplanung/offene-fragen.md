@@ -225,3 +225,19 @@ Produkte auf derselben Preisstufe, ohne geklärtes Verhältnis.
 entscheiden, ob Mental Load Reset ein **Bundle** (dann ist es Fenja Complete
 unter anderem Namen) oder ein **eigenes Produkt** (dann Filterfrage beantworten:
 welchen konkreten Mental Load nimmt es ab?) sein soll.
+
+### D8. Gibt es einen Founding-Preis unter 39 €?
+
+Die 30-Tage-Serie plant für den **Founding-Launch am 02.–08.11.** einen Preis von
+**29 €** – bewusst nicht als Umsatzereignis, sondern als Testlauf für
+Testimonials, Einwände und die fertige Anleitung. In der Preistabelle stehen
+aber nur **39 € Early Access** und **49 € regulär**.
+
+**Vorschlag:** Founding mit 29 € aufnehmen, ausdrücklich als einmalige,
+zahlenmäßig begrenzte Kohorte vor dem öffentlichen Early Access. Begründung
+trägt: Wer zuerst kauft, bekommt ein Produkt, das noch nicht durch echte
+Nutzerinnen gelaufen ist, und liefert dafür das Feedback. Das ist keine
+willkürliche Preisstaffel, sondern ein Gegenwert.
+
+**Vor der ersten Nennung entscheiden** – der Preis steht sonst im Artefakt,
+aber nicht in der Produktplanung.
