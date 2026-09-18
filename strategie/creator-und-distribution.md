@@ -77,6 +77,7 @@ https://app.notion.com/p/3df904ff732d8116ac65c5c0278f24e1
 | **Affiliate-Partner** | Partner, Link, Code, Provision – **keine Zugangsdaten** |
 | **Ideen-Speicher** | schnell festhalten, bevor es weg ist |
 | **Content-Säulen** | die Säulen mit Unterthemen und den vier Absichten |
+| **Launch-Plan Sarah** | die fünf Launch-Phasen und die Kampagnen bis Dezember |
 
 **Kanäle im Kalender:** Instagram (Feed, Reel, Story) · TikTok · YouTube Shorts ·
 LinkedIn · Podcast · Newsletter · Blog · Threads.
@@ -116,6 +117,25 @@ Life, Work Smarter Not Harder usw.) beschreiben die **Positionierung** nach
 außen. Sie sind keine Planungsraster und tauchen im Kalender nicht auf.
 
 **PPG hat keine Säule.** LinkedIn läuft über *Marke: PPG*, Säule bleibt leer.
+
+### Launch-Steuerung
+
+Zwei Eigenschaften im Kalender machen den Sarah-Launch steuerbar:
+
+**Kampagne** – Sarah Early Access · Sarah Launch · Sarah Evergreen ·
+Fenja Interesse-Test · Fenja Beta/Presale · Affiliate-Aktion · Kooperation.
+Leer bedeutet laufender Content.
+
+**Launch-Phase** – Aufwärmen · Ankündigung · Verkaufsfenster · Letzte Chance ·
+Nach dem Kauf.
+
+Der Sinn der zweiten Eigenschaft: Sie verhindert den häufigsten Launch-Fehler –
+zwölf Beiträge über Sarah, in denen nie jemand zum Kauf aufgefordert wird.
+Faustregel: Im Verkaufsfenster darf jeder zweite Beitrag *Promote* sein,
+außerhalb höchstens jeder fünfte.
+
+**Fenja wird erst nach der Validierung beworben.** Vor dem Oktober-Test gibt es
+keine Fenja-Verkaufsbeiträge, nur die Frage, ob Bedarf besteht.
 
 Die alte gekaufte Vorlage „Content Planner Ochsenglitter" (zuletzt bearbeitet
 Februar 2025) bleibt unangetastet bestehen.
