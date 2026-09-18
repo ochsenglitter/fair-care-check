@@ -66,7 +66,24 @@ Behind the Business, Affiliate-/Produktempfehlungen.
 
 ---
 
-## Wo geplant wird: Notion
+## Wo geplant wird
+
+**Die laufende 30-Tage-Serie plus Founding-Launch** wird im Artefakt
+„Mental Load sichtbar machen" geplant, nicht in Notion:
+https://claude.ai/artifact/EfgrDosN5mhmsKbpuD2JEw
+
+Reiter: **Heute** (Tagesablauf, drei Story-Blöcke, fünf Zahlen) · **Feed**
+(13 Beiträge) · **Produktion** (Batch-Sonntage, Vorlauf, Kooperationsfenster) ·
+**Affiliate** (Jahreskalender, Regeln) · **Launch** (Phasen, Launch-Woche).
+
+**Warum dort und nicht in Notion:** Eine laufende Serie braucht eine
+Tagesansicht mit Haken, keine Datenbankzeile. Der Zustand wird geräteübergreifend
+gespeichert.
+
+**Notion bleibt zuständig für alles außerhalb der Serie:** LinkedIn/PPG,
+Affiliate-Partner, Ideen-Speicher und alles nach dem 14.10.
+
+## Notion
 
 **Content-Zentrale** (angelegt 2026-09-18):
 https://app.notion.com/p/3df904ff732d8116ac65c5c0278f24e1
