@@ -47,6 +47,11 @@ Doppelklick auf `index.html` genügt. Wer einen Server möchte:
 **Stundensatz** ist im Formular frei einstellbar; der Startwert steht in
 `app.js` unter `rate`.
 
+## Weitere App in diesem Repository
+
+`advent/` – **Stressfrei in den Advent**, die App zum 20-Tage-Vorlauf vor dem
+1. Advent (Christmas Add-on). Eigene README unter `advent/README.md`.
+
 ## Lizenz / Nutzung
 
 © Ochsenglitter. Inhalte und Gestaltung sind nicht zur Weitergabe oder zum

@@ -1,10 +1,12 @@
 # Projektkontext
 
-Dieses Repository enthält zwei Dinge:
+Dieses Repository enthält drei Dinge:
 
 1. **Fair Care Check** – statischer Care-Arbeit-Rechner (`index.html`,
    `app.js`, `styles.css`, `support.js`). Siehe `README.md`.
-2. **`produktplanung/`** – die verbindliche Produktarchitektur des
+2. **Stressfrei in den Advent** (`advent/`) – App zum 20-Tage-Vorlauf vor
+   dem 1. Advent. Gehört zum **Christmas Add-on**. Siehe `advent/README.md`.
+3. **`produktplanung/`** – die verbindliche Produktarchitektur des
    KI-/Automation-Business für Working Moms (Sarah, Fenja, Add-ons).
 
 ## Pflicht: Produktarchitektur vor Produktentscheidungen lesen

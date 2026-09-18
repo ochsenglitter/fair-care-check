@@ -1,0 +1,586 @@
+/* Stressfrei in den Advent · Ochsenglitter
+   Cormorant Garamond (Serif) für Überschriften, Mulish (Sans) für alles andere.
+   Farben und Maße wie im Fair Care Check, damit alle Materialien zusammenpassen. */
+
+:root {
+  color-scheme: light;
+
+  --creme: #FDF9F3;
+  --puder: #F7EDE0;
+  --puder-dunkel: #EDDCCB;
+  --rose: #BC7A5A;
+  --rose-hell: #F3E2D8;
+  --messing: #C2A36B;
+  --espresso: #2c251e;
+  --espresso-hell: #3a3228;
+  --claim: #5c5042;
+  --linie: #E3D7C7;
+  --linie-hell: #EDE3D5;
+  --linie-warm: #DEC9B4;
+  --gedaempft: #b3a48f;
+  --gedaempft-2: #a09080;
+  --gold-gedaempft: #a08a63;
+  --tanne: #5d6f5a;
+  --tanne-hell: #E4EAE1;
+
+  --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --sans: Mulish, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --nav-hoehe: 58px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--puder);
+  color: var(--espresso-hell);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------------- Grundgerüst ---------------- */
+
+.shell {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  padding-bottom: calc(var(--nav-hoehe) + 32px + env(safe-area-inset-bottom, 0px));
+}
+
+.col {
+  width: 100%;
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.top {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 25px;
+  color: var(--rose);
+  line-height: 1;
+}
+
+.rule-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  font-size: 10px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--gold-gedaempft);
+}
+.rule-row::before,
+.rule-row::after {
+  content: "";
+  height: 1px;
+  background: var(--linie-warm);
+  flex: 1;
+  max-width: 52px;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(32px, 10vw, 42px);
+  line-height: 1.05;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--espresso);
+  margin: 2px 0 0;
+}
+h1 em { color: var(--rose); font-style: italic; }
+
+h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 1.14;
+  color: var(--espresso);
+  margin: 0;
+  text-wrap: balance;
+}
+
+h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 14.5px;
+  line-height: 1.4;
+  color: var(--espresso);
+  margin: 0;
+}
+
+p { margin: 0; }
+
+.lede { font-size: 15px; line-height: 1.65; color: var(--claim); }
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin: 0;
+}
+.eyebrow--gold { color: var(--gold-gedaempft); letter-spacing: .3em; }
+
+/* ---------------- Karten ---------------- */
+
+.card {
+  background: var(--creme);
+  border: 1px solid var(--linie);
+  border-radius: 22px;
+  padding: 22px 20px;
+  box-shadow: 0 12px 32px rgba(44, 37, 30, .05);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card--ruhig {
+  background: var(--puder-dunkel);
+  border-color: var(--linie-warm);
+  box-shadow: none;
+}
+
+.note {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--claim);
+  border-left: 2px solid var(--linie-warm);
+  padding-left: 14px;
+}
+.note b { color: var(--espresso); font-weight: 600; }
+
+.mini { font-size: 12.5px; line-height: 1.5; color: var(--gedaempft-2); }
+
+/* ---------------- Heute ---------------- */
+
+.heute__datum {
+  font-size: 10px;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--gedaempft-2);
+}
+
+.heute__nr {
+  font-family: var(--serif);
+  font-size: 54px;
+  line-height: .9;
+  color: var(--rose);
+}
+.heute__nr small {
+  display: block;
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gedaempft-2);
+  margin-top: 8px;
+}
+
+.countdown {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+.countdown b {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 34px;
+  color: var(--espresso);
+  line-height: 1;
+}
+.countdown span { font-size: 13px; color: var(--claim); }
+
+/* ---------------- Fortschritt ---------------- */
+
+.fort {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.fort__kopf {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 12px;
+  color: var(--claim);
+}
+.fort__kopf b {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--espresso);
+}
+.bar {
+  height: 6px;
+  border-radius: 99px;
+  background: var(--puder-dunkel);
+  overflow: hidden;
+}
+.bar i {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+  background: var(--rose);
+  transition: width .3s ease;
+}
+
+/* ---------------- Tagesliste ---------------- */
+
+.days { display: flex; flex-direction: column; gap: 0; }
+
+.day {
+  display: grid;
+  grid-template-columns: 42px 1fr 30px;
+  gap: 12px;
+  align-items: start;
+  padding: 13px 0;
+  border-bottom: 1px dotted var(--linie-warm);
+  text-align: left;
+}
+.day:last-child { border-bottom: 0; }
+
+.day__n {
+  font-family: var(--serif);
+  font-size: 26px;
+  color: var(--rose);
+  line-height: .92;
+  text-align: center;
+}
+.day__n small {
+  display: block;
+  font-family: var(--sans);
+  font-size: 9px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gedaempft-2);
+  margin-top: 4px;
+  line-height: 1.2;
+}
+.day__t b {
+  font-weight: 600;
+  color: var(--espresso);
+  font-size: 14.5px;
+  line-height: 1.4;
+  display: block;
+}
+.day__t > span {
+  display: block;
+  color: var(--claim);
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 3px;
+}
+.day--weekend .day__n { color: var(--messing); }
+.day--heute {
+  background: var(--puder);
+  border-radius: 14px;
+  padding: 13px 12px;
+  border-bottom-color: transparent;
+}
+.day--offen .day__n { color: var(--gedaempft-2); }
+.day--fertig .day__t b,
+.day--fertig .day__t > span { color: var(--gedaempft); }
+.day--fertig .day__t b { text-decoration: line-through; text-decoration-color: var(--linie-warm); }
+
+.tag {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--gold-gedaempft);
+  border: 1px solid var(--linie-warm);
+  border-radius: 99px;
+  padding: 2px 7px;
+  margin-left: 5px;
+  vertical-align: 2px;
+  white-space: nowrap;
+}
+
+/* Haken */
+.hak {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  margin: 2px 0 0;
+  border: 1px solid var(--linie-warm);
+  border-radius: 7px;
+  background: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+.hak::after {
+  content: "";
+  width: 11px;
+  height: 6px;
+  border-left: 2px solid var(--creme);
+  border-bottom: 2px solid var(--creme);
+  transform: rotate(-45deg) translate(1px, -1px);
+  opacity: 0;
+}
+.hak:checked { background: var(--rose); border-color: var(--rose); }
+.hak:checked::after { opacity: 1; }
+.hak:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
+
+/* ---------------- Listen (Geschenke, Feiern, Türchen) ---------------- */
+
+.liste { display: flex; flex-direction: column; gap: 0; }
+
+.eintrag {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 0;
+  border-bottom: 1px dotted var(--linie-warm);
+}
+.eintrag:first-child { padding-top: 2px; }
+.eintrag:last-child { border-bottom: 0; padding-bottom: 2px; }
+
+.eintrag__kopf {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.eintrag__kopf .feld--name { flex: 1; min-width: 0; }
+
+.feld {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--espresso);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--linie-hell);
+  border-radius: 0;
+  padding: 5px 0;
+}
+.feld::placeholder { color: var(--gedaempft); }
+.feld:focus { outline: 0; border-bottom-color: var(--rose); }
+.feld--name { font-weight: 600; font-size: 15px; }
+.feld--klein { font-size: 13px; color: var(--claim); }
+.feld--datum { width: auto; min-width: 128px; font-size: 13px; color: var(--claim); }
+.feld--zahl { width: 84px; text-align: right; font-variant-numeric: tabular-nums; }
+
+.textarea {
+  width: 100%;
+  min-height: 84px;
+  resize: vertical;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--espresso);
+  background: var(--puder);
+  border: 1px solid var(--linie);
+  border-radius: 12px;
+  padding: 11px 13px;
+}
+.textarea:focus { outline: 0; border-color: var(--rose); }
+.textarea--code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  min-height: 110px;
+}
+
+.zeile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.zeile--eng { gap: 8px; }
+
+/* Status-Chip */
+.chip {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  border: 1px solid var(--linie-warm);
+  border-radius: 99px;
+  padding: 4px 11px;
+  background: #fff;
+  color: var(--gedaempft-2);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.chip[data-stufe="1"] { color: var(--gold-gedaempft); border-color: var(--messing); }
+.chip[data-stufe="2"] { color: var(--rose); border-color: var(--rose); background: var(--rose-hell); }
+.chip[data-stufe="3"] { color: var(--tanne); border-color: var(--tanne); background: var(--tanne-hell); }
+.chip:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
+
+.weg {
+  border: 0;
+  background: transparent;
+  color: var(--gedaempft);
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 4px 0;
+}
+.weg:hover { color: var(--rose); }
+
+/* ---------------- Knöpfe ---------------- */
+
+.btn {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--creme);
+  background: var(--rose);
+  border: 1px solid var(--rose);
+  border-radius: 99px;
+  padding: 11px 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+.btn:hover { background: #a96a4c; border-color: #a96a4c; }
+.btn:focus-visible { outline: 2px solid var(--espresso); outline-offset: 2px; }
+
+.btn--leise {
+  color: var(--espresso);
+  background: transparent;
+  border-color: var(--linie-warm);
+}
+.btn--leise:hover { background: var(--puder); border-color: var(--rose); }
+
+.btn--breit { width: 100%; }
+
+.btn-reihe { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn-reihe .btn { flex: 1; min-width: 132px; }
+
+/* ---------------- Summen und Schlüsseldaten ---------------- */
+
+.summe {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 12px;
+  border-top: 1px solid var(--linie);
+  font-size: 13px;
+  color: var(--claim);
+}
+.summe b {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 22px;
+  color: var(--espresso);
+  font-variant-numeric: tabular-nums;
+}
+
+.dl {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px dotted var(--linie-warm);
+  align-items: baseline;
+}
+.dl:last-child { border-bottom: 0; }
+.dl .w { font-family: var(--serif); font-size: 19px; color: var(--rose); line-height: 1.1; }
+.dl .t { font-size: 13.5px; line-height: 1.5; color: var(--claim); }
+.dl .t b { color: var(--espresso); font-weight: 600; }
+
+.leer {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--gedaempft-2);
+  text-align: center;
+  padding: 18px 8px;
+}
+
+.foot {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--gedaempft-2);
+  padding: 4px 0 2px;
+}
+
+/* ---------------- Navigation ---------------- */
+
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  background: rgba(253, 249, 243, .96);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--linie);
+  padding: 0 4px env(safe-area-inset-bottom, 0px);
+}
+
+.nav__btn {
+  flex: 1;
+  max-width: 88px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 9.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gedaempft-2);
+  padding: 11px 2px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+.nav__btn i {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 99px;
+  background: transparent;
+}
+.nav__btn[aria-current="true"] { color: var(--rose); }
+.nav__btn[aria-current="true"] i { background: var(--rose); }
+.nav__btn:focus-visible { outline: 2px solid var(--rose); outline-offset: -4px; }
+
+/* ---------------- Drucken ---------------- */
+
+@media print {
+  body { background: #fff; }
+  .nav, .btn, .weg, .hak { display: none !important; }
+  .card { box-shadow: none; break-inside: avoid; }
+  .shell { padding: 0; }
+  .day--heute { background: transparent; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}

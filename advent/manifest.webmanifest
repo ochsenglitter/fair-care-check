@@ -1,0 +1,15 @@
+{
+  "name": "Stressfrei in den Advent",
+  "short_name": "Advent",
+  "description": "20 Tage Vorlauf: ein To-do pro Tag, Geschenke, Adventskalender, Feiern und Budget an einem Ort.",
+  "lang": "de",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7EDE0",
+  "theme_color": "#F7EDE0",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
