@@ -263,9 +263,10 @@ stehen aber als Platzhalter im Produkt und auf der Verkaufsseite:
 1. **V10 — Claude-Stufe und Monatskosten.** Fertig, wenn der Satz steht:
    „Du brauchst [Stufe], ca. [X] € im Monat – das zahlst du an Claude, nicht an
    mich." Er gehört **vor** den Kaufbutton, nicht in die Zugangsmail.
-2. **Support-Adresse und zugesagte Antwortzeit**, z. B. „werktags innerhalb von
-   48 Stunden". Support ist ausdrücklich **keine Begleitung**: eine Adresse,
-   eine Zusage, schriftlich.
+2. **Antwortzeit für den Support.** Die Adresse ist entschieden (19.09.):
+   `hallo@ochsenglitter.de`. Offen ist nur noch die Zusage — Vorschlag:
+   „werktags innerhalb von 48 Stunden". Support ist ausdrücklich **keine
+   Begleitung**: eine Adresse, eine Zusage, schriftlich.
 3. **Live-Session ja oder nein.** `Produktionswochenende` führt sie als Bonus
    (Do 01.10.), `Launch-Choreografie` streicht sie ersatzlos. Der Tagesplan geht
    von **ohne Begleitung** aus; die Entscheidung muss vor dem 27.09. fallen,

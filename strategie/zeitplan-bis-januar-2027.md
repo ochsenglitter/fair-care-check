@@ -117,15 +117,21 @@ denkt bei euch eigentlich an die Geschenke?" sammelt Nachfrage, ohne eine
 Zusage zu machen. Verkauft Sarah bis zum 11.10., ist die Parkbedingung erfüllt
 und aus dem Teaser darf ein Produkt werden. Vorher nicht.
 
-### Vier Zahlen fehlen noch
+### Was noch fehlt
 
-Alle vier stehen als Platzhalter und blockieren die Verkaufsseite:
+Blockiert die Verkaufsseite:
 
 1. **Einführungspreis** (27.09.–11.10.)
 2. **Preis ab 12.10.** — der Evergreen-Preis
 3. **V10: Claude-Stufe und Monatskosten** — „Du brauchst [Stufe], ca. [X] € im
    Monat – das zahlst du an Claude, nicht an mich"
-4. **Support-Adresse und Antwortzeit**
+4. **Antwortzeit für den Support** — die Adresse steht, die Zusage noch nicht.
+   Vorschlag: werktags innerhalb von 48 Stunden
+
+**Erledigt am 19.09.: die Support-Adresse.** `hallo@ochsenglitter.de` — gehört
+auf die Verkaufsseite (vor den Kaufbutton), in die Zugangsmail und in die
+Rechtstexte. Support ist ausdrücklich **keine Begleitung**: eine Adresse, eine
+zugesagte Antwortzeit, schriftlich.
 
 Die Rechtstexte bleiben der einzige Punkt, der den 27.09. kippen kann, weil er
 nicht von Antonia abhängt.
