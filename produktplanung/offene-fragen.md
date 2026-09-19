@@ -226,18 +226,18 @@ entscheiden, ob Mental Load Reset ein **Bundle** (dann ist es Fenja Complete
 unter anderem Namen) oder ein **eigenes Produkt** (dann Filterfrage beantworten:
 welchen konkreten Mental Load nimmt es ab?) sein soll.
 
-### D8. Gibt es einen Founding-Preis unter 39 €? — **dringend**
+### D8. Welche Zahl ist der Einführungspreis? — **dringend**
 
-**Aktualisiert 2026-09-18.** Der Founding-Launch liegt nicht im November,
-sondern läuft bereits: Verkauf offen **Mi 23.09.**, Founding-Preis endet
-**So 27.09., 23:59**, Preis steigt **Mo 28.09.**
+**Aktualisiert 2026-09-19, Zeitschiene von Antonia vorgegeben.** Warteliste bis
+**Sa 26.09.**, Einführungspreis **So 27.09. bis So 11.10., 23:59**, danach
+Evergreen.
 
-Die Launch-Dokumente führen zwei Preise als Platzhalter, nicht einen:
+Zwei Preise stehen als Platzhalter, nicht einer:
 
 | | |
 |---|---|
-| **Founding-Preis** | bis So 27.09., 23:59 — Arbeitsannahmen im Umlauf: 29 € und 49 € |
-| **Preis ab Mo 28.09.** | noch offen — daran hängt die gesamte Sonntagsargumentation |
+| **Einführungspreis** | 27.09.–11.10. — Arbeitsannahmen im Umlauf: 29 € und 49 € |
+| **Preis ab 12.10.** | der Evergreen-Preis, noch offen — daran hängt die gesamte Schlussargumentation |
 
 In der Preistabelle stehen bisher nur **39 € Early Access** und **49 € regulär**.
 
@@ -246,13 +246,14 @@ datumsbegrenzt. Die Begründung trägt ohne künstliche Verknappung: Wer zuerst
 kauft, kauft ohne eine einzige Bewertung, kauft ein Produkt mit Kanten, und
 bekommt alles ohne Aufpreis, was daraus noch wird.
 
-**Der Preis ab Montag muss zum Januar-Preis passen** — im Januar kommt der große
-Sarah-Launch mit Testimonials. Drei Stufen (Founding · ab 28.09. · Januar)
-müssen als Reihe erklärbar sein.
+**Der Evergreen-Preis muss zum Januar-Preis passen** — im Januar kommt der große
+Sarah-Launch mit Testimonials. Drei Stufen (Einführung · ab 12.10. · Januar)
+müssen als Reihe erklärbar sein. Die Arbeitsannahmen aus `CLAUDE.md` sind
+39 € Early Access und 49 € regulär.
 
-⚠️ **Am Montag wird wirklich erhöht.** Steht der Preis am Dienstag noch
-unverändert, ist die Begründung gegenüber genau den Käuferinnen gebrochen, die
-am meisten vertraut haben.
+⚠️ **Am 12.10. wird wirklich erhöht.** Steht der Preis am 13. noch unverändert,
+ist die Begründung gegenüber genau den Käuferinnen gebrochen, die am meisten
+vertraut haben.
 
 ### D9. Drei Entscheidungen, die den Verkaufsstart blockieren
 
@@ -266,7 +267,32 @@ stehen aber als Platzhalter im Produkt und auf der Verkaufsseite:
    48 Stunden". Support ist ausdrücklich **keine Begleitung**: eine Adresse,
    eine Zusage, schriftlich.
 3. **Live-Session ja oder nein.** `Produktionswochenende` führt sie als Bonus
-   (Do 01.10.), `Launch-Choreografie` streicht sie ersatzlos. Beide sind
-   „Fassung 2" vom selben Wochenende. Der Tagesplan geht von **ohne Begleitung**
-   aus; die Entscheidung muss vor Mo 21.09. fallen, weil Verkaufsseite, alle vier
-   Mails und die Founding-Begründung daran hängen.
+   (Do 01.10.), `Launch-Choreografie` streicht sie ersatzlos. Der Tagesplan geht
+   von **ohne Begleitung** aus; die Entscheidung muss vor dem 27.09. fallen,
+   weil Verkaufsseite und alle Mails daran hängen.
+
+### D10. Darf das Christmas Add-on ab 12.10. geteasert werden?
+
+**Stand 2026-09-19.** Die vorgegebene Zeitschiene sieht ab dem 12.10. Evergreen
+plus **Teaser für das Christmas Add-on** vor.
+
+Das kollidiert mit der Produktregel in `CLAUDE.md`:
+
+> Die Fenja-Add-ons sind architektonisch gültig, **ihr Bau ist geparkt**,
+> solange Sarah und Fenja nicht nachweislich verkaufen.
+
+Ein Teaser ab 12.10. kündigt damit ein Produkt an, dessen Bau noch nicht
+freigegeben ist — und das Weihnachtsfenster verzeiht keine Verschiebung.
+
+**Vorschlag:** ab 12.10. die **Frage** teasern, nicht das Produkt. „Wer denkt
+bei euch eigentlich an die Geschenke?" sammelt Nachfrage und Adressen, ohne
+eine Zusage zu machen. Verkauft Sarah im Einführungsfenster, ist die
+Parkbedingung erfüllt — dann darf ab November aus dem Teaser ein Produkt
+werden. Verkauft sie nicht, bleibt die Frage eine Content-Serie und kostet
+nichts.
+
+**Zusätzlich zu klären:** Das Christmas Add-on ist in der Produktarchitektur
+ein **Fenja**-Add-on. Fenja gibt es im Oktober noch nicht. Wird es an Fenja
+gekoppelt (dann frühestens Januar) oder als eigenständiges Produkt neben Sarah
+verkauft (dann ist die Einordnungstabelle betroffen)? **Nicht eigenmächtig
+verschieben** — das ist eine Architekturentscheidung.

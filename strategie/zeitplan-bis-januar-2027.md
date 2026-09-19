@@ -1,6 +1,6 @@
 # Zeitplan bis 31.12.2026
 
-**Stand:** 2026-09-18
+**Stand:** 2026-09-19
 **Zweck:** Monatsprioritäten aus dem Master-Briefing. Wenn eine Aufgabe in
 keinem dieser Monate steht, ist sie aktuell nicht dran.
 
@@ -8,7 +8,7 @@ keinem dieser Monate steht, ist sie aktuell nicht dran.
 
 ## September 2026
 
-1. **Sarah Founding verkaufen** – Verkauf offen Mi 23.09., Preis steigt Mo 28.09.
+1. **Sarah verkaufen** – Warteliste bis 26.09., Einführungspreis ab 27.09.
 2. erste zahlende Kundinnen gewinnen
 3. Anschlussprojekt ab Januar akquirieren
 4. PPG-/Freelance-Outreach intensivieren
@@ -16,9 +16,9 @@ keinem dieser Monate steht, ist sie aktuell nicht dran.
 
 ## Oktober 2026
 
-1. Sarah ausliefern
-2. Feedback auswerten
-3. Sarah optimieren
+1. **Einführungspreis bis 11.10. verkaufen, am 12.10. wirklich erhöhen**
+2. Sarah ausliefern, Feedback auswerten, Fehlerkästen nachziehen
+3. Evergreen aufsetzen, Christmas-Nachfrage sammeln
 4. Freelancer-/PPG-Pipeline Richtung Januar konkretisieren
 5. **Fenja-Interesse bei Sarah-Käuferinnen testen**
 
@@ -47,77 +47,91 @@ keinem dieser Monate steht, ist sie aktuell nicht dran.
 
 ---
 
-## ⚠️ Korrektur: Der Launch läuft bereits — im September
+## ⚠️ Verbindliche Launch-Zeitschiene Sarah
 
-**Stand 2026-09-18.** Die Planung, die von einem Founding-Launch Anfang November
-ausging, ist überholt. Maßgeblich sind die drei Dokumente im Drive-Ordner
-`Sarah und Fenja / Launches / 2026-10 Sarah Founding und Early Access`:
+**Stand: 2026-09-19. Von Antonia direkt vorgegeben.** Diese Zeitschiene gilt.
+Sie ersetzt sowohl die Monatsplanung oben als auch die Dokumente im
+Drive-Ordner `Sarah und Fenja / Launches / 2026-10 Sarah Founding und Early
+Access`. Bei Widersprüchen gilt **dieser Abschnitt**.
 
-| Dokument | Was darin verbindlich geregelt ist |
-|---|---|
-| `Launch-Choreografie Sarah · 18.–27.09.` (Fassung 2) | Tag-für-Tag-Kommunikation, Founding ohne Begleitung |
-| `Produktionswochenende Sarah` (Fassung 2) | Drehplan, Namen, Funnel, Technikreihenfolge |
-| `00 Launchplan Sarah – Sofortstart` | Reihenfolge der Blocker, was gestrichen wird |
-| `00 ALT – Launchplan Sarah 26.10.` | **überholt**, nur noch als Quelle für die Produkthärtung |
+| Phase | Zeitraum | Was läuft |
+|---|---|---|
+| **Early Access · Warteliste** | ab sofort bis **Sa 26.09.** | Adressen sammeln. Kein Verkauf. Warteliste-Versprechen: Mail zuerst plus Einführungspreis |
+| **Einführungspreis** | **So 27.09. – So 11.10., 23:59** | Verkauf offen, 15 Tage |
+| **Evergreen** | ab **Mo 12.10.** | Fester Preis, kein Countdown, keine Aktion |
+| **Christmas Add-on** | Teaser ab 12.10., Thema ab November | siehe Vorbehalt unten |
 
-**Bei Widersprüchen gilt die `Launch-Choreografie`**, weil sie die jüngste
-Fassung ist und die Außenkommunikation regelt.
+### Was aus den Drive-Dokumenten weiter gilt
 
-### Die echte Zeitschiene
+Überholt ist dort nur die **Zeitschiene** (Verkaufsstart Mi 23.09., Ende
+So 27.09.). Weiter gültig und in den Tagesplan übernommen:
 
-| Zeitraum | Was läuft |
-|---|---|
-| **Fr 18.–So 20.09.** | Produktionswochenende. Nebenher täglich eine „So sieht das aus"-Story |
-| **Mo 21.09.** | Ankündigung. Story-Serie, Mail M1, ManyChat scharf |
-| **Di 22.09.** | Einwand „Ich bin nicht technisch genug" abräumen. Testerin geht durch |
-| **Mi 23.09.** | **Verkauf offen.** Mail M2, V04 als Reel |
-| **Do 24.09.** | Der Beweis: echte Nachrichten, Reel „Ressource Mama ist nicht unendlich" |
-| **Fr 25.09.** | Mail M3, der Einwand für Mail-Leserinnen |
-| **Sa 26.09.** | Ruhe. Eine Story |
-| **So 27.09., 23:59** | **Founding-Preis endet** |
-| **Mo 28.09.** | **Preis steigt. Ohne Ausnahme.** |
-| 29.09.–18.10. | Produkt härten. Testimonial-Mail ab Tag 14 |
-| 19.10.–01.11. | Herbstferien, kein Schulverkauf, Affiliate und Kooperationen |
-| November | „Stressfrei in den Advent" kostenlos, Black Week Affiliate |
-| Januar | **Der große Sarah-Launch** mit Testimonials aus der Founding-Runde |
+- die **DM-Antwort** („Das ist gar keine App") und die Regel, auf
+  „Was ist das für eine App?" nie mit „Das ist Claude" zu antworten
+- der **Tagesrhythmus der Fragen**: Was ist das? · Kann ich das? · Wo kaufe
+  ich? · Bin ich damit allein? · Jetzt oder später?
+- die Begründung **ohne Platzlimit**, mit Ende am Datum
+- die **Anonymisierungsregel** vor jedem Bildschirmfoto
+- der **Produktionsplan** (Drehplan, Namen, Funnel) und die **Reihenfolge der
+  Blocker**
 
-### Was sich dadurch strukturell ändert
+### Die fünfzehn Tage brauchen eine Dramaturgie
 
-- **Kein Platzlimit, sondern ein Ende am Datum.** „Nur 50 Plätze" ohne Grund ist
-  künstliche Verknappung. Der Founding-Preis endet an einem überprüfbaren Termin.
+Fünfzehn Tage „kauf jetzt" verkaufen weniger als fünfzehn Tage mit Aufbau.
+Deshalb drei Akte, mit **vier echten Verkaufstagen**:
+
+| Akt | Zeitraum | Was er leistet |
+|---|---|---|
+| **Öffnen** | So 27.–Mi 30.09. | Warteliste zuerst, dann öffentlich. Der Weg nach dem Kauf |
+| **Beweisen** | Do 01.–So 04.10. | Echte Käuferinnen, Ausschlüsse, erste Rückmeldungen |
+| **Schließen** | Mo 05.–So 11.10. | Das Datum steht in jeder Mail. Stimmen aus W3 |
+
+Verkaufstage: **So 27.09. · Mi 30.09. · So 04.10. · So 11.10.**
+
+**Günstiger Nebeneffekt:** Die Testimonial-Mail W3 läuft 14 Tage nach dem
+ersten Kauf — bei Start am 27.09. also genau am **11.10.**, dem Schlusstag.
+Die ersten echten Stimmen sind da, wenn sie am meisten wert sind.
+
+### Was sich strukturell nicht ändert
+
+- **Kein Platzlimit, sondern ein Ende am Datum.** 11.10., 23:59.
 - **Keine Begleitung.** Keine Live-Session, keine Sprechstunde, kein „direkter
-  Draht" — in keiner Mail, keiner Story, nicht auf der Seite. An ihre Stelle
-  treten: der Test durch eine Fremde vor Mittwoch, eine Support-Adresse mit
-  zugesagter Antwortzeit, und die Fehlerkästen „Wenn das nicht klappt".
-- **Der Adventsplaner 2026 ist gestrichen.** Wochen Bauzeit für ein 19-€-Produkt
-  mit zwanzig Verkaufstagen. „Stressfrei in den Advent" bleibt als kostenlose
-  Serie und hält die Liste bis Januar warm.
-- **Fenja rutscht in den Januar.** Das bleibt so — aus dem September-Launch folgt
-  kein früheres Fenster.
+  Draht". An ihre Stelle treten: der Test durch eine Fremde, eine
+  Support-Adresse mit zugesagter Antwortzeit, die Fehlerkästen „Wenn das nicht
+  klappt".
+- **Am 12.10. wird wirklich erhöht.** Steht der Preis am 13. unverändert, ist
+  die Begründung gegenüber genau den Käuferinnen gebrochen, die am meisten
+  vertraut haben.
+- **Der Adventsplaner 2026 bleibt gestrichen.** „Stressfrei in den Advent"
+  bleibt als kostenlose Serie und hält die Liste bis Januar warm.
+- **Fenja rutscht weiter in den Januar.**
 
-### Offener Widerspruch zwischen zwei Dokumenten
+### ⚠️ Vorbehalt Christmas Add-on
 
-`Produktionswochenende` führt die Live-Session weiter als Bonus mit Termin
-**Do 01.10.** `Launch-Choreografie` streicht sie ersatzlos. Beide sind
-„Fassung 2" vom selben Wochenende.
+Die Produktregel in `CLAUDE.md` ist eindeutig: **Der Bau der Fenja-Add-ons ist
+geparkt, solange Sarah und Fenja nicht nachweislich verkaufen.** Ein Teaser ab
+dem 12.10. verspricht damit etwas, das es noch nicht gibt.
 
-**Zu entscheiden vor Mo 21.09.**, weil Verkaufsseite, alle vier Mails und die
-Founding-Begründung daran hängen. Der Tagesplan geht bis zur Entscheidung von
-*ohne Begleitung* aus.
+**Sauberer Weg:** ab 12.10. die **Frage** teasern, nicht das Produkt — „Wer
+denkt bei euch eigentlich an die Geschenke?" sammelt Nachfrage, ohne eine
+Zusage zu machen. Verkauft Sarah bis zum 11.10., ist die Parkbedingung erfüllt
+und aus dem Teaser darf ein Produkt werden. Vorher nicht.
 
 ### Vier Zahlen fehlen noch
 
-Alle vier stehen als Platzhalter in den Dokumenten und blockieren den Verkauf:
+Alle vier stehen als Platzhalter und blockieren die Verkaufsseite:
 
-1. **Founding-Preis** (bis So 27.09., 23:59)
-2. **Preis ab Mo 28.09.** — daran hängt die ganze Sonntagsargumentation
-3. **V10: Claude-Stufe und Monatskosten** — der Satz „Du brauchst [Stufe],
-   ca. [X] € im Monat – das zahlst du an Claude, nicht an mich"
+1. **Einführungspreis** (27.09.–11.10.)
+2. **Preis ab 12.10.** — der Evergreen-Preis
+3. **V10: Claude-Stufe und Monatskosten** — „Du brauchst [Stufe], ca. [X] € im
+   Monat – das zahlst du an Claude, nicht an mich"
 4. **Support-Adresse und Antwortzeit**
 
-Die Arbeitsannahmen aus `CLAUDE.md` (Sarah 39 € EA / 49 € regulär) sind damit
-**nicht erledigt, sondern betroffen**: der Founding-Preis liegt unter dem Early
-Access, und der Preis ab Montag muss zum Januar-Preis passen.
+Die Rechtstexte bleiben der einzige Punkt, der den 27.09. kippen kann, weil er
+nicht von Antonia abhängt.
+
+**Der Tagesplan mit Story-Themen und Aufgaben:**
+https://claude.ai/artifact/EfgrDosN5mhmsKbpuD2JEw
 
 ---
 

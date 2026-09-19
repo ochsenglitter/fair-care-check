@@ -79,15 +79,18 @@ Reiter: **Heute** (Tagesfrage, Aufgaben mit Haken, Story-Themen) · **Woche**
 **Regeln** (Anonymisieren, frei sprechen, niemals streichen, Kooperationen,
 Affiliate).
 
-Inhaltlich folgt es der `Launch-Choreografie Sarah · 18.–27.09.` aus dem
-Drive-Ordner. Die Zeitschiene steht in `strategie/zeitplan-bis-januar-2027.md`.
+Inhaltlich folgt es der verbindlichen Zeitschiene in
+`strategie/zeitplan-bis-januar-2027.md`: Warteliste bis 26.09.,
+Einführungspreis 27.09.–11.10., danach Evergreen und Christmas-Teaser.
+Aus der `Launch-Choreografie` im Drive-Ordner gelten weiter die DM-Antwort,
+der Tagesrhythmus der Fragen und die Anonymisierungsregel.
 
 **Warum dort und nicht in Notion:** Ein laufender Launch braucht eine
 Tagesansicht mit Haken, keine Datenbankzeile. Der Zustand wird geräteübergreifend
 gespeichert.
 
 **Notion bleibt zuständig für alles außerhalb der Serie:** LinkedIn/PPG,
-Affiliate-Partner, Ideen-Speicher und alles nach dem 18.10.
+Affiliate-Partner, Ideen-Speicher und alles nach dem 12.10.
 
 ## Notion
 
