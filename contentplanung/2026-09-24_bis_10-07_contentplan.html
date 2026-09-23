@@ -1,0 +1,314 @@
+<title>Sarah-Launch Contentplan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Caveat:wght@600&display=swap">
+<style>
+/* Ochsenglitter Designsystem, Theme „Sarah & Fenja“ – alle Werte aus tokens.json */
+:root{
+  --grund:#fbf4ef; --flaeche:#ffffff; --flaeche-weich:#fbe7ec;
+  --tinte:#2a1620; --tinte-weich:#5c4450; --akzent:#ff3f86; --akzent-aktiv:#d21e66;
+  --gold:#bd8f3f; --beere:#b01a50; --linie:#e6d5cb; --tinte-auf-dunkel:#ffffff;
+  --raum-1:4px; --raum-2:8px; --raum-3:12px; --raum-4:18px; --raum-5:24px; --raum-6:34px; --raum-7:56px;
+  --rund-klein:6px; --rund-mittel:12px; --rund-xl:22px; --rund-pille:999px;
+  --schatten-karte:0 12px 32px rgba(44,37,30,.05);
+  --serif:"Playfair Display", Georgia, "Times New Roman", serif;
+  --sans:"DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --hand:Caveat, "Segoe Script", cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--grund);color:var(--tinte-weich);font:400 17px/1.65 var(--sans);padding-inline:16px;padding-block:var(--raum-6) var(--raum-7)}
+.wrap{max-width:1040px;margin-inline:auto;display:flex;flex-direction:column;gap:var(--raum-7)}
+h1,h2,h3{font-family:var(--serif);color:var(--tinte);font-weight:700;text-wrap:balance;margin:0}
+h1{font-size:clamp(33px,6vw,58px);line-height:1.14;letter-spacing:-.015em}
+h1 em,h2 em{color:var(--akzent);font-style:italic}
+h2{font-size:clamp(28px,4vw,40px);line-height:1.14}
+h3{font-size:22px;line-height:1.3}
+p{margin:0;max-width:60ch}
+.kicker{font:700 12px/1.4 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.lead{font-size:19px}
+.stack{display:flex;flex-direction:column;gap:var(--raum-4)}
+.hand{font-family:var(--hand);font-size:24px;font-weight:600;color:var(--beere)}
+/* Status */
+.status{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--raum-4)}
+.card{background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--rund-xl);padding:var(--raum-5);display:flex;flex-direction:column;gap:var(--raum-3)}
+.card .zahl{font:700 44px/1 var(--serif);color:var(--tinte);font-variant-numeric:tabular-nums}
+.card ul{margin:0;padding-left:1.1em;font-size:15px}
+.dunkel{background:var(--tinte);border-color:var(--tinte);color:var(--tinte-auf-dunkel)}
+.dunkel h3,.dunkel .zahl{color:var(--tinte-auf-dunkel)}
+.dunkel .kicker{color:var(--gold)}
+/* Filter */
+.filter{display:flex;flex-wrap:wrap;gap:var(--raum-2)}
+.filter button{font:700 14px/1.2 var(--sans);letter-spacing:.03em;border:1px solid var(--linie);background:var(--flaeche);color:var(--tinte);border-radius:var(--rund-pille);padding:10px 18px;cursor:pointer}
+.filter button[aria-pressed="true"]{background:var(--beere);border-color:var(--beere);color:var(--tinte-auf-dunkel)}
+.filter button:focus-visible,summary:focus-visible{outline:2px solid var(--akzent);outline-offset:3px}
+/* Tage */
+.tage{display:flex;flex-direction:column;gap:var(--raum-4)}
+.tag{background:var(--flaeche);border:1px solid var(--linie);border-radius:var(--rund-xl);padding:var(--raum-5);display:grid;grid-template-columns:150px 1fr;gap:var(--raum-5)}
+.tag-kopf{display:flex;flex-direction:column;gap:var(--raum-2)}
+.datum{font:700 26px/1.1 var(--serif);color:var(--tinte)}
+.wtag{font-size:14px}
+.phase{align-self:flex-start;font:700 12px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase;border-radius:var(--rund-pille);padding:3px 10px;border:1px solid var(--linie);color:var(--tinte)}
+.p1{background:var(--flaeche-weich)} .p2{background:var(--beere);border-color:var(--beere);color:var(--tinte-auf-dunkel)} .pr{background:var(--grund)}
+.thema{font-size:15px;color:var(--tinte)}
+.kanaele{display:flex;flex-direction:column;gap:var(--raum-4);min-width:0}
+.kanal{display:grid;grid-template-columns:92px 1fr;gap:var(--raum-3);align-items:start}
+.klabel{font:700 12px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);padding-top:4px}
+.eintrag{font-size:15px;line-height:1.55;display:flex;flex-direction:column;gap:var(--raum-1)}
+.eintrag b{color:var(--tinte)}
+.marke{display:inline-block;font:700 11px/1.5 var(--sans);letter-spacing:.06em;text-transform:uppercase;border-radius:var(--rund-klein);padding:1px 7px;margin-right:6px;vertical-align:1px}
+.m-fertig{background:#e7f1e6;color:#2d5a2a} .m-schnitt{background:var(--flaeche-weich);color:var(--beere)} .m-dreh{background:var(--tinte);color:#fff} .m-fremd{background:var(--grund);color:var(--tinte-weich);border:1px solid var(--linie)}
+.stories{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:var(--raum-2)}
+.slot{border:1px solid var(--linie);border-radius:var(--rund-mittel);padding:10px 12px;font-size:14px;line-height:1.45;display:flex;flex-direction:column;gap:2px;background:var(--grund)}
+.slot .zeit{font:700 13px/1.2 var(--sans);color:var(--tinte);font-variant-numeric:tabular-nums;display:flex;justify-content:space-between;gap:8px}
+.slot .art{font-weight:500;color:var(--gold);text-transform:uppercase;letter-spacing:.08em;font-size:11px}
+.bogen{font-size:14px;font-style:italic;color:var(--tinte-weich)}
+[data-f="feed"] .k-tiktok,[data-f="feed"] .k-stories,
+[data-f="tiktok"] .k-feed,[data-f="tiktok"] .k-stories,
+[data-f="stories"] .k-feed,[data-f="stories"] .k-tiktok{display:none}
+/* Tabellen */
+.tabelle{overflow-x:auto;border:1px solid var(--linie);border-radius:var(--rund-xl);background:var(--flaeche)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:15px}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--linie);vertical-align:top}
+th{font:700 12px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+tr:last-child td{border-bottom:0}
+td b{color:var(--tinte)}
+.zwei{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:var(--raum-4)}
+.muster{background:var(--flaeche-weich);border-radius:var(--rund-mittel);padding:var(--raum-4);font-size:15px;white-space:pre-line;color:var(--tinte)}
+ol.haken,ul.haken{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:var(--raum-3);font-size:15px}
+.haken li{display:grid;grid-template-columns:22px 1fr;gap:10px}
+.haken li::before{content:"✓";width:22px;height:22px;border-radius:50%;background:var(--gold);color:#fff;font:700 12px/22px var(--sans);text-align:center}
+@media (max-width:680px){
+  .tag{grid-template-columns:1fr;gap:var(--raum-4)}
+  .kanal{grid-template-columns:1fr;gap:var(--raum-1)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header class="stack">
+  <span class="kicker">Contentplan · Do 24.09. bis Mi 07.10.2026</span>
+  <h1>Zwei Wochen Sarah-Launch, <em>Tag für Tag.</em></h1>
+  <p class="lead">Instagram-Feed, TikTok und Stories im Zwei-Stunden-Takt, abgestimmt auf den „01 Launchfahrplan Sarah“ und die Planoly-Einplanung vom 19.09. Karussells kommen von den anderen Agenten und sind hier nur als feste Plätze eingetragen.</p>
+  <p class="hand">Fertig ist, was grün markiert ist. Alles andere braucht den Schnitt am Mac oder einen Dreh.</p>
+</header>
+
+<section class="status" aria-label="Stand">
+  <div class="card">
+    <span class="kicker">Fertig &amp; eingeplant</span>
+    <span class="zahl">9</span>
+    <ul>
+      <li>6 Reels im Feed (Planoly, 06:00 Uhr)</li>
+      <li>3 TikTok-Fassungen: schulpost, assistentin, kopf-frei</li>
+    </ul>
+  </div>
+  <div class="card">
+    <span class="kicker">Schnitt am Mac</span>
+    <span class="zahl">11</span>
+    <ul>
+      <li>6 kurze Sarah-Sequenzen für TikTok</li>
+      <li>4 TikTok-Fassungen ohne „Kommentiere“</li>
+      <li>Story-Clips aus dem Ordner „Story“ (7 Rohclips)</li>
+    </ul>
+  </div>
+  <div class="card dunkel">
+    <span class="kicker">Fehlt: Dreh</span>
+    <span class="zahl">3</span>
+    <ul>
+      <li>27.09. Start-Reel</li>
+      <li>30.09. „Rückwärts denken“</li>
+      <li>05.10. „Der Tag, an dem es sich gelohnt hat“</li>
+    </ul>
+  </div>
+</section>
+
+<section class="stack" aria-labelledby="plan-h">
+  <span class="kicker">Der Plan</span>
+  <h2 id="plan-h">Jeder Tag, <em>jeder Kanal.</em></h2>
+  <p>Stories laufen von 08 bis 20 Uhr, alle zwei Stunden eine, sieben am Tag. Jeder Tag erzählt eine Geschichte vom Morgen bis zum Abend und endet mit dem Link der aktuellen Phase.</p>
+  <div class="filter" role="group" aria-label="Kanal filtern">
+    <button type="button" id="f-alle" data-filter="alle" aria-pressed="true">Alle Kanäle</button>
+    <button type="button" id="f-feed" data-filter="feed" aria-pressed="false">Instagram-Feed</button>
+    <button type="button" id="f-tiktok" data-filter="tiktok" aria-pressed="false">TikTok</button>
+    <button type="button" id="f-stories" data-filter="stories" aria-pressed="false">Stories</button>
+  </div>
+  <div class="tage" id="tage" data-f="alle"></div>
+</section>
+
+<section class="stack" aria-labelledby="tt-h">
+  <span class="kicker">TikTok</span>
+  <h2 id="tt-h">Link statt <em>„Kommentiere“.</em></h2>
+  <div class="zwei">
+    <div class="card">
+      <h3>So wird jede Sarah-Fassung geschnitten</h3>
+      <ul class="haken">
+        <li>Der Satz „Kommentiere SARAH“ wird hinten weggeschnitten, samt eingebrannter Einblendung. Das Video endet auf dem letzten Nutzensatz.</li>
+        <li>Die bestehenden TikTok-Fassungen vom 21.09. dienen als Vorlage für Länge und Schlussbild.</li>
+        <li>Der Link kommt in die Caption. Achtung: TikTok macht Links in Captions nicht klickbar. Deshalb steht der Link als Text in der Caption und zusätzlich in der Bio.</li>
+        <li>Link je Phase: bis Sa 26.09. <b>/sarah-early-access/</b>, ab So 27.09. <b>/sarah/</b>.</li>
+        <li>CHECK-Videos auf TikTok enden ebenfalls ohne „Kommentiere CHECK“ und bekommen den Link zum Fair Care Check.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Caption-Vorlage Sarah</h3>
+      <div class="muster">[Erster Satz aus dem Video, z. B.: Ich lese die Schulpost meiner Kinder nicht mehr selbst.]
+
+Ich fotografiere den Zettel. Sarah macht daraus Termine, Fristen und Aufgaben, direkt in meinem Kalender.
+
+Phase 1: Trag dich auf die Warteliste ein: ochsenglitter.de/sarah-early-access/
+Phase 2: Sarah gibt es bis 11.10. zum Einführungspreis: ochsenglitter.de/sarah/
+Link auch in meiner Bio.
+
+#mentalload #schulalltag #workingmom #familienorganisation</div>
+      <p style="font-size:14px">Domain bitte prüfen. Der Launchfahrplan nennt nur die Pfade.</p>
+    </div>
+  </div>
+</section>
+
+<section class="stack" aria-labelledby="kurz-h">
+  <span class="kicker">Kurze Sarah-Sequenzen</span>
+  <h2 id="kurz-h">Sechs Clips aus den <em>Werbevideos.</em></h2>
+  <p>Jede Sequenz trägt genau einen Gedanken, 15 bis 30 Sekunden, mit eigenem Titel ab Bild 0. Die Timecodes setzt der Schnitt am Mac nach dem Transkript. Die Abschnitte stammen aus der Stapel-Übersicht vom 17./18.09.</p>
+  <div class="tabelle">
+    <table>
+      <thead><tr><th>Clip</th><th>Quelle</th><th>Abschnitt</th><th>Titel (Vorschlag)</th><th>Einsatz</th></tr></thead>
+      <tbody>
+        <tr><td><b>K1</b></td><td>schulpost (Sarah_Werbung2, 0:48)</td><td>Sprechteil bis „Zettel rein“</td><td>Ich fotografiere <em>nur noch den Zettel.</em></td><td>TikTok Fr 25.09.</td></tr>
+        <tr><td><b>K2</b></td><td>assistentin (Sarah_Werbung, 1:57)</td><td>Klassenfahrt erkannt, Rückwärtsplanung</td><td>Sie rechnet rückwärts, <em>bis zum Koffer.</em></td><td>TikTok Di 29.09.</td></tr>
+        <tr><td><b>K3</b></td><td>familie_job (1:56)</td><td>Einstieg „wie einen Job“ + Checkliste „ausgelagert“</td><td>Ich manage meine Familie <em>wie einen Job.</em></td><td>TikTok Do 01.10.</td></tr>
+        <tr><td><b>K4</b></td><td>schulpost</td><td>Chips Orte, Daten, Anlagen</td><td>Drei Dinge, die Sarah <em>in jedem Brief findet.</em></td><td>TikTok Sa 03.10.</td></tr>
+        <tr><td><b>K5</b></td><td>assistentin</td><td>Kalendereinträge + Enter</td><td>Zettel rein, <em>Kalender raus.</em></td><td>TikTok Mo 05.10.</td></tr>
+        <tr><td><b>K6</b></td><td>talkinghead57 / kopf-frei</td><td>Hook + erster Absatz</td><td>Ich muss nicht <em>an alles denken.</em></td><td>TikTok Mi 07.10.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:14px">Im Bildschirm-Mitschnitt wird weiter nicht gezoomt. Geschnitten wird dort nur an Stellen, an denen nicht gescrollt wird. So steht es in der Stapel-Übersicht.</p>
+</section>
+
+<section class="stack" aria-labelledby="mac-h">
+  <span class="kicker">Schnittauftrag</span>
+  <h2 id="mac-h">Was die Sitzung <em>am Mac baut.</em></h2>
+  <div class="card">
+    <p>Diese Cloud-Sitzung kann keine Videos aus Drive laden. Den Schnitt übernimmt Claude Code auf dem Mac, mit den Werkzeugen in <b>~/ochsenglitter-videotools/</b> und nach den Regeln aus der Drive-CLAUDE.md. Dateinamen nach dem Muster <b>JJJJ-MM-TT_thema_KEYWORD</b>.</p>
+    <ol class="haken">
+      <li><b>TikTok-Fassungen ohne „Kommentiere“:</b> 2026-09-30_familie-job_SARAH_tiktok, 2026-09-28_ressourcen_CHECK_tiktok, 2026-10-02_to-do-liste_CHECK_tiktok, 2026-10-04_backup_CHECK_tiktok.</li>
+      <li><b>Kurze Sarah-Sequenzen K1 bis K6</b> nach der Tabelle oben, je eine eigene Datei mit _tiktok.</li>
+      <li><b>Story-Clips:</b> die 7 Rohclips aus „Rohmaterial/Talking Head/Story“ sichten, transkribieren und den Story-Plätzen mit der Marke „Clip“ zuordnen. Story-Clips höchstens 15 Sekunden, Untertitel im tinte-Kästchen, kein Titel.</li>
+      <li><b>Jumpcut-Videos aus B-Roll:</b> sobald die Übersicht mit den Texten im Ordner liegt, mit textvideo.py. Ablage in „Fertige Produkte/Text-Videos/“.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="stack" aria-labelledby="offen-h">
+  <span class="kicker">Offen</span>
+  <h2 id="offen-h">Das brauche ich <em>noch von dir.</em></h2>
+  <div class="card">
+    <ul class="haken">
+      <li><b>Stories-Ordner mit Textposts:</b> noch nicht gefunden. Solange er fehlt, stehen hier meine Story-Texte. Kommen die Texte der anderen Agenten, ersetzen sie die Text-Plätze.</li>
+      <li><b>Affiliate-Karussells:</b> Termine unbekannt. Frei und passend wären Sa 03.10. und So 04.10. Sie verkaufen nicht Sarah, stören also die Ruhetage kaum.</li>
+      <li><b>Einführungspreis:</b> 29 € steht im alten Veröffentlichungsplan. Alle Preise sind Arbeitsannahmen. Bitte vor dem 27.09. bestätigen.</li>
+      <li><b>Echte Fragen und Geschichten:</b> Plätze mit [ECHTE FRAGE] oder [DEINE GESCHICHTE] bleiben leer, bis du sie füllst. Erfunden wird nichts.</li>
+      <li><b>Story-Uhrzeiten:</b> 08 bis 20 Uhr ist mein Vorschlag. Wenn du früher oder später startest, verschiebe ich alle Plätze.</li>
+    </ul>
+  </div>
+</section>
+
+</div>
+
+<script>
+const L1 = "Link: /sarah-early-access/", L2 = "Link: /sarah/";
+const M = {f:["m-fertig","fertig"], s:["m-schnitt","Schnitt"], d:["m-dreh","Dreh"], a:["m-fremd","Karussell-Team"]};
+// Stories: [Uhrzeit, Art, Text]
+const TAGE = [
+ {d:"24.09.", w:"Donnerstag", p:1, thema:"Was Sarah nicht ist",
+  feed:[["a","Karussell „Was Sarah nicht ist“: kein Abo, kein Kurs, keine App"]],
+  tiktok:[["f","2026-09-20_schulpost_SARAH_tiktok, Caption mit Warteliste-Link"]],
+  bogen:"Drei Missverständnisse, eins nach dem anderen aufgeräumt.",
+  st:[["08","Clip","Kaffee, Küchentisch: „Heute räume ich mit drei Missverständnissen auf.“"],["10","Text","Missverständnis 1: Sarah ist ein Abo. Nein. Du kaufst sie einmal."],["12","Umfrage","Was schreckt dich bei KI am meisten ab? Kosten · Technik · Datenschutz"],["14","Text","Missverständnis 2: Sarah ist ein Kurs. Nein. Kopieren, Daten eintragen, testen. Fertig."],["16","Clip","Schulpost auf dem Tisch, anonymisiert: „So sieht es hier jeden Dienstag aus.“"],["18","Text","Missverständnis 3: Du brauchst eine neue App. Nein. Sarah läuft in deiner eigenen KI-Umgebung."],["20","Link","Karussell teilen + "+L1]]},
+ {d:"25.09.", w:"Freitag", p:1, thema:"Sonntag geht sie raus",
+  feed:[["f","pfannkuchen_schulpost_v1 (Text-Video)"]],
+  tiktok:[["s","K1 „Ich fotografiere nur noch den Zettel“"]],
+  bogen:"Ankündigen ohne Countdown: zeigen, woran du gerade sitzt.",
+  st:[["08","Clip","Pfannkuchen: „Frühstück heute ohne Zettelchaos.“"],["10","Text","Sonntag geht Sarah raus. Wer auf der Liste steht, erfährt es zuerst."],["12","Text","Ergebnis der Umfrage von gestern, ehrlich eingeordnet"],["14","Clip","Hinter den Kulissen: letzter Test mit einem echten Elternbrief"],["16","Text","Was du bekommst: eine Anleitung Schritt für Schritt. Kein Video-Kurs."],["18","Frage","„Was willst du wissen, bevor Sarah rauskommt?“"],["20","Link",L1]]},
+ {d:"26.09.", w:"Samstag", p:1, thema:"Letzter Tag der Liste",
+  feed:[["f","2026-09-26_kopf-frei_SARAH (talkinghead57_v3)"]],
+  tiktok:[["f","2026-09-26_kopf-frei_SARAH_tiktok, Caption mit Warteliste-Link"]],
+  bogen:"Ein Versprechen halten: Die Liste erfährt es zuerst.",
+  st:[["08","Clip","„Heute ist der letzte Tag der Warteliste.“"],["10","Text","Ich hab versprochen: Die Liste erfährt es zuerst. Dabei bleibt es."],["12","Text","Antworten auf eure Fragen von gestern [ECHTE FRAGEN]"],["14","Clip","Samstag, echtes Leben, kein Verkauf"],["16","Text","Morgen früh geht eine Mail an alle auf der Liste."],["18","Reel","Reel des Tages teilen"],["20","Link","Letzter Aufruf, sachlich + "+L1]]},
+ {d:"27.09.", w:"Sonntag", p:2, thema:"Start",
+  feed:[["d","Start-Reel, ein paar Stunden nach der Mail an die Liste"]],
+  tiktok:[["f","2026-09-23_assistentin_SARAH_tiktok, Caption mit /sarah/"]],
+  bogen:"Sarah ist da. Erst die Liste, dann alle.",
+  st:[["08","Text","Sarah ist da. Die Liste hat die Mail schon."],["10","Clip","Warum ich Sarah gebaut habe [DEINE GESCHICHTE, ein Satz]"],["12","Text","Einführungspreis bis So 11.10. Ab 12.10. kostet Sarah 59 €. [Preis prüfen]"],["14","Clip","Kurze Demo: Zettel fotografieren, fertig"],["16","Text","Ich muss den Schulalltag meiner Kinder nicht mehr im Kopf behalten. Das ist der ganze Punkt."],["18","Reel","Start-Reel teilen"],["20","Link",L2]]},
+ {d:"28.09.", w:"Montag", p:2, thema:"Wie es funktioniert",
+  feed:[["a","Karussell „Wie es funktioniert“ in sieben Schritten"]],
+  tiktok:[["s","2026-09-28_ressourcen_CHECK_tiktok (aus 2DC98D47_v6)"]],
+  bogen:"Drei Schritte, an einem echten Montagmorgen.",
+  st:[["08","Clip","Montagmorgen, Rucksäcke, Brotdosen"],["10","Text","Schritt 1: Zettel oder Mail fotografieren."],["12","Text","Schritt 2: Sarah findet Termin, Frist und was mit muss."],["14","Text","Schritt 3: Es steht im Kalender, mit Erinnerung."],["16","Umfrage","Wie viele Schulzettel pro Woche? 1–3 · 4–6 · ich zähle nicht mehr"],["18","Post","Karussell teilen"],["20","Link",L2]]},
+ {d:"29.09.", w:"Dienstag", p:2, thema:"Eure Fragen",
+  feed:[["f","hilfe_brauchst_v2 (Text-Video, CHECK)"]],
+  tiktok:[["s","K2 „Sie rechnet rückwärts, bis zum Koffer“"]],
+  bogen:"Echte Fragen aus den DMs, den ganzen Tag beantwortet.",
+  st:[["08","Clip","„Ihr habt gefragt. Heute antworte ich.“"],["10","Frage","[ECHTE FRAGE 1] + Antwort"],["12","Frage","[ECHTE FRAGE 2] + Antwort"],["14","Frage","[ECHTE FRAGE 3] + Antwort"],["16","Frage","[ECHTE FRAGE 4] + Antwort. Weniger Fragen? Dann ein Clip."],["18","Reel","hilfe_brauchst teilen, Hinweis auf den Fair Care Check"],["20","Link",L2]]},
+ {d:"30.09.", w:"Mittwoch", p:2, thema:"Rückwärts denken",
+  feed:[["d","Reel „Rückwärts denken“: der Ausflug mit dem halben Projekt dahinter"]],
+  tiktok:[["s","2026-09-30_familie-job_SARAH_tiktok"]],
+  bogen:"Ein Ausflug. Und alles, was davor passieren muss.",
+  st:[["08","Clip","Ausflugszettel, anonymisiert: „Ein Ausflug. Und dahinter ein halbes Projekt.“"],["10","Text","Einverständnis. Geld. Regenjacke. Rucksack. Alles bis wann?"],["12","Umfrage","Wer merkt sich so was bei euch? Ich · mein Partner · beide"],["14","Text","Sarah rechnet rückwärts: Die Erinnerung kommt, bevor die Frist da ist."],["16","Clip","Rucksack packen, ohne nachzudenken"],["18","Reel","Reel teilen"],["20","Link",L2]]},
+ {d:"01.10.", w:"Donnerstag", p:2, thema:"Ehrlich: das Claude-Konto",
+  feed:[["f","schulpost_schutzbrille_v1 (Text-Video)"]],
+  tiktok:[["s","K3 „Ich manage meine Familie wie einen Job“"]],
+  bogen:"Offen sagen, was es sonst noch braucht.",
+  st:[["08","Clip","Schutzbrille auf, Schulpost auf"],["10","Text","Ehrlich, bevor du kaufst: Sarah läuft in Claude. Das Konto dort kostet extra."],["12","Text","Was das Konto kostet und warum ich es trotzdem nutze [ZAHLEN PRÜFEN]"],["14","Frage","„Was ist dir bei KI noch unklar?“"],["16","Text","Bei mir gibt es kein Abo. Sarah kaufst du einmal."],["18","Reel","Text-Video teilen"],["20","Link",L2]]},
+ {d:"02.10.", w:"Freitag", p:2, thema:"Für wen Sarah nichts ist",
+  feed:[["a","Karussell „Für wen Sarah nichts ist“"]],
+  tiktok:[["s","2026-10-02_to-do-liste_CHECK_tiktok (aus 38DA8832_v3)"]],
+  bogen:"Wer offen sagt, wem er nicht hilft, dem wird geglaubt.",
+  st:[["08","Clip","Freitagmorgen, Wochenende in Sicht"],["10","Text","Sarah ist nichts für dich, wenn du gar keine Schulkinder hast."],["12","Text","… wenn du nie mit KI arbeiten willst. Das ist in Ordnung."],["14","Text","… wenn bei euch schon jemand anders den Schulkram im Kopf hat. Glückwunsch."],["16","Umfrage","Trifft eins davon auf dich zu? Ja · Nein"],["18","Post","Karussell teilen"],["20","Link",L2]]},
+ {d:"03.10.", w:"Samstag", p:"r", thema:"Ruhe",
+  feed:[["a","Frei. Vorschlag: Affiliate-Karussell"]],
+  tiktok:[["s","K4 „Drei Dinge, die Sarah in jedem Brief findet“"]],
+  bogen:"Ein persönlicher Tag ohne Verkauf.",
+  st:[["08","Clip","Feiertag, langsamer Morgen"],["10","Clip","Was wir heute vorhaben"],["12","Text","Das Beste an diesem Samstag bisher [DEIN MOMENT]"],["14","Clip","Unterwegs"],["16","Umfrage","Feiertag: rausgehen oder Sofa?"],["18","Clip","Abendessen"],["20","Text","Gute Nacht. Kein Link heute."]]},
+ {d:"04.10.", w:"Sonntag", p:"r", thema:"Ruhe",
+  feed:[["f","me_time_auto_v2 (Text-Video, CHECK)"]],
+  tiktok:[["s","2026-10-04_backup_CHECK_tiktok (aus 8F4FDDA2_v3)"]],
+  bogen:"Me-Time im Auto, und was sie über die Woche sagt.",
+  st:[["08","Clip","Sonntagmorgen"],["10","Reel","me_time_auto teilen"],["12","Umfrage","Deine Me-Time diese Woche: über 1 Stunde · unter 1 Stunde · welche Me-Time?"],["14","Text","Ergebnis der Umfrage, ehrlich eingeordnet"],["16","Clip","Wochenplanung am Sonntag"],["18","Text","Wo deine Zeit hingeht, zeigt der Fair Care Check."],["20","Link","Link: Fair Care Check"]]},
+ {d:"05.10.", w:"Montag", p:2, thema:"Der Tag, an dem es sich gelohnt hat",
+  feed:[["d","Reel „Der Tag, an dem es sich gelohnt hat“ [ECHTE SITUATION]"]],
+  tiktok:[["s","K5 „Zettel rein, Kalender raus“"]],
+  bogen:"Eine konkrete Situation, die ohne Sarah schiefgegangen wäre.",
+  st:[["08","Clip","„Letzte Woche wäre fast was schiefgegangen.“"],["10","Text","[DEINE GESCHICHTE: was passiert wäre]"],["12","Text","Was Sarah stattdessen gemacht hat"],["14","Clip","Blick in den Kalender, anonymisiert"],["16","Umfrage","Ist dir so was schon passiert? Ja · Nein · jede Woche"],["18","Reel","Reel teilen"],["20","Link",L2]]},
+ {d:"06.10.", w:"Dienstag", p:2, thema:"Zwei Tage Paris",
+  feed:[["f","paris_an_nichts_denken_v2 (Text-Video)"]],
+  tiktok:[["s","paris_an_nichts_denken_SARAH_tiktok, Caption mit /sarah/"]],
+  bogen:"Weg sein, ohne an zu Hause zu denken. Rückmeldungen nur, wenn es echte gibt.",
+  st:[["08","Clip","Paris-Material oder Rückblick"],["10","Text","Zwei Tage weg, und nichts hing mehr in meinem Kopf."],["12","Text","Erste Rückmeldungen [NUR ECHTE. Wenn keine da sind: Clip vom Alltag]"],["14","Clip","Zurück zu Hause, Kalender stimmt"],["16","Frage","„Wann warst du zuletzt weg, ohne an alles zu denken?“"],["18","Reel","Text-Video teilen"],["20","Link",L2]]},
+ {d:"07.10.", w:"Mittwoch", p:2, thema:"Die Einwände",
+  feed:[["a","Karussell „Die Einwände“: kein Programmieren, mehrere Kinder, mehrere Schulen, iPhone und Android"]],
+  tiktok:[["s","K6 „Ich muss nicht an alles denken“"]],
+  bogen:"Jeder Einwand einmal, jeweils mit einer ehrlichen Antwort.",
+  st:[["08","Clip","„Heute die Fragen, die immer kommen.“"],["10","Text","Muss ich programmieren? Nein."],["12","Text","Drei Kinder, zwei Schulen? Geht."],["14","Text","iPhone oder Android? Beides."],["16","Frage","„Welcher Einwand fehlt noch?“"],["18","Post","Karussell teilen"],["20","Link",L2]]}
+];
+const phase = p => p===1 ? ['p1','Phase 1 · Warteliste'] : p===2 ? ['p2','Phase 2 · Einführungspreis'] : ['pr','Ruhetag'];
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const eintrag = arr => arr.map(([m,t]) => `<span><span class="marke ${M[m][0]}">${M[m][1]}</span>${esc(t)}</span>`).join('');
+document.getElementById('tage').innerHTML = TAGE.map(t => {
+  const [pc,pt] = phase(t.p);
+  return `<article class="tag">
+    <div class="tag-kopf"><span class="datum">${t.d}</span><span class="wtag">${t.w}</span><span class="phase ${pc}">${pt}</span><span class="thema">${esc(t.thema)}</span></div>
+    <div class="kanaele">
+      <div class="kanal k-feed"><span class="klabel">Feed 06:00</span><div class="eintrag">${eintrag(t.feed)}</div></div>
+      <div class="kanal k-tiktok"><span class="klabel">TikTok 18:00</span><div class="eintrag">${eintrag(t.tiktok)}</div></div>
+      <div class="kanal k-stories"><span class="klabel">Stories</span><div class="eintrag"><span class="bogen">${esc(t.bogen)}</span>
+        <div class="stories">${t.st.map(([z,a,x]) => `<div class="slot"><span class="zeit">${z}:00 <span class="art">${a}</span></span>${esc(x)}</div>`).join('')}</div></div></div>
+    </div></article>`;
+}).join('');
+const box = document.getElementById('tage');
+document.querySelectorAll('[data-filter]').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('[data-filter]').forEach(x => x.setAttribute('aria-pressed', x===b ? 'true' : 'false'));
+  box.dataset.f = b.dataset.filter;
+}));
+</script>
