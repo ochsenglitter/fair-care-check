@@ -65,11 +65,10 @@ Projektsprache ist Deutsch. Dokumentation, Commits und Antworten auf Deutsch.
 
 ## Nicht in diesem Repository
 
-Die **Property Performance Group** (kaufmännische Indexberatung für
-Gewerbemietverträge, Indexmietprüfung, VPI, ALDI-Projekt) ist ein eigenes
-Geschäft und hat ein eigenes Repository: `ochsenglitter/PPG`.
-Material dazu liegt im Drive-Ordner „Property Performance Group".
+Die **Property Performance Group** (Beratung rund um Gewerbemietverträge) ist
+ein eigenes Geschäft mit eigenem, privatem Repository und eigenem Drive-Ordner.
 
 Nichts davon gehört hierher, und nichts aus der Produktfamilie gehört dorthin.
-Wer in einer Session Material zur Indexberatung bekommt: im anderen Repository
-arbeiten, nicht in diesem.
+Wer in einer Session Material dazu bekommt: im anderen Repository arbeiten,
+nicht in diesem. **Mandanten- und Projektnamen aus diesem Geschäft gehören nie
+in dieses Repository – es ist öffentlich.**
