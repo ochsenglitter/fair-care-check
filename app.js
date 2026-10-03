@@ -306,7 +306,7 @@
 
       '<div class="card" style="margin-top:12px">' +
       '<div class="eyebrow" style="margin-bottom:12px">Mental-Load-Report</div>' +
-      '<p style="font-size:13px;line-height:1.55;color:var(--claim);margin:0">Deine Antworten werden in deinem Browser gespeichert. Dein Ergebnis fließt anonym in den Mental-Load-Report ein, ohne Namen und ohne E-Mail-Adresse, außer du wählst das ab. Die Übertragung läuft über Google. Mehr in der <a href="https://ochsenglitter.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>' +
+      '<p style="font-size:13px;line-height:1.55;color:var(--claim);margin:0">Deine Antworten werden in deinem Browser gespeichert. Dein Ergebnis fließt anonym in den Mental-Load-Report ein, ohne Namen und ohne E-Mail-Adresse. Mehr in der <a href="https://ochsenglitter.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>' +
       '<label style="display:flex;gap:10px;align-items:center;margin-top:14px;font-size:13.5px;color:var(--espresso);cursor:pointer">' +
       '<input type="checkbox" data-act="optOut"' + (state.optOut ? ' checked' : '') + ' style="width:18px;height:18px;margin:0;accent-color:var(--rose)">' +
       '<span>Ich möchte nicht mitmachen.</span></label>' +
@@ -424,7 +424,7 @@
 
     var mentalText = (r.mentalA > 60 || r.mentalA < 40)
       ? 'Kopfarbeit ist die Arbeit, die niemand sieht und die trotzdem müde macht. Bei euch liegt sie deutlich schiefer als die sichtbare Arbeit – ' + (r.mentalA > 50 ? A : B) + ' ist die Zentrale. Zuständigkeit abgeben heißt: ganze Bereiche übergeben, nicht Aufgaben zuteilen.'
-      : 'Die Kopfarbeit ist bei euch erstaunlich fair verteilt. Haltet das – es ist der Teil, der als Erstes wieder kippt, wenn es stressig wird.';
+      : 'Die Kopfarbeit ist bei euch erstaunlich fair verteilt. Behaltet das bei – es ist der Teil, der als Erstes wieder kippt, wenn es stressig wird.';
 
     return '' +
     '<div class="col" style="padding-top:28px">' +
