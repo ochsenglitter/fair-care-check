@@ -114,6 +114,8 @@
         if (s.split && typeof s.split[t.id] === 'number') state.split[t.id] = s.split[t.id];
         if (s.time && typeof s.time[t.id] === 'number') state.time[t.id] = s.time[t.id];
       });
+      if (!ROLLE[state.personA]) state.personA = '';
+      if (!ROLLE[state.personB]) state.personB = '';
     } catch (e) { /* egal */ }
   }
 
@@ -123,8 +125,10 @@
 
   /* ---------------- Helfer ---------------- */
 
-  function nameA() { return state.nameA.trim() || 'Person A'; }
-  function nameB() { return state.nameB.trim() || 'Person B'; }
+  var ROLLE = { mutter: 'Mama', vater: 'Papa' };
+  function rolesDiffer() { return ROLLE[state.personA] && ROLLE[state.personB] && state.personA !== state.personB; }
+  function nameA() { return state.nameA.trim() || (rolesDiffer() ? ROLLE[state.personA] : 'Person A'); }
+  function nameB() { return state.nameB.trim() || (rolesDiffer() ? ROLLE[state.personB] : 'Person B'); }
 
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (c) {
@@ -272,7 +276,14 @@
         }).join('') + '</select></label>';
     }
     var erwerb = [['vollzeit', 'Vollzeit'], ['teilzeit', 'Teilzeit'], ['keine', 'nicht erwerbstätig']];
-    var rolle = [['mutter', 'Mutter'], ['vater', 'Vater'], ['andere', 'andere Person']];
+    function roleField(key, nameKey, label) {
+      return '<div class="field"><span class="field-label">' + label + '</span>' +
+        '<div class="role-toggle" role="group" aria-label="' + label + ': Mama oder Papa">' +
+        ['mutter', 'vater'].map(function (r) {
+          return '<button type="button" data-act="role" data-key="' + key + '" data-val="' + r + '" aria-pressed="' + (state[key] === r) + '">' + ROLLE[r] + '</button>';
+        }).join('') + '</div>' +
+        '<input type="text" autocomplete="off" placeholder="Name" aria-label="Name ' + label + '" value="' + esc(state[nameKey]) + '" data-act="' + nameKey + '"></div>';
+    }
 
     var variants = [
       { key: 'slider', t: 'Regler', s: 'Eine Aufgabe pro Karte, Verteilung frei schieben. Am genauesten.' },
@@ -292,10 +303,9 @@
       '<div class="card" style="margin-top:32px">' +
         '<div class="eyebrow" style="margin-bottom:20px">Wer seid ihr zwei?</div>' +
         '<div style="display:flex;flex-direction:column;gap:16px">' +
-          '<label class="field"><span class="field-label">Person A</span>' +
-            '<input type="text" autocomplete="off" placeholder="Name" value="' + esc(state.nameA) + '" data-act="nameA"></label>' +
-          '<label class="field"><span class="field-label">Person B</span>' +
-            '<input type="text" autocomplete="off" placeholder="Name" value="' + esc(state.nameB) + '" data-act="nameB"></label>' +
+          roleField('personA', 'nameA', 'Person A') +
+          roleField('personB', 'nameB', 'Person B') +
+          '<p class="role-hint" id="roleHint"' + (state.roleMissing && !(ROLLE[state.personA] && ROLLE[state.personB]) ? '' : ' hidden') + ' role="alert">Bitte wählt für beide aus, ob Mama oder Papa. Zwei Mamas oder zwei Papas gehen natürlich auch.</p>' +
           '<label class="rate"><span class="field-label">STUNDENSATZ ZUM BERECHNEN DES WERTS</span>' +
             '<span style="display:flex;align-items:baseline;gap:5px">' +
               '<input type="number" inputmode="numeric" min="1" step="1" value="' + state.rate + '" data-act="rate">' +
@@ -307,8 +317,6 @@
       '<div class="card" style="margin-top:12px">' +
       '<div class="eyebrow" style="margin-bottom:12px">Freiwillige Angaben</div>' +
       '<div style="display:flex;flex-direction:column;gap:16px">' +
-      sel('personA', 'Person A ist', rolle) +
-      sel('personB', 'Person B ist', rolle) +
       sel('kinder', 'Anzahl Kinder', [['1', '1'], ['2', '2'], ['3', '3'], ['4+', '4 oder mehr']]) +
       sel('erwerbA', 'Erwerbsumfang Person A', erwerb) +
       sel('erwerbB', 'Erwerbsumfang Person B', erwerb) +
@@ -686,7 +694,21 @@
     var val = el.getAttribute('data-val');
 
     if (act === 'variant') { state.variant = val; state.step = 0; render(); }
-    else if (act === 'start') { state.screen = 'cards'; state.step = 0; render(); window.scrollTo(0, 0); }
+    else if (act === 'role') {
+      state[el.getAttribute('data-key')] = val; save();
+      el.parentNode.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', b === el); });
+      var hint = document.getElementById('roleHint');
+      if (hint && ROLLE[state.personA] && ROLLE[state.personB]) hint.hidden = true;
+    }
+    else if (act === 'start') {
+      if (!(ROLLE[state.personA] && ROLLE[state.personB])) {
+        state.roleMissing = true;
+        var h = document.getElementById('roleHint');
+        if (h) { h.hidden = false; h.scrollIntoView({ block: 'center', behavior: 'smooth' }); }
+        return;
+      }
+      state.screen = 'cards'; state.step = 0; render(); window.scrollTo(0, 0);
+    }
     else if (act === 'restart') {
       if (!confirm('Alle Antworten zurücksetzen?')) return;
       TASKS.forEach(function (t) { state.split[t.id] = 50; state.time[t.id] = t.min; });
@@ -741,7 +763,7 @@
     if (act === 'optOut') { state.optOut = el.checked; save(); }
     else if (act === 'info') {
       var key = el.getAttribute('data-key');
-      if (['personA', 'personB', 'kinder', 'erwerbA', 'erwerbB'].indexOf(key) >= 0) { state[key] = el.value; save(); }
+      if (['kinder', 'erwerbA', 'erwerbB'].indexOf(key) >= 0) { state[key] = el.value; save(); }
     }
   });
 
