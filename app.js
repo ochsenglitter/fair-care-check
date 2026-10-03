@@ -4,6 +4,10 @@
 (function () {
   'use strict';
 
+  /* Datenspende fuer den Mental-Load-Report: Web-App-URL des Google Apps Script */
+  var SPENDE_URL = 'https://script.google.com/macros/s/AKfycbx-ySplgK1SWQ3sHFpanx3BaHxcf4N8UTkluHKjDoDtdZJW8rpHn24r4kD7YkokFpxA/exec';
+  var SPENDE_STORE = 'faircarecheck.spende';
+
   var STORE = 'faircarecheck.v1';
 
   /* ---------------- Daten: 7 Bereiche, 44 Aufgaben ----------------
@@ -87,7 +91,13 @@
     nameB: '',
     rate: 18,
     split: {},
-    time: {}
+    time: {},
+    optOut: false,
+    personA: '',
+    personB: '',
+    kinder: '',
+    erwerbA: '',
+    erwerbB: ''
   };
 
   TASKS.forEach(function (t) { state.split[t.id] = 50; state.time[t.id] = t.min; });
@@ -97,7 +107,7 @@
       var raw = localStorage.getItem(STORE);
       if (!raw) return;
       var s = JSON.parse(raw);
-      ['screen', 'variant', 'step', 'nameA', 'nameB', 'rate'].forEach(function (k) {
+      ['screen', 'variant', 'step', 'nameA', 'nameB', 'rate', 'optOut', 'personA', 'personB', 'kinder', 'erwerbA', 'erwerbB'].forEach(function (k) {
         if (s[k] !== undefined && s[k] !== null) state[k] = s[k];
       });
       TASKS.forEach(function (t) {
@@ -254,6 +264,16 @@
   /* ---------------- Screens ---------------- */
 
   function viewIntro() {
+    function sel(key, label, opts) {
+      return '<label class="field"><span class="field-label">' + esc(label) + '</span>' +
+        '<select data-act="info" data-key="' + key + '" style="font-family:var(--sans);font-size:15px;color:var(--espresso);background:transparent;border:none;border-bottom:1px solid var(--linie-warm);padding:4px 0 8px;width:100%">' +
+        [['', 'keine Angabe']].concat(opts).map(function (o) {
+          return '<option value="' + o[0] + '"' + (state[key] === o[0] ? ' selected' : '') + '>' + esc(o[1]) + '</option>';
+        }).join('') + '</select></label>';
+    }
+    var erwerb = [['vollzeit', 'Vollzeit'], ['teilzeit', 'Teilzeit'], ['keine', 'nicht erwerbstätig']];
+    var rolle = [['mutter', 'Mutter'], ['vater', 'Vater'], ['andere', 'andere Person']];
+
     var variants = [
       { key: 'slider', t: 'Regler', s: 'Eine Aufgabe pro Karte, Verteilung frei schieben. Am genauesten.' },
       { key: 'taps', t: 'Fünf Stufen', s: 'Eine Aufgabe pro Karte, fünf Antworten, tippt sich von allein weiter.' },
@@ -284,6 +304,22 @@
         '<p style="font-size:12px;line-height:1.5;color:var(--gedaempft-2);margin:16px 0 0">18 € entspricht etwa einer bezahlten Haushaltshilfe. Wer den Wert der eigenen Zeit wirklich realistisch berechnen will, nimmt den eigenen Brutto-Stundenlohn.</p>' +
       '</div>' +
 
+      '<div class="card" style="margin-top:12px">' +
+      '<div class="eyebrow" style="margin-bottom:12px">Mental-Load-Report</div>' +
+      '<p style="font-size:13px;line-height:1.55;color:var(--claim);margin:0">Dein Ergebnis fließt anonym in den jährlichen Mental-Load-Report von OCHSENGLITTER ein: ohne Namen, ohne E-Mail-Adresse. Die Übertragung läuft über Google. Mehr dazu in der <a href="https://ochsenglitter.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>' +
+      '<label style="display:flex;gap:10px;align-items:center;margin-top:14px;font-size:13.5px;color:var(--espresso);cursor:pointer">' +
+      '<input type="checkbox" data-act="optOut"' + (state.optOut ? ' checked' : '') + ' style="width:18px;height:18px;margin:0;accent-color:var(--rose)">' +
+      '<span>Ich möchte nicht mitmachen.</span></label>' +
+      '<div style="display:flex;flex-direction:column;gap:16px;margin-top:18px;border-top:1px dotted var(--linie-warm);padding-top:18px">' +
+      '<p style="font-size:12px;line-height:1.5;color:var(--gedaempft-2);margin:0">Freiwillige Angaben für die Auswertung:</p>' +
+      sel('personA', 'Person A ist', rolle) +
+      sel('personB', 'Person B ist', rolle) +
+      sel('kinder', 'Anzahl Kinder', [['1', '1'], ['2', '2'], ['3', '3'], ['4+', '4 oder mehr']]) +
+      sel('erwerbA', 'Erwerbsumfang Person A', erwerb) +
+      sel('erwerbB', 'Erwerbsumfang Person B', erwerb) +
+      '</div>' +
+      '</div>' +
+
       '<div style="margin-top:26px">' +
         '<div class="eyebrow eyebrow--gold" style="text-align:center;margin-bottom:12px">Wie wollt ihr antworten?</div>' +
         '<div style="display:grid;gap:8px">' +
@@ -296,7 +332,7 @@
       '</div>' +
 
       '<button type="button" class="btn btn--primary" style="margin-top:26px" data-act="start">CARE CHECK STARTEN</button>' +
-      '<p class="fineprint" style="margin-top:14px">ca. 6 Minuten · alles bleibt auf eurem Gerät</p>' +
+      '<p class="fineprint" style="margin-top:14px">ca. 6 Minuten</p>' +
     '</div>';
   }
 
@@ -561,6 +597,53 @@
     setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
   }
 
+  /* ---------------- Datenspende (Mental-Load-Report) ---------------- */
+
+  var lastSent = '';
+
+  function spendeId() {
+    var id = '';
+    try { id = localStorage.getItem(SPENDE_STORE) || ''; } catch (e) { /* egal */ }
+    if (/^[a-z0-9]{32}$/.test(id)) return id;
+    var abc = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    var bytes = new Uint8Array(32);
+    try { crypto.getRandomValues(bytes); } catch (e) {
+      for (var j = 0; j < 32; j++) bytes[j] = Math.floor(Math.random() * 256);
+    }
+    id = '';
+    for (var i = 0; i < 32; i++) id += abc.charAt(bytes[i] % abc.length);
+    try { localStorage.setItem(SPENDE_STORE, id); } catch (e) { /* egal */ }
+    return id;
+  }
+
+  /* Sendet nur Zahlen und Auswahlwerte – niemals nameA, nameB oder Freitext. */
+  function spenden() {
+    if (state.optOut || SPENDE_URL.indexOf('https://') !== 0) return;
+    try {
+      var body = JSON.stringify({
+        v: 1,
+        id: spendeId(),
+        variant: state.variant,
+        rate: state.rate,
+        personA: state.personA,
+        personB: state.personB,
+        kinder: state.kinder,
+        erwerbA: state.erwerbA,
+        erwerbB: state.erwerbB,
+        split: TASKS.map(function (t) { return state.split[t.id]; }),
+        min: TASKS.map(function (t) { return state.time[t.id]; })
+      });
+      if (body === lastSent) return;
+      lastSent = body;
+      fetch(SPENDE_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: body
+      }).catch(function () { /* still ignorieren */ });
+    } catch (e) { /* still ignorieren */ }
+  }
+
   /* ---------------- Rendern & Events ---------------- */
 
   var app = document.getElementById('app');
@@ -570,6 +653,7 @@
       : state.screen === 'cards' ? viewCards()
       : viewResult();
     save();
+    if (state.screen === 'result') spenden();
   }
 
   function advance() {
@@ -645,6 +729,17 @@
           : state.split[id] < 50 ? 'Mehr bei ' + nameB() : 'Genau geteilt';
       }
       save();
+    }
+  });
+
+  app.addEventListener('change', function (e) {
+    var el = e.target.closest('[data-act]');
+    if (!el) return;
+    var act = el.getAttribute('data-act');
+    if (act === 'optOut') { state.optOut = el.checked; save(); }
+    else if (act === 'info') {
+      var key = el.getAttribute('data-key');
+      if (['personA', 'personB', 'kinder', 'erwerbA', 'erwerbB'].indexOf(key) >= 0) { state[key] = el.value; save(); }
     }
   });
 
