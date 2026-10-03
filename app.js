@@ -305,13 +305,8 @@
       '</div>' +
 
       '<div class="card" style="margin-top:12px">' +
-      '<div class="eyebrow" style="margin-bottom:12px">Mental-Load-Report</div>' +
-      '<p style="font-size:13px;line-height:1.55;color:var(--claim);margin:0">Deine Antworten werden in deinem Browser gespeichert. Dein Ergebnis fließt anonym in den Mental-Load-Report ein, ohne Namen und ohne E-Mail-Adresse. Mehr in der <a href="https://ochsenglitter.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>' +
-      '<label style="display:flex;gap:10px;align-items:center;margin-top:14px;font-size:13.5px;color:var(--espresso);cursor:pointer">' +
-      '<input type="checkbox" data-act="optOut"' + (state.optOut ? ' checked' : '') + ' style="width:18px;height:18px;margin:0;accent-color:var(--rose)">' +
-      '<span>Ich möchte nicht mitmachen.</span></label>' +
-      '<div style="display:flex;flex-direction:column;gap:16px;margin-top:18px;border-top:1px dotted var(--linie-warm);padding-top:18px">' +
-      '<p style="font-size:12px;line-height:1.5;color:var(--gedaempft-2);margin:0">Freiwillige Angaben für die Auswertung:</p>' +
+      '<div class="eyebrow" style="margin-bottom:12px">Freiwillige Angaben</div>' +
+      '<div style="display:flex;flex-direction:column;gap:16px">' +
       sel('personA', 'Person A ist', rolle) +
       sel('personB', 'Person B ist', rolle) +
       sel('kinder', 'Anzahl Kinder', [['1', '1'], ['2', '2'], ['3', '3'], ['4+', '4 oder mehr']]) +
@@ -333,6 +328,12 @@
 
       '<button type="button" class="btn btn--primary" style="margin-top:26px" data-act="start">CARE CHECK STARTEN</button>' +
       '<p class="fineprint" style="margin-top:14px">ca. 6 Minuten</p>' +
+      '<div style="margin-top:40px;padding-top:14px;border-top:1px dotted var(--linie-warm);font-size:11px;line-height:1.5;color:var(--gedaempft-2);text-align:center">' +
+        '<p style="margin:0">Deine Antworten werden in deinem Browser gespeichert. Dein Ergebnis fließt anonym in den Mental-Load-Report ein, ohne Namen und ohne E-Mail-Adresse. Mehr in der <a href="https://ochsenglitter.de/datenschutz" target="_blank" rel="noopener" style="color:inherit">Datenschutzerklärung</a>.</p>' +
+        '<label style="display:inline-flex;gap:6px;align-items:center;margin-top:8px;cursor:pointer">' +
+        '<input type="checkbox" data-act="optOut"' + (state.optOut ? ' checked' : '') + ' style="width:13px;height:13px;margin:0;accent-color:var(--rose)">' +
+        '<span>Ich möchte nicht mitmachen.</span></label>' +
+      '</div>' +
     '</div>';
   }
 
