@@ -306,7 +306,7 @@
 
       '<div class="card" style="margin-top:12px">' +
       '<div class="eyebrow" style="margin-bottom:12px">Mental-Load-Report</div>' +
-      '<p style="font-size:13px;line-height:1.55;color:var(--claim);margin:0">Dein Ergebnis fließt anonym in den jährlichen Mental-Load-Report von OCHSENGLITTER ein: ohne Namen, ohne E-Mail-Adresse. Die Übertragung läuft über Google. Mehr dazu in der <a href="https://ochsenglitter.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>' +
+      '<p style="font-size:13px;line-height:1.55;color:var(--claim);margin:0">Deine Antworten werden in deinem Browser gespeichert. Dein Ergebnis fließt anonym in den Mental-Load-Report ein, ohne Namen und ohne E-Mail-Adresse, außer du wählst das ab. Die Übertragung läuft über Google. Mehr in der <a href="https://ochsenglitter.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>' +
       '<label style="display:flex;gap:10px;align-items:center;margin-top:14px;font-size:13.5px;color:var(--espresso);cursor:pointer">' +
       '<input type="checkbox" data-act="optOut"' + (state.optOut ? ' checked' : '') + ' style="width:18px;height:18px;margin:0;accent-color:var(--rose)">' +
       '<span>Ich möchte nicht mitmachen.</span></label>' +
@@ -449,6 +449,7 @@
         '<p class="verdict">' + esc(verdictText(r)) + '</p>' +
       '</div>' +
 
+      '<p class="fineprint" style="margin:12px 0 0">' + esc(state.optOut ? 'Dein Ergebnis bleibt nur bei dir.' : 'Danke! Dein Ergebnis zählt für den Mental-Load-Report 2027.') + '</p>' +
       '<div class="stats" style="margin-top:12px">' +
         stats.map(function (s) {
           return '<div class="stat"><div class="k">' + esc(s[0]) + '</div><div class="v">' + esc(s[1]) +
@@ -513,7 +514,7 @@
       '</div>' +
 
       '<div class="brandfoot"><div class="w">Ochsenglitter</div>' +
-        '<div class="s">Fair Care Check · nur zur privaten Nutzung</div></div>' +
+        '<div class="s">Fair Care Check · nur zur privaten Nutzung · <a href="https://ochsenglitter.de/datenschutz" target="_blank" rel="noopener" style="color:inherit">Anonyme Auswertung für den Mental-Load-Report · Datenschutz</a></div></div>' +
 
       '<button type="button" class="btn btn--ghost" style="width:100%;margin-top:20px" data-print="hide" data-act="restart">Von vorn beginnen</button>' +
     '</div>';
