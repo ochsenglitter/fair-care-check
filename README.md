@@ -7,7 +7,7 @@ Umverteilungs-Vorschlägen. Als PDF druckbar, als CSV mit fertigen Formeln für
 Google Sheets exportierbar.
 
 Statisch: HTML, CSS, ein JavaScript. Kein Build, keine Abhängigkeiten, kein
-Backend. Antworten werden im Browser gespeichert. Wer nicht widerspricht, spendet
+eigenes Backend. Antworten werden im Browser gespeichert. Wer nicht widerspricht, spendet
 das Ergebnis anonym (ohne Namen) an ein Google Sheet für den Mental-Load-Report.
 
 ## Dateien
